@@ -1,4 +1,4 @@
-// import { nextInLine } from './stand-in-line';
+//import { nextInLine } from './stand-in-line';
 
 xdescribe('stand-in-line', () => {
     test('nextInLine([], 1) should return 1', () => {

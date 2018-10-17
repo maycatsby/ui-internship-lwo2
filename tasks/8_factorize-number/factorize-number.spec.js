@@ -1,4 +1,4 @@
-// import { factorialize } from './factorize-number';
+//import { factorialize } from './factorize-number';
 
 xdescribe('factorize-number', () => {
     test('should return a number.', () => {
