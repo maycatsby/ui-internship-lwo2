@@ -7,7 +7,7 @@ export const GOLF_SCORES = {
   DOUBLE_BOGEY: 'Double Bogey',
   GO_HOME: 'Go home!',
 };
-export function golfScore(par,strokes) {
+export function golfScore(par, strokes) {
   if (strokes == 1) return GOLF_SCORES.HOLE_IN_ONE;
   if (strokes == par - 1) return GOLF_SCORES.BIRDIE;
   if (strokes == par) return GOLF_SCORES.PAR;
