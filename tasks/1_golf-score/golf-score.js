@@ -23,4 +23,4 @@ export const golfScore = (par, strokes) => {
   } else if (par + 3 <= strokes) {
     return GOLF_SCORES.GO_HOME;
   }
-}
+};
