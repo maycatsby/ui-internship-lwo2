@@ -1,3 +1,3 @@
 export function trimWhiteSpaces(str) {
-  return str.replace(/\s/gi,'');
+  return str.replace(/\s/gi, '');
 }
