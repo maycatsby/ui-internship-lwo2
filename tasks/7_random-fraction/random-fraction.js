@@ -1,3 +1,3 @@
-export function randomFraction(){
-    return Math.random();
+export function randomFraction() {
+  return Math.random();
 }
