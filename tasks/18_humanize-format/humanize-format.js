@@ -1,7 +1,7 @@
 export function humanizeFormat(str) {
   let x = str % 10;
   let y = str % 100;
-  if (str === '' || str === null) return '';
+  if (!str) return '';
   if (x == 1 && y != 11) {
     return str + 'st';
   }
