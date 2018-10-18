@@ -31,9 +31,11 @@ export const lookupProfile = function(fName, prop) {
       contactExists = true;
       if (contacts[i].hasOwnProperty(prop)) {
         return contacts[i][prop];
-      } else return 'No such property';
+      } else {
+        return 'No such property';
+      }
     }
   }
   if (!contactExists) return 'No such contact';
-  return 'lul';
+  return 'Something went wrong...';
 };
