@@ -1,10 +1,6 @@
-export function onfirmEnding(str, word) {
-  let newStr = str.split('');
-  if (newStr[newStr.length-1] == word) {
-    return true;
-  }
+/* eslint-disable */ 
+
+export function confirmEnding(string, target) {
+  return string.substr(-target.length) === target;
 }
 
-// expect function onfirmEnding(str, word) {
-
-// }

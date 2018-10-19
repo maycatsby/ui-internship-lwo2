@@ -1,3 +1,5 @@
+/* eslint-disable */ 
+
 export function findLongestWord(str) {
   let strArr = str.split(' ');
   let theLongest = strArr[0];

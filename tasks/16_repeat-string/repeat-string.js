@@ -1,3 +1,5 @@
+/* eslint-disable */ 
+
 export function repeatStringNumTimes(str, num) {
   let newStr = '';
   for (let i=0; i<num; i++) {

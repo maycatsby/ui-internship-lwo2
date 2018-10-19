@@ -1,3 +1,5 @@
+/* eslint-disable */ 
+
 export function humanizeFormat(date) {
   if (date) {
     let strDate = date.toString();

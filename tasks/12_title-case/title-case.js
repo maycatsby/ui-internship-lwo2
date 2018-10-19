@@ -1,3 +1,5 @@
+/* eslint-disable */ 
+
 export function titleCase(str) {
   let newStr = str.toLowerCase()
       .split(' ')
