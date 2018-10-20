@@ -1,4 +1,3 @@
-
 export function reverseStringInRange(str, arr) {
   let copyStr = str.split('');
   let chunk = copyStr.slice(arr[0], arr[1]+1).reverse().join('');

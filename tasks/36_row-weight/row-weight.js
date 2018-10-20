@@ -21,6 +21,5 @@ export function rowWeights(arr) {
   } else {
     final.push(arr[0], 0);
   }
-
   return final;
 }

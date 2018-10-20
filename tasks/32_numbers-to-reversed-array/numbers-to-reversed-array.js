@@ -1,4 +1,3 @@
-
 export function numberToReversedArray(num) {
   let str = num.toString();
   let arr = str.split('').reverse();

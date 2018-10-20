@@ -1,7 +1,6 @@
-
 export function arrayPlusArray(arr1, arr2) {
   let total = [];
-  if (arr1.length == arr2.length) {
+  if (arr1.length === arr2.length) {
     for ( let i = 0; i < arr1.length; i++) {
       total.push(arr1[i]+arr2[i]);
     }

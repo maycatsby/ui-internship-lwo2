@@ -12,7 +12,6 @@ export function minNumberToPrime(arr) {
   }
   function findPrime(n) {
     let num = n + 1;
-
     while (num) {
       if (isPrime(num)) {
         return num;
