@@ -9,3 +9,4 @@ export function truncateString(str, leng) {
     return str;
   }
 }
+

@@ -1,5 +1,5 @@
 export function titleCase(str) {
-	let newArr = str.split(' ');
+  let newArr = str.split(' ');
 	let arr = [];
 	let final = [];
 	for (let i in newArr) {
@@ -8,3 +8,4 @@ export function titleCase(str) {
 		}
 	return (final.join(' '));
 	}
+	
