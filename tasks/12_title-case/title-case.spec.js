@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { titleCase } from './title-case';
 
 describe('title-case', () => {

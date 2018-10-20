@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { largestOfFour } from './largest-of-four';
 
 describe('largest-of-four', () => {

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { arrayChunks} from './array-chunks';
 
 describe('array-chunks', () => {

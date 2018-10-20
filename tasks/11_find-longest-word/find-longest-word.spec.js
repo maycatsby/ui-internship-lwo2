@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { findLongestWord } from './find-longest-word';
 
 describe('find-longest-word', () => {

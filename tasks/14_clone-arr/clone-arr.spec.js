@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { cloneArr } from './clone-arr';
 
 describe('clone-arr', () => {

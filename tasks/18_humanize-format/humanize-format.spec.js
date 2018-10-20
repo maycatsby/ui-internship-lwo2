@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { humanizeFormat} from './humanize-format';
 
 describe('humanize-format', () => {

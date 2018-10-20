@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { confirmEnding } from './confirm-ending';
 
 describe('confirm-ending', () => {

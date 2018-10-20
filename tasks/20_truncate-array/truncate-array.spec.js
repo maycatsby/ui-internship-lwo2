@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { truncateArray } from './truncate-array';
 
 describe('truncate-array', () => {

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { repeatStringNumTimes } from './repeat-string';
 
 describe('repeat-string', () => {

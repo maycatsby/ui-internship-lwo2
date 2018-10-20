@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { truncateString } from './truncate-string';
 
 const STRING0 = 'A-tisket a-tasket A green and yellow basket';
