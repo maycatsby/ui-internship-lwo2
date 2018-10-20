@@ -1,5 +1,3 @@
-
-
 export function checkLetters(array) {
   const str = array[0].toLowerCase();
   const copy = array[1].toLowerCase().split('');

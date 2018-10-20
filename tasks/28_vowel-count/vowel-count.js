@@ -1,4 +1,3 @@
-
 export function getVowelCount(str) {
   let vowelList = 'aeiouAEIOU';
   let vcount = 0;

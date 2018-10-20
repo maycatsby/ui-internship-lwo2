@@ -1,4 +1,3 @@
-
 export function peopleInBus(busStops) {
   let totalCount = 0;
   let busStopsLeng = busStops.length;
