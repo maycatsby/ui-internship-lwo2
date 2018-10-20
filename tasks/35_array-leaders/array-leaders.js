@@ -1,9 +1,10 @@
 export function arrayLeaders(arr) {
   let newArr = [];
-  for (let i = 0; i < arr.length; i++) {
+  const leng = arr.length;
+  for (let i = 0; i < leng; i++) {
     let cur = 0;
-    for (let j = i+1; j < arr.length; j++) {
-      if (i != arr.length-1) {
+    for (let j = i+1; j < leng; j++) {
+      if (i !== leng-1) {
         cur += arr[j];
       } else {
         cur = arr[i];

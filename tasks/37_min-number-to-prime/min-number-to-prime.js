@@ -4,7 +4,7 @@ export function minNumberToPrime(arr) {
       return false;
     }
     for (let i = 2; i < n; i++) {
-      if (n % i == 0) {
+      if (n % i === 0) {
         return false;
       }
     }
@@ -21,7 +21,8 @@ export function minNumberToPrime(arr) {
     return 0;
   }
   let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
+  const leng = arr.length;
+  for (let i = 0; i < leng; i++) {
     sum += arr[i];
   }
   if (isPrime(sum)) {

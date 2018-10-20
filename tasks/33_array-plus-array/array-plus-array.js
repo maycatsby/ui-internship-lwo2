@@ -1,19 +1,21 @@
 export function arrayPlusArray(arr1, arr2) {
   let total = [];
-  if (arr1.length === arr2.length) {
-    for ( let i = 0; i < arr1.length; i++) {
+  const leng1 = arr1.length;
+  const leng2 = arr2.length;
+  if (leng1 === leng2) {
+    for ( let i = 0; i < leng1; i++) {
       total.push(arr1[i]+arr2[i]);
     }
-  } else if (arr1.length<arr2.length) {
-    for ( let i = 0; i < arr1.length; i++) {
+  } else if (leng1<leng2) {
+    for ( let i = 0; i < leng1; i++) {
       total.push(arr1[i]+arr2[i]);
     }
-    total.push(arr2[arr2.length-1]);
-  } else if (arr2.length<arr1.length) {
-    for ( let i = 0; i < arr2.length; i++) {
+    total.push(arr2[leng2-1]);
+  } else if (leng2 < leng1) {
+    for ( let i = 0; i < leng2; i++) {
       total.push(arr1[i]+arr2[i]);
     }
-    total.push(arr1[arr1.length-1]);
+    total.push(arr1[leng1-1]);
   }
   return total;
 }

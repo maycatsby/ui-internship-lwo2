@@ -10,7 +10,7 @@ export function rowWeights(arr) {
     }
   }
   const final = [];
-  if (arr.length != 1) {
+  if (arr.length !== 1) {
     let num1 = team1.reduce(function(sum, current) {
       return sum + current;
     });
