@@ -1,11 +1,11 @@
 export function titleCase(str) {
   let newArr = str.split(' ');
-	let arr = [];
+  let arr = [];
 	let final = [];
-	for (let i in newArr) {
-		arr.push(newArr[i].toLowerCase());
-		final.push(arr[i].charAt(0).toUpperCase() + arr[i].slice(1));
-		}
-	return (final.join(' '));
-	}
-	
+	let leng = newArr.length;
+  for (let i=0; i<leng; ++i) {
+    arr.push(newArr[i].toLowerCase());
+    final.push(arr[i].charAt(0).toUpperCase() + arr[i].slice(1));
+  }
+  return (final.join(' '));
+}
