@@ -1,6 +1,7 @@
 export function findEqualIndex(arr) {
   const arrLeng = arr.length;
-  let leftsum; let rightsum;
+  let leftsum;
+  let rightsum;
   for (let i = 0; i < arrLeng; ++i) {
     leftsum = 0;
     rightsum = 0;
