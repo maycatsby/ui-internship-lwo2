@@ -1,5 +1,5 @@
 export function minNumberToPrime(arr) {
-  let arrSum = arr.reduce((a, b) => a + b);
+  const arrSum = arr.reduce((a, b) => a + b);
   function isPrime(value) {
     for (let x = 2; x < value; x++) {
       if (value % x === 0) {
