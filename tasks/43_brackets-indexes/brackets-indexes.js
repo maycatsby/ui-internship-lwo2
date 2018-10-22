@@ -1,14 +1,19 @@
 export function findCloseIndex(text, openPos) {
   let currentPos = openPos;
   let counter = 1;
-  while (counter > 0) {
+  if (text[openPos] !== '(') {
+    return -1;
+  }
+  while (currentPos<text.length) {
     let elemAtNextPos = text[++currentPos];
-    switch (elemAtNextPos) {
-      case '(': counter++;
-        break;
-      case ')': counter--;
-        break;
+    if (elemAtNextPos == '(') {
+      counter++;
+    } else if (elemAtNextPos == ')') {
+      counter--;
+    }
+    if (counter === 0) {
+      return currentPos;
     }
   }
-  return currentPos;
+  return -1;
 }
