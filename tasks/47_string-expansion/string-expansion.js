@@ -1,8 +1,8 @@
 export function stringExpansion(str) {
-  let leng = str.length;
+  const leng = str.length;
   let result = '';
   let current;
-  for (let i = 0; i<leng; i++) {
+  for (let i = 0; i < leng; i++) {
     if (!isNaN(str[i])) {
       current = str[i];
     } else if (isNaN(str[i])) {

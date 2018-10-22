@@ -4,6 +4,6 @@ export function runningAverage(num) {
   return function(n) {
     timesCalled++;
     total += n;
-    return Math.round(total / timesCalled * 100) /100;
+    return Math.round(total / timesCalled * 100) / 100;
   };
 }
