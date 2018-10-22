@@ -1,25 +1,22 @@
 class God {
   static create() {
-    return [new Man(), new Woman()];
+    return [new Man('Adam'), new Woman('Eve')];
   }
 }
 class Human {
-  constructor(name, sex) {
+  constructor(name) {
     this.name = name;
-    this.sex = sex;
   }
 }
 class Man extends Human {
-  constructor(name, sex) {
-    super(name, sex);
-    this.name = 'Adam';
+  constructor(name) {
+    super(name);
     this.sex = 'male';
   }
 }
 class Woman extends Human {
-  constructor(name, sex) {
-    super(name, sex);
-    this.name = 'Eve';
+  constructor(name) {
+    super(name);
     this.sex = 'female';
   }
 }
