@@ -1,12 +1,7 @@
-export const destroyer = (arr, ...args) => {
-  const arrLength = arr.length;
-  const argsLength = args.length;
-  for (let i = 0; i < arrLength; i++) {
-    for (let j = 0; j < argsLength; j++) {
-      if (arr[i] === args[j]) {
-        delete arr[i];
-      }
-    }
+export const destroyer = (arr, ...args ) => {
+  return arr.filter(destroyNum);
+
+  function destroyNum(element) {
+    return !args.includes(element);
   }
-  return arr.filter(Boolean);
 };
