@@ -5,5 +5,5 @@ export function sumAll(arr) {
   for (let i=min; i <= max; i++) {
     final += i;
   }
-  return (final);
+  return final;
 }

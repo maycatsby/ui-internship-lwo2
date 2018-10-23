@@ -1,14 +1,15 @@
 export function abbreviated(str) {
-  let splited = str.split(' ');
-  const leng = splited.length;
+  let splitName = str.split(' ');
+  const leng = splitName.length;
+  if (leng > 2) {
+    /* eslint max-len: ["error", { "code": 100 }] */
+    return (splitName[0] + ' ' + splitName[1].charAt(0) + '. ' + splitName[2].charAt(0)+'.');
+  }
+  if (leng === 2) {
+    return (splitName[0] + ' ' + splitName[1].charAt(0) + '.');
+  }
   if (leng === 1) {
     return str;
   }
-  for (let i = 1; i < leng; ++i) {
-    let current = splited[i].split('');
-    const curLeng = current.length;
-    current.splice(1, curLeng, '.');
-    splited.splice(i, 1, current.join(''));
-  }
-  return splited.join(' ');
+  return splitName[0];
 }

@@ -18,9 +18,7 @@ export function findLetter(str) {
     }
     firstCharacter = str.charCodeAt(i);
   }
-  if (valueToReturn === '') {
-    return undefined;
-  } else {
+  if (valueToReturn) {
     return valueToReturn;
   }
 }
