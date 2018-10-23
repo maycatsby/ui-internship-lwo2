@@ -1,20 +1,16 @@
 export function findEqualIndex(arr) {
   const arrLen = arr.length;
-  let leftsum;
-  let rightsum;
+  let leftSum = 0;
+  let sum = 0;
   for (let i = 0; i < arrLen; i++) {
-    leftsum = 0, rightsum = 0;
-    for (let j = 0; j < i; j++) {
-      leftsum += arr[j];
-    }
-    for (let j = i + 1; j < arrLen; j++) {
-      rightsum += arr[j];
-    }
-    if (leftsum == rightsum) {
+    sum += arr[i];
+  }
+  for (let i = 0; i < arrLen; i++) {
+    sum -= arr[i];
+    if (leftSum === sum) {
       return i;
     }
+    leftSum += arr[i];
   }
-  if (leftsum != rightsum) {
-    return -1;
-  }
+  return -1;
 }
