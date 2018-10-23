@@ -1,13 +1,12 @@
 export function followTheSpy(arr) {
   const leng = arr.length;
-  let final = [arr[0][0], arr[0][1]];
+  const final = [arr[0][0], arr[0][1]];
   for (let i = 1; i < leng; i++) {
     for (let j = 0; j < leng; j++) {
-      if (arr[j][0]===final[i]) {
+      if (arr[j][0] === final[i]) {
         final.push(arr[j][1]);
       }
     }
   }
-  let finalStr = final.join(', ');
-  return finalStr;
+  return final.join(', ');
 }

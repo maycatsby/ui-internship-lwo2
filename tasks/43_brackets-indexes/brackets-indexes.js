@@ -4,11 +4,11 @@ export function findCloseIndex(text, openPos) {
   if (text[openPos] !== '(') {
     return -1;
   }
-  while (currentPos<text.length) {
+  while (currentPos < text.length) {
     let elemAtNextPos = text[++currentPos];
-    if (elemAtNextPos == '(') {
+    if (elemAtNextPos === '(') {
       counter++;
-    } else if (elemAtNextPos == ')') {
+    } else if (elemAtNextPos === ')') {
       counter--;
     }
     if (counter === 0) {

@@ -1,5 +1,5 @@
 export function firstNSmallest(arr, k) {
-  let final = [];
+  const final = [];
   const arrLeng = arr.length;
   for (let i = k; i < arrLeng; ++i) {
     let maxVar = arr[k - 1];
