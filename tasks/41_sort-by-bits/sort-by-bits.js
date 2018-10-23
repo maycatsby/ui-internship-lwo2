@@ -1,5 +1,5 @@
 export function sortByBits(arr) {
-  arr.sort(function(a, b) {
+  return arr.sort(function(a, b) {
     /* eslint-disable-next-line */
     let n = (a.toString(2).match(/1/g) || []).length-(b.toString(2).match(/1/g) || []).length;
     if (n !== 0) {
@@ -7,5 +7,4 @@ export function sortByBits(arr) {
     }
     return a-b;
   });
-  return arr;
 }

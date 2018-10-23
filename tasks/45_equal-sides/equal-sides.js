@@ -11,11 +11,11 @@ export function findEqualIndex(arr) {
     for (let j = i + 1; j < arrLeng; j++) {
       rightsum += arr[j];
     }
-    if (leftsum == rightsum) {
+    if (leftsum === rightsum) {
       return i;
     }
   }
-  if (leftsum != rightsum) {
+  if (leftsum !== rightsum) {
     return -1;
   }
 }

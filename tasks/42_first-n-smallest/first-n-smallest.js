@@ -22,5 +22,5 @@ export function firstNSmallest(arr, k) {
   for (let i = 0; i < k; i++) {
     final.push(arr[i]);
   }
-  return final;
+  return final.slice(0, arr.length);
 }
