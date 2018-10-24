@@ -1,4 +1,4 @@
-// import { smallestCommons } from './smaller-common-multiple';
+import { smallestCommons } from './smaller-common-multiple';
 
 xdescribe('Smallest common multiple', () => {
 
