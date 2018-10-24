@@ -2,7 +2,7 @@ export function sortByBits(arr) {
   let newArr=[];
   let tempArray=[];
   arr.forEach(function(elem) {
-    newArr.push(elem.toString(2).split('').map(Number).reduce((a,b)=>a+b,0));
+    newArr.push(elem.toString(2).split('').map(Number).reduce((a, b)=>a+b, 0));
   });
   newArr.forEach(function(elem, index) {
     tempArray[index] = [arr[index], newArr[index]];
