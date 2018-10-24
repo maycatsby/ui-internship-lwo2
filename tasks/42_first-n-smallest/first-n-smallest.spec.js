@@ -1,9 +1,6 @@
 import { firstNSmallest } from './first-n-smallest';
 
 describe('first-n-smallest', () => {
-    test(`firstNSmallest([1, 2, 3, 4, 5], 10) should return [0, 0, 0]`, () => {
-        expect(firstNSmallest([1,2,3,4,5], 10)).toEqual([0, 0, 0]);
-    });
 
     test(`firstNSmallest([5, 4, 3, 2, 1], 3) should return [3, 2, 1]`, () => {
         expect(firstNSmallest([5, 4, 3, 2, 1], 3)).toEqual([3, 2, 1]);
