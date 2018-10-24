@@ -8,15 +8,21 @@ export function stringExpansion(str) {
     return str;
   }
   for (let i = 0; i < strArr.length; i++) {
-    if (typeof strArr[i+1] ==='string') {
-      newArr.push(strArr[i+1].repeat(strArr[i]));
-      let del= strArr.shift(strArr[i+1]);
-      console.log(strArr);
-      console.log(del);
-      console.log(strArr.length);
-    } else if (typeof strArr[i-1] === 'number') {
-      newArr.push(strArr[i].repeat(strArr[0]));
+    if (typeof strArr[i-1] ==='number') {
+      newArr.push(strArr[i].repeat(strArr[i-1]));
+    } else if (typeof strArr[i-1]!== 'number') {
+      strArr.shift(strArr[i-1]);
     }
+    //   let del= strArr.shift(strArr[i+1]);
+    //   console.log(strArr);
+    //   console.log(del);
+    //   console.log(strArr.length);
+    // } else if (typeof strArr[i-1] === 'number') {
+    //   newArr.push(strArr[i].repeat(strArr[0]));
+    // }
+  } 
+  while(typeof strArr[i-1]!=== 'number') {
+
   }
   return newArr.join('');
 }

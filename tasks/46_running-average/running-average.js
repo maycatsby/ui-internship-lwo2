@@ -1,13 +1,7 @@
-// export function runningAverage() {
-//     return function(num) {
-//       return ( + num) / 2;
-//     };
-//   }
-
-  export function runningAverage(value) {
-       let n = 0;
-       return function(n) {
-           n++;
-           return value / n;
-  }
+export const runningAverage = () => {
+  const arr = [];
+  return function(n) {
+    arr.push(n);
+    return arr.reduce((a, b) => a + b ) / arr.length;
+  };
 }
