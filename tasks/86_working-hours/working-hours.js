@@ -1,2 +1,0 @@
-export function formatWorkingHours(arr) {
-}
