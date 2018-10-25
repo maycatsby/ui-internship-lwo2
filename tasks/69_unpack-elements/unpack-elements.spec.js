@@ -1,4 +1,4 @@
-// import { unpackArray } from './unpack-elements';
+import { unpackArray } from './unpack-elements';
 
 xdescribe('Unpack array', () => {
 
