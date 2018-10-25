@@ -4,4 +4,5 @@ export const runningAverage = () => {
     arr.push(n);
     return arr.reduce((a, b) => a + b ) / arr.length;
   };
-}
+};
+

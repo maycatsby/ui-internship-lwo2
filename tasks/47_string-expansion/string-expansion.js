@@ -1,5 +1,5 @@
 export function stringExpansion(str) {
-  let res = '';
+  let newStr = '';
   let number = 1;
   let strArr = str.split('').map((el) => {
     let num = Number(el);
@@ -9,8 +9,8 @@ export function stringExpansion(str) {
     if (typeof strArr[i] === 'number') {
       number = strArr[i];
     } else {
-      res += strArr[i].repeat(number);
+      newStr += strArr[i].repeat(number);
     }
   }
-  return res;
+  return newStr;
 }

@@ -1,3 +1,4 @@
+/* eslint-disable*/
 String.prototype.camelCase = function() {
   let newArr = this.split(' ');
   for (let i = 0; i < newArr.length; i++) {
