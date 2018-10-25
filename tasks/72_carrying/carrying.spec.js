@@ -1,4 +1,4 @@
-// import { addTogether } from './carrying';
+import { addTogether } from './carrying';
 
 xdescribe('carrying', () => {
     test('addTogether(2, 3) should return 5', () => {
