@@ -1,5 +1,6 @@
 export function sumPrimes(num) {
   let sum = 0;
+
   function checkPrime(n) {
     for (let i = 2; i < n; i++) {
       if (n % i === 0) {
@@ -13,5 +14,6 @@ export function sumPrimes(num) {
       sum += i;
     }
   }
+
   return sum;
 }

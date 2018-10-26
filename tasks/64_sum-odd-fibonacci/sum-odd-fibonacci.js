@@ -4,6 +4,6 @@ export function sumFibs(n) {
     if ((fiboArr[i-1] + fiboArr[i-2]) > n) break;
     fiboArr[i] = fiboArr[i-1] + fiboArr[i-2];
   }
-  fiboArr = fiboArr.filter((el) => el % 2 !== 0);
-  return fiboArr.reduce((res, item) => res + item);
+
+  return fiboArr.filter((el) => el % 2 !== 0).reduce((res, item) => res + item);
 }

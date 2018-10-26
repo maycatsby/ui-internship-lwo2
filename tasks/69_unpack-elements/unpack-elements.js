@@ -1,5 +1,6 @@
 export function unpackArray(arr) {
   const newArray = [];
+
   function unpack(arr) {
     arr.forEach(function(item) {
       if (!Array.isArray(item)) {
@@ -10,5 +11,6 @@ export function unpackArray(arr) {
     });
   }
   unpack(arr);
+
   return newArray;
 }

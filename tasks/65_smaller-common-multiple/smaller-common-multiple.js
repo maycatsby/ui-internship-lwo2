@@ -3,6 +3,7 @@ export function smallestCommons(arr) {
   let max = Math.max(arr[0], arr[1]);
   let smallest = min * max;
   let calc = 0;
+
   while (calc === 0) {
     for (let i = min; i <= max; i++) {
       if (smallest % i !== 0) {
@@ -14,5 +15,6 @@ export function smallestCommons(arr) {
       }
     }
   }
+
   return smallest;
 }
