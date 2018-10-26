@@ -1,5 +1,5 @@
 /* eslint "require-jsdoc": 0 */
-export const humanYearsCatYearsDogYears = (human) => {
+export const humanYearsCatYearsDogYears = (humanAge) => {
   let catAge;
   let dogAge;
   const dogFirst = 15;
@@ -8,17 +8,17 @@ export const humanYearsCatYearsDogYears = (human) => {
   const catFirst = 15;
   const catSecond = 9;
   const catNext = 4;
-  if (human === 1) {
+  if (humanAge === 1) {
     catAge = catFirst;
     dogAge = dogFirst;
   }
-  if (human === 2) {
+  if (humanAge === 2) {
     catAge = catFirst + catSecond;
     dogAge = dogFirst + dogSecond;
   }
-  if (human > 2) {
-    catAge = catFirst + (catNext * human) + 1;
-    dogAge = dogFirst + (dogNext * human) - 1;
+  if (humanAge > 2) {
+    catAge = catFirst + (catNext * humanAge) + 1;
+    dogAge = dogFirst + (dogNext * humanAge) - 1;
   }
-  return [human, catAge, dogAge];
+  return [humanAge, catAge, dogAge];
 };
