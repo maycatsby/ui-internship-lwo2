@@ -12,13 +12,16 @@ export function formatWorkingHours(input) {
   let sun = 'sun';
   const hours = [];
   input.forEach(function(el) {
-    return el.day === mon ? mon = el.day.toUpperCase() + ':' + ' ' + el.from + ' ' + '-' + ' ' + el.to
-      : el.day === tue ? tue = el.day.toUpperCase() + ':' + ' ' + el.from + ' ' + '-' + ' ' + el.to
-      : el.day === wed ? wed = el.day.toUpperCase() + ':' + ' ' + el.from + ' ' + '-' + ' ' + el.to
-      : el.day === thu ? thu = el.day.toUpperCase() + ':' + ' ' + el.from + ' ' + '-' + ' ' + el.to
-      : el.day === fri ? fri = el.day.toUpperCase() + ':' + ' ' + el.from + ' ' + '-' + ' ' + el.to
-      : el.day === sat ? sat = el.day.toUpperCase() + ':' + ' ' + el.from + ' ' + '-' + ' ' + el.to
-      : sun = el.day.toUpperCase() + ':' + ' ' + el.from + ' ' + '-' + ' ' + el.to;
+    const upper = el.day.toUpperCase();
+    const from = el.from;
+    const to = el.to;
+    return el.day === mon ? mon = upper + ':' + ' ' + from + ' ' + '-' + ' ' + to
+      : el.day === tue ? tue = upper + ':' + ' ' + from + ' ' + '-' + ' ' + to
+      : el.day === wed ? wed = upper + ':' + ' ' + from + ' ' + '-' + ' ' + to
+      : el.day === thu ? thu = upper + ':' + ' ' + from + ' ' + '-' + ' ' + to
+      : el.day === fri ? fri = upper + ':' + ' ' + from + ' ' + '-' + ' ' + to
+      : el.day === sat ? sat = upper + ':' + ' ' + from + ' ' + '-' + ' ' + to
+      : sun = upper + ':' + ' ' + from + ' ' + '-' + ' ' + to;
   });
   hours.push(mon, tue, wed, thu, fri, sat, sun);
   let formated = hours.reduce(function(acc, next) {
@@ -27,8 +30,10 @@ export function formatWorkingHours(input) {
     }
     let time1 = acc[acc.length - 1].match(/\d\d:\d\d - \d\d:\d\d/g);
     let time2 = next.match(/\d\d:\d\d - \d\d:\d\d/g);
-    if (JSON.stringify(time1) === JSON.stringify(time2) && JSON.stringify(acc[acc.length - 1] !== JSON.stringify(next))) {
-      acc[acc.length -1] = acc[acc.length - 1].slice(0, 3) + ' ' + '-' + ' ' + next;
+    if (JSON.stringify(time1) === JSON.stringify(time2)
+    && JSON.stringify(acc[acc.length - 1] !== JSON.stringify(next))) {
+      acc[acc.length -1] = acc[acc.length - 1]
+          .slice(0, 3) + ' ' + '-' + ' ' + next;
     } else {
       acc.push(next);
     }
@@ -41,10 +46,12 @@ export function formatWorkingHours(input) {
     if (elleng === 3 || elleng === 9) {
       rest.push(el);
     } else if (el.slice(0, 3) === el.slice(6, 9)) {
-      timeTable += el.slice(6) + '\n';
+      timeTable = el.slice(6);
+      rest.push(timeTable);
     } else {
-      timeTable += el + ',' + '\n';
+      timeTable = el;
+      rest.push(timeTable);
     }
   });
-  return [timeTable.replace(/.$/, '')];
+  return rest;
 }
