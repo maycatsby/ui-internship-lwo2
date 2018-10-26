@@ -1,4 +1,4 @@
-// import { convertHTML } from './convert-html-entities';
+//import { convertHTML } from './convert-html-entities';
 
 
 xdescribe('Convert HTML entities', () => {
