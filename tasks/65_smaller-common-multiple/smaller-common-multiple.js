@@ -1,15 +1,22 @@
 export const smallestCommons = (arr) => {
-  const rangeArr = [Math.min(...arr)];
-  let num = rangeArr[0] + 1;
-  while (num <= Math.max(...arr)) {
+  const minNum = Math.min(...arr);
+  const maxNum = Math.max(...arr);
+  const rangeArr = [minNum];
+  let num = minNum + 1;
+  let curCheckNum = maxNum * 2;
+
+  while (num <= maxNum) {
     rangeArr.push(num);
     num++;
   }
-  let curN = Math.max(...rangeArr) * 2;
-  let condition = rangeArr.every((el) => el % curN === 0);
-  while (!condition) {
-    curN += rangeArr[rangeArr.length - 1];
-    condition = rangeArr.every((el) => curN % el === 0);
+
+  while (!isCommonNumberMult(rangeArr, curCheckNum)) {
+    curCheckNum += maxNum;
   }
-  return curN;
+
+  function isCommonNumberMult(array, checkNum) {
+    return array.every((el) => checkNum % el === 0);
+  }
+
+  return curCheckNum;
 };
