@@ -1,5 +1,4 @@
 export function palindrome(str) {
-  let newStr = str.replace(/[^\w]|_/g, '').toLowerCase();
-  let reversed = newStr.split('').reverse().join('');
-  return newStr === reversed;
+  const newStr = str.replace(/[^\w]|_/g, '').toLowerCase();
+  return newStr === newStr.split('').reverse().join('');
 }
