@@ -40,7 +40,7 @@ xdescribe('Stack class', () => {
         })
     });
 
-    xdescribe('pop method', () => {
+    describe('pop method', () => {
         test('Should do nothing for empty list', () => {
             const lastSnapshotBeforePop = JSON.stringify(stack.last);
             stack.pop();

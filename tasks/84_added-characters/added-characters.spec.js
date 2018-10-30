@@ -1,6 +1,6 @@
-import { addedChar } from './added_characters';
+// import { addedChar } from './added_characters';
 
-describe('Three added characters', () => {
+xdescribe('Three added characters', () => {
     test("addedChar('aabbcc', 'aacccbbcc') should return ‘c’", () => {
         expect(addedChar('aabbcc', 'aacccbbcc')).toBe('c');
     });
@@ -9,7 +9,7 @@ describe('Three added characters', () => {
         expect(addedChar('abcde', '2db2a2ec')).toBe('2');
     });
 
-    // test("addedChar('hello', 'aacccbbcc') should return ‘c’", () => {
-    //     expect(addedChar('hello', 'aacccbbcc')).toBe('c');
-    // });
+    test("addedChar('hello', 'aacccbbcc') should return ‘c’", () => {
+        expect(addedChar('hello', 'aacccbbcc')).toBe('c');
+     });
 });
