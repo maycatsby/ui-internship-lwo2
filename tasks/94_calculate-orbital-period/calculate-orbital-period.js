@@ -12,7 +12,7 @@ export function orbitalPeriod(arr) {
 
   for (let i=0; i< args[0].length; i++) {
     result = oPeriod(args[0][i]);
-    ret = ret.concat({'name': args[0][i]['name'], 
+    ret = ret.concat({'name': args[0][i]['name'],
       'orbitalPeriod': result});
   }
 
