@@ -1,6 +1,6 @@
-import { formatWorkingHours } from './working-hours';
+//import { formatWorkingHours } from './working-hours';
 
-const = [
+const INPUT_DATA = [
     {
         "day": "sat",
         "from": "10:00",
