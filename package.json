@@ -5,6 +5,7 @@
   "scripts": {
     "test": "jest",
     "lint": "./node_modules/.bin/eslint tasks/**/*.js",
+    "lint:fix": "./node_modules/.bin/eslint tasks/**/*.js --fix",
     "tdd": "jest --watch"
   },
   "husky": {
