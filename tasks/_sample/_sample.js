@@ -5,6 +5,7 @@
  * @param {Number} value
  * @return {*}
  */
+/* eslint 'require-jsdoc': 0 */
 export function binarySearch(array, value) {
   let guess;
   let min = 0;
@@ -12,17 +13,14 @@ export function binarySearch(array, value) {
 
   while (min <= max) {
     guess = Math.floor((min + max) / 2);
-
     if (array[guess] === value) {
       return guess;
     }
-
     if (array[guess] < value) {
       min = guess + 1;
     } else {
       max = guess - 1;
     }
   }
-
   return -1;
 }
