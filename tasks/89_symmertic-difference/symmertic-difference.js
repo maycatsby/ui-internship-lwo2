@@ -1,32 +1,17 @@
 /* eslint "require-jsdoc": 0 */
-export function sym() {
-  let arr = [];
-  let simddif = [];
-  const argsLength = arguments.length;
-  for (let i = 0; i < argsLength; i++) {
-    /* eslint-disable-next-line */
-    arr.push(unique(arguments[i]));
-  }
-  function unique(arr) {
-    return arr.filter((e, i, a) => a.indexOf(e) == i);
-  }
-  const arrLength = arr.length;
-  for (let i = 1; i < arrLength; i++) {
-    if (i === 1) {
-      simddif = diffArray(arr[0], arr[1]);
-    } else {
-      simddif = diffArray(simddif, arr[i]);
-    }
-  }
-  function diffArray(arr1, arr2) {
-    let newArr = [];
-    arr1.forEach((val) => {
-      if (arr2.indexOf(val) < 0) newArr.push(val);
+export function sym(...args) {
+  let arrays = [].slice.call(args);
+  const diff = (arr1, arr2) => {
+    return arr1.filter((value) => {
+      return !~arr2.indexOf(value);
     });
-    arr2.forEach((val) => {
-      if (arr1.indexOf(val) < 0) newArr.push(val);
-    });
-    return newArr;
-  }
-  return simddif.sort();
+  };
+  return arrays.reduce((accArr, curArr) => {
+    return [].concat( diff(accArr, curArr), diff(curArr, accArr) )
+        .filter((v, i, self) => {
+          return self.indexOf(v) === i;
+        });
+  }).sort((a, b) => {
+    return a > b;
+  });
 }
