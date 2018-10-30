@@ -12,4 +12,4 @@ export const Person = function(firstAndLastName) {
   this.getFullName = () => names.join(' ');
   this.getFirstName = () => names[0];
   this.getLastName = () => names[1];
-}; 
+};
