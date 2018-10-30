@@ -1,7 +1,7 @@
-// import { LinkedList } from './linked-list';
+import { LinkedList } from './linked-list';
 
 
-xdescribe('LinkedList', () => {
+describe('LinkedList', () => {
     let list;
 
     beforeEach(() => {

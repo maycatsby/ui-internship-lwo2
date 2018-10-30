@@ -1,7 +1,7 @@
-// import { Stack } from './stack';
+import { Stack } from './stack';
 
 
-xdescribe('Stack class', () => {
+describe('Stack class', () => {
     let stack;
 
     const firstNodeValue = 5;
