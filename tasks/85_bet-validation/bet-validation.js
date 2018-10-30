@@ -9,8 +9,10 @@ export const validate_bet = ([count, max], str) => {
     }
   }
   str1.forEach((el) => {
-    if(isNaN(el)) return 'None'
-  })
+    if (isNaN(el)) {
+      return 'None';
+    }
+  });
   str1 = str1.map((item) => +item);
   if (str1.length !== count) {
     return 'None';
