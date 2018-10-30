@@ -1,11 +1,11 @@
 /* eslint "require-jsdoc": 0 */
 export const minNumberToPrime = (arr) => {
-  let arrSum = arr.reduce((a, b) => {
+  const arrSum = arr.reduce((a, b) => {
     return a + b;
   });
   const isPrime = (value) => {
-    for (let i = 2; i <= value/2 + 1; i++) {
-      if (value % i == 0 && i != value) return false;
+    for (let i = 2; i <= value / 2 + 1; i++) {
+      if (value % i === 0 && i !== value) return false;
     }
     return true;
   };

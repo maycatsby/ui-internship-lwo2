@@ -1,6 +1,6 @@
 /* eslint "require-jsdoc": 0 */
 export const maxTripletSum = (arr) => {
-  let uniqueArr = arr.reduce((unique, current) => {
+  const uniqueArr = arr.reduce((unique, current) => {
     if (!unique.includes(current)) {
       unique.push(current);
     }

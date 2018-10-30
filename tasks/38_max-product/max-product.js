@@ -1,7 +1,7 @@
 /* eslint "require-jsdoc": 0 */
 export const maxProduct = (arr) => {
-  let res = [];
-  let mainArr = arr.concat();
+  const res = [];
+  const mainArr = arr.concat();
   mainArr.forEach((element, index) => {
     let count = index + 1;
     while (count < arr.length) {

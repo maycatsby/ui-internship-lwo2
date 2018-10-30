@@ -9,7 +9,7 @@ export const findFriend = (line) => {
     }
     if ((line[i] === 'red') && (line[i + 1] === 'blue') &&
      (line[i + 2] === 'blue')) {
-      counter ++;
+      counter++;
     }
   }
   return counter;
