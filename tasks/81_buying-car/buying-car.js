@@ -1,4 +1,5 @@
-export function nbMonths(startPriceOld, startPriceNew, savingPerMonth, percentLossByMonth) {
+export function nbMonths(startPriceOld, startPriceNew,
+    savingPerMonth, percentLossByMonth) {
   if (startPriceOld >= startPriceNew) {
     return [0, Math.floor(startPriceOld - startPriceNew)];
   }
@@ -16,5 +17,6 @@ export function nbMonths(startPriceOld, startPriceNew, savingPerMonth, percentLo
     decreasedPriceOld -= decreasedPriceOld * (loss / 100);
     decreasedPriceNew -= decreasedPriceNew * (loss / 100);
   }
-  return [months, Math.round(totalSaving + decreasedPriceOld - decreasedPriceNew)];
+  return [months,
+    Math.round(totalSaving + decreasedPriceOld - decreasedPriceNew)];
 }
