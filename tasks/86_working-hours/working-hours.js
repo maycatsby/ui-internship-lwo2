@@ -1,4 +1,4 @@
-/* eslint 'require-jsdoc': 0 */
+/* eslint 'working-hours.js': 0 */
 
 const DAYS = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 
