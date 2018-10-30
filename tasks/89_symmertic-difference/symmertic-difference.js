@@ -1,8 +1,12 @@
-export function sym(...arrays) {
-  const allItems = arrays.reduce((a, c)=>a.concat(c), []);
-  // Identify repeated items
-  const repeatedItems = allItems.filter((v, i, a)=>a.indexOf(v) !== i);
-  // Filter repeated items out
-  const diff = allItems.filter((item)=>repeatedItems.indexOf(item) < 0);
-  return diff;
+export function sym(...args) {
+  return args.reduce((arr, cur) => {
+    /* eslint-disable-next-line */
+    const set = [...new Set(cur)];
+    for (let i = 0; i < set.length; i++) {
+      const unique = arr.indexOf(set[i]);
+      if (unique === -1) arr.push(set[i]);
+      else arr.splice(unique, 1);
+    }
+    return arr;
+  }, []).sort((a, b) => a - b);
 }
