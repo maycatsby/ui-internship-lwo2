@@ -34,4 +34,3 @@ export function lookupProfile(firstName, prop) {
       return 'No such property';
     }
   } return 'No such contact';
-}

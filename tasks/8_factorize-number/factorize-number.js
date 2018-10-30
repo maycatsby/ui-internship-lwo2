@@ -8,5 +8,5 @@ export function factorialize(n) {
   if (f[n] > 0) {
     return f[n];
   }
-  return f[n] = factorialize(n - 1) * n;
+  return f[n] = factorialize(n-1) * n;
 }

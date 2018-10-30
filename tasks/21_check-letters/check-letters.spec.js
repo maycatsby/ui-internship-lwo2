@@ -1,4 +1,4 @@
-// import { checkLetters } from './check-letters';
+ //import { checkLetters } from './check-letters';
 
 xdescribe('check-letters', () => {
     test('checkLetters(["hello", "hey"]) should return false', () => {
