@@ -1,6 +1,6 @@
-// import { Person } from './make-a-person';
+import { Person } from './make-a-person';
 
-// const bob = new Person('Bob Ross');
+const bob = new Person('Bob Ross');
 
 xdescribe('Make a person', () => {
 
