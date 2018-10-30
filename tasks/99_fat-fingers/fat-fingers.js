@@ -1,11 +1,16 @@
-export function fatFingers(word) {
-  let newWord = '';
-  for (let i = 0; i < word.length; i++) {
-    if (word.charCodeAt(i) == 65) {
-      newWord = newWord + word.charAt(i).toLowerCase();
+export function fatFingers(str) {
+  let isCapsLock = false;
+  let result = '';
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === 'A' || str[i] === 'a') {
+      isCapsLock = !isCapsLock;
+      continue;
+    }
+    if (isCapsLock) {
+      result += str[i].toUpperCase();
     } else {
-      newWord = newWord + word.charAt(i).toUpperCase();
+      result += str[i];
     }
   }
-  return newWord;
+  return result;
 }
