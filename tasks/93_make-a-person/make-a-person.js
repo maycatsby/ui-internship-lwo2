@@ -15,11 +15,11 @@ export class Person {
   }
   setFirstName(first) {
     this.firstName = first;
-    this.fullName = `${this.firstName} ${this.lastName}`;
+    this.fullName = this.firstName + ' ' + this.lastName;
   }
   setLastName(last) {
     this.lastName = last;
-    this.fullName = `${this.firstName} ${this.lastName}`;
+    this.fullName = this.firstName + ' ' + this.lastName;
   }
   setFullName(firstAndLast) {
     this.fullName = firstAndLast;
