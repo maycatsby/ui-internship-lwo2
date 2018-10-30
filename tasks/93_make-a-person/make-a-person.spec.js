@@ -2,7 +2,7 @@ import { Person } from './make-a-person';
 
 const bob = new Person('Bob Ross');
 
-xdescribe('Make a person', () => {
+describe('Make a person', () => {
     test('bob instanceof Person', () => {
         expect(bob instanceof Person).toBe(true);
     });

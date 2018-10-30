@@ -62,7 +62,7 @@ describe('LinkedList', () => {
         expect(list.tail).toBe(null);
     });
 
-    xdescribe('insertAfter method', () => {
+    describe('insertAfter method', () => {
         const firstValue = 5;
         const secondValue = 10;
         const valueToInsert = 30;
@@ -93,7 +93,7 @@ describe('LinkedList', () => {
         });
     });
 
-    xdescribe('removeItem method', () => {
+    describe('removeItem method', () => {
         const firstValue = 1;
         const existedValue = 2;
         const notExistedValue = 3;
