@@ -17,5 +17,4 @@ export const validate_bet = (arr, str) => {
   }).sort((a, b) => a - b);
   if (strArr.length < arr[0]) return 'None';
   return strArr;
-
 };
