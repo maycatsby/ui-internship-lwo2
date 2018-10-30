@@ -1,57 +1,64 @@
-/* eslint max-len: [ "error", { "code" : 130 }] */
+const DAYS = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+function checkSequentialDays(first, second) {
+  const firstIndex = DAYS.findIndex((elem) => elem === first.day);
+  const secondIndex = DAYS.findIndex((elem) => elem === second.day);
+
+  return secondIndex - firstIndex === 1;
+}
+
+function testDivide(sortedArray) {
+  let result = [];
+
+  sortedArray.reduce((prev, cur) => {
+    const range = `${cur.from} - ${cur.to}`;
+
+    if (result.length === 0) {
+      const firstRange = `${prev.from} - ${prev.to}`;
+      result.push({
+        range: firstRange,
+        start: Object.assign({}, prev),
+        end: Object.assign({}, prev),
+      });
+    }
+
+    const index = result.findIndex((elem) => elem.range === range);
+    if (index === -1 || !checkSequentialDays(result[index].end, cur) ) {
+      result.push({
+        range: range,
+        start: Object.assign({}, cur),
+        end: Object.assign({}, cur),
+      });
+    } else {
+      result[index].end = Object.assign({}, cur);
+    }
+
+    return cur;
+  });
+
+  return result;
+}
+
 export function formatWorkingHours(input) {
-  if (!input.length) {
+  if (!input.length && Array.isArray(input)) {
     return [];
   }
-  let mon = 'mon';
-  let tue = 'tue';
-  let wed = 'wed';
-  let thu = 'thu';
-  let fri = 'fri';
-  let sat = 'sat';
-  let sun = 'sun';
-  const hours = [];
-  input.forEach(function(el) {
-    const upper = el.day.toUpperCase();
-    const from = el.from;
-    const to = el.to;
-    return el.day === mon ? mon = upper + ':' + ' ' + from + ' ' + '-' + ' ' + to
-      : el.day === tue ? tue = upper + ':' + ' ' + from + ' ' + '-' + ' ' + to
-      : el.day === wed ? wed = upper + ':' + ' ' + from + ' ' + '-' + ' ' + to
-      : el.day === thu ? thu = upper + ':' + ' ' + from + ' ' + '-' + ' ' + to
-      : el.day === fri ? fri = upper + ':' + ' ' + from + ' ' + '-' + ' ' + to
-      : el.day === sat ? sat = upper + ':' + ' ' + from + ' ' + '-' + ' ' + to
-      : sun = upper + ':' + ' ' + from + ' ' + '-' + ' ' + to;
+  const sorted = DAYS.map((day) => {
+    return input.find((inputDay) => inputDay.day === day);
   });
-  hours.push(mon, tue, wed, thu, fri, sat, sun);
-  let formated = hours.reduce(function(acc, next) {
-    if (!acc.length) {
-      acc[0] = hours[0];
-    }
-    let time1 = acc[acc.length - 1].match(/\d\d:\d\d - \d\d:\d\d/g);
-    let time2 = next.match(/\d\d:\d\d - \d\d:\d\d/g);
-    if (JSON.stringify(time1) === JSON.stringify(time2)
-    && JSON.stringify(acc[acc.length - 1] !== JSON.stringify(next))) {
-      acc[acc.length -1] = acc[acc.length - 1]
-          .slice(0, 3) + ' ' + '-' + ' ' + next;
+
+  const arrObj = testDivide(sorted);
+
+  const res = [];
+  for (let i = 0; i < arrObj.length; i++) {
+    const range = arrObj[i];
+    if (range.start.day === range.end.day) {
+      res.push(`${range.start.day.toUpperCase()}: ${range.range}`);
     } else {
-      acc.push(next);
+      res.push(`${range.start.
+          day.toUpperCase()} - ${range.end.day.toUpperCase()}: ${range.range}`);
     }
-    return acc;
-  }, []);
-  let timeTable = '';
-  let rest = [];
-  formated.forEach(function(el) {
-    const elleng = el.length;
-    if (elleng === 3 || elleng === 9) {
-      rest.push(el);
-    } else if (el.slice(0, 3) === el.slice(6, 9)) {
-      timeTable = el.slice(6);
-      rest.push(timeTable);
-    } else {
-      timeTable = el;
-      rest.push(timeTable);
-    }
-  });
-  return rest;
+  }
+
+  return res;
 }
