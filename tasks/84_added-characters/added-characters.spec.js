@@ -11,5 +11,5 @@ xdescribe('Three added characters', () => {
 
     test("addedChar('hello', 'aacccbbcc') should return ‘c’", () => {
         expect(addedChar('hello', 'aacccbbcc')).toBe('c');
-    });
+     });
 });
