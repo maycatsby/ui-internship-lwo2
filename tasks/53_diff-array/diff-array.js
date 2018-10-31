@@ -1,19 +1,4 @@
-export function diffArray(arr1, arr2) {
-  const concatArr = arr1.concat(arr2);
-
-
-
-
-
-
-
-
-
-
-
-  
-  const uniqArr = concatArr.filter(function(a, b) {
-  return concatArr.indexOf(a)==b;
-});
-  return uniqArr;
-}
+export const diffArray = (arr1, arr2) => {
+  const newArr = arr1.concat(arr2);
+  return newArr.filter((el, i, arr) => arr.indexOf(el) === arr.lastIndexOf(el));
+};
