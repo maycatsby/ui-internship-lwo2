@@ -8,7 +8,6 @@ export function translatePigLatin(str) {
       index = i;
     }
   }
-
   if (index > 0) {
     str = str.slice(index) + str.substring(0, index) + 'ay';
   } else {

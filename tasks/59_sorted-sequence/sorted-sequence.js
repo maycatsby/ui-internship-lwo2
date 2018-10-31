@@ -1,6 +1,6 @@
 export function uniteUnique(...arr) {
-  const uniqArr = arr[0].concat(...arr);
-  return uniqArr.filter(function(a, b) {
-    return uniqArr.indexOf(a)==b;
+  const uniqArray = arr[0].concat(...arr);
+  return uniqArray.filter(function(a, b) {
+    return uniqArray.indexOf(a)==b;
   });
 }

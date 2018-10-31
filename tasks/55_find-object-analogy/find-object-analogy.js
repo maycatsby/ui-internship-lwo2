@@ -1,9 +1,9 @@
-export function whatIsInAName(arr1, arr2) {
-  const keys = Object.keys(arr2);
+export function whatIsInAName(array1, array2) {
+  const keys = Object.keys(array2);
 
-  return arr1.filter(function(obj) {
+  return array1.filter(function(obj) {
     return keys.every(function(key) {
-      return obj.hasOwnProperty(key) && obj[key] === arr2[key];
+      return obj.hasOwnProperty(key) && obj[key] === array2[key];
     });
   });
 }

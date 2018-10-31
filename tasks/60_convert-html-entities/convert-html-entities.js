@@ -1,5 +1,5 @@
-export function convertHTML(str) {
-  return str.replace(/&/g, '&amp;')
+export function convertHTML(string) {
+  return string.replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
