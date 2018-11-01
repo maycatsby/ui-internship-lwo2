@@ -1,4 +1,4 @@
-// import { validate_bet } from './bet-validation';
+import { validate_bet } from './bet-validation';
 
 xdescribe('validate_bet', () => {
     test("validate bet '1 2 3 4 5' should return [1, 2, 3, 4, 5]", () => {
