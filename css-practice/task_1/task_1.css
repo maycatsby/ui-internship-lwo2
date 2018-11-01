@@ -1,0 +1,15 @@
+body {
+    margin: 70px;
+}
+a {
+display: flex;
+justify-content: flex-end;
+}
+section {
+    display:flex;
+    justify-content: space-between;
+}
+article {
+    width: 414pt;
+    height: 63pt;
+}
