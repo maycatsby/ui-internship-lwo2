@@ -11,7 +11,7 @@ height: 100%;
   position: relative;
 }
 
-.mainPage #triangleM {
+ #triangleM {
   position: absolute;
   top: 10%;
   left: 47%;
@@ -47,7 +47,7 @@ height: 100%;
   line-height: 1.7em;
 }
 
-.mainPage #scroller {
+#scroller {
   position: absolute;
   bottom: 10%;
   left: 48.5%;
@@ -121,6 +121,7 @@ height: 100%;
   border-top: none;
   padding: 55px 120px 35px 120px;
 }
+
 .services p:before {
   display: block;
   content: '';
@@ -142,6 +143,38 @@ height: 100%;
   width: 240px;
   height: 2px;
 }
+
+.whatWeDo {
+  width: 100vw;
+  height: 120vh;
+  position: relative;
+}
+.textBlock{
+  border: 2px solid #3c3c3c;
+  padding: 150px 120px 60px 120px;
+  position: relative;
+  top: 19%;
+  left: 23%;
+  width: 520px;
+  margin-bottom: 130px;
+}
+
+.whatWeDo h4 {
+  position: absolute;
+  font-family: Avenir;
+  color: #3c3c3c;
+  font-size: 30px;
+  letter-spacing: 3px;
+  left: 38.5%;
+  top: 11%;
+  z-index: 1;
+  background-color: #ffffff;
+  padding: 5px 55px 5px 55px;
+  text-transform: uppercase;
+}
+
+
+
 
 
 
