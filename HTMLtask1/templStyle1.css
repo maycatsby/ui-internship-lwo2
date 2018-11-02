@@ -1,6 +1,7 @@
 html {
-width: 100%;
-height: 100%;
+margin: 0;
+padding: 0;
+font-family: 'Lato', sans-serif;
 }
 
 .mainPage {
@@ -8,49 +9,44 @@ height: 100%;
   height: 100vh;
   background-image: url("pics/mainBackground.jpg");
   background-size: cover;
-  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
- #triangleM {
-  position: absolute;
-  top: 10%;
-  left: 47%;
-  }
-
-.mainPage h1 {
-  position: absolute;
-  top: 30%;
-  left: 30%;
-  right: 30%;
-  text-align: center;
-  font-family: Avenir;
-  color: #ffffff;
-  font-size: 40px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 6px;
+.main {
+  width: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.mainPage p {
-  position: absolute;
-  top: 50%;
-  left: 17%;
-  width: 900px;
-  height: 90px;
-  overflow: auto;
+#triangleM {
+  margin: 120px 0 60px 0;
+}
+
+.mainHead {
   text-align: center;
-  font-family: Avenir;
   color: #ffffff;
+  font-size: 54px;
+  font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 8.62px;
+}
+
+.mainPar {
+  text-align: center;
+  color: #ffffff;
   font-size: 15px;
-  letter-spacing: 5px;
-  line-height: 1.7em;
+  font-weight: 400;
+  line-height: 29px;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  margin: 40px 0 50px 0;
 }
 
 #scroller {
-  position: absolute;
-  bottom: 10%;
-  left: 48.5%;
+  margin: 43px 0 40px 0;
 }
 
 .about {
@@ -63,25 +59,23 @@ height: 100%;
   visibility: hidden;
 }
 
-.about h4 {
+.aboutHead {
   position: absolute;
-  font-family: Avenir;
   color: #3c3c3c;
   font-size: 30px;
   letter-spacing: 3px;
   left: 40%;
-  top: 9%;
+  top: 13%;
   z-index: 1;
   background-color: #ffffff;
   padding: 5px 55px 5px 55px;
   text-transform: uppercase;
 }
 
-.about p {
+.aboutPar {
   position: absolute;
   top: 19%;
   left: 23%;
-  font-family: Avenir;
   font-size: 14px;
   text-align: center;
   color: #3c3c3c;
@@ -97,23 +91,21 @@ height: 100%;
   background-size: cover;
 }
 
-.services h4 {
+.servHead {
   position: absolute;
-  font-family: Avenir;
   color: #ffffff;
   font-size: 30px;
   letter-spacing: 3px;
   left: 40%;
-  top: 6%;
+  top: 13%;
   padding: 5px 55px 5px 55px;
   text-transform: uppercase;
 }
 
-.services p {
+.servPar {
   position: absolute;
   top: 19%;
   left: 23%;
-  font-family: Avenir;
   font-size: 14px;
   text-align: center;
   color: #ffffff;
@@ -122,7 +114,7 @@ height: 100%;
   padding: 55px 120px 35px 120px;
 }
 
-.services p:before {
+.servPar:before {
   display: block;
   content: '';
   position: absolute;
@@ -133,7 +125,7 @@ height: 100%;
   height: 2px;
 }
 
-.services p:after {
+.servPar:after {
   display: block;
   content: '';
   position: absolute;
@@ -146,12 +138,13 @@ height: 100%;
 
 .whatWeDo {
   width: 100vw;
-  height: 120vh;
   position: relative;
+  margin-top: 130px;
 }
+
 .textBlock{
   border: 2px solid #3c3c3c;
-  padding: 150px 120px 60px 120px;
+  padding: 50px 120px 60px 120px;
   position: relative;
   top: 19%;
   left: 23%;
@@ -159,22 +152,168 @@ height: 100%;
   margin-bottom: 130px;
 }
 
-.whatWeDo h4 {
+.whatWeDoHead {
   position: absolute;
-  font-family: Avenir;
   color: #3c3c3c;
   font-size: 30px;
   letter-spacing: 3px;
   left: 38.5%;
-  top: 11%;
+  top: -20px;
   z-index: 1;
   background-color: #ffffff;
   padding: 5px 55px 5px 55px;
   text-transform: uppercase;
 }
 
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.wwdPic {
+  margin-top: 60px;
+}
 
+.wwdHead {
+  color: #3c3c3c;
+  font-size: 22px;
+  letter-spacing: 2px;
+  margin: 40px 0 40px 0;
+}
 
+.wwdPar {
+  color: #3c3c3c;
+  font-size: 14px;
+  text-align: center;
+  width: inherit;
+}
 
+.gallery {
+  width: 100vw;
+  height: 55vh;
+  position: relative;
+}
 
+.gridDisplay {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+}
+
+.pics {
+  height: 27.5vh;
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 8.95px;
+  text-decoration: none;
+  position: relative;
+}
+
+.pics:hover {
+  color: #3c3c3c;
+}
+
+.galText {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+}
+
+#pic1 {
+  background-image: url(pics/serv1.png);
+}
+
+#pic2 {
+  background-image: url(pics/serv3.png);
+}
+
+#pic3 {
+  background-image: url(pics/serv5.png);
+}
+
+#pic4 {
+  background-image: url(pics/serv2.png);
+}
+
+#pic5 {
+  background-image: url(pics/serv4.png);
+}
+
+#pic6 {
+  background-image: url(pics/serv6.png);
+}
+
+.contact {
+  margin: 150px 0 150px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #3c3c3c;
+  width: 900px;
+  position: absolute;
+  left: 17%;
+  margin-bottom: 100px;
+}
+
+.contactHead {
+  color: #3c3c3c;
+  font-size: 30px;
+  letter-spacing: 3px;
+  top: 10%;
+  z-index: 1;
+  background-color: #ffffff;
+  padding: 5px 55px 5px 55px;
+  text-transform: uppercase;
+  transform: translateY(30px);
+}
+
+.contactPar {
+  max-width: 600px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #3c3c3c;
+  padding: 55px 120px 35px 120px;
+}
+
+.text {
+  font-size: 14px;
+  text-align: center;
+  color: #3c3c3c;
+}
+
+button {
+  width: 395px;
+  height: 58px;
+  border: 2px solid #3c3c3c;
+  background-color: #3c3c3c;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2.54px;
+  margin: 40px 0 20px 0;
+}
+
+.foot {
+  position: relative;
+}
+
+#contactPic {
+ 
+}
+
+.copyright {
+}

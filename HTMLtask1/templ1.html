@@ -5,64 +5,86 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Ellipsis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="templStyle1.css" />
 </head>
 <body>
-  <div class=mainPage>
-    <img src="pics/mainLabel.png" alt="Triangle label" id=triangleM>
-    <h1>Working<br> with design lab</h1>
-    <p>We’ve been helping startups launch and grow their businesses.<br> We help you to fill the gap between development,<br>
-      design and product management.</p>
-    <img src="pics/mainMouseLabel.png" alt="Scroller" id=scroller>
+  <div class="mainPage">
+      <div class="main">
+        <img src="pics/mainLabel.png" alt="Triangle label" id="triangleM">
+        <div class="mainHead">Working<br> with design lab</div>
+        <div class="mainPar">We’ve been helping startups launch and grow their businesses.<br>
+           We help you to fill the gap between development,<br>
+          design and product management.
+        </div>
+        <img src="pics/mainMouseLabel.png" alt="Scroller" id="scroller">
+      </div>
   </div>
-  <div class=about>
-    <h4>About us</h4>
-    <p>When you work with us, you are part of a team of committed collaborators.<br> 
+  <div class="about">
+    <div class="aboutHead">About us</div>
+    <div class="aboutPar">When you work with us, you are part of a team of committed collaborators.<br> 
       All aspects of our software development process are integrated, iterative and agile.<br><br>
       Our approach unifies design, development and<br> 
       product management to create exceptional products.<br> 
       We start each project by understanding your business goals,<br> 
       the user’s needs and the product requirements.<br> 
       Then we help translate them into effective and elegant solutions.
-    </p>
+    </div>
   </div>
-  <div class=services>
-    <h4>Services</h4>
-    <p>Before we sign a contract or write a line of code our team will spend the necessary<br> time needed to understand your product vision.<br> 
+  <div class="services">
+    <div class="servHead">Services</div>
+    <div class="servPar">Before we sign a contract or write a line of code our team will spend the necessary<br> time needed to understand your divroduct vision.<br> 
       The outcome of this scoping session is a proposal or high-level statement of work.<br> 
-      Based on your requirements, we can provide a complete offering or just the pieces<br> you need. </p>
+      Based on your requirements, we can provide a complete offering or just the pieces<br> you need. </div>
   </div>
-  <div class=whatWeDo>
-    <h4>What we do</h4>
-    <div class=textBlock>
-      <div>
-        <img src="pics/wwdDes.png" alt="Design" id=wwdDes>
-        <h6 id=wwdDesHead>Design</h6>
-        <p id=wwdParDes>Our design practice offers a full range of services including branding strategy,<br>
-          interaction and visual design and user experience testing.<br> 
+  <div class="whatWeDo">
+    <div class="whatWeDoHead">What we do</div>
+    <div class="textBlock">
+      <div class="item">
+        <img src="pics/wwdDes.png" alt="Design" class="wwdPic">
+        <div class="wwdHead">Design</div>
+        <div class="wwdPar">Our design practice offers a full range of services including branding strategy,<br>
+          interaction and visual design and user experience testing. 
           Throughout your project, our designers create and implement visual designs and workflows,<br> solicit user feedback, and work with you to make sure what gets built is what is needed. 
-        </p>
+        </div>
       </div>
-      <div>
-        <img src="pics/wwdDev.png" alt="Development" id=wwdDev>
-        <h6 id=wwdDevHead>Development</h6>
-        <p id=wwdParDev>All engineers are fluent in the latest enterprise, mobile and web development technologies.<br> 
-          They collaborate with your team to write, test, and improve code on a daily basis, using proven<br> practices such as test-driven development and pair programing.
-        </p>
+      <div class="item">
+        <img src="pics/wwdDev.png" alt="Development" class="wwdPic">
+        <div class=wwdHead>Development</div>
+        <div class=wwdPar>All engineers are fluent in the latest enterprise, mobile and web development technologies. 
+          They collaborate with your team to write, test, and improve code on a daily basis, using proven practices such as test-driven development and pair programming.
+        </div>
       </div> 
-      <div>
-        <img src="pics/wwdPM.png" alt="Product Management" id=wwdPM>
-        <h6 id=wwdPMHead>Product Management</h6>
-        <p id=wwdParPM>Planning and development is iterative. Because we are constantly coding and testing, the<br> products we build are always ready to go live. This iterative process allows for changes as<br> business requirements evolve. 
-        </p>
+      <div class="item">
+        <img src="pics/wwdPM.png" alt="Product Management" class="wwdPic">
+        <div class="wwdHead">Product Management</div>
+        <div class="wwdPar">Planning and development is iterative. Because we are constantly coding and testing, the products we build are always ready to go live. This iterative process allows for changes as business requirements evolve. 
+        </div>
       </div>
     </div>
   </div>
-  <div class=galery>
-
+  <div class="gallery">
+    <div class="gridDisplay">
+        <a id="pic1" class="pics" href="#"><span class="galText">Topworks</span></a>
+        <a id="pic2" class="pics" href="#"><span class="galText">Joint</span></a>
+        <a id="pic3" class="pics" href="#"><span class="galText">Market</span></a>
+        <a id="pic4" class="pics" href="#"><span class="galText">Worktop</span></a>
+        <a id="pic5" class="pics" href="#"><span class="galText">Lable</span></a>
+        <a id="pic6" class="pics" href="#"><span class="galText">Kyiv</span></a>
+    </div>
   </div>
-  <div class=contact>
-
+  <div class="contact">
+    <div class="contactHead">Contact us</div>
+    <div class="contactPar">
+      <p class="text">Planning and development is iterative. Because we are constantly coding and testing, 
+          the products we build are always ready to go live. This iterative process allows for changes as business 
+          requirements evolve.</p> 
+      <button>Contact us</button>
+    </div>
   </div>
+  <footer>
+    <img src="pics/contactLabel.png" alt="Contacts label" id="contactPic">
+    <div class="copyright">© 2018. All Rights Reserved Ellipsis.com</div>
+  </footer>
 </body>
 </html>
