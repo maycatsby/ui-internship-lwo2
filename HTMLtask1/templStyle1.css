@@ -4,7 +4,7 @@ padding: 0;
 font-family: 'Lato', sans-serif;
 }
 
-.mainPage {
+.main-page {
   width: 100vw;
   height: 100vh;
   background-image: url("pics/mainBackground.jpg");
@@ -25,7 +25,7 @@ font-family: 'Lato', sans-serif;
   margin: 120px 0 60px 0;
 }
 
-.mainHead {
+.main-head {
   text-align: center;
   color: #ffffff;
   font-size: 54px;
@@ -34,7 +34,7 @@ font-family: 'Lato', sans-serif;
   letter-spacing: 8.62px;
 }
 
-.mainPar {
+.main-par {
   text-align: center;
   color: #ffffff;
   font-size: 15px;
@@ -59,7 +59,7 @@ font-family: 'Lato', sans-serif;
   visibility: hidden;
 }
 
-.aboutHead {
+.about-head {
   position: absolute;
   color: #3c3c3c;
   font-size: 30px;
@@ -72,7 +72,7 @@ font-family: 'Lato', sans-serif;
   text-transform: uppercase;
 }
 
-.aboutPar {
+.about-par {
   position: absolute;
   top: 19%;
   left: 23%;
@@ -91,7 +91,7 @@ font-family: 'Lato', sans-serif;
   background-size: cover;
 }
 
-.servHead {
+.serv-head {
   position: absolute;
   color: #ffffff;
   font-size: 30px;
@@ -102,7 +102,7 @@ font-family: 'Lato', sans-serif;
   text-transform: uppercase;
 }
 
-.servPar {
+.serv-par {
   position: absolute;
   top: 19%;
   left: 23%;
@@ -114,7 +114,7 @@ font-family: 'Lato', sans-serif;
   padding: 55px 120px 35px 120px;
 }
 
-.servPar:before {
+.serv-par:before {
   display: block;
   content: '';
   position: absolute;
@@ -125,7 +125,7 @@ font-family: 'Lato', sans-serif;
   height: 2px;
 }
 
-.servPar:after {
+.serv-par:after {
   display: block;
   content: '';
   position: absolute;
@@ -136,13 +136,13 @@ font-family: 'Lato', sans-serif;
   height: 2px;
 }
 
-.whatWeDo {
+.what-we-do {
   width: 100vw;
   position: relative;
   margin-top: 130px;
 }
 
-.textBlock{
+.text-block{
   border: 2px solid #3c3c3c;
   padding: 50px 120px 60px 120px;
   position: relative;
@@ -152,7 +152,7 @@ font-family: 'Lato', sans-serif;
   margin-bottom: 130px;
 }
 
-.whatWeDoHead {
+.what-we-do-head {
   position: absolute;
   color: #3c3c3c;
   font-size: 30px;
@@ -171,18 +171,18 @@ font-family: 'Lato', sans-serif;
   align-items: center;
 }
 
-.wwdPic {
+.wwd-pic {
   margin-top: 60px;
 }
 
-.wwdHead {
+.wwd-head {
   color: #3c3c3c;
   font-size: 22px;
   letter-spacing: 2px;
   margin: 40px 0 40px 0;
 }
 
-.wwdPar {
+.wwd-par {
   color: #3c3c3c;
   font-size: 14px;
   text-align: center;
@@ -195,7 +195,7 @@ font-family: 'Lato', sans-serif;
   position: relative;
 }
 
-.gridDisplay {
+.grid-display {
   display: grid;
   grid-template-columns: 1fr 1.5fr 1fr;
   grid-row-gap: 10px;
@@ -217,7 +217,7 @@ font-family: 'Lato', sans-serif;
   color: #3c3c3c;
 }
 
-.galText {
+.gal-text {
   position: absolute;
   bottom: 10%;
   left: 10%;
@@ -255,18 +255,7 @@ font-family: 'Lato', sans-serif;
   align-items: center;
 }
 
-.contactFlex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 2px solid #3c3c3c;
-  width: 900px;
-  position: absolute;
-  left: 17%;
-  margin-bottom: 100px;
-}
-
-.contactHead {
+.contact-head {
   color: #3c3c3c;
   font-size: 30px;
   letter-spacing: 3px;
@@ -278,7 +267,7 @@ font-family: 'Lato', sans-serif;
   transform: translateY(30px);
 }
 
-.contactPar {
+.contact-par {
   max-width: 600px;
   display: flex;
   margin: 0 auto;
@@ -313,7 +302,7 @@ footer {
   justify-content: center;
 }
 
-#contactPic {
+#contact-pic {
   margin: 10px;
 }
 
