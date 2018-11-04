@@ -4,7 +4,13 @@ padding: 0;
 font-family: 'Lato', sans-serif;
 }
 
-.main-page {
+.flex-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
   width: 100vw;
   height: 100vh;
   background-image: url("pics/mainBackground.jpg");
@@ -16,9 +22,6 @@ font-family: 'Lato', sans-serif;
 .main {
   width: 600px;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 #triangleM {
@@ -52,7 +55,7 @@ font-family: 'Lato', sans-serif;
 .about {
   width: 100vw;
   height: 60vh;
-  position: relative;
+  justify-content: center;
 }
 
 .about hr {
@@ -60,58 +63,51 @@ font-family: 'Lato', sans-serif;
 }
 
 .about-head {
-  position: absolute;
   color: #3c3c3c;
   font-size: 30px;
   letter-spacing: 3px;
-  left: 40%;
-  top: 13%;
+  text-align: center;
   z-index: 1;
   background-color: #ffffff;
   padding: 5px 55px 5px 55px;
   text-transform: uppercase;
+  transform: translateY(30px);
 }
 
 .about-par {
-  position: absolute;
-  top: 19%;
-  left: 23%;
-  font-size: 14px;
   text-align: center;
-  color: #3c3c3c;
+  font-size: 14px;
   border: 2px solid #3c3c3c;
+  color: #3c3c3c;
   padding: 55px 120px 35px 120px;
 }
 
 .services {
   width: 100vw;
   height: 55vh;
-  position: relative;
   background-image: url("pics/servBack.png");
   background-size: cover;
+  justify-content: center;
 }
 
 .serv-head {
-  position: absolute;
   color: #ffffff;
   font-size: 30px;
   letter-spacing: 3px;
   left: 40%;
-  top: 13%;
   padding: 5px 55px 5px 55px;
   text-transform: uppercase;
+  transform: translateY(25px);
 }
 
 .serv-par {
-  position: absolute;
-  top: 19%;
-  left: 23%;
   font-size: 14px;
   text-align: center;
   color: #ffffff;
   border: 2px solid #ffffff;
   border-top: none;
   padding: 55px 120px 35px 120px;
+  position: relative;
 }
 
 .serv-par:before {
@@ -138,39 +134,26 @@ font-family: 'Lato', sans-serif;
 
 .what-we-do {
   width: 100vw;
-  position: relative;
-  margin-top: 130px;
+  justify-content: center;
+  height: 1300px;
 }
 
 .text-block{
   border: 2px solid #3c3c3c;
   padding: 50px 120px 60px 120px;
-  position: relative;
-  top: 19%;
-  left: 23%;
   width: 520px;
-  margin-bottom: 130px;
 }
 
 .what-we-do-head {
-  position: absolute;
   color: #3c3c3c;
   font-size: 30px;
   letter-spacing: 3px;
-  left: 38.5%;
-  top: -20px;
   z-index: 1;
   background-color: #ffffff;
   padding: 5px 55px 5px 55px;
   text-transform: uppercase;
+  transform: translateY(30px);
 }
-
-.item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .wwd-pic {
   margin-top: 60px;
 }
@@ -192,7 +175,6 @@ font-family: 'Lato', sans-serif;
 .gallery {
   width: 100vw;
   height: 55vh;
-  position: relative;
 }
 
 .grid-display {
@@ -248,11 +230,8 @@ font-family: 'Lato', sans-serif;
 }
 
 .contact {
-  margin: 150px 0 150px 0;
+  margin: 100px 0;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .contact-head {
@@ -269,10 +248,7 @@ font-family: 'Lato', sans-serif;
 
 .contact-par {
   max-width: 600px;
-  display: flex;
   margin: 0 auto;
-  flex-direction: column;
-  align-items: center;
   border: 2px solid #3c3c3c;
   padding: 55px 120px 35px 120px;
 }
@@ -296,16 +272,18 @@ button {
   margin: 40px 0 20px 0;
 }
 
+button:hover {
+  background-color: #ffffff;
+  color: #3c3c3c;
+  border: 2px solid #3c3c3c;
+}
+
 footer {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 #contact-pic {
   margin: 10px;
-}
-
-.copyright {
-  margin: 0;
 }
