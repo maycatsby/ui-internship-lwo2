@@ -54,7 +54,7 @@ header {
 
 .about {
   width: 100vw;
-  height: 60vh;
+  height: 400px;
   justify-content: center;
 }
 
@@ -84,7 +84,7 @@ header {
 
 .services {
   width: 100vw;
-  height: 55vh;
+  height: 300px;
   background-image: url("pics/servBack.png");
   background-size: cover;
   justify-content: center;
@@ -286,4 +286,33 @@ footer {
 
 #contact-pic {
   margin: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    width: 300px;
+    height: 100%;
+  }
+
+  .about {
+    height: 500px;
+  }
+
+  .services {
+    height: 400px;
+  }
+
+  .text-block {
+    border: 2px solid #3c3c3c;
+    padding: 25px 90px 30px 90px;
+    width: 400px;
+}
+
+  .gal-text {
+    float: left;
+    transform: rotate(90deg);
+    font-size: 20px;
+    vertical-align: baseline;
+    top: 0;
+  }
 }
