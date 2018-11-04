@@ -307,13 +307,16 @@ button {
   margin: 40px 0 20px 0;
 }
 
-.foot {
-  position: relative;
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #contactPic {
- 
+  margin: 10px;
 }
 
 .copyright {
+  margin: 0;
 }
