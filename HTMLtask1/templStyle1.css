@@ -60,7 +60,7 @@ html {
   }
   
   #scroller {
-    margin: 43px 0 40px 0;
+    margin: 12px 0 10px 0;
   }
   
   .about {
@@ -84,9 +84,9 @@ html {
     background-color: #ffffff;
     padding: 5px 55px 5px 55px;
     text-transform: uppercase;
-    -webkit-transform: translateY(30px);
-        -ms-transform: translateY(30px);
-            transform: translateY(30px);
+    -webkit-transform: translateY(50px);
+        -ms-transform: translateY(50px);
+            transform: translateY(50px);
   }
   .paragraphs {
     text-align: center;
@@ -116,9 +116,9 @@ html {
     left: 40%;
     padding: 5px 55px 5px 55px;
     text-transform: uppercase;
-    -webkit-transform: translateY(25px);
-        -ms-transform: translateY(25px);
-            transform: translateY(25px);
+    -webkit-transform: translateY(45px);
+        -ms-transform: translateY(45px);
+            transform: translateY(45px);
   }
   
   .serv-par {
@@ -172,9 +172,9 @@ html {
     background-color: #ffffff;
     padding: 5px 55px 5px 55px;
     text-transform: uppercase;
-    -webkit-transform: translateY(30px);
-        -ms-transform: translateY(30px);
-            transform: translateY(30px);
+    -webkit-transform: translateY(50px);
+        -ms-transform: translateY(50px);
+            transform: translateY(50px);
   }
   .wwd-pic {
     margin-top: 60px;
@@ -265,9 +265,9 @@ html {
     background-color: #ffffff;
     padding: 5px 55px 5px 55px;
     text-transform: uppercase;
-    -webkit-transform: translateY(30px);
-        -ms-transform: translateY(30px);
-            transform: translateY(30px);
+    -webkit-transform: translateY(50px);
+        -ms-transform: translateY(50px);
+            transform: translateY(50px);
   }
   
   .contact-par {
