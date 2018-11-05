@@ -8,30 +8,57 @@ p {
   line-height: 1.5!important;
 }
 
+.container {
+  max-width: 1061px;
+  margin: 0 auto;
+}
+
 /* Header */
 
 #main-header{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* height: 100vh; */
   position: relative;
   min-height: 600px; 
 }
 .header{ 
+  display: -webkit-box; 
+  display: -ms-flexbox; 
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  height: 1vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+          
+  padding: 68px 0 72px;        
+  /* width: 90%; */
+}
+.logo {
+  width: 40%;
 }
 .menu{
-  width: 50%;
+  width: 60%;
 }
 .menu ul{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .menu li{
   list-style: none;
@@ -51,7 +78,7 @@ p {
   text-decoration: none;
 }
 .baner{
-  width: 90%;
+  /* width: 90%; */
 }
 .baner img{
   width: 100%;
@@ -60,16 +87,30 @@ p {
 /* Main content */
 
 .content{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 .photodiary{
-  width: 70%;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 .photodiary span, .card-holder span{
   font-family: Ubuntu;
@@ -92,9 +133,14 @@ p {
   width: 100%;
 }
 .card-holder{
-  width: 70%;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   
 }
 .card{
@@ -104,8 +150,12 @@ p {
   width: 45%;
 }
 .row{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 100px;
 }
 .row img{
@@ -135,10 +185,18 @@ p {
 .sidebar{
   height: 300px;
   background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-bottom: 100px;
 }
 .sidebar h2{
@@ -158,7 +216,24 @@ p {
   outline: none;
   font-size: 20px;
   font-family: "Playfair Display";
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
+}
+.form input::-webkit-input-placeholder{
+  color: #626262;
+  font-size: 18px;
+  font-family: "Playfair Display";
+}
+.form input:-ms-input-placeholder{
+  color: #626262;
+  font-size: 18px;
+  font-family: "Playfair Display";
+}
+.form input::-ms-input-placeholder{
+  color: #626262;
+  font-size: 18px;
+  font-family: "Playfair Display";
 }
 .form input::placeholder{
   color: #626262;
@@ -167,30 +242,52 @@ p {
 }
 .form input[type="text"]:hover{
   opacity: 0.4;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 /* Card Bar */
 .card-bar{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 .card-bar .row{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 100px;
-  width: 70%;
+  width: 80%;
 }
 .card-bar span{
   font-family: Ubuntu;
   text-transform: uppercase;
 }
 .button{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-bottom: 100px;
 }
 .button .btn{
@@ -202,11 +299,15 @@ p {
   font-family: "Playfair Display";
   color: #626262;
   cursor: pointer;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 .button .btn:hover{
   background-color: #626262;
   color: #fff;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 .button .btn:active{
@@ -217,24 +318,42 @@ p {
 
 footer{
   background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100px;
 }
 .footer{
-  width: 70%;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .footer-menu{
   width: 30%
 }
 .footer-menu ul{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .footer-menu li{
   list-style: none;
@@ -251,9 +370,15 @@ footer{
   text-decoration: none;
 }
 .follow-link{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 25%;
 }
 .follow-link p{
@@ -346,6 +471,15 @@ footer{
     height: 20px;
     font-size: 15px;
   }
+  .form input::-webkit-input-placeholder{
+    font-size: 15px;
+  }
+  .form input:-ms-input-placeholder{
+    font-size: 15px;
+  }
+  .form input::-ms-input-placeholder{
+    font-size: 15px;
+  }
   .form input::placeholder{
     font-size: 15px;
   }
@@ -400,25 +534,46 @@ footer{
   
   /* Header */
   #main-header{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 80vh;
     position: relative;
     min-height: 600px; 
   }
   .header{ 
-    flex-direction: column;
+    -webkit-box-orient: vertical; 
+    -webkit-box-direction: normal; 
+        -ms-flex-direction: column; 
+            flex-direction: column;
     width: 100%;
+  }
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
   .menu{
     margin-top: 50px;
     width: 100%;
   }
   .menu ul{
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .menu li{
     background-color: #fff;
@@ -457,7 +612,10 @@ footer{
     width: 100%;
   }
   .row{
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .row span{
     font-size: 12px;
@@ -484,6 +642,15 @@ footer{
   .form input[type="text"]{
     width: 200px;
     height: 20px;
+  }
+  .form input::-webkit-input-placeholder{
+    font-size: 15px;
+  }
+  .form input:-ms-input-placeholder{
+    font-size: 15px;
+  }
+  .form input::-ms-input-placeholder{
+    font-size: 15px;
   }
   .form input::placeholder{
     font-size: 15px;
@@ -537,6 +704,7 @@ footer{
     font-size: 12px;
   }
   .fa-instagram{
+    font-size: 12px;
   }
   .fa-instagram:hover{
     font-size: 12px;
