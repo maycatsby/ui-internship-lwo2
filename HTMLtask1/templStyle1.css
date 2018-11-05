@@ -126,6 +126,7 @@ html {
     border: 2px solid #ffffff;
     border-top: none;
     position: relative;
+    margin-bottom: 65px;
   }
   
   .serv-par:before {
@@ -155,7 +156,8 @@ html {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 1500px;
+    height: 1340px;
+    margin-bottom: 50px;
   }
   
   .text-block{
@@ -252,7 +254,7 @@ html {
   }
   
   .contact {
-    margin: 100px 0;
+    margin: 40px 0;
     position: relative;
   }
   
