@@ -1,28 +1,37 @@
 body {
   max-width: 1200px;
   margin: auto;
+  min-width: 600px;
 }
+
 header, nav {
+  min-width: 680px;
   margin-left: 70px;
   margin-right: 70px;
 }
+
 header {
   margin-top: 72px;
   text-align: center;
 }
+
 header img {
   width:100%;
   height:100%;
 }
+
 h2, p, button, .about .title, .singup {
   font-family: 'Playfair Display', serif;
 }
+
 nav a, h2, .about, .about .title, button {
   color: #626262;
 }
+
 .description, .about .name, .about .comment{
   color: #b4ad9e;
 } 
+
 .register, .register input, footer {
   background-color: #f0f0f0;
 }
@@ -36,20 +45,24 @@ nav {
         -ms-flex-pack: justify;
             justify-content: space-between;
 }
+
 nav img {
   margin-right: 265px;
 }
+
 main {
 	margin-top: 93px;
   padding-right:150px;
   padding-left: 150px;
 }
+
 nav a {
   text-decoration: none;
   font-size: 14px;
   line-height: 24px;
   height: 11px;
 }
+
 section {
   display:-webkit-box;
   display:-ms-flexbox;
@@ -62,9 +75,11 @@ section {
 	margin-right: 10px;
 	margin-bottom: 110px;
 }
+
 article {
 	width: 410px;
 }
+
 .description {
   margin-top: 25px;
   width: 85px;
@@ -74,32 +89,37 @@ article {
   text-transform: uppercase;
   font-family: 'Ubuntu', sans-serif;
 }
+
 h2 {
 	margin-top: 25px;
 	font-size: 30px;
 	font-weight: 400;
 }
+
 p {
   font-size: 14px;
 	line-height: 1.75;
   font-weight: 400;
 	
 }
+
 .about {
   margin-top: 70px;
   text-align: left;
-  font-family: 'Ubuntu', sans-serif;
-    
+  font-family: 'Ubuntu', sans-serif;  
 }
+
 .about .name {
   font-size: 14px;
   margin-bottom: 15px;
 }
+
 .about .comment {
   font-size: 14px;
   margin-top: 50px;
 	margin-bottom: 128px;
 }
+
 .about .title {
   margin-bottom: 38px;
   width: 407px;
@@ -107,19 +127,21 @@ p {
   font-size: 30px;
   font-weight: 400;
 }
+
 .register {
 	margin-right: -150px;
 	margin-left: -150px;
   height: 287px;
 	margin-bottom: 100px;
 } 
+
 .singup {
 	font-size: 30px;
   margin-top: 63px;
   word-spacing: 3px;
   color:#333333;
-
 }
+
 .register input {
 	margin-top: 65px;
   text-align: left;
@@ -129,9 +151,11 @@ p {
   border-bottom: 1px solid #000;
   height: 40px;
 }
+
 .send {
   margin-left: -30px;
 }
+
 button {
   width: 164px;
   height: 60px;
@@ -139,6 +163,7 @@ button {
 	font-size: 20px;
 	background-color: #ffffff;
 }
+
 .button {
   height: 600px;
   display: -webkit-box;
@@ -150,6 +175,7 @@ button {
             justify-content: center;
 	margin-bottom: 830px;
 }
+
 .reg {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -165,6 +191,7 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+
 footer {
   height: 97px;
   display: -webkit-box;
@@ -174,6 +201,7 @@ footer {
         -ms-flex-pack: justify;
             justify-content: space-between;
 }
+
 .follow {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -184,6 +212,7 @@ footer {
   margin-top: 27px;
   margin-right: 60px;
 }
+
 footer a {
   margin: 10px;
   color: #000;
