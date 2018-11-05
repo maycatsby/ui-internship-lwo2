@@ -18,16 +18,16 @@ html {
   }
   
   header {
-    width: 100vw;
-    height: 100vh;
     background-image: url("pics/mainBackground.jpg");
     background-size: cover;
+    background-position: center no-repeat;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-bottom: 80px        
   }
   
   .main {
@@ -36,7 +36,7 @@ html {
   }
   
   #triangleM {
-    margin: 120px 0 60px 0;
+    margin: 286px 926px 94px 929px;
   }
   
   .main-head {
@@ -46,6 +46,9 @@ html {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 8.62px;
+    margin: 0px 669px 53px 668px;
+    width: 595px;
+    height: 103px;
   }
   
   .main-par {
@@ -56,11 +59,13 @@ html {
     line-height: 29px;
     text-transform: uppercase;
     letter-spacing: 0.9px;
-    margin: 40px 0 50px 0;
+    margin: 0px 671px 245px 676px;
+    width: 574px;
+    height: 70px;
   }
   
   #scroller {
-    margin: 12px 0 10px 0;
+    margin: 0px 947px 115px 950px;
   }
   
   .about {
@@ -84,24 +89,27 @@ html {
     background-color: #ffffff;
     padding: 5px 55px 5px 55px;
     text-transform: uppercase;
-    -webkit-transform: translateY(50px);
-        -ms-transform: translateY(50px);
-            transform: translateY(50px);
+    -webkit-transform: translateY(207px);
+        -ms-transform: translateY(207px);
+            transform: translateY(207px);
   }
   .paragraphs {
     text-align: center;
     font-size: 14px;
     color: #3c3c3c;
-    padding: 55px 120px 35px 120px;
+    padding: 55px 160px;
   }
   
   .about-par {
     border: 2px solid #3c3c3c;
+    margin: 160px 510px 159px 508px;
+    padding: 76px 168px 53px 178px;
+    width: 535px;
+    height: 312px;
   }
   
   .services {
-    width: 100vw;
-    height: 300px;
+    margin: 159px 0 119px 0;
     background-image: url("pics/servBack.png");
     background-size: cover;
     -webkit-box-pack: center;
@@ -116,9 +124,9 @@ html {
     left: 40%;
     padding: 5px 55px 5px 55px;
     text-transform: uppercase;
-    -webkit-transform: translateY(45px);
-        -ms-transform: translateY(45px);
-            transform: translateY(45px);
+    -webkit-transform: translateY(91px);
+        -ms-transform: translateY(91px);
+            transform: translateY(91px);
   }
   
   .serv-par {
@@ -126,8 +134,10 @@ html {
     border: 2px solid #ffffff;
     border-top: none;
     position: relative;
-    margin-bottom: 65px;
-  }
+    margin: 50px 511px 114px 510px;
+    width: 641px;
+    height: 148px;
+}
   
   .serv-par:before {
     display: block;
@@ -152,18 +162,17 @@ html {
   }
   
   .what-we-do {
-    width: 100vw;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 1340px;
-    margin-bottom: 50px;
+    
   }
   
   .text-block{
     border: 2px solid #3c3c3c;
-    padding: 50px 120px 60px 120px;
-    width: 520px;
+    padding: 50px 120px 96px 120px;
+    width: 654px;
+    margin: -100px 510px 114px 508px;
   }
   
   .what-we-do-head {
@@ -174,9 +183,9 @@ html {
     background-color: #ffffff;
     padding: 5px 55px 5px 55px;
     text-transform: uppercase;
-    -webkit-transform: translateY(50px);
-        -ms-transform: translateY(50px);
-            transform: translateY(50px);
+    -webkit-transform: translateY(-53px);
+        -ms-transform: translateY(-53px);
+            transform: translateY(-53px);
   }
   .wwd-pic {
     margin-top: 60px;
@@ -209,7 +218,7 @@ html {
   }
   
   .pics {
-    height: 27.5vh;
+    height: 237px;
     color: #ffffff;
     font-size: 34px;
     font-weight: 700;
@@ -254,7 +263,7 @@ html {
   }
   
   .contact {
-    margin: 40px 0;
+    margin: 175px 0 0 0;
     position: relative;
   }
   
@@ -267,14 +276,14 @@ html {
     background-color: #ffffff;
     padding: 5px 55px 5px 55px;
     text-transform: uppercase;
-    -webkit-transform: translateY(50px);
-        -ms-transform: translateY(50px);
-            transform: translateY(50px);
+    -webkit-transform: translateY(-2px);
+        -ms-transform: translateY(-2px);
+            transform: translateY(-2px);
   }
   
   .contact-par {
-    max-width: 600px;
-    margin: 0 auto;
+    width: 890px;
+    margin: -52px auto;
     border: 2px solid #3c3c3c;
   }
   
@@ -288,7 +297,7 @@ html {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 2.54px;
-    margin: 40px 0 20px 0;
+    margin: 10px 0 43px 0;
   }
   
   button:hover {
@@ -307,6 +316,7 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin: 63px auto;        
   }
   
   #contact-pic {
@@ -315,20 +325,31 @@ html {
   
   @media screen and (max-width: 600px) {
     header {
-      height: 780px;
+      height: 820px;
+      margin-bottom: 0;
     }
     
     .main {
       width: 300px;
       height: 100%;
     }
-  
+    
+    .main-head {
+      font-size: 40px;
+    }
+
+    .main-par {
+      font-size: 12px;
+      margin: 0px 671px 95px 676px;
+    }
+
     .about {
       height: 450px;
     }
   
     .services {
       height: 400px;
+      margin: 30px 0 119px 0;
     }
   
     .serv-par:before {
@@ -358,7 +379,15 @@ html {
       padding: 25px 65px 30px 65px;
       width: 400px;
     }
-  
+    
+    .about-par {
+      border: 2px solid #3c3c3c;
+      margin: 160px 510px 159px 508px;
+      padding: 76px 168px 53px 178px;
+      width: 535px;
+      height: 312px;
+    }
+
     .paragraphs {
       text-align: center;
       font-size: 14px;
@@ -369,4 +398,13 @@ html {
     .gal-text {
       font-size: 10px;
     }
-  }
+
+    .contact-par {
+      width: 575px;
+    }
+
+    .serv-par {
+      width: 460px;
+      height: 148px;
+    }
+}
