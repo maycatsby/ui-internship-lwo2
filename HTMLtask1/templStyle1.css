@@ -185,6 +185,7 @@ html {
     font-size: 22px;
     letter-spacing: 2px;
     margin: 40px 0 40px 0;
+    text-align: center;
   }
   
   .wwd-par {
@@ -250,8 +251,6 @@ html {
     margin: 0 auto;
     width: 735px;
   }
-
-
   
   .contact-head {
     color: #3c3c3c;
@@ -290,6 +289,10 @@ html {
     border: 2px solid #3c3c3c;
   }
   
+  #contact-pic {
+    margin: 10px;
+  }
+
   footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -300,96 +303,101 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 63px auto;        
+    margin: 65px auto;        
   }
   
-  #contact-pic {
-    margin: 10px;
-  }
-  
-  @media screen and (max-width: 600px) {
-    header {
-      height: 820px;
-      margin-bottom: 0;
-    }
-    
-    .main {
-      width: 100%;
-      height: 100%;
-    }
-    
+  @media screen and (max-width: 576px) {
     .main-head {
-      font-size: 40px;
+      font-size: 20px;
+      margin-bottom: 0;
     }
 
     .main-par {
-      font-size: 12px;
-      margin: 0px 671px 95px 676px;
+      font-size: 8px;
+    }
+
+    #triangleM {
+      margin: 50px;
+      width: 25px;
+    }
+
+    #scroller {
+      width: 15px;
+      margin: 15px auto;
     }
 
     .about {
-      height: 450px;
+      margin: 0 15px 20px 15px;
     }
-  
+
+    .about-head {
+      font-size: 15px;
+      transform: translateY(30px);
+    }
+
     .services {
-      height: 400px;
-      margin: 30px 0 119px 0;
-      width: 100%;
-    }
-  
-    .serv-par:before {
-      display: block;
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: #ffffff;
-      width: 25%;
-      height: 2px;
-    }
-  
-    .serv-par:after {
-      display: block;
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: #ffffff;
-      width: 25%;
-      height: 2px;
-    }  
-  
-    .text-block {
-      border: 2px solid #3c3c3c;
-      padding: 25px 65px 30px 65px;
-      width: 70%;
-    }
-    
-    .about-par {
-      border: 2px solid #3c3c3c;
-      margin: 160px 510px 159px 508px;
-      padding: 76px 168px 53px 178px;
-      width: 70%;
-      height: 312px;
+      margin: 0 auto;
     }
 
-    .paragraphs {
-      text-align: center;
-      font-size: 14px;
-      color: #3c3c3c;
-      padding: 30px 50px 20px 50px;
-    } 
-  
-    .gal-text {
-      font-size: 10px;
-    }
-
-    .contact-par {
-      width: 90%;
+    .serv-head {
+      font-size: 15px;
+      transform: translateY(30px);
     }
 
     .serv-par {
-      width: 70%;
-      height: 148px;
+      margin: 0 15px 20px 15px;
+    }
+
+    .serv-par:before {
+      width: 75px;
+    }
+    
+    .serv-par:after {
+      width: 75px;
+    }
+
+    .what-we-do {
+      margin: 0 auto;
+      width: 280px;
+    }
+
+    .what-we-do-head {
+      font-size: 15px;
+      transform: translateY(30px);
+    }
+
+    .pics {
+      position: relative;
+    }
+    .gal-text {
+      font-size: 8px;
+      position: absolute;
+      transform: rotate(90deg);
+      top: 30%;
+      bottom: 30%;
+      right: 50%;
+    }
+
+    .contact {
+      margin: 0 auto;
+      width: inherit;
+    }
+
+    .contact-head {
+      font-size: 15px;
+      transform: translateY(30px);
+    }
+
+    .contact-par {
+      width: 280px;
+      padding: 15px 15px 0px 15px;
+    }
+
+    button {
+      width: 200px;
+    }
+
+    footer {
+      margin: 0 auto;
     }
 }
