@@ -3,6 +3,11 @@ html {
   padding: 0;
   font-family: 'Lato', sans-serif;
   }
+
+ body {
+   margin: 0;
+   height: 100%;
+ } 
   
   .flex-display {
     display: -webkit-box;
@@ -18,25 +23,14 @@ html {
   }
   
   header {
-    background-image: url("pics/mainBackground.jpg");
+    background-image: url(pics/mainBackground.jpg);
     background-size: cover;
-    background-position: center no-repeat;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-bottom: 80px        
-  }
-  
-  .main {
-    width: 600px;
-    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   
   #triangleM {
-    margin: 286px 926px 94px 929px;
+    margin: 285px auto;
   }
   
   .main-head {
@@ -59,13 +53,13 @@ html {
     line-height: 29px;
     text-transform: uppercase;
     letter-spacing: 0.9px;
-    margin: 0px 671px 245px 676px;
+    padding: 25px 0 150px 0;
     width: 574px;
     height: 70px;
   }
   
   #scroller {
-    margin: 0px 947px 115px 950px;
+    margin: 0px 950px 115px 950px;
   }
   
   .about {
@@ -102,14 +96,11 @@ html {
   
   .about-par {
     border: 2px solid #3c3c3c;
-    margin: 160px 510px 159px 508px;
-    padding: 76px 168px 53px 178px;
-    width: 535px;
-    height: 312px;
+    margin: 160px auto;
   }
   
   .services {
-    margin: 159px 0 119px 0;
+    margin: 70px auto;
     background-image: url("pics/servBack.png");
     background-size: cover;
     -webkit-box-pack: center;
@@ -134,9 +125,7 @@ html {
     border: 2px solid #ffffff;
     border-top: none;
     position: relative;
-    margin: 50px 511px 114px 510px;
-    width: 641px;
-    height: 148px;
+    margin: 50px;
 }
   
   .serv-par:before {
@@ -170,9 +159,8 @@ html {
   
   .text-block{
     border: 2px solid #3c3c3c;
-    padding: 50px 120px 96px 120px;
-    width: 654px;
-    margin: -100px 510px 114px 508px;
+    padding: 50px 120px;
+    margin-bottom: 100px;
   }
   
   .what-we-do-head {
@@ -183,9 +171,9 @@ html {
     background-color: #ffffff;
     padding: 5px 55px 5px 55px;
     text-transform: uppercase;
-    -webkit-transform: translateY(-53px);
-        -ms-transform: translateY(-53px);
-            transform: translateY(-53px);
+    -webkit-transform: translateY(47px);
+        -ms-transform: translateY(47px);
+            transform: translateY(47px);
   }
   .wwd-pic {
     margin-top: 60px;
@@ -201,11 +189,6 @@ html {
   .wwd-par {
     width: inherit;
     padding: 15px 80px 10px 80px;
-  }
-  
-  .gallery {
-    width: 100vw;
-    height: 55vh;
   }
   
   .grid-display {
@@ -263,8 +246,7 @@ html {
   }
   
   .contact {
-    margin: 175px 0 0 0;
-    position: relative;
+    margin: 25px 0;
   }
   
   .contact-head {
@@ -276,14 +258,12 @@ html {
     background-color: #ffffff;
     padding: 5px 55px 5px 55px;
     text-transform: uppercase;
-    -webkit-transform: translateY(-2px);
-        -ms-transform: translateY(-2px);
-            transform: translateY(-2px);
+    -webkit-transform: translateY(47px);
+        -ms-transform: translateY(47px);
+            transform: translateY(47px);
   }
   
   .contact-par {
-    width: 890px;
-    margin: -52px auto;
     border: 2px solid #3c3c3c;
   }
   
