@@ -63,8 +63,6 @@ html {
   }
   
   .about {
-    width: 100vw;
-    height: 400px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -83,20 +81,19 @@ html {
     background-color: #ffffff;
     padding: 5px 55px 5px 55px;
     text-transform: uppercase;
-    -webkit-transform: translateY(207px);
-        -ms-transform: translateY(207px);
-            transform: translateY(207px);
+    -webkit-transform: translateY(50px);
+        -ms-transform: translateY(50px);
+            transform: translateY(50px);
   }
   .paragraphs {
     text-align: center;
     font-size: 14px;
     color: #3c3c3c;
-    padding: 55px 160px;
+    padding: 55px 120px;
   }
   
   .about-par {
     border: 2px solid #3c3c3c;
-    margin: 160px auto;
   }
   
   .services {
@@ -112,12 +109,11 @@ html {
     color: #ffffff;
     font-size: 30px;
     letter-spacing: 3px;
-    left: 40%;
     padding: 5px 55px 5px 55px;
     text-transform: uppercase;
-    -webkit-transform: translateY(91px);
-        -ms-transform: translateY(91px);
-            transform: translateY(91px);
+    -webkit-transform: translateY(98px);
+        -ms-transform: translateY(98px);
+            transform: translateY(98px);
   }
   
   .serv-par {
@@ -126,6 +122,9 @@ html {
     border-top: none;
     position: relative;
     margin: 50px;
+    padding: 55px 120px;
+    text-align: center;
+    font-size: 14px;
 }
   
   .serv-par:before {
@@ -135,7 +134,7 @@ html {
     top: 0;
     left: 0;
     background: #ffffff;
-    width: 240px;
+    width: 250px;
     height: 2px;
   }
   
@@ -146,20 +145,22 @@ html {
     top: 0;
     right: 0;
     background: #ffffff;
-    width: 240px;
+    width: 250px;
     height: 2px;
   }
   
   .what-we-do {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center;
+            justify-content: center;  
+    width: 52%;
+    margin: 0 auto;   
     
   }
   
   .text-block{
     border: 2px solid #3c3c3c;
-    padding: 50px 120px;
+    padding: 50px;
     margin-bottom: 100px;
   }
   
@@ -246,7 +247,8 @@ html {
   }
   
   .contact {
-    margin: 25px 0;
+    width: 52%;
+    margin: 0 auto;
   }
   
   .contact-head {
