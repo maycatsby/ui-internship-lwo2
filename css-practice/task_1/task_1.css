@@ -5,7 +5,7 @@ body {
 }
 
 header, nav {
-  min-width: 680px;
+  min-width: 600px;
   margin-left: 70px;
   margin-right: 70px;
 }
