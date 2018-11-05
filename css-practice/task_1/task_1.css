@@ -73,7 +73,7 @@ section {
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
 	margin-right: 10px;
-	margin-bottom: 110px;
+	margin-bottom: 115px;
 }
 
 article {
@@ -116,8 +116,8 @@ p {
 
 .about .comment {
   font-size: 14px;
-  margin-top: 50px;
-	margin-bottom: 128px;
+  margin-top: 45px;
+	margin-bottom: 133px;
 }
 
 .about .title {
@@ -129,6 +129,7 @@ p {
 }
 
 .register {
+  margin-top: -10px;
 	margin-right: -150px;
 	margin-left: -150px;
   height: 287px;
@@ -169,7 +170,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-	margin-top: 148px;
+	margin-top: 150px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -219,7 +220,7 @@ footer a {
 }
 
 .doc {
-	margin-top: 40px;
+	margin-top: 38px;
   margin-left: 140px;
 }
 
