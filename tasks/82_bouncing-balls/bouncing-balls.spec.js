@@ -1,4 +1,4 @@
-/* eslint-disable */ 
+/* eslint-disable */
 import { bouncingBall } from './bouncing-balls';
 
 describe('Bouncing ball', () => {
