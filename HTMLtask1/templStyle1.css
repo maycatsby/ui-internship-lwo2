@@ -24,7 +24,9 @@ html {
   header {
     background-image: url("pics/mainBackground.jpg");
     background-size: cover;
-    background-position: center no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -40,13 +42,13 @@ html {
   }
   
   #triangleM {
-    margin: 286px 926px 94px 929px;
+    margin: 150px 925px 95px 925px;
   }
   
   .main-head {
     text-align: center;
     color: #ffffff;
-    font-size: 54px;
+    font-size: 34px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 8.62px;
@@ -59,7 +61,7 @@ html {
     color: #ffffff;
     font-size: 15px;
     font-weight: 400;
-    line-height: 29px;
+    line-height: 23px;
     text-transform: uppercase;
     letter-spacing: 0.9px;
     margin: 0px 671px 245px 676px;
@@ -68,7 +70,7 @@ html {
   }
   
   #scroller {
-    margin: 0px 947px 115px 950px;
+    margin: 0px 947px 15px 950px;
   }
   
   .about {
