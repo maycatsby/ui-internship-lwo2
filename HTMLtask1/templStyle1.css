@@ -64,13 +64,13 @@ html {
     line-height: 23px;
     text-transform: uppercase;
     letter-spacing: 0.9px;
-    margin: 0px 671px 245px 676px;
+    margin: 0px 671px 65px 676px;
     width: 574px;
     height: 70px;
   }
   
   #scroller {
-    margin: 0px 947px 15px 950px;
+    margin: 0px 950px 15px 950px;
   }
   
   .about {
@@ -93,9 +93,9 @@ html {
     background-color: #ffffff;
     padding: 5px 55px 5px 55px;
     text-transform: uppercase;
-    -webkit-transform: translateY(207px);
-        -ms-transform: translateY(207px);
-            transform: translateY(207px);
+    -webkit-transform: translateY(51px);
+        -ms-transform: translateY(51px);
+            transform: translateY(51px);
   }
   .paragraphs {
     text-align: center;
@@ -106,7 +106,6 @@ html {
   
   .about-par {
     border: 2px solid #3c3c3c;
-    margin: 160px 510px 159px 508px;
     padding: 76px 168px 53px 178px;
     width: 535px;
   }
@@ -266,7 +265,6 @@ html {
   }
   
   .contact {
-    margin: 175px 0 0 0;
     position: relative;
   }
   
@@ -301,6 +299,7 @@ html {
     text-transform: uppercase;
     letter-spacing: 2.54px;
     margin: 10px 0 43px 0;
+    cursor: pointer;
   }
   
   button:hover {
@@ -318,8 +317,7 @@ html {
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center;
-    margin: 63px auto;        
+            align-items: center; 
   }
   
   #contact-pic {
