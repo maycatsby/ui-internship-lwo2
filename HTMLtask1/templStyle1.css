@@ -4,6 +4,9 @@ html {
   font-family: 'Lato', sans-serif;
   }
   
+  body {
+    margin: 0;
+  }
   .flex-display {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -48,7 +51,6 @@ html {
     letter-spacing: 8.62px;
     margin: 0px 669px 53px 668px;
     width: 595px;
-    height: 103px;
   }
   
   .main-par {
@@ -70,7 +72,6 @@ html {
   
   .about {
     width: 100vw;
-    height: 400px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -105,7 +106,6 @@ html {
     margin: 160px 510px 159px 508px;
     padding: 76px 168px 53px 178px;
     width: 535px;
-    height: 312px;
   }
   
   .services {
@@ -195,7 +195,7 @@ html {
     color: #3c3c3c;
     font-size: 22px;
     letter-spacing: 2px;
-    margin: 40px 0 40px 0;
+    margin: 40px 0;
   }
   
   .wwd-par {
@@ -274,16 +274,16 @@ html {
     top: 10%;
     z-index: 1;
     background-color: #ffffff;
-    padding: 5px 55px 5px 55px;
+    padding: 5px 55px;
     text-transform: uppercase;
-    -webkit-transform: translateY(-2px);
-        -ms-transform: translateY(-2px);
-            transform: translateY(-2px);
+    -webkit-transform: translateY(147px);
+        -ms-transform: translateY(147px);
+            transform: translateY(147px);
   }
   
   .contact-par {
     width: 890px;
-    margin: -52px auto;
+    margin: 100px auto;
     border: 2px solid #3c3c3c;
   }
   
