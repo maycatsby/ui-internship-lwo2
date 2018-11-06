@@ -13,6 +13,74 @@ br {
   display: none;
 }
 
+header {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  text-transform: uppercase;
+  font-size: 12px;
+  height: 94px;
+  justify-content: space-between;
+}
+
+nav {
+  width: 60%;
+}
+
+nav a {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 69px;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  height: 69px;
+  width: 16%;
+}
+
+nav a:hover {
+  border-left: 1px solid #d9e1e6;
+  border-right: 1px solid #d9e1e6;
+}
+
+p {
+  margin-top: 0;
+}
+
+ul, p {
+  word-spacing: 1.5px;
+  line-height: 20px;
+}
+
+ul {
+  padding: 25px 0 0 13px;;
+}
+
+ul li {
+  color: #ccc;
+  line-height: 24px;
+}
+
+ul li span {
+  color: #797979;
+}
+
+footer {
+  border-top: 1px solid #e1e1e1;
+  margin-top: 88px;
+  font-size: 13px;
+  color: #ccc;
+  width: 100%;
+  padding: 29px 0;
+  text-align: center;
+  font-weight: 300;
+}
+
 .menu-wrapper {
   width: 100%;
   border-top: 1px solid #e1e1e1;
@@ -51,20 +119,6 @@ br {
   margin: 0 auto;
 }
 
-header {
-  width: 100%;
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-transform: uppercase;
-  font-size: 12px;
-  height: 94px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .logo {
   display: inline-block;
   line-height:98px;
@@ -94,45 +148,24 @@ header {
   text-align: center;
 }
 
-nav {
-  width: 60%;
-}
-
-nav a {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 69px;
-  text-align: center;
-  color: black;
-  text-decoration: none;
-  display: inline-block;
-  height: 69px;
-  width: 16%;
-}
-
-nav a:hover {
-  border-left: 1px solid #d9e1e6;
-  border-right: 1px solid #d9e1e6;
-}
-
 .menu {
   width: 6%;
 }
 
 .menu-bar {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -ms-flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
   width: 80%;
   margin: 0 auto;
   font-size: 12px;
   text-transform: uppercase;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 70px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
 .menu-bar i {
@@ -150,12 +183,12 @@ nav a:hover {
 }
 
 .button-group {
-  min-width: 60px;
+  -ms-flex-pack: distribute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  min-width: 60px;
+  justify-content: space-around;
   justify-items: center;
   width: 7%;
 }
@@ -182,13 +215,13 @@ nav a:hover {
 }
 
 .base-img-row {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   margin-top: 37px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .base {
@@ -212,28 +245,6 @@ nav a:hover {
   padding: 0;
   line-height: 25px;
   margin-bottom: 25px;
-}
-
-p {
-  margin-top: 0;
-}
-
-ul, p {
-  word-spacing: 1.5px;
-  line-height: 20px;
-}
-
-ul {
-  padding: 25px 0 0 13px;;
-}
-
-ul li {
-  color: #ccc;
-  line-height: 24px;
-}
-
-ul li span {
-  color: #797979;
 }
 
 .information h1 {
@@ -273,9 +284,9 @@ ul li span {
 }
 
 .order-spec-selection {
-  padding: 25px 0px 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
+  padding: 25px 0px 20px 0;
   display: flex;
   margin-bottom: 35px;
 }
@@ -307,10 +318,10 @@ ul li span {
 }
 
 .order-btn-container {
-  margin-bottom: 35px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 35px;
 }
 
 .order-btn-container button {
@@ -318,7 +329,6 @@ ul li span {
   background-color: black;
   color : white;
   text-align: center;
-  line-height: 55px;
   height: 55px;
   width: 220px;
   margin-right: 20px;
@@ -342,19 +352,19 @@ ul li span {
 
 .order-btn-container button:hover {
   -webkit-box-shadow: 0px 0px 4px #6c6c6c;
-          box-shadow: 0px 0px 4px #6c6c6c;
+  box-shadow: 0px 0px 4px #6c6c6c;
   -webkit-transition-duration: 0.5s;
-       -o-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
 .share-this {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   border-top: 1px solid #e1e1e1;
   border-bottom: 1px solid #e1e1e1; 
   height: 50px;
@@ -378,31 +388,20 @@ ul li span {
   margin-right: 5px;
 }
 
-footer {
-  border-top: 1px solid #e1e1e1;
-  margin-top: 88px;
-  font-size: 13px;
-  color: #ccc;
-  width: 100%;
-  padding: 29px 0;
-  text-align: center;
-  font-weight: 300;
-}
-
 @media only screen and (max-width: 1275px) {
   .share-this>span {
     display: none;
   }
 
   .icons-container {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     margin: 0 auto;
   }
 
@@ -418,8 +417,8 @@ footer {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 
   .gallery {
@@ -433,14 +432,14 @@ footer {
 
   .order-spec-selection {
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   .order-btn-container {
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
 
   .order-btn-container button {
@@ -456,8 +455,8 @@ footer {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     width: 400px;
   }
 
@@ -482,7 +481,7 @@ footer {
     position: absolute;
     background-color: white;
     -webkit-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     top: 100%;
   }
@@ -525,8 +524,8 @@ footer {
   }
   .icons-container {
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
@@ -546,4 +545,55 @@ footer {
   .message {
     height: 60px;
   }
+}
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+}
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 52px;
+  right: 6px;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-color: #ccc transparent transparent transparent;
+}
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+.select-selected {
+  margin-top: 20px;
+}
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: black;
+  padding: 8px 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: white;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
 }
