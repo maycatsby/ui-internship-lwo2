@@ -3,6 +3,11 @@ html {
   padding: 0;
   font-family: 'Lato', sans-serif;
   }
+
+ body {
+   margin: 0;
+   height: 100%;
+ } 
   
   .flex-display {
     display: -webkit-box;
@@ -18,25 +23,14 @@ html {
   }
   
   header {
-    background-image: url("pics/mainBackground.jpg");
+    background-image: url(pics/mainBackground.jpg);
     background-size: cover;
-    background-position: center no-repeat;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-bottom: 80px        
-  }
-  
-  .main {
-    width: 600px;
-    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   
   #triangleM {
-    margin: 286px 926px 94px 929px;
+    margin: 285px auto;
   }
   
   .main-head {
@@ -59,18 +53,16 @@ html {
     line-height: 29px;
     text-transform: uppercase;
     letter-spacing: 0.9px;
-    margin: 0px 671px 245px 676px;
+    padding: 25px 0 150px 0;
     width: 574px;
     height: 70px;
   }
   
   #scroller {
-    margin: 0px 947px 115px 950px;
+    margin: 0px 950px 115px 950px;
   }
   
   .about {
-    width: 100vw;
-    height: 400px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -89,27 +81,23 @@ html {
     background-color: #ffffff;
     padding: 5px 55px 5px 55px;
     text-transform: uppercase;
-    -webkit-transform: translateY(207px);
-        -ms-transform: translateY(207px);
-            transform: translateY(207px);
+    -webkit-transform: translateY(50px);
+        -ms-transform: translateY(50px);
+            transform: translateY(50px);
   }
   .paragraphs {
     text-align: center;
     font-size: 14px;
     color: #3c3c3c;
-    padding: 55px 160px;
+    padding: 55px 120px;
   }
   
   .about-par {
     border: 2px solid #3c3c3c;
-    margin: 160px 510px 159px 508px;
-    padding: 76px 168px 53px 178px;
-    width: 535px;
-    height: 312px;
   }
   
   .services {
-    margin: 159px 0 119px 0;
+    margin: 70px auto;
     background-image: url("pics/servBack.png");
     background-size: cover;
     -webkit-box-pack: center;
@@ -121,12 +109,11 @@ html {
     color: #ffffff;
     font-size: 30px;
     letter-spacing: 3px;
-    left: 40%;
     padding: 5px 55px 5px 55px;
     text-transform: uppercase;
-    -webkit-transform: translateY(91px);
-        -ms-transform: translateY(91px);
-            transform: translateY(91px);
+    -webkit-transform: translateY(98px);
+        -ms-transform: translateY(98px);
+            transform: translateY(98px);
   }
   
   .serv-par {
@@ -136,7 +123,11 @@ html {
     position: relative;
     margin: 50px 510px 115px 510px;
     width: 641px;
-}
+    margin: 50px;
+    padding: 55px 120px;
+    text-align: center;
+    font-size: 14px;
+  }
   
   .serv-par:before {
     display: block;
@@ -145,7 +136,7 @@ html {
     top: 0;
     left: 0;
     background: #ffffff;
-    width: 240px;
+    width: 250px;
     height: 2px;
   }
   
@@ -156,22 +147,23 @@ html {
     top: 0;
     right: 0;
     background: #ffffff;
-    width: 240px;
+    width: 250px;
     height: 2px;
   }
   
   .what-we-do {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center;
+            justify-content: center;  
+    width: 735px;
+    margin: 0 auto;   
     
   }
   
   .text-block{
     border: 2px solid #3c3c3c;
-    padding: 50px 120px 96px 120px;
-    width: 654px;
-    margin: -100px 510px 114px 508px;
+    padding: 50px;
+    margin-bottom: 100px;
   }
   
   .what-we-do-head {
@@ -182,9 +174,9 @@ html {
     background-color: #ffffff;
     padding: 5px 55px 5px 55px;
     text-transform: uppercase;
-    -webkit-transform: translateY(-53px);
-        -ms-transform: translateY(-53px);
-            transform: translateY(-53px);
+    -webkit-transform: translateY(47px);
+        -ms-transform: translateY(47px);
+            transform: translateY(47px);
   }
   .wwd-pic {
     margin-top: 60px;
@@ -195,16 +187,12 @@ html {
     font-size: 22px;
     letter-spacing: 2px;
     margin: 40px 0 40px 0;
+    text-align: center;
   }
   
   .wwd-par {
     width: inherit;
     padding: 15px 80px 10px 80px;
-  }
-  
-  .gallery {
-    width: 100vw;
-    height: 55vh;
   }
   
   .grid-display {
@@ -262,8 +250,8 @@ html {
   }
   
   .contact {
-    margin: 175px 0 0 0;
-    position: relative;
+    margin: 0 auto;
+    width: 735px;
   }
   
   .contact-head {
@@ -275,14 +263,12 @@ html {
     background-color: #ffffff;
     padding: 5px 55px 5px 55px;
     text-transform: uppercase;
-    -webkit-transform: translateY(-2px);
-        -ms-transform: translateY(-2px);
-            transform: translateY(-2px);
+    -webkit-transform: translateY(47px);
+        -ms-transform: translateY(47px);
+            transform: translateY(47px);
   }
   
   .contact-par {
-    width: 890px;
-    margin: -52px auto;
     border: 2px solid #3c3c3c;
   }
   
@@ -305,6 +291,10 @@ html {
     border: 2px solid #3c3c3c;
   }
   
+  #contact-pic {
+    margin: 10px;
+  }
+
   footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -315,96 +305,101 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 63px auto;        
+    margin: 65px auto;        
   }
   
-  #contact-pic {
-    margin: 10px;
-  }
-  
-  @media screen and (max-width: 600px) {
-    header {
-      height: 820px;
-      margin-bottom: 0;
-    }
-    
-    .main {
-      width: 100%;
-      height: 100%;
-    }
-    
+  @media screen and (max-width: 576px) {
     .main-head {
-      font-size: 40px;
+      font-size: 20px;
+      margin-bottom: 0;
     }
 
     .main-par {
-      font-size: 12px;
-      margin: 0px 671px 95px 676px;
+      font-size: 8px;
+    }
+
+    #triangleM {
+      margin: 50px;
+      width: 25px;
+    }
+
+    #scroller {
+      width: 15px;
+      margin: 15px auto;
     }
 
     .about {
-      height: 450px;
+      margin: 0 15px 20px 15px;
     }
-  
+
+    .about-head {
+      font-size: 15px;
+      transform: translateY(30px);
+    }
+
     .services {
-      height: 400px;
-      margin: 30px 0 119px 0;
-      width: 100%;
-    }
-  
-    .serv-par:before {
-      display: block;
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: #ffffff;
-      width: 25%;
-      height: 2px;
-    }
-  
-    .serv-par:after {
-      display: block;
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: #ffffff;
-      width: 25%;
-      height: 2px;
-    }  
-  
-    .text-block {
-      border: 2px solid #3c3c3c;
-      padding: 25px 65px 30px 65px;
-      width: 70%;
-    }
-    
-    .about-par {
-      border: 2px solid #3c3c3c;
-      margin: 160px 510px 159px 508px;
-      padding: 76px 168px 53px 178px;
-      width: 70%;
-      height: 312px;
+      margin: 0 auto;
     }
 
-    .paragraphs {
-      text-align: center;
-      font-size: 14px;
-      color: #3c3c3c;
-      padding: 30px 50px 20px 50px;
-    } 
-  
-    .gal-text {
-      font-size: 10px;
-    }
-
-    .contact-par {
-      width: 90%;
+    .serv-head {
+      font-size: 15px;
+      transform: translateY(30px);
     }
 
     .serv-par {
-      width: 70%;
-      height: 148px;
+      margin: 0 15px 20px 15px;
+    }
+
+    .serv-par:before {
+      width: 75px;
+    }
+    
+    .serv-par:after {
+      width: 75px;
+    }
+
+    .what-we-do {
+      margin: 0 auto;
+      width: 280px;
+    }
+
+    .what-we-do-head {
+      font-size: 15px;
+      transform: translateY(30px);
+    }
+
+    .pics {
+      position: relative;
+    }
+    .gal-text {
+      font-size: 8px;
+      position: absolute;
+      transform: rotate(90deg);
+      top: 30%;
+      bottom: 30%;
+      right: 50%;
+    }
+
+    .contact {
+      margin: 0 auto;
+      width: inherit;
+    }
+
+    .contact-head {
+      font-size: 15px;
+      transform: translateY(30px);
+    }
+
+    .contact-par {
+      width: 280px;
+      padding: 15px 15px 0px 15px;
+    }
+
+    button {
+      width: 200px;
+    }
+
+    footer {
+      margin: 0 auto;
     }
 }
