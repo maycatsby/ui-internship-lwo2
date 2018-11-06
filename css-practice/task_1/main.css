@@ -55,8 +55,6 @@ nav img {
   margin-right: 265px;
 }
 
-
-
 nav a {
   margin: 2px;
   text-decoration: none;
@@ -169,7 +167,6 @@ button {
 
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-
 }
 
 .register-wrapper {
