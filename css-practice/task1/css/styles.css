@@ -5,74 +5,96 @@
   font-family: "Lato", sans-serif;
 }
 
-.header-ad {
+header h6 {
   width: 100%;
-
+  font-size: 10px;
   background-color: #d9e1e6;
   color: #919a9e;
   text-align: center;
-
-  padding: 5px 10%;
+  padding: 8px 10%;
   margin-bottom: 10px;
 }
 
-span.close {
-  margin-right: 5px;
-  text-align: center;
-}
-
 .close {
+  margin: -35px 10% 0 0;
   float: right;
+  color: #919a9e;
 }
 
 .cart:hover {
   background: #ded3aa;
 }
 
-.head-container,
 nav {
-  padding: 20px 10%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-span.language {
-  font-size: 12px;
-}
-
-.logo {
   margin: 0 auto;
-  width: auto;
-  height: 100%;
-  justify-content: center;
-}
-
-span.cart {
-  height: 44px;
-  text-align: center;
-  justify-content: end;
-  padding: 10px 20px;
-  border: 2px solid #ded3aa;
-}
-
-nav {
-  justify-content: space-around;
+  justify-content: space-between;
   display: flex;
-  text-align: center;
-  padding: 10px 6.5%;
-  margin-bottom: 30px;
+  margin-top: 25px;
+  width: 80%;
+  margin-bottom: 25px;
+}
+
+.nav-container {
   border-top: 1px solid lightgrey;
   border-bottom: 1px solid lightgray;
+  width: 100%;
+  margin-bottom: 55px;
 }
 
 nav a {
-  padding: 10px;
+  padding: 22px;
   color: grey;
   text-align: center;
   text-decoration: none;
   font-size: 12px;
   font-weight: bold;
+}
+
+.menu,
+.like-and-search {
+  width: 6%;
+}
+
+.head-container {
+  padding: 20px 10%;
+  justify-content: space-between;
+  display: flex;
+  font-size: 12px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.language {
+  font-size: 12px;
+  padding-left: 5px;
+}
+
+.language img {
+  padding-right: 10px;
+}
+
+.fa-caret-down {
+  margin-left: 10px;
+}
+
+.logo {
+  margin: 0 auto;
+  width: auto;
+  padding-left: 5%;
+  height: 100%;
+  justify-content: center;
+}
+
+.cart {
+  text-align: center;
+  justify-content: end;
+  font-size: 12px;
+  padding: 12px 38px;
+  border: 2px solid #ded3aa;
+}
+
+.menu {
+  margin: 0px 0 0 8px;
 }
 
 .container {
@@ -84,14 +106,26 @@ nav a {
 
 .pic-holder {
   flex-flow: column wrap;
-  flex-basis: 57%;
+  flex-basis: 58%;
   width: 100%;
+}
+
+p.last span {
+  font-weight: 100;
+  font-size: 14px;
+  color: #555555;
+}
+
+.goodie-info {
+  flex-basis: 40%;
+  padding-top: 15px;
 }
 
 .big {
   margin-bottom: 10px;
 }
-.big img {
+.big img,
+.goodie-items img {
   width: 100%;
 }
 
@@ -105,22 +139,23 @@ nav a {
   margin-top: 10px;
   width: 22%;
   height: 200px;
-  background: #e1e1e1;
 }
 
 .share {
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 20px 0 15px 0;
+  font-size: 12px;
 }
 
 .space-btw {
   justify-content: space-between;
 }
 
-.goodie-info {
-  flex-basis: 40%;
-  padding-top: 10px;
+.goodie-info span a {
+  font-size: 14px;
+  color: #68899a;
+  margin-bottom: 20px;
 }
 
 span a {
@@ -128,11 +163,14 @@ span a {
 }
 
 h3 {
-  padding-top: 20px;
+  padding-top: 35px;
+  font-size: 24px;
+  margin-bottom: 15px;
 }
 
 .fas.fa-star {
   color: #ded3aa;
+  font-size: 14px;
 }
 
 i.fas.fa-star.last {
@@ -143,12 +181,19 @@ i.fas.fa-star.last:hover {
   color: #ded3aa;
 }
 
-.price {
+span.price {
   color: #68899a;
   font-family: "Lato";
   font-size: 24px;
   font-weight: 700;
   line-height: 48px;
+}
+
+.details {
+  padding-top: 12px;
+  margin-left: -5px;
+  line-height: 15px;
+  font-size: 15px;
 }
 
 a.review {
@@ -157,7 +202,7 @@ a.review {
   border-bottom-color: black;
 }
 
-p span {
+.details p span {
   color: #68899a;
   font-weight: 100;
 }
@@ -176,7 +221,13 @@ p span {
 .description {
   color: #555555;
   line-height: 1.5;
-  padding-bottom: 20px;
+  font-size: 14px;
+  padding-top: 20px;
+}
+
+.description ul li {
+  margin-top: 20px;
+  line-height: 10px;
 }
 
 ul li {
@@ -185,6 +236,7 @@ ul li {
 
 h4 {
   font-weight: bold;
+  font-size: 14px;
   margin-bottom: 20px;
 }
 
@@ -204,8 +256,9 @@ h4 {
 }
 
 a.clear-selected {
-  padding: 20px 0;
+  margin: 35px 0 0 0;
   display: block;
+  font-size: 12px;
   color: black;
   border-bottom-color: black;
 }
@@ -214,7 +267,7 @@ a.clear-selected {
 .add-2-wishlist {
   width: 220px;
   padding: 20px;
-  margin-top: 10px;
+  margin-top: 45px;
   color: black;
   text-align: center;
   margin-bottom: 20px;
