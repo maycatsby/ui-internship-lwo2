@@ -42,7 +42,7 @@ p {
   width: 40%;
 }
 .menu {
-  width: 60%;
+  width: 54%;
 }
 .menu ul {
   display: -webkit-box;
@@ -71,7 +71,7 @@ p {
 }
 .baner img {
   width: 100%;
-  padding: 68px 0 72px;
+  padding: 0 0 72px;
 }
 /* Main content */
 .content {
@@ -99,24 +99,31 @@ p {
   align-self: center;
   padding: 0 153px 0 149px;
 }
-.photodiary span, .card-holder span {
+.photodiary span {
   font-family: Ubuntu;
   text-transform: uppercase;
   font-size: 12px;
   color: #b4ad9e;
-  margin: 30px 0 30px 0;
+  margin: 20px 0 19px 0;
+}
+.card-holder span {
+  font-family: Ubuntu;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #b4ad9e;
+  margin: 44px 0 19px 0;
 }
 .photodiary h2 {
   color: #626262;
   font-family: "Playfair Display";
-  font-size: 30px;
+  font-size: 33px;
   font-weight: normal;
   margin-bottom:30px;
 }
 .photodiary p {
   color: #626262;
   font-family: "Playfair Display";
-  font-size: 14px;
+  font-size: 16px;
 }
 .card-holder {
   display: -webkit-box;
@@ -129,10 +136,10 @@ p {
   padding: 0 153px 0 149px;
 }
 .card {
-  width: 45%;
+  width: 47%;
 }
 .card-rigth {
-  width: 45%;
+  width: 47%;
 }
 .row {
   display: -webkit-box;
@@ -141,11 +148,12 @@ p {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 100px;
+  margin-bottom: 17px;
+  margin-top: 114px;
 }
 .row img {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 .row span {
   font-family: Ubuntu;
@@ -155,18 +163,18 @@ p {
 .row h2 {
   color: #626262;
   font-family: "Playfair Display";
-  font-size: 30px;
-  margin: 20px 0 20px 0;
+  font-size: 33px;
+  margin: 17px 0 28px 0;
   font-weight: normal;
 }
 .row p {
   font-family: "Playfair Display";
   color: #626262;
-  font-size: 14px;
+  font-size: 16px;
 }
 /* Side Bar */
 .sidebar {
-  height: 300px;
+  height: 284px;
   background-color: #f0f0f0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -180,21 +188,24 @@ p {
   align-items: center;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  margin-bottom: 100px;
+  margin-bottom: -10px;
+  margin-top: 100px;
 }
 .sidebar h2 {
   color: #333333;
   font-family: "Playfair Display";
-  font-size: 40px;
+  font-size: 35px;
   font-weight: normal;
+  margin-top: 30px;
 }
 .form {
   border-bottom: 2px solid #000;
+  margin-bottom: 37px; 
 }
 .form input[type="text"] {
   border: none;
   background-color:#f0f0f0;
-  width: 400px;
+  width: 360px;
   height: 40px;
   outline: none;
   font-size: 20px;
@@ -202,6 +213,7 @@ p {
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
+  padding-left: 7px;
 }
 .form input::-webkit-input-placeholder {
   color: #626262;
@@ -251,7 +263,7 @@ p {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 100px;
+  margin-bottom: 163px;
   padding: 0 153px 0 149px;
 }
 .card-bar span {
@@ -276,8 +288,8 @@ p {
 .button .btn {
   border: 1px solid #626262;
   background-color: #fff;
-  padding: 16px 32px;
-  font-size: 20px;
+  padding: 17px 34px;
+  font-size: 21px;
   text-align: center;
   font-family: "Playfair Display";
   color: #626262;
