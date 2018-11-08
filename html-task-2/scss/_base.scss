@@ -9,6 +9,7 @@ html {
 body {
   margin: auto;
   max-width: 1400px;
+  @include box-shadow-block;
 }
 
 header {
@@ -58,7 +59,7 @@ main {
 }
 
 .main-text {
-  padding: 115px 0 100px 150px;
+  padding: 115px 0 130px 150px;
   color: $white;
   font-family: $Raleway;
   width: 520px;
@@ -94,7 +95,7 @@ main {
   }
 }
 .main-form {
-  padding: 140px 0 100px 150px;
+  padding: 140px 0 120px 150px;
   .form-header {
     width: 360px;
     background-color: $light;
@@ -146,3 +147,41 @@ main {
     }
   }
 }
+
+.social-m-bar {
+  background-color: $white;
+  @include flex;
+  @include justify-content-space-around;
+  padding: 10px 140px;
+  .social-media {
+    @include flex;
+    @include flex-direction-column;
+    font-family: $OpenSans;
+    .socials-header {
+      font-size: 20px;
+      color: $item-header;
+      margin: 0;
+    }
+    .socials-paragraph {
+      font-size: 14px;
+      color: $font;
+      margin: 0;
+    }
+  }
+  .social-icons {
+    font-size: 48px;
+    color: $socials-n-shadow;
+    margin: 20px;
+    @include flex;
+    .fa {
+      padding: 0 28px;
+      &:hover {
+        color: $icons;
+      }
+    }
+  }
+}
+
+
+
+

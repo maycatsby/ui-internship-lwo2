@@ -34,9 +34,14 @@
   flex-direction: column;
 }
 
-@mixin box-shadow {
+@mixin box-shadow-image {
   -webkit-box-shadow: 15px 15px 50px $socials-n-shadow;
   box-shadow: 15px 15px 50px $socials-n-shadow;
+}
+
+@mixin box-shadow-block {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 @mixin input-borders($border-top, $border-right, $border-bottom, $border-left) {
