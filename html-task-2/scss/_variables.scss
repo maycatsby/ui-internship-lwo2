@@ -1,8 +1,12 @@
 $black: #000000;
-$socials-color: #cccccc;
-$item-header-color: #333333;
-$font-color: #86878b;
+$socials-n-shadow: #cccccc;
+$item-header: #333333;
+$placeholder: #bdbdbd;
+$font: #86878b;
 $white: #ffffff;
-$section-header-color: #212121;
-$icons-color: #ff8b38;
+$section-header: #212121;
+$icons: #ff8b38;
+$light: lighten($socials-n-shadow, 15%);
+$OpenSans: 'Open Sans';
+$Raleway: 'Raleway';
 

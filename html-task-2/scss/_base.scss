@@ -25,14 +25,14 @@ header {
 }
 
 .logo {
-  margin: 5px 100px;
+  margin: 5px 125px;
 }
 
 .top-menu {
   list-style-type: none;
-  display: flex;
-  justify-content: right;
-  font-family: 'Open Sans';
+  @include flex;
+  @include justify-content-right;
+  font-family: $OpenSans;
   font-size: 14px;
   margin: 5px 60px 0 0;
 }
@@ -42,7 +42,7 @@ header {
     text-decoration: none;
     color: $white;
     &:hover {
-      color: $icons-color;
+      color: $icons;
     }
   }
 }
@@ -53,16 +53,15 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
-
-.main-text-indent {
-  padding: 5px 0;
+  @include flex;
+  @include justify-content-space-between;
 }
 
 .main-text {
-  padding: 100px 150px;
+  padding: 115px 0 100px 150px;
   color: $white;
-  font-family: 'Raleway';
+  font-family: $Raleway;
+  width: 520px;
   .main-header {
     font-size: 36px;
     text-transform: uppercase;
@@ -70,8 +69,10 @@ main {
   .main-paragraph {
     font-size: 16px;
     position: relative;
-    padding: 25px 140px 25px 0;
+    padding: 40px 0;
     margin: 0;
+    opacity: 0.8;
+    line-height: 1.6;
     &:before {
       display: block;
       content: '';
@@ -79,14 +80,69 @@ main {
       top: 0;
       left: 0;
       background: $white;
-      width: 75px;
+      width: 63px;
       height: 2px;
     }
   }
   .download {
     background: transparent;
+    border: 2px solid $white;
     color: $white;
-    font-family: 'Open Sans';
+    font-family: $OpenSans;
+    font-size: 15px;
     padding: 8px 30px;
+  }
+}
+.main-form {
+  padding: 140px 0 100px 150px;
+  .form-header {
+    width: 360px;
+    background-color: $light;
+    color: $item-header;
+    font-family: $OpenSans;
+    font-size: 20px;
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+    @include border-radius-top(4px); 
+    .free-word {
+      text-transform: uppercase;
+      color: $icons;
+    }
+  }
+  .login-form {
+    background-color: $white;
+    @include flex;
+    @include flex-direction-column;
+    @include align-items-center;
+    width: 360px;
+    margin: 0 145px 0 0;
+    @include border-radius-bottom(4px);
+    input {
+      @include input-borders(none, none, 1px solid $socials-n-shadow, none);
+      width: 280px;
+      margin: 25px 0;
+      padding: 5px 0;
+      @include flex;
+      @include flex-direction-column;
+      @include align-items-center;
+      @include justify-content-space-around;
+      &::placeholder {
+        padding-left: 10px;
+        font-size: 14px;
+        color: $placeholder;
+      }
+      &[type=password] {
+        margin-bottom: 45px;
+      }
+    }
+    button {
+      width: inherit;
+      font-size: 15px;
+      padding: 20px 0;
+      background-color: #ff8b38;
+      color: white;
+      @include border-radius-bottom(4px);
+    }
   }
 }

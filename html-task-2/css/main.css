@@ -18,13 +18,17 @@ header {
   right: 5%; }
 
 .logo {
-  margin: 5px 100px; }
+  margin: 5px 125px; }
 
 .top-menu {
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: right;
+  -ms-flex-pack: right;
   justify-content: right;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-size: 14px;
   margin: 5px 60px 0 0; }
 
@@ -41,23 +45,29 @@ main {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; }
-
-.main-text-indent {
-  padding: 5px 0; }
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
 
 .main-text {
-  padding: 100px 150px;
+  padding: 115px 0 100px 150px;
   color: #ffffff;
-  font-family: 'Raleway'; }
+  font-family: "Raleway";
+  width: 520px; }
   .main-text .main-header {
     font-size: 36px;
     text-transform: uppercase; }
   .main-text .main-paragraph {
     font-size: 16px;
     position: relative;
-    padding: 25px 140px 25px 0;
-    margin: 0; }
+    padding: 40px 0;
+    margin: 0;
+    opacity: 0.8;
+    line-height: 1.6; }
     .main-text .main-paragraph:before {
       display: block;
       content: '';
@@ -65,10 +75,79 @@ main {
       top: 0;
       left: 0;
       background: #ffffff;
-      width: 75px;
+      width: 63px;
       height: 2px; }
   .main-text .download {
     background: transparent;
+    border: 2px solid #ffffff;
     color: #ffffff;
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
+    font-size: 15px;
     padding: 8px 30px; }
+
+.main-form {
+  padding: 140px 0 100px 150px; }
+  .main-form .form-header {
+    width: 360px;
+    background-color: #f2f2f2;
+    color: #333333;
+    font-family: "Open Sans";
+    font-size: 20px;
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px; }
+    .main-form .form-header .free-word {
+      text-transform: uppercase;
+      color: #ff8b38; }
+  .main-form .login-form {
+    background-color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 360px;
+    margin: 0 145px 0 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px; }
+    .main-form .login-form input {
+      border-top: none;
+      border-right: none;
+      border-bottom: 1px solid #cccccc;
+      border-left: none;
+      width: 280px;
+      margin: 25px 0;
+      padding: 5px 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: distribute;
+      justify-content: space-around; }
+      .main-form .login-form input::placeholder {
+        padding-left: 10px;
+        font-size: 14px;
+        color: #bdbdbd; }
+      .main-form .login-form input[type=password] {
+        margin-bottom: 45px; }
+    .main-form .login-form button {
+      width: inherit;
+      font-size: 15px;
+      padding: 20px 0;
+      background-color: #ff8b38;
+      color: white;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px; }
