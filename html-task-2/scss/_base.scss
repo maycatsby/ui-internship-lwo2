@@ -161,9 +161,14 @@ main {
       width: inherit;
       font-size: 15px;
       padding: 20px 0;
-      background-color: #ff8b38;
+      background-color: $icons;
       color: white;
       @include border-radius-bottom(4px);
+      cursor: pointer;
+      &:hover {
+        color: $white;
+        border: 1px solid $item-header;
+      }
     }
   }
 }
