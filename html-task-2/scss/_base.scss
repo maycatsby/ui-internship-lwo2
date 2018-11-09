@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+@import "media";
 
 html {
   margin: 0;
@@ -18,6 +19,7 @@ header {
   align-items: center;
   padding: 15px;
   position: relative;
+
 }
 
 .top-navigation {
@@ -45,6 +47,24 @@ header {
     &:hover {
       color: $icons;
     }
+  }
+}
+
+@media screen and (max-width: 678px) {
+  header {
+    @include flex-direction-column;
+    min-height: 15px;
+    .logo {
+      display: none;
+    }
+  }
+
+  .main-text {
+    padding: 50px;
+  }
+
+  .main-form {
+    display: none;
   }
 }
 
@@ -176,7 +196,149 @@ main {
     .fa {
       padding: 0 28px;
       &:hover {
-        color: $icons;
+        color: $item-header;
+      }
+    }
+  }
+}
+
+.tabs-bar {
+  background-color: $section-background;
+  @include flex;
+  @include justify-content-space-around;
+  padding: 145px 140px 135px 135px;
+  .tabs {
+    padding-right: 60px;
+    .tabs-item {
+      padding: 30px 40px;
+      font-family: $OpenSans;
+      font-size: 15px;
+      background-color: $item-header;
+      color: $white;
+      pre {
+        font-family: $OpenSans;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      cursor: pointer;
+      span {
+        text-align: center;
+      }
+      &:active {
+        background-color: $icons;
+      }
+      &:focus {
+        background-color: $icons;
+      }
+      &:hover {
+        background-color: $icons;
+      }
+    }
+  } 
+  .tabs-text {
+    padding-right: 80px; 
+    font-family: $OpenSans;
+    .tabs-header {
+      color: $black;
+      font-size: 20px;
+      margin: 0;
+      padding-bottom: 30px;
+    }
+    .tabs-paragraph {
+      font-size: 14px;
+      color: $font;
+      padding: 20px 0;
+      margin: 0;
+    }
+    .second {
+      padding-bottom: 45px;
+    }
+    hr {
+      visibility: hidden;
+      &:after {
+        font-size: 14px;
+        color: $font;
+      }
+    }
+    .tabs-button {
+      font-family: $OpenSans;
+      font-size: 15px;
+      color: $white;
+      background-color: $icons;
+      padding: 10px 20px;
+    }
+  }
+  .tabs-img {
+    padding-top: 45px;
+  }
+}
+
+.city-view {
+  @include box-shadow-image;
+}
+
+.sub-list {
+  padding: 135px 140px 135px 135px;
+  @include flex;
+  @include justify-content-space-around;
+  .left {
+  }
+  .sub-list-section {
+    padding-left: 80px;
+    .sub-header {
+      margin: 0;
+      font-family: $OpenSans;
+      font-size: 20px;
+      color: $section-header;
+      padding-bottom: 30px;
+      font-weight: bold;
+    }
+    .sub-paragraph {
+      color: $font;
+      font-family: $OpenSans;
+      font-size: 14px;
+      padding: 30px 0;
+      margin: 0;
+      position: relative;
+      &:before {
+        display: block;
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 63px;
+        background: $icons;
+        height: 2px;
+      }
+    }
+    .sub-l {
+      @include flex;
+      @include justify-content-space-between;
+      .sub-img {
+        @include flex;
+        @include flex-direction-column;
+        .fa {
+          border: 1px solid $icons;
+          padding: 10px;
+          border-radius: 100%;
+          color: $icons;
+          width: fit-content;
+          margin-bottom: 120%;
+        }
+      }
+      .sub-l-text {
+        padding: 0 30px;
+        h5 {
+          margin: 0;
+          font-family: $OpenSans;
+          font-size: 14px;
+          color: $section-header;
+        }
+        p {
+          color: $font;
+          font-family: $OpenSans;
+          font-size: 14px;
+        }
       }
     }
   }

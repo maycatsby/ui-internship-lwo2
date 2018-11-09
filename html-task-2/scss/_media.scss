@@ -1,0 +1,114 @@
+//////////     PHONE     //////////
+@media screen and (max-width: 678px) {
+  body{
+    header {
+      @include flex-direction-column;
+      min-height: 15px;
+      .logo {
+        display: none;
+      }
+    }
+  
+    .main-text {
+      padding: 50px;
+    }
+  
+    .main-form {
+      display: none;
+    }
+
+    .social-m-bar {
+      @include flex-direction-column;
+      @include align-items-center;
+      padding: 10px 0;
+      .socials-paragraph {
+        display: none;
+      }
+      .social-icons {
+        .fa {
+          padding: 0 15px;
+        }
+      }
+    }
+
+    .tabs-bar {
+      position: relative;
+      padding: 130px 0;
+      .tabs {
+        padding: 30px;
+        .tabs-item {
+          padding: 15px 20px;
+        }
+      }
+      .tabs-img {
+        position: absolute;
+        padding: 0;
+        bottom: 5%;
+        right: 15%;
+        img {
+          width: 230px;
+        }
+      }
+    }
+    
+  }
+}
+//////////     TABLET     //////////
+@media  screen and (min-width: 679px) and (max-width: 1027px) {
+  body{
+    header {
+      @include flex-direction-column;
+      min-height: 60px;
+      position: relative;
+      .top-navigation {
+        position: absolute;
+        bottom: 10%;
+      }
+    }
+  
+    .main-text {
+      padding: 50px;
+    }
+  
+    .main-form {
+      display: none;
+    }
+
+    .social-m-bar {
+      @include flex-direction-column;
+      @include align-items-center;
+      padding: 10px 0;
+      
+    }
+
+    .tabs-bar {
+      position: relative;
+      padding: 50px 0 70px 0;
+      @include flex;
+      @include flex-direction-column;
+      @include align-items-center;
+      .tabs {
+        padding: 30px;
+        @include flex;
+        @include justify-content-space-between;
+        .tabs-item {
+          padding: 15px 20px;
+          margin: 0 30px;
+        }
+      }
+      .tabs-text {
+        padding: 20px 60px;
+      }
+      .tabs-img {
+        position: absolute;
+        padding: 0;
+        bottom: 5%;
+        right: 15%;
+        img {
+          width: 170px;
+        }
+      }
+    }
+  }
+}
+  
