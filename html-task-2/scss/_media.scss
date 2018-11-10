@@ -51,6 +51,22 @@
       }
     }
     
+    .city-view {
+      display: none;
+    }
+
+    .sub-list {
+      .sub-list-section {
+        padding: 0;
+      }
+    }
+
+    .standart-picture {
+      .right {
+        display: none;
+      }
+    }
+
   }
 }
 //////////     TABLET     //////////
@@ -107,6 +123,42 @@
         img {
           width: 170px;
         }
+      }
+    }
+
+    .city-view {
+      width: 315px;
+      height: 250px;
+      margin: 25px;
+    }
+
+    .sub-list {
+      padding: 70px 105px 100px 80px;
+      position: relative;
+      .sub-list-section {
+        padding: 40px;
+        .sub-l {
+          position: absolute;
+          left: 10%;
+          .sub-img {
+            .fa {
+              padding: 5px;
+              margin-bottom: 93%;
+            }
+          }
+          .sub-l-text {
+            p {
+              margin-bottom: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    .standart-picture {
+      padding: 70px 105px 100px 80px;
+      .right {
+        margin: 25px 0 25px 40px;
       }
     }
   }

@@ -185,7 +185,7 @@ main {
     .socials-header {
       font-size: 20px;
       color: $item-header;
-      margin: 0;
+      margin: 10px;
     }
     .socials-paragraph {
       font-size: 14px;
@@ -196,7 +196,7 @@ main {
   .social-icons {
     font-size: 48px;
     color: $socials-n-shadow;
-    margin: 20px;
+    margin: 20px 0;
     @include flex;
     .fa {
       padding: 0 28px;
@@ -211,11 +211,11 @@ main {
   background-color: $section-background;
   @include flex;
   @include justify-content-space-around;
-  padding: 145px 140px 135px 135px;
+  padding: 150px 140px 113px 140px;
   .tabs {
-    padding-right: 60px;
+    padding-right: 98px;
     .tabs-item {
-      padding: 30px 40px;
+      padding: 30px 37px;
       font-family: $OpenSans;
       font-size: 15px;
       background-color: $item-header;
@@ -258,19 +258,16 @@ main {
     .second {
       padding-bottom: 45px;
     }
-    hr {
-      visibility: hidden;
-      &:after {
-        font-size: 14px;
-        color: $font;
-      }
-    }
     .tabs-button {
       font-family: $OpenSans;
       font-size: 15px;
       color: $white;
       background-color: $icons;
       padding: 10px 20px;
+      cursor: pointer;
+      &:hover {
+        background-color: $item-header;
+      }
     }
   }
   .tabs-img {
@@ -283,27 +280,28 @@ main {
 }
 
 .sub-list {
-  padding: 135px 140px 135px 135px;
+  padding: 103px 134px 96px 153px;
   @include flex;
   @include justify-content-space-around;
   .left {
+    margin-top: 25px;
   }
   .sub-list-section {
-    padding-left: 80px;
+    padding-left: 200px;
     .sub-header {
       margin: 0;
       font-family: $OpenSans;
       font-size: 20px;
       color: $section-header;
-      padding-bottom: 30px;
+      padding-bottom: 20px;
       font-weight: bold;
     }
     .sub-paragraph {
       color: $font;
       font-family: $OpenSans;
       font-size: 14px;
-      padding: 30px 0;
-      margin: 0;
+      padding: 20px 0;
+      margin-bottom: 22px;
       position: relative;
       &:before {
         display: block;
@@ -323,12 +321,12 @@ main {
         @include flex;
         @include flex-direction-column;
         .fa {
-          border: 1px solid $icons;
+          border: 2px solid $icons;
           padding: 10px;
           border-radius: 100%;
           color: $icons;
           width: fit-content;
-          margin-bottom: 120%;
+          margin-bottom: 150%;
         }
       }
       .sub-l-text {
@@ -343,9 +341,53 @@ main {
           color: $font;
           font-family: $OpenSans;
           font-size: 14px;
+          margin-bottom: 27px;
         }
       }
     }
+  }
+}
+
+.standart-picture {
+  padding: 77px 134px 129px 153px;
+  background-color: $section-background;
+  @include flex;
+  @include justify-content-space-around;
+  .standart-picture-section {
+    .stand-header {
+      font-family: $OpenSans;
+      font-size: 20px;
+      color: $section-header;
+      font-weight: bold;
+      margin: 25px 0;
+    }
+    .first {
+      margin: 0;
+      padding: 32px 0;
+      color: $font;
+      font-family: $OpenSans;
+      font-size: 14px;
+      position: relative;
+      &:before {
+        display: block;
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 63px;
+        background: $icons;
+        height: 2px;
+      }
+    }
+    p {
+      margin: 0;
+      color: $font;
+      font-family: $OpenSans;
+      font-size: 14px;
+    }
+  }
+  .right {
+    margin: 16px 0 0 204px;
   }
 }
 
