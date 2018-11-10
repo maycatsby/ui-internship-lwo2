@@ -67,8 +67,29 @@
       }
     }
 
+    .sections {
+      text-align: center;
+      .section-elements {
+        @include flex-direction-column;
+        padding: 0;
+        .wtia-item-paragraph {
+          padding-bottom: 20px;
+        }
+      }  
+    }
+
+    .pricing-options {
+      .basic {
+        margin: 0;
+      }
+      .enterprise {
+        margin: 0;
+      }
+    }
+    
   }
 }
+
 //////////     TABLET     //////////
 @media  screen and (min-width: 679px) and (max-width: 1027px) {
   body{
@@ -159,6 +180,57 @@
       padding: 70px 105px 100px 80px;
       .right {
         margin: 25px 0 25px 40px;
+      }
+    }
+
+    .sections {
+      text-align: center;
+      .section-elements {
+        .wtia-item {
+          text-align: center;
+          margin: 0 30px;
+          .wtia-item-paragraph {
+            width: 120px;
+          }
+        }
+      }  
+    }
+
+    .pricing-options {
+      padding: 0;
+      .pricing-item {
+        margin: 5px;
+        .pricing-header {
+          width: 230px;
+        }
+        .b {
+          padding: 0;
+          width: 230px;
+        }
+        .pr {
+          padding: 0;
+          width: 230px;
+        }
+        .e {
+          padding: 0;
+          width: 230px;
+        }
+        .pricing-features {
+          padding: 0;
+          width: 230px;
+          li {
+            width: 230px;
+          }
+          .diff {
+            width: 230px;
+          }
+        }
+      }
+      .basic {
+        margin-top: 44px;
+      }
+      .enterprise {
+        margin-top: 44px;
       }
     }
   }

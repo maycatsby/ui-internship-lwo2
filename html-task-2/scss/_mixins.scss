@@ -27,12 +27,6 @@
   align-items: center;
 }
 
-@mixin align-items-strech {
-  -webkit-box-align: strech;
-  -ms-flex-align: strech;
-  align-items: strech;
-}
-
 @mixin flex-direction-column {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -65,4 +59,9 @@
 @mixin border-radius-bottom($border-b-r-l) {
   border-bottom-left-radius: $border-b-r-l;
   border-bottom-right-radius: $border-b-r-l;
+}
+
+@mixin text-overflow {
+  -o-text-overflow: ellipsis;
+   text-overflow: ellipsis;
 }

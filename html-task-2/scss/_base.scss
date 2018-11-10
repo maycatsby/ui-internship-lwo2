@@ -391,6 +391,152 @@ main {
   }
 }
 
+.why-this-is-awesome {
+  padding: 77px 134px 40px 153px;
+}
 
+.sections {
+  @include flex;
+  @include flex-direction-column;
+  @include align-items-center;
+  .section-header {
+    font-family: $Raleway;
+    font-size: 36px;
+    color: $section-header;
+    text-transform: uppercase;
+    margin: 25px 0;
+  }
+  .section-paragraph {
+    font-family: $OpenSans;
+    font-size: 14px;
+    color: $font;
+    padding: 25px 0;
+    margin: 0;
+    position: relative;
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 40%;
+      background-color: $icons;
+      width: 63px;
+      height: 2px;
+    }
+  }
+  .section-elements {
+    @include flex;
+    @include justify-content-space-around;
+    padding: 55px 0;
+    .wtia-item {
+      @include flex;
+      @include flex-direction-column;
+      @include align-items-center;
+      .fa {
+        font-size: 32px;
+        color: $icons;
+        border: 2px solid $icons;
+        border-radius: 100%;
+        padding: 16px;
+      }
+      .oval {
+        padding: 16px 24px; 
+      }
+      .wtia-item-header {
+        color: $item-header;
+        font-family: $OpenSans;
+        font-size: 20px;
+      }
+      .wtia-item-paragraph {
+        color: $font;
+        font-family: $OpenSans;
+        font-size: 14px;
+        margin: 0;
+        text-align: center;
+      }
+    }
+  }
+}
 
-
+.pricing-options {
+  padding: 77px 134px 40px 153px;
+  background-color: $section-background;
+  .pricing-item {
+    @include flex;
+    @include flex-direction-column;
+    @include align-items-center;
+    margin: 0 45px;
+    .pricing-header {
+      color: $white;
+      font-family: $OpenSans;
+      font-size: 20px;
+      background-color: $item-header;
+      margin: 0;
+      padding: 14px 0;
+      text-align: center;
+      width: 339px;
+      border-bottom: 2px solid $white;
+    }
+    .pricing-paragraph {
+      font-family: $OpenSans;
+      background-color: $item-header;
+      .price {
+        color: $white;
+        font-weight: bold;
+        font-size: 100px;
+        font-family: $Raleway;
+        margin: 0;
+        span {
+          font-size: 30px
+        }
+      }
+      .description {
+        font-size: 14px;
+        color: $font;
+        font-style: italic;
+        margin: 0;
+      }
+    }
+    .add-border {
+      border-bottom: 4px solid $icons;
+    }
+    .b {
+      padding: 0 130px 15px 130px;
+    }
+    .pr {
+      padding: 0 93px 15px 129px;
+    }
+    .e {
+      padding: 0 78px 15px 130px;
+    }
+    .pricing-features {
+      list-style-type: none;
+      font-family: $OpenSans;
+      color: $font;
+      background-color: $white;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      li {
+        padding: 11px 0;
+        position: relative;
+        width: 339px;
+        white-space: nowrap;
+        border-bottom: 1px solid $section-background;
+      }
+      .diff {
+        background-color: $icons;
+        color: $white;
+        font-weight: bold;
+      }
+    }
+  }
+  .basic {
+    margin: 37px 0 0 20px;
+  }
+  .enterprise {
+    margin: 37px 36px 0 0;
+  }
+}
