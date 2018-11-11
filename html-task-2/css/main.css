@@ -51,6 +51,9 @@
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
       padding: 0; }
       body .sections .section-elements .wtia-item-paragraph {
         padding-bottom: 20px; }
@@ -636,7 +639,9 @@ main {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin: 0 45px; }
+    margin: 0 45px;
+    width: 33%;
+    max-width: 339px; }
     .pricing-options .pricing-item .pricing-header {
       color: #ffffff;
       font-family: "Open Sans";

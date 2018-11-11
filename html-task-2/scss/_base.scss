@@ -466,6 +466,8 @@ main {
     @include flex-direction-column;
     @include align-items-center;
     margin: 0 45px;
+    width: 33%;
+    max-width: 339px;
     .pricing-header {
       color: $white;
       font-family: $OpenSans;
