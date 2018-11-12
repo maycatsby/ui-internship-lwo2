@@ -214,29 +214,29 @@ input {
   padding: 150px 140px 113px 140px;
   .tabs {
     padding-right: 98px;
-    .tabs-item {
-      padding: 30px 37px;
-      font-size: 15px;
-      background-color: $item-header;
-      color: $white;
-      pre {
-        text-transform: uppercase;
-        font-weight: bold;
-        font-family: $OpenSans;
-      }
-      cursor: pointer;
-      span {
-        text-align: center;
-      }
-      &:active {
-        background-color: $icons;
-      }
-      &:focus {
-        background-color: $icons;
-      }
-      &:hover {
-        background-color: $icons;
-      }
+  }
+  .tabs-item {
+    padding: 30px 37px;
+    font-size: 15px;
+    background-color: $item-header;
+    color: $white;
+    pre {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-family: $OpenSans;
+    }
+    cursor: pointer;
+    span {
+      text-align: center;
+    }
+    &:active {
+      background-color: $icons;
+    }
+    &:focus {
+      background-color: $icons;
+    }
+    &:hover {
+      background-color: $icons;
     }
   } 
   .tabs-text {
@@ -276,7 +276,7 @@ input {
 }
 
 .sub-list {
-  padding: 105px 134px 96px 153px;
+  padding: 96px 134px 96px 153px;
   @include flex;
   @include justify-content-space-around;
   .left {
@@ -308,28 +308,28 @@ input {
     .sub-l {
       @include flex;
       @include justify-content-space-between;
-      .sub-img {
-        @include flex;
-        @include flex-direction-column;
-        .fa {
-          border: 2px solid $icons;
-          padding: 10px;
-          border-radius: 100%;
-          color: $icons;
-          width: fit-content;
-          margin-bottom: 150%;
-        }
-      }
-      .sub-l-text {
-        padding: 0 30px;
-        h5 {
-          margin: 0;
-          color: $section-header;
-        }
-        p {
-          margin-bottom: 27px;
-        }
-      }
+    }
+    .sub-img {
+      @include flex;
+      @include flex-direction-column;
+    }
+    .fa {
+      border: 2px solid $icons;
+      padding: 10px;
+      border-radius: 100%;
+      color: $icons;
+      width: fit-content;
+      margin-bottom: 150%;
+    }
+    .sub-l-text {
+      padding: 0 30px;
+    }
+    h5 {
+      margin: 0;
+      color: $section-header;
+    }
+    p {
+      margin-bottom: 27px;
     }
   }
 }
@@ -407,20 +407,20 @@ input {
       @include flex;
       @include flex-direction-column;
       @include align-items-center;
-      .fa {
-        font-size: 32px;
-        color: $icons;
-        border: 2px solid $icons;
-        border-radius: 100%;
-        padding: 16px;
-      }
-      .oval {
-        padding: 16px 24px; 
-      }
-      .wtia-item-paragraph {
-        margin: 0 10px;
-        text-align: center;
-      }
+    }
+    .fa {
+      font-size: 32px;
+      color: $icons;
+      border: 2px solid $icons;
+      border-radius: 100%;
+      padding: 16px;
+    }
+    .oval {
+      padding: 16px 24px; 
+    }
+    .wtia-item-paragraph {
+      margin: 0 10px;
+      text-align: center;
     }
   }
 }
@@ -441,20 +441,20 @@ input {
     }
     .pricing-paragraph {
       background-color: $item-header;
-      .price {
-        color: $white;
-        font-weight: bold;
-        font-size: 100px;
-        font-family: $Raleway;
-        margin: 0;
-        span {
-          font-size: 30px
-        }
-      }
-      .description {
-        font-style: italic;
-        margin: 0;
-      }
+    }
+    .price {
+      color: $white;
+      font-weight: bold;
+      font-size: 100px;
+      font-family: $Raleway;
+      margin: 0;
+    }
+    span {
+      font-size: 30px
+    }
+    .description {
+      font-style: italic;
+      margin: 0;
     }
     .add-border {
       border-bottom: 4px solid $icons;
@@ -475,18 +475,18 @@ input {
       margin: 0;
       padding: 0;
       text-align: center;
-      li {
-        padding: 11px 0;
-        position: relative;
-        width: 339px;
-        white-space: nowrap;
-        border-bottom: 1px solid $section-background;
-      }
-      .diff {
-        background-color: $icons;
-        color: $white;
-        font-weight: bold;
-      }
+    }
+    li {
+      padding: 11px 0;
+      position: relative;
+      width: 339px;
+      white-space: nowrap;
+      border-bottom: 1px solid $section-background;
+    }
+    .diff {
+      background-color: $icons;
+      color: $white;
+      font-weight: bold;
     }
   }
   .basic {
@@ -528,13 +528,13 @@ input {
       @include flex-direction-column;
       @include align-items-center;
       padding: 14px 0;
-      h4 {
-        font-weight: bold;
-        margin: 0;
-      }
-      p {
-        margin: 0;
-      }
+    }
+    h4 {
+      font-weight: bold;
+      margin: 0;
+    }
+    p {
+      margin: 0;
     }
   }
 }
@@ -554,7 +554,7 @@ input {
 }
 
 .contact {
-  padding: 74px 163px 84px 151px;
+  padding: 82px 163px 84px 151px;
   .contact-form {
     @include flex;
     @include justify-content-space-around;
