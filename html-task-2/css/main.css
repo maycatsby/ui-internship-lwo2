@@ -76,7 +76,8 @@
     position: relative; }
     body header .top-navigation {
       position: absolute;
-      bottom: 10%; }
+      bottom: 10%;
+      right: auto; }
   body .main-text {
     padding: 50px; }
   body .main-form {
