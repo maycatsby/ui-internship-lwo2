@@ -4,6 +4,12 @@
   display: flex;
 }
 
+@mixin justify-content-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 @mixin justify-content-right {
   -webkit-box-pack: right;
   -ms-flex-pack: right;
@@ -25,6 +31,18 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+@mixin align-self-center {
+  -ms-flex-item-align:center;
+  -ms-grid-row-align:center;
+  align-self:center;
+}
+
+@mixin align-items-flex-start {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 @mixin flex-direction-column {
@@ -64,4 +82,9 @@
 @mixin text-overflow {
   -o-text-overflow: ellipsis;
    text-overflow: ellipsis;
+}
+
+@mixin box-sizing {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }

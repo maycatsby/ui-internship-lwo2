@@ -11,6 +11,24 @@ body {
   margin: auto;
   max-width: 1400px;
   @include box-shadow-block;
+  font-family: $OpenSans;
+}
+
+.background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.font {
+  font-size: 14px;
+  color: $font;
+}
+
+.header {
+  font-size: 20px;
+  color: $item-header;
 }
 
 header {
@@ -35,10 +53,9 @@ header {
   list-style-type: none;
   @include flex;
   @include justify-content-right;
-  font-family: $OpenSans;
-  font-size: 14px;
   margin: 5px 60px 0 0;
 }
+
 .menu-item {
   padding: 0 20px;
   a {
@@ -50,30 +67,12 @@ header {
   }
 }
 
-@media screen and (max-width: 678px) {
-  header {
-    @include flex-direction-column;
-    min-height: 15px;
-    .logo {
-      display: none;
-    }
-  }
-
-  .main-text {
-    padding: 50px;
-  }
-
-  .main-form {
-    display: none;
-  }
+.main-text {
+  padding: 50px;
 }
 
 main {
   background: url(../pics/main-background.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   @include flex;
   @include justify-content-space-between;
 }
@@ -109,19 +108,39 @@ main {
     background: transparent;
     border: 2px solid $white;
     color: $white;
-    font-family: $OpenSans;
     font-size: 15px;
     padding: 8px 30px;
+    cursor: pointer;
+    &:hover {
+      border-color: $icons;
+      color: $icons;
+    }
   }
 }
+
+.form {
+  @include flex;
+  @include flex-direction-column;
+  @include align-items-center;
+}
+input {
+  @include input-borders(none, none, 1px solid $socials-n-shadow, none);
+  @include flex;
+  @include flex-direction-column;
+  @include align-items-center;
+  @include justify-content-space-around;
+  &::placeholder {
+    padding-left: 10px;
+    font-size: 14px;
+    color: $placeholder;
+  }
+} 
+
 .main-form {
   padding: 140px 0 120px 150px;
   .form-header {
     width: 360px;
     background-color: $light;
-    color: $item-header;
-    font-family: $OpenSans;
-    font-size: 20px;
     margin: 0;
     padding: 15px 0;
     text-align: center;
@@ -133,29 +152,13 @@ main {
   }
   .login-form {
     background-color: $white;
-    @include flex;
-    @include flex-direction-column;
-    @include align-items-center;
     width: 360px;
     margin: 0 145px 0 0;
     @include border-radius-bottom(4px);
     input {
-      @include input-borders(none, none, 1px solid $socials-n-shadow, none);
       width: 280px;
-      margin: 25px 0;
-      padding: 5px 0;
-      @include flex;
-      @include flex-direction-column;
-      @include align-items-center;
-      @include justify-content-space-around;
-      &::placeholder {
-        padding-left: 10px;
-        font-size: 14px;
-        color: $placeholder;
-      }
-      &[type=password] {
-        margin-bottom: 45px;
-      }
+      margin: 25px 36px;
+      padding: 7px 0;
     }
     button {
       width: inherit;
@@ -181,28 +184,25 @@ main {
   .social-media {
     @include flex;
     @include flex-direction-column;
-    font-family: $OpenSans;
     .socials-header {
-      font-size: 20px;
-      color: $item-header;
       margin: 10px;
     }
     .socials-paragraph {
-      font-size: 14px;
-      color: $font;
       margin: 0;
     }
   }
-  .social-icons {
-    font-size: 48px;
-    color: $socials-n-shadow;
-    margin: 20px 0;
-    @include flex;
-    .fa {
-      padding: 0 28px;
-      &:hover {
-        color: $item-header;
-      }
+}
+
+.social-icons {
+  font-size: 48px;
+  color: $socials-n-shadow;
+  margin: 20px 0;
+  @include flex;
+  cursor: pointer;
+  .fa {
+    padding: 0 28px;
+    &:hover {
+      color: $item-header;
     }
   }
 }
@@ -216,14 +216,13 @@ main {
     padding-right: 98px;
     .tabs-item {
       padding: 30px 37px;
-      font-family: $OpenSans;
       font-size: 15px;
       background-color: $item-header;
       color: $white;
       pre {
-        font-family: $OpenSans;
         text-transform: uppercase;
         font-weight: bold;
+        font-family: $OpenSans;
       }
       cursor: pointer;
       span {
@@ -241,37 +240,34 @@ main {
     }
   } 
   .tabs-text {
-    padding-right: 80px; 
-    font-family: $OpenSans;
+    padding-right: 80px;
     .tabs-header {
       color: $black;
-      font-size: 20px;
       margin: 0;
       padding-bottom: 30px;
     }
     .tabs-paragraph {
-      font-size: 14px;
-      color: $font;
       padding: 20px 0;
       margin: 0;
     }
     .second {
       padding-bottom: 45px;
     }
-    .tabs-button {
-      font-family: $OpenSans;
-      font-size: 15px;
-      color: $white;
-      background-color: $icons;
-      padding: 10px 20px;
-      cursor: pointer;
-      &:hover {
-        background-color: $item-header;
-      }
-    }
   }
   .tabs-img {
     padding-top: 45px;
+  }
+}
+
+.tabs-button {
+  font-size: 15px;
+  color: $white;
+  background-color: $icons;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  &:hover {
+    background-color: $item-header;
   }
 }
 
@@ -280,7 +276,7 @@ main {
 }
 
 .sub-list {
-  padding: 103px 134px 96px 153px;
+  padding: 105px 134px 96px 153px;
   @include flex;
   @include justify-content-space-around;
   .left {
@@ -290,16 +286,11 @@ main {
     padding-left: 200px;
     .sub-header {
       margin: 0;
-      font-family: $OpenSans;
-      font-size: 20px;
       color: $section-header;
       padding-bottom: 20px;
       font-weight: bold;
     }
     .sub-paragraph {
-      color: $font;
-      font-family: $OpenSans;
-      font-size: 14px;
       padding: 20px 0;
       margin-bottom: 22px;
       position: relative;
@@ -333,14 +324,9 @@ main {
         padding: 0 30px;
         h5 {
           margin: 0;
-          font-family: $OpenSans;
-          font-size: 14px;
           color: $section-header;
         }
         p {
-          color: $font;
-          font-family: $OpenSans;
-          font-size: 14px;
           margin-bottom: 27px;
         }
       }
@@ -349,14 +335,12 @@ main {
 }
 
 .standart-picture {
-  padding: 77px 134px 129px 153px;
+  padding: 79px 134px 129px 153px;
   background-color: $section-background;
   @include flex;
   @include justify-content-space-around;
   .standart-picture-section {
     .stand-header {
-      font-family: $OpenSans;
-      font-size: 20px;
       color: $section-header;
       font-weight: bold;
       margin: 25px 0;
@@ -364,9 +348,6 @@ main {
     .first {
       margin: 0;
       padding: 32px 0;
-      color: $font;
-      font-family: $OpenSans;
-      font-size: 14px;
       position: relative;
       &:before {
         display: block;
@@ -381,9 +362,6 @@ main {
     }
     p {
       margin: 0;
-      color: $font;
-      font-family: $OpenSans;
-      font-size: 14px;
     }
   }
   .right {
@@ -407,9 +385,6 @@ main {
     margin: 25px 0;
   }
   .section-paragraph {
-    font-family: $OpenSans;
-    font-size: 14px;
-    color: $font;
     padding: 25px 0;
     margin: 0;
     position: relative;
@@ -428,7 +403,7 @@ main {
     @include flex;
     @include justify-content-space-around;
     padding: 55px 0;
-    .wtia-item {
+    .section-item {
       @include flex;
       @include flex-direction-column;
       @include align-items-center;
@@ -442,15 +417,7 @@ main {
       .oval {
         padding: 16px 24px; 
       }
-      .wtia-item-header {
-        color: $item-header;
-        font-family: $OpenSans;
-        font-size: 20px;
-      }
       .wtia-item-paragraph {
-        color: $font;
-        font-family: $OpenSans;
-        font-size: 14px;
         margin: 0 10px;
         text-align: center;
       }
@@ -462,16 +429,9 @@ main {
   padding: 77px 134px 40px 153px;
   background-color: $section-background;
   .pricing-item {
-    @include flex;
-    @include flex-direction-column;
-    @include align-items-center;
     margin: 0 45px;
-    width: 33%;
-    max-width: 339px;
     .pricing-header {
       color: $white;
-      font-family: $OpenSans;
-      font-size: 20px;
       background-color: $item-header;
       margin: 0;
       padding: 14px 0;
@@ -480,7 +440,6 @@ main {
       border-bottom: 2px solid $white;
     }
     .pricing-paragraph {
-      font-family: $OpenSans;
       background-color: $item-header;
       .price {
         color: $white;
@@ -493,8 +452,6 @@ main {
         }
       }
       .description {
-        font-size: 14px;
-        color: $font;
         font-style: italic;
         margin: 0;
       }
@@ -513,11 +470,8 @@ main {
     }
     .pricing-features {
       list-style-type: none;
-      font-family: $OpenSans;
-      color: $font;
       background-color: $white;
       text-transform: uppercase;
-      font-size: 14px;
       margin: 0;
       padding: 0;
       text-align: center;
@@ -540,5 +494,104 @@ main {
   }
   .enterprise {
     margin: 37px 36px 0 0;
+  }
+}
+
+.feedback {
+  padding: 67px 163px 46px 151px;
+  .feedback-elements {
+    padding-top: 29px;
+  }
+  .feedback-item {
+    padding: 0 59px;
+    @include flex;
+    @include flex-direction-column;
+    @include align-items-flex-start;
+  }
+  .feedback-text {
+    position: relative;
+    p {
+      padding: 5px 0 0 14px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-style: italic;
+    }
+  }
+  .user-info {
+    @include flex;
+    img {
+      padding-right: 20px;
+    }
+    .user-name {
+      @include flex;
+      @include flex-direction-column;
+      @include align-items-center;
+      padding: 14px 0;
+      h4 {
+        font-weight: bold;
+        margin: 0;
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.stylish {
+  background: url(../pics/section-background.png);
+  padding: 30px 163px 65px 151px;
+  width: initial;
+  .stylish-paragraph {
+    position: relative;
+    padding: 27px 0;
+    &:before {
+      left: 46%;
+      background-color: $white;
+    }
+  }
+}
+
+.contact {
+  padding: 74px 163px 84px 151px;
+  .contact-form {
+    @include flex;
+    @include justify-content-space-around;
+    margin: 45px 0 27px 0;
+    input {
+      @include box-sizing;
+      width: 527px;
+      margin: 0 30px 12px 30px;
+      padding: 17px 4px;
+    }
+    .separate {
+      height: 0px;
+      padding-bottom: 140px;
+      margin-top: 10px;
+    }
+  }
+}
+
+footer {
+  @include flex;
+  @include flex-direction-column;
+  @include align-items-center;
+  @include justify-content-center;
+  padding-top: 20px;
+  background-color: $black;
+  .soc-ic-foot {
+    font-size: 24px;
+    margin: 0;
+    .fa {
+      padding: 0 14px;
+      &:hover {
+        color: $icons;
+      }
+    }
+  }
+  p {
+    font-size: 12px;
+    color: $white;
   }
 }

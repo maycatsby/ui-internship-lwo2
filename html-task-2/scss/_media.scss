@@ -88,6 +88,14 @@
       }
     }
     
+    .contact {
+      padding: 74px 50px 84px 50px;
+      .contact-form {
+        input {
+          width: 100%;
+        }
+      }
+    }
   }
 }
 
@@ -232,6 +240,37 @@
       }
       .enterprise {
         margin-top: 44px;
+      }
+    }
+
+    .feedback {
+      .feedback-elements {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+        .feedback-item {
+          padding: 10px;
+        }
+        #align-self {
+          position: absolute;
+          left: 27%;
+          top: 50%;
+        }
+      }
+    }
+
+    .contact {
+      padding: 74px 50px 84px 50px;
+      .contact-form {
+        @include flex-direction-column;
+        width: 85%;
+        input {
+          width: 100%;
+        }
+        .separate {
+          margin: 0;
+        }
       }
     }
   }
