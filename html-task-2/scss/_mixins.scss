@@ -88,3 +88,8 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+@mixin grid {
+  display: -ms-grid;
+  display: grid;
+}
