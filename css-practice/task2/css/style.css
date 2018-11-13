@@ -89,7 +89,7 @@ header img {
   text-transform: uppercase; }
 
 .header-container {
-  background-image: url(../img/section-1-bg.png);
+  background-image: url(../img/header-bg.png);
   background-position: center;
   background-size: cover; }
 
@@ -169,7 +169,7 @@ header img {
   width: 32%; }
 
 .design-container {
-  background-image: url(../img/section-4-bg.png);
+  background-image: url(../img/design-bg.png);
   background-position: -924px -100px;
   padding: 7% 4%;
   background-repeat: no-repeat; }
@@ -199,7 +199,7 @@ header img {
   width: 50%; }
 
 .founder-section-container {
-  background: url(../img/section-5-bg.png);
+  background: url(../img/founder-bg.png);
   padding: 108px 0 76px;
   position: relative; }
 
@@ -296,7 +296,7 @@ header img {
 
 .designer-features img {
   display: block;
-  background-image: url(../img/section-7-30-days.png);
+  background-image: url(../img/30-days.png);
   position: absolute;
   top: -70px; }
 
@@ -347,7 +347,7 @@ input:focus::placeholder {
   color: transparent; }
 
 .contact-info {
-  background-image: url(../img/section-8-bg.png);
+  background-image: url(../img/contact-info-bg.png);
   background-repeat: no-repeat;
   background-position-x: 1086px;
   background-position-y: -803px;
