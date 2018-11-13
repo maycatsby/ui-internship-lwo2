@@ -1,0 +1,135 @@
+@media screen and (max-width: 678px) {
+
+  body {
+
+    header { 
+
+      min-height: fit-content;
+
+      .logo {
+        display: none;
+      }
+
+      .top-navigation {
+        position: static;
+      }
+
+      .top-menu {
+        @include flex;
+        @include flex-direction-column;
+      }
+    }
+
+    .main-text {
+      padding: 50px;
+    }
+  
+    .main-form {
+      display: none;
+    }
+
+    .social-m-bar {
+      @include flex-direction-column;
+      @include align-items-center;
+
+      padding: 10px 0;
+
+      .socials-paragraph {
+        display: none;
+      }
+
+      .social-icons {
+        font-size: 30px;
+        display: inline-block;
+        font-size: 30px;
+      }
+
+      .fa {
+        padding: 0 15px;
+      }
+    }
+
+    .tabs-bar {
+      position: relative;
+      padding: 130px 0;
+
+      img {
+        width: 70%;
+      }
+
+      .tabs {
+        padding: 30px;
+      }
+
+      .tabs-item {
+        padding: 35px 20px;
+      }
+
+      .tabs-text {
+        position: relative;
+      }
+
+      .tabs-img {
+        position: absolute;
+        padding: 0;
+        bottom: 25%;
+        opacity: 0.2;
+      }
+    }
+    
+    .city-view {
+      display: none;
+    }
+
+    .sub-list {
+
+      .sub-list-section {
+        padding: 0;
+      }
+    }
+
+    .standart-picture {
+
+      .right {
+        display: none;
+      }
+    }
+
+    .sections {
+      text-align: center;
+
+      .section-elements {
+        @include flex-direction-column;
+        @include align-items-center;
+
+        padding: 0;
+      }  
+
+      .wtia-item-paragraph {
+        padding-bottom: 20px;
+      }
+    }
+
+    .pricing-options {
+
+      .basic-item {
+        margin: 0;
+      }
+
+      .enterprise-item {
+        margin: 0;
+      }
+    }
+    
+    .contact {
+      padding: 74px 50px 84px 50px;
+
+      .contact-form {
+
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
