@@ -11,7 +11,7 @@ body {
 header {
     background: url(../img/photo-1433354359170-23a4ae7338c6.png) no-repeat;
     background-size: cover;
-    padding-top: 211px;
+    padding-top: 215px;
     padding-bottom: 189px;
     h1{
         margin-top: 0;
@@ -234,11 +234,6 @@ a {
     padding-bottom: 80px;
     background-image: url(../img/Slice_1.png);
     background-size: cover;
-    /*background-image: url(../img/Rectangle_21_copy_2.png);
-    background-color: white;
-    background-position-x: 405%;
-    background-position-y: 4%;
-    background-repeat: no-repeat;*/
     z-index: 3;
     article {
         max-width: 525px;
@@ -273,11 +268,6 @@ a {
     @include flexbox();
     @include flex-direction(column);
     @include align-items(center);
-  /*  img {
-        width: 66.5%;
-        margin-left: 16.5%;
-        margin-top: 51px;
-    }*/
 }
 
 .co-founders {
