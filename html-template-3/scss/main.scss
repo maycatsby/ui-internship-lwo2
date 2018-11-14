@@ -22,6 +22,20 @@ main {
   font-size: 15px;
 }
 
+.italic-header {
+  color: $headers;
+  font-family: $KaushanScript;
+  font-size: 24px;
+}
+
+.simple-header {
+  color: $headers;
+  font-family: $Montserrat;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .background {
   background-repeat: no-repeat;
   background-position: center;
@@ -31,6 +45,17 @@ main {
 .align {
   width: 1200px;
   margin: 0 auto;
+}
+
+.underline {
+  border-top: 3px solid;
+  color: transparent;
+}
+
+.container {
+  @include flex;
+  @include flex-direction-column;
+  @include align-items-center;
 }
 
 .second-back {
@@ -75,23 +100,28 @@ main {
     .menu-item {
       padding: 0 27px;
       cursor: pointer;
+    }
 
+    .hovered:hover {
+      color: $background-main;
+      border-bottom: 3px solid $background-main;
+      padding-bottom: 7px;
+    } 
+
+    .fa {
+      font-size: 16px;
       &:hover {
         color: $background-main;
       }
     }
 
-    .about:hover, .about:visited {
+    .about:hover, .about:focus-within {
       border-bottom: 3px solid $background-main;
     }
   }
 }
 
-.container {
-  @include flex;
-  @include flex-direction-column;
-  @include align-items-center;
-
+.pad {
   padding-top: 138px;
 }
 
@@ -113,9 +143,8 @@ main {
   padding: 27px 0 56px 0;
 }
 
-.underline {
-  border-top: 3px solid $white;
-  color: transparent;
+.white-underline {
+  border-color: $white;
   padding-top: 30px;
 }
 
@@ -125,6 +154,12 @@ main {
   border: 3px solid $white;
   font-weight: bold;
   padding: 10px 28px;
+  cursor: pointer;
+
+  &:hover {
+    color: $background-main;
+    border-color: $background-main;
+  }
 }
 
 .slider-buttons {
@@ -178,3 +213,55 @@ main {
   }
 }
 
+.story-about {
+  padding: 90px 0;
+
+  p {
+    text-align: center;
+    line-height: 22px;
+    padding: 0 102px;
+  }
+}
+
+.color-underline {
+  border-color: $underlines;
+  margin: 39px 0 26px 0;
+}
+
+.sau-gallery {
+  @include flex;
+  @include justify-content-space-between;
+
+  padding: 99px 0 17px 0;
+}
+
+.sau-pic {
+  margin: 0px 15px;
+}
+
+.statistics {
+  background-color: $riptide;
+}
+
+.stats {
+  @include grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.stat {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.stat-content {
+  padding: 40px 10px;
+}
+
+.stat-header {
+  font-size: 72px;
+  padding: 0;
+}
+
+.stat-font {
+  color: $white;
+  text-transform: uppercase;
+}

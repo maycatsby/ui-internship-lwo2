@@ -1,0 +1,56 @@
+@media screen and (min-width: 426px) and (max-width: 1023px) {
+
+  body {
+    margin: 0;
+
+    header {
+      @include flex;
+      @include flex-direction-column;
+
+      margin: 0;
+    }
+
+    .top-navigation {
+      
+      .top-menu {
+
+        .menu-item {
+          padding: 0 12px;
+        }
+      }
+    }
+    
+    .container {
+      margin: 0;
+      padding: 40px 0;
+    }
+
+    .align {
+      width: 75%;
+      @include flex;
+      @include flex-direction-column;
+      @include align-items-center;
+    }
+
+    .main-subheader {
+      font-size: 40px;
+    }
+
+    .main-header {
+      line-height: initial;
+      font-size: 66px;
+    }
+
+    .slider-buttons {
+      padding-top: 50px;
+    }
+
+    .slide {
+      width: 70px;
+      font-size: 16px;
+      span {
+        font-size: 20px;
+      }
+    }
+  }
+}

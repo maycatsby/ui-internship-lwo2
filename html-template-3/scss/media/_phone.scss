@@ -1,0 +1,42 @@
+@media screen and (min-width: 320px) and (max-width: 425px) {
+
+  body {
+
+    .top-navigation {
+      margin: 0;
+    }
+
+    .top-menu {
+      @include flex-direction-column;
+    }
+
+    .menu-item {
+      padding: 7px 0;
+    }
+
+    .container {
+      @include flex;
+      @include flex-direction-column;
+      @include align-items-center;
+      
+      padding: 40px 0;
+    }
+
+    .align {
+      width: 75%;
+    }
+
+    .main-subheader {
+      font-size: 24px;
+    }
+
+    .main-header {
+      line-height: initial;
+      font-size: 40px;
+    }
+
+    .slider-buttons {
+      display: none;
+    }
+  }
+}
