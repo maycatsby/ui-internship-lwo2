@@ -5,6 +5,7 @@
   "scripts": {
     "test": "jest",
     "lint": "./node_modules/.bin/eslint tasks/**/*.js",
+    "lint:fix": "./node_modules/.bin/eslint tasks/**/*.js --fix",
     "tdd": "jest --watch",
     "watch:sass": "node-sass -w css-practice/task2/css/ -o css-practice/task2/css/",
     "compile:sass": "node-sass css-practice/task2/css/ -o css-practice/task2/css/"
