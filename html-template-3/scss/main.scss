@@ -3,20 +3,17 @@
 @import "media/phone";
 @import "media/tablet";
 
-html {
+* {
   margin: 0;
   padding: 0;
 }
 
 body {
-  margin: auto;
-  padding: 0;
   max-width: 1920px;
 }
 
 main {
   background-image: url(../pics/backgrounds/main-background-picture.png);
-  margin: 0;
 }
 
 .font {
@@ -31,18 +28,22 @@ main {
   background-size: cover;
 }
 
+.align {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .second-back {
   background-color: $background-main;
   background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
   opacity: 0.9;
-  padding: 0 280px;
 
   header {
     @include flex;
     @include justify-content-space-between;
 
     .small-logo {
-      font-size: 21px;
+      font-size: 30px;
       font-weight: bold;
       margin: 0;
       padding: 17px 0;
@@ -59,32 +60,120 @@ main {
 .top-navigation {
   @include flex;
   @include justify-content-space-around;
-  padding: 10px 0;
+
+  padding-top: 36px;
+  margin-right: -29px;
 
   .top-menu {
     @include flex;
     @include justify-content-space-around;
+
     list-style-type: none;
     color: $white;
+    text-transform: uppercase;
 
     .menu-item {
-      padding: 0 16px;
+      padding: 0 27px;
       cursor: pointer;
+
       &:hover {
         color: $background-main;
       }
     }
 
-    .about:hover {
+    .about:hover, .about:visited {
       border-bottom: 3px solid $background-main;
-      padding: 0;
-      margin-right: 16px;
     }
-    
-    .about:visited {
-      border-bottom: 3px solid $background-main;
-      padding: 0;
-      margin-right: 16px;
+  }
+}
+
+.container {
+  @include flex;
+  @include flex-direction-column;
+  @include align-items-center;
+
+  padding-top: 138px;
+}
+
+.main-subheader {
+  font-family: $KaushanScript;
+  color: $white;
+  font-size: 72px;
+  font-weight: 400;
+}
+
+.main-header {
+  font-family: $Montserrat;
+  color: $white;
+  font-size: 150px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 140px;
+  padding: 27px 0 56px 0;
+}
+
+.underline {
+  border-top: 3px solid $white;
+  color: transparent;
+  padding-top: 30px;
+}
+
+.learn-more {
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 3px solid $white;
+  font-weight: bold;
+  padding: 10px 28px;
+}
+
+.slider-buttons {
+  @include flex;
+  @include justify-content-space-around;
+
+  padding-top: 156px;
+}
+
+.slide {
+  text-transform: uppercase;
+  text-decoration: none;
+  border-top: 3px solid $white;
+  opacity: 0.5;
+  font-size: 18px;
+  margin: 0 16px;
+  padding: 20px 0;
+  display: inline-block;
+  width: 278px;
+
+  span {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &:hover, &:focus-within {
+    position: relative;
+    opacity: 1;
+    border: none;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      content: '';
+      background: $underlines;
+      height: 3px;
+      width: 25%;
+    }
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      content: '';
+      background: $white;
+      height: 3px;
+      width: 75%;
     }
   }
 }
