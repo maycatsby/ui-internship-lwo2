@@ -5,8 +5,9 @@
   "scripts": {
     "test": "jest",
     "lint": "./node_modules/.bin/eslint tasks/**/*.js",
-    "lint:fix": "./node_modules/.bin/eslint --fix tasks/**/*.js",
-    "tdd": "jest --watch"
+    "tdd": "jest --watch",
+    "watch:sass": "node-sass -w html-task-2/scss/ -o html-task-2/css/",
+    "compile:sass": "node-sass html-task-2/scss/ -o html-task-2/css/"
   },
   "husky": {
     "hooks": {
@@ -23,9 +24,10 @@
     "eslint-config-google": "^0.10.0",
     "husky": "^1.1.2",
     "jest": "^21.1.0",
-    "regenerator-runtime": "^0.11.0"
+    "regenerator-runtime": "^0.11.0",
+    "node-sass": "^4.10.0"
   },
   "dependencies": {
-    "sieve-of-sundaram": "^1.0.0"
+    "sass": "^1.14.3"
   }
 }
