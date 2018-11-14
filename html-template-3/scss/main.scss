@@ -1,0 +1,91 @@
+@import "variables";
+@import "mixins";
+@import "media/phone";
+@import "media/tablet";
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: auto;
+  padding: 0;
+  max-width: 1920px;
+}
+
+main {
+  background-image: url(../pics/backgrounds/main-background-picture.png);
+  margin: 0;
+}
+
+.font {
+  font-family: $Roboto;
+  color: $font;
+  font-size: 15px;
+}
+
+.background {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.second-back {
+  background-color: $background-main;
+  background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+  opacity: 0.9;
+  padding: 0 280px;
+
+  header {
+    @include flex;
+    @include justify-content-space-between;
+
+    .small-logo {
+      font-size: 21px;
+      font-weight: bold;
+      margin: 0;
+      padding: 17px 0;
+    }
+  }
+}
+
+.main-font {
+  color: $white;
+  font-family: $Montserrat;
+  font-size: 14px;
+}
+
+.top-navigation {
+  @include flex;
+  @include justify-content-space-around;
+  padding: 10px 0;
+
+  .top-menu {
+    @include flex;
+    @include justify-content-space-around;
+    list-style-type: none;
+    color: $white;
+
+    .menu-item {
+      padding: 0 16px;
+      cursor: pointer;
+      &:hover {
+        color: $background-main;
+      }
+    }
+
+    .about:hover {
+      border-bottom: 3px solid $background-main;
+      padding: 0;
+      margin-right: 16px;
+    }
+    
+    .about:visited {
+      border-bottom: 3px solid $background-main;
+      padding: 0;
+      margin-right: 16px;
+    }
+  }
+}
+
