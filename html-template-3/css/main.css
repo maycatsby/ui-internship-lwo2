@@ -299,3 +299,27 @@ main {
 .stat-font {
   color: #ffffff;
   text-transform: uppercase; }
+
+.amazing-services {
+  padding: 139px 0; }
+
+.as-items {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr; }
+
+.item {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: 0.2fr 0.8fr;
+  padding: 21px 0 94px 27px; }
+
+.as-small-header {
+  text-transform: uppercase;
+  color: #333333; }
+
+.as-paragraph {
+  font-family: "Roboto";
+  font-size: 15px;
+  color: #999999; }
