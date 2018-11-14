@@ -17,7 +17,7 @@ body {
 header {
   background: url(../img/photo-1433354359170-23a4ae7338c6.png) no-repeat;
   background-size: cover;
-  padding-top: 211px;
+  padding-top: 215px;
   padding-bottom: 189px; }
   header h1 {
     margin-top: 0;
@@ -34,6 +34,7 @@ header {
 h3 {
   color: #ff6d6d;
   font-family: main-font;
+  text-transform: uppercase;
   font-size: 16px;
   font-weight: 500;
   line-height: 50px;
@@ -121,7 +122,6 @@ a {
   display: -webkit-flex;
   display: flex; }
   .intro article {
-    width: 60.5%;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -135,7 +135,8 @@ a {
     -webkit-align-items: center;
     -moz-align-items: center;
     -ms-align-items: center;
-    align-items: center; }
+    align-items: center;
+    width: 60.5%; }
     .intro article div {
       width: 66%; }
     .intro article h2 {
@@ -168,7 +169,6 @@ a {
   z-index: +3; }
 
 .about {
-  position: relative;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -182,6 +182,7 @@ a {
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center;
+  position: relative;
   padding-bottom: 180px;
   background-color: #f6f5f3;
   z-index: -1; }
@@ -193,16 +194,15 @@ a {
     margin-top: 0px;
     margin-bottom: 0px; }
   .about div {
-    width: 81%;
-    margin: 0 auto;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    width: 81%;
+    margin: 0 auto;
     padding-top: 81px; }
   .about article {
-    width: 37%;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -215,7 +215,8 @@ a {
     -webkit-align-items: center;
     -moz-align-items: center;
     -ms-align-items: center;
-    align-items: center; }
+    align-items: center;
+    width: 37%; }
     .about article p {
       text-align: center;
       margin-top: 0px;
@@ -236,7 +237,7 @@ a {
   right: 164px;
   top: -7px; }
 
-.coffe {
+.coffee {
   position: absolute;
   right: 88px;
   width: 204px;
@@ -254,11 +255,6 @@ a {
   padding-bottom: 80px;
   background-image: url(../img/Slice_1.png);
   background-size: cover;
-  /*background-image: url(../img/Rectangle_21_copy_2.png);
-    background-color: white;
-    background-position-x: 405%;
-    background-position-y: 4%;
-    background-repeat: no-repeat;*/
   z-index: 3; }
   .top-new article {
     max-width: 525px;
@@ -282,9 +278,6 @@ a {
   margin-bottom: 10px; }
 
 .partnership {
-  background-image: url(../img/Group_4.png);
-  background-size: cover;
-  padding-bottom: 75px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -298,11 +291,9 @@ a {
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center;
-  /*  img {
-        width: 66.5%;
-        margin-left: 16.5%;
-        margin-top: 51px;
-    }*/ }
+  background-image: url(../img/Group_4.png);
+  background-size: cover;
+  padding-bottom: 75px; }
 
 .co-founders {
   display: -webkit-box;
@@ -321,7 +312,6 @@ a {
   padding-bottom: 50px; }
 
 .founder {
-  width: 27%;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -334,7 +324,8 @@ a {
   -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
-  align-items: center; }
+  align-items: center;
+  width: 27%; }
   .founder div {
     width: 76px;
     height: 76px;
@@ -375,12 +366,12 @@ a {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  width: 67%;
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   -ms-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: space-between;
+  width: 67%;
   padding-bottom: 6px; }
   .partners img {
     height: 85px;
@@ -452,13 +443,13 @@ aside {
       text-decoration: underline; }
 
 .pointer {
-  width: 260px;
-  display: inline-flex;
-  height: 43px;
   -webkit-align-self: flex-end;
   -moz-align-self: flex-end;
   -ms-align-self: flex-end;
   align-self: flex-end;
+  width: 260px;
+  display: inline-flex;
+  height: 43px;
   margin-top: 7px;
   margin-bottom: 16;
   margin-bottom: 6px;
@@ -479,7 +470,6 @@ aside {
     right: -25px; }
 
 .feedback {
-  width: 79%;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -492,7 +482,8 @@ aside {
   -webkit-align-self: center;
   -moz-align-self: center;
   -ms-align-self: center;
-  align-self: center; }
+  align-self: center;
+  width: 79%; }
   .feedback input {
     width: 238px;
     height: 46px;
@@ -519,16 +510,16 @@ footer {
   background-position-x: -19px; }
 
 .footer-wrapper {
-  margin-top: 5px;
-  width: 79%;
-  margin: 0 auto;
-  padding-top: 53px;
-  padding-bottom: 80px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  margin-top: 5px;
+  width: 79%;
+  margin: 0 auto;
+  padding-top: 53px;
+  padding-bottom: 80px;
   position: relative; }
   .footer-wrapper h5 {
     color: #282828;
@@ -637,7 +628,6 @@ footer {
 
 @media (min-width: 1024px) and (max-width: 1439px) {
   .user-actions {
-    width: 180px;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -650,8 +640,11 @@ footer {
     -webkit-align-self: center;
     -moz-align-self: center;
     -ms-align-self: center;
-    align-self: center; }
-  .play-mode, .try-now {
+    align-self: center;
+    width: 180px; }
+  .play-mode {
+    margin-left: 35%; }
+  .try-now {
     margin-left: 0; }
   .empty {
     padding-bottom: 0;
@@ -665,12 +658,12 @@ footer {
     .intro article h2 {
       font-size: 37px; }
   .about div {
-    width: 95%;
     -webkit-justify-content: space-around;
     -moz-justify-content: space-around;
     -ms-justify-content: space-around;
     justify-content: space-around;
-    -ms-flex-pack: space-around; }
+    -ms-flex-pack: space-around;
+    width: 95%; }
   .about article {
     width: 30%; }
     .about article p {
@@ -731,14 +724,11 @@ footer {
     .intro article h2 {
       font-size: 37px; }
   .about div {
-    width: 81%;
-    margin: 0 auto;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    padding-top: 30px;
     -webkit-flex-direction: column;
     -moz-flex-direction: column;
     -ms-flex-direction: column;
@@ -746,9 +736,11 @@ footer {
     -webkit-align-self: center;
     -moz-align-self: center;
     -ms-align-self: center;
-    align-self: center; }
+    align-self: center;
+    width: 81%;
+    margin: 0 auto;
+    padding-top: 30px; }
   .about article {
-    width: 80%;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -758,12 +750,16 @@ footer {
     -moz-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
     align-items: center;
+    width: 80%;
     padding-bottom: 26px; }
   .penholder {
     position: absolute;
     left: -17px;
-    top: 0px; }
+    top: 0; }
   .earphones {
     position: absolute;
     right: 6px;
@@ -795,15 +791,14 @@ footer {
     aside .feedback input:first-child {
       margin-left: 29px; }
   aside .pointer {
-    width: 260px;
-    display: inline-flex;
-    height: 43px;
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
     -ms-align-self: flex-end;
     align-self: flex-end;
+    width: 260px;
+    display: inline-flex;
+    height: 43px;
     margin-top: 7px;
-    margin-bottom: 16;
     margin-bottom: 6px;
     margin-right: 12%;
     position: relative;
@@ -847,7 +842,7 @@ footer {
     width: 100%; }
     .intro article h2 {
       font-size: 30px; }
-  .penholder, .earphones, .coffe {
+  .penholder, .earphones, .coffee {
     display: none; }
   .about {
     padding-bottom: 90px; }
@@ -908,15 +903,14 @@ footer {
     aside .feedback input:first-child {
       margin-left: 29px; }
   aside .pointer {
-    width: 260px;
-    display: inline-flex;
-    height: 43px;
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
     -ms-align-self: flex-end;
     align-self: flex-end;
+    width: 260px;
+    display: inline-flex;
+    height: 43px;
     margin-top: 7px;
-    margin-bottom: 16;
     margin-bottom: 6px;
     margin-right: 12%;
     position: relative;
@@ -970,7 +964,7 @@ footer {
     width: 100%; }
     .intro article h2 {
       font-size: 23px; }
-  .penholder, .earphones, .coffe {
+  .penholder, .earphones, .coffee {
     display: none; }
   .about {
     padding-bottom: 40px; }
@@ -1034,13 +1028,13 @@ footer {
     aside .feedback input:first-child {
       margin-left: 29px; }
   aside .pointer {
-    width: 260px;
-    display: inline-flex;
-    height: 43px;
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
     -ms-align-self: flex-end;
     align-self: flex-end;
+    width: 260px;
+    display: inline-flex;
+    height: 43px;
     margin-top: 7px;
     margin-bottom: 16;
     margin-bottom: 6px;

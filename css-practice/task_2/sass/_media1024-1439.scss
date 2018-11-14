@@ -1,14 +1,16 @@
 @media (min-width: 1024px) and (max-width: 1439px) {
     .user-actions {
-        width: 180px;
         @include flexbox();
         @include flex-direction(column);
         @include align-self(center);
+        width: 180px;
     }
-    .play-mode, .try-now {
+    .play-mode {
+        margin-left: 35%;
+    }
+    .try-now {
         margin-left: 0;
     }
-
     .empty {
         padding-bottom: 0;
         padding-top: 0;
@@ -20,8 +22,8 @@
 
     .about {  
         div {
-        width: 95%;
         @include justify-content(space-around);
+        width: 95%;
         }
          article {
         width: 30%;

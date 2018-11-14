@@ -28,7 +28,7 @@
         }
         }   
     }
-    .penholder, .earphones, .coffe {
+    .penholder, .earphones, .coffee {
         display: none;
     }
  
@@ -114,10 +114,10 @@
             }
         }
         .pointer {
+            @include align-self(flex-end);
             width: 260px;
             display: inline-flex;
             height: 43px;
-            @include align-self(flex-end);
             margin-top: 7px;
             margin-bottom: 16;
             margin-bottom: 6px;

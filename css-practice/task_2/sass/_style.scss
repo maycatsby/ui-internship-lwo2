@@ -30,6 +30,7 @@ header {
 h3 {
     color: $square-buttons-and-section-name-color;
     font-family: $font-main;
+    text-transform: uppercase;
     font-size: 16px;
     font-weight: 500;
     line-height: 50px;
@@ -122,10 +123,10 @@ a {
 .intro {
     @include flexbox();
     article {
-        width: 60.5%;
         @include flexbox();
         @include justify-content(center);
         @include align-items(center);
+        width: 60.5%;
         div {
             width: 66%;
         }
@@ -165,10 +166,10 @@ a {
 }
 
 .about {
-    position: relative;
     @include flexbox();
     @include flex-direction(column);
     @include align-items(center);
+    position: relative;
     padding-bottom: 180px;
     background-color: $section-background-color;
     z-index: -1;
@@ -182,16 +183,16 @@ a {
         margin-bottom: 0px;
     }
     div {
+        @include flexbox();
         width: 81%;
         margin: 0 auto;
-        @include flexbox();
         padding-top: 81px;
     }
     article {
-        width: 37%;
         @include flexbox();
         @include flex-direction(column);
         @include align-items(center);
+        width: 37%;
         p {
             text-align: center;
             margin-top: 0px;
@@ -219,7 +220,7 @@ a {
     top: -7px;
 }
 
-.coffe {
+.coffee {
     position: absolute;
     right: 88px;
     width: 204px;
@@ -262,12 +263,12 @@ a {
 }
 
 .partnership {
-    background-image: url(../img/Group_4.png);
-    background-size: cover;
-    padding-bottom: 75px;
     @include flexbox();
     @include flex-direction(column);
     @include align-items(center);
+    background-image: url(../img/Group_4.png);
+    background-size: cover;
+    padding-bottom: 75px;
 }
 
 .co-founders {
@@ -280,10 +281,10 @@ a {
 }
 
 .founder {
-    width: 27%;
     @include flexbox();
     @include flex-direction(column);
     @include align-items(center);
+    width: 27%;
     div {
         width: 76px;
         height: 76px;
@@ -325,8 +326,8 @@ a {
 
 .partners {
     @include flexbox();
-    width: 67%;
     @include justify-content(space-between);
+    width: 67%;
     padding-bottom: 6px;
     img {
         height: 85px;
@@ -391,10 +392,10 @@ aside {
 }
 
 .pointer {
+    @include align-self(flex-end);
     width: 260px;
     display: inline-flex;
     height: 43px;
-    @include align-self(flex-end);
     margin-top: 7px;
     margin-bottom: 16;
     margin-bottom: 6px;
@@ -420,10 +421,10 @@ aside {
 }
 
 .feedback {
-    width: 79%;
     @include flexbox();
     @include align-items(baseline);
     @include align-self(center);
+    width: 79%;
     input {
         width: 238px;
         height: 46px;
@@ -453,12 +454,12 @@ footer {
     background-position-x: -19px;
 }
 .footer-wrapper {
+    @include flexbox();
     margin-top: 5px;
     width: 79%;
     margin: 0 auto;
     padding-top: 53px;
     padding-bottom: 80px;
-    @include flexbox();
     position: relative;
     h5 {
         color: $font-main-color;
