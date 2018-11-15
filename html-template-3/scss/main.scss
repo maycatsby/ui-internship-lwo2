@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+@import "grid_gallery";
 @import "media/phone";
 @import "media/tablet";
 
@@ -26,6 +27,7 @@ main {
   color: $headers;
   font-family: $KaushanScript;
   font-size: 24px;
+  font-weight: 400;
 }
 
 .simple-header {
@@ -54,18 +56,19 @@ main {
 
 .container {
   @include flex;
-  @include flex-direction-column;
-  @include align-items-center;
+  @include flex-direction(column);
+  @include align-items(center);
 }
 
 .second-back {
+  @include background-image-main;
+
   background-color: $background-main;
-  background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
   opacity: 0.9;
 
   header {
     @include flex;
-    @include justify-content-space-between;
+    @include justify-content(space-between);
 
     .small-logo {
       font-size: 30px;
@@ -84,14 +87,14 @@ main {
 
 .top-navigation {
   @include flex;
-  @include justify-content-space-around;
+  @include justify-content(space-around);
 
   padding-top: 36px;
   margin-right: -29px;
 
   .top-menu {
     @include flex;
-    @include justify-content-space-around;
+    @include justify-content(space-around);
 
     list-style-type: none;
     color: $white;
@@ -164,7 +167,7 @@ main {
 
 .slider-buttons {
   @include flex;
-  @include justify-content-space-around;
+  @include justify-content(space-around);
 
   padding-top: 156px;
 }
@@ -215,12 +218,12 @@ main {
 
 .story-about {
   padding: 90px 0;
+}
 
-  p {
-    text-align: center;
-    line-height: 22px;
-    padding: 0 102px;
-  }
+.paragraph {
+  text-align: center;
+  line-height: 22px;
+  padding: 0 102px;
 }
 
 .color-underline {
@@ -228,14 +231,14 @@ main {
   margin: 39px 0 26px 0;
 }
 
-.sau-gallery {
+.gallery {
   @include flex;
-  @include justify-content-space-between;
+  @include justify-content(space-between);
 
-  padding: 99px 0 17px 0;
+  padding: 97px 0 17px 0;
 }
 
-.sau-pic {
+.pic {
   margin: 0px 15px;
 }
 
@@ -245,7 +248,7 @@ main {
 
 .stats {
   @include grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  @include grid-template-columns(1fr 1fr 1fr 1fr 1fr);
 }
 
 .stat {
@@ -253,7 +256,7 @@ main {
 }
 
 .stat-content {
-  padding: 40px 10px;
+  padding: 40px 10px 70px 10px;
 }
 
 .stat-header {
@@ -267,18 +270,19 @@ main {
 }
 
 .amazing-services {
-  padding: 139px 0;
+  padding: 108px 0 47px 0;
 }
 
 .as-items {
   @include grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  @include grid-template-columns(1fr 1fr 1fr);
+  @include grid-template-rows(1fr 1fr);
 }
 
 .item {
   @include grid;
-  grid-template-columns: 0.2fr 0.8fr;
+  @include grid-template-columns(0.2fr 0.8fr);
+
   padding: 21px 0 94px 27px;
 }
 
@@ -292,3 +296,254 @@ main {
   font-size: 15px;
   color: $font;
 }
+
+.unique-designs {
+  background-image: url(../pics/backgrounds/uniq-design-background-pic.png);
+}
+
+.grey-background {
+  background-color: $background-section;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding-top: 108px;
+  position: relative;
+}
+
+.tablet-pic {
+  margin-right: 57px;
+}
+
+.phone-pic {
+  position: absolute;
+  z-index: 1;
+  bottom: -11%;
+  right: 25%;
+}
+
+.what-we-do {
+  padding: 109px 0 120px 0;
+}
+
+.wwd-items {
+  @include grid;
+  @include grid-template-columns(1fr 1fr);
+
+  padding-top: 92px;
+}
+
+.future-dropdown {
+  list-style-type: none;
+
+  .drop-item {
+    @include grid;
+    @include grid-template-columns(0.05fr 0.95fr);
+    @include align-items(center);
+  
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border: 1px solid $font;
+    
+    .drop-icon {
+      padding-right: 12px;
+    }
+  }
+}
+
+.drop-item-header {
+  color: $headers;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.quote {
+  background-color: $quote-background;
+  padding-top: 36px;
+}
+
+.quote-items {
+  @include grid;
+  @include grid-template-columns(0.2fr 0.8fr);
+
+  .quote-img {
+    border: 3px solid $riptide;
+    padding: 41px;
+    margin: 34px 67px 69px 106px;
+  }
+  
+  .quote-paragraph {
+    @include flex;
+    @include flex-direction(column);
+  
+    font-style: italic;
+    font-size: 24px;
+    margin-top: 38px;
+    line-height: 36px;
+  }
+}
+
+.quote-underline {
+  margin: 17px 10px 0 0;
+}
+
+.name {
+  @include flex;
+
+  margin-top: 8px;
+}
+
+.meet-our-team {
+  padding: 99px 0;
+}
+
+.mot-pic {
+  margin: 0 30px;
+}
+
+.dev-p {
+  font-style: italic;
+}
+
+.developer {
+  padding-top: 22px;
+  line-height: 22px;
+}
+
+.labels {
+  background-color: $quote-background;
+  padding: 51px 0;
+}
+
+.some-of-our-work {
+  padding: 105px 0;
+}
+
+.grid-section {
+  padding-top: 100px;
+  margin-bottom: 151px;
+}
+
+.joshua-quote {
+  background: transparent;
+  padding-bottom: 128px;
+}
+
+.joshua-text {
+  margin: 0;
+}
+
+.joshua-earle {
+  margin: 2px 36px 2px 75px;
+}
+
+.what-people-say {
+  background-image: url(../pics/backgrounds/uniq-design-background-pic.png);
+}
+
+.grey-people {
+  padding-bottom: 114px;
+}
+
+.people {
+  @include grid;
+  @include grid-template-columns(1fr 1fr);
+  @include grid-template-rows(1fr 1fr);
+  padding-top: 30px;
+  grid-gap: 10px;
+
+  .people-item {
+    @include grid;
+    @include grid-template-columns(0.2fr 0.8fr);
+    grid-gap: 21px;
+    margin-top: 23px;
+  }
+}
+
+.wps-underline {
+  width: 61px;
+  margin: 28px 0 20px 0;
+}
+
+.wps-header {
+  margin-bottom: 6px;
+}
+
+.wps-pic {
+  margin-left: 39px;
+}
+
+.latest-blog {
+  padding: 108px 0;
+}
+
+.lb-gallery {
+  padding-top: 0;
+}
+
+.lb-item {
+  position: relative;
+}
+
+.number {
+  font-size: 30px;
+  line-height: 30px;
+  padding: 0;
+}
+
+.calendar {
+  @include flex;
+  @include flex-direction(column);
+
+  background-color: $riptide;
+  color: $white;
+  font-style: italic;
+  font-weight: 300;
+  position: absolute;
+  padding: 11px 16px;
+  text-align: center;
+  top: 46%;
+}
+
+.lb-text-block {
+  border-bottom: 1px solid $border;
+  padding: 17px 0 33px 10px;
+  margin-right: 17px;
+}
+
+.lb-icons{
+  @include flex;
+  margin-top: 15px;
+
+  .fa {
+    color: $riptide;
+    padding: 0 12px;
+
+    &:before {
+      padding-right: 5px;
+    }
+
+    span {
+      font-style: italic;
+    }
+  }
+}
+
+.open-map {
+  background-image: url(../pics/backgrounds/open-map-background-pic.png);
+
+  .map-background {
+    padding: 48px 0 15px 0;
+  }
+
+  .map-header {
+    color: $underlines;
+    font-size: 24px;
+  }
+
+  img {
+    padding-bottom: 10px;
+  }
+
+  .map-underline {
+    margin-top: 16px;
+  }
+}
+

@@ -7,7 +7,7 @@
     }
 
     .top-menu {
-      @include flex-direction-column;
+      @include flex-direction(column);
     }
 
     .menu-item {
@@ -16,9 +16,9 @@
 
     .container {
       @include flex;
-      @include flex-direction-column;
-      @include align-items-center;
-      
+      @include flex-direction(column);
+      @include align-items(center);
+
       padding: 40px 0;
     }
 

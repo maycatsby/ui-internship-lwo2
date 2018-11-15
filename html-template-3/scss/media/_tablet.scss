@@ -5,7 +5,7 @@
 
     header {
       @include flex;
-      @include flex-direction-column;
+      @include flex-direction(column);
 
       margin: 0;
     }
@@ -28,8 +28,8 @@
     .align {
       width: 75%;
       @include flex;
-      @include flex-direction-column;
-      @include align-items-center;
+      @include flex-direction(column);
+      @include align-items(center);
     }
 
     .main-subheader {
