@@ -1,0 +1,343 @@
+// 1200px
+@media only screen and (max-width: $screen-xl + 'px') {
+  .signup-form {
+
+    &--heading {
+      padding: 1.5rem;
+      font-size: 1.8rem;
+    }
+
+    [type="button"] {
+      line-height: 3.3;
+    }
+  }
+};
+
+// 1024px
+@media only screen and (max-width: $screen-lg + 'px') {
+  .hero {
+    padding: 18rem 7.5% 13.8rem;
+  }
+
+  .social {
+    padding: 2rem 5%;
+  }
+
+  .signup-form {
+
+    & > fieldset {
+      padding-left: 5%;
+    }
+  }
+
+  .cards-holder {
+    padding: 0;
+  }
+
+  .reviews {
+    padding: 8rem 5.5% 10rem;
+  }
+
+  .users-list {
+    .user-details {
+      margin-left: 4%;
+      width: 100px;
+    }
+  }
+}
+
+// 1024px - 767px
+@media only screen and (max-width: $screen-lg + 'px') and (min-width: $screen-md - 1 + 'px') {
+  .hero {
+    grid-template-columns: auto 40.5%;
+  }
+}
+
+// 768px
+@media only screen and (max-width: $screen-md + 'px') {
+  // Navbar
+  .header {
+    
+    &--menu {
+      display: none;
+      position: absolute;
+      background: rgba($color-black, .7);
+      top: 80px;
+      left: 0;
+      width: 100%;
+      line-height: 3.7;
+      text-align: center;
+      text-transform: uppercase;
+
+      &.show {
+        display: block;
+      }
+    }
+
+    .menu-opener {
+      display: block;
+      width: 40px;
+      height: 30px;
+      position: relative;
+      border: 1px solid $color-main;
+      border-radius: 3px;
+      margin-top: 20px;
+      cursor: pointer;
+
+      .icon-bar {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: $color-white;
+        transition: all 0.5s ease;
+        @include abs-center;
+        @include p-el(before, 24px, 2px) {
+          background: $color-white;
+          top: -7px;
+        }
+        @include p-el(after, 24px, 2px) {
+          background: $color-white;
+          top: 7px;
+        }
+      }
+    }
+  }
+
+  // Hero & Social
+  .hero {
+    grid-gap: 0;
+
+    &--title::after {
+      display: none;
+    }
+  }
+
+  .company {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .singup-form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+  }
+
+  .social--bar {
+    display: none;
+  }
+
+  // Features
+  .features {
+    
+    &--first {
+      grid-gap: 5.5%;
+      padding: 9.5rem 7.5% 11rem;
+      
+      .feature--content {
+        text-align: center;
+      }
+    }
+
+    &--second {
+      grid-gap: 5%;
+    }
+
+    &--third {
+      padding: 7.5rem 10% 2rem;
+    }
+  }
+
+  .feature--tabs {
+    flex-direction: row;
+
+    button:first-child {
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 5px;
+    }
+
+    button:last-child {
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 5px;
+    }
+
+    button:not(:last-child) {
+      margin: 0;
+      margin-right: 10px;
+    }
+  }
+
+  .feature--title {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .small-line {
+    margin: 0 auto 25px;
+  }
+
+  // About
+  .about {
+    padding-bottom: 11.5rem;
+  }
+
+  .benefits {
+    grid-gap: 5%;
+  }
+
+  // Pricing
+  .cards-holder {
+    grid-gap: 0;
+    margin-top: 40px;
+  }
+
+  .pricing-slot {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 35px;
+
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+  }
+
+  // Reviews
+  .users-list {
+    grid-gap: 5%;
+
+    .testimonial {
+      max-width: 100%;
+      align-items: center;
+      @include d-flex();
+
+      &:nth-child(2) {
+        
+        & > blockquote {
+          order: 1;
+
+          &::after {
+            left: -17px;
+            bottom: 20px;
+            transform: rotate(90deg);
+          }
+        }
+
+        .user-details {
+          margin-right: auto;
+        }
+      } 
+
+      &:not(:nth-child(2)) {
+
+        & > blockquote::after {
+          left: auto;
+          right: -17px;
+          bottom: 20px;
+          transform: rotate(-90deg);
+        }
+
+        .testimonial--avatar {
+          margin-left: auto;
+        }
+      }
+    }
+
+    blockquote {
+      max-width: 55%;
+    }
+  }
+
+  // Custom & Contact
+  .custom {
+    padding: 5rem;
+  }
+
+  .contact-us {
+    padding: 4rem 1rem;
+
+    .message--fields {
+      padding: 0;
+    }
+  }
+}
+
+// 475px
+@media only screen and (max-width: $screen-sm + 'px') {
+  html {
+    font-size: 50%;
+  }
+  // Social
+  .social--links-list {
+    display: none;
+    
+    &__mb {
+      @include d-flex() {
+        flex: 1 0 auto;
+        align-self: center;
+      };
+    }
+  }
+
+  // Features
+  .features--btn,
+  .features--btn__active {
+    width: 80px;
+    height: 80px;
+  }
+
+  // Pricing
+  .pricing {
+    padding: 5rem 5%;
+  }
+
+  // Reviews
+  .users-list {
+
+    .testimonial {
+      flex-wrap: wrap;
+
+      & > blockquote {
+        max-width: 100%;
+        order: 1;
+        margin-bottom: 0;
+        margin-top: 20px;
+
+        &::after {
+          display: none;
+        }
+      }
+      
+      .user-details {
+        margin-right: auto;
+      }
+      
+      &--avatar {
+        margin-left: auto;
+      }
+    }
+  }
+
+  // Contact
+  .contact-us {
+
+    .message {
+      grid-template-columns: auto;
+      grid-gap: auto;
+      padding: 0 2%;
+  
+      &--button {
+        grid-column: auto;
+      }
+  
+      &--fields {
+        padding-left: 0;
+      }
+
+      [type="text"],
+      [type="email"],
+      textarea {
+        padding: .5em;
+      }
+    }
+  }
+}

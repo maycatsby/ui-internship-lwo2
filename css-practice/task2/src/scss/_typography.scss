@@ -1,0 +1,83 @@
+.section-heading {
+  @extend %base-heading;
+  color: $color-dark-2;
+
+  @include p-el(after, 64px, 2px) {
+    background: $color-main;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+  }
+
+  &__white {
+    @extend %base-heading;
+    color: $color-white;
+
+    @include p-el(after, 64px, 2px) {
+      background: $color-white;
+      left: 50%;
+      bottom: -5px;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.small-heading {
+  display: block;
+  color: $color-grey;
+  font-family: $font-second;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  padding: 3rem;
+}
+
+.custom-heading {
+  color: rgba($color-white, .8);
+  font-family: $font-main;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 2;
+  padding: 3rem 0 2.5rem;
+}
+
+.copyright {
+  font-size: 1.2rem;
+  font-family: $font-second;
+}
+
+.feature {
+
+  &--title {
+    margin-bottom: 25px;
+    font-size: 2rem;
+    color: $color-black;
+
+    &__tabs {
+      @extend .feature--title;
+      line-height: 2;
+    }
+  }
+  
+  &--text {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: $color-grey;
+    margin-bottom: 15px;
+  }
+}
+
+.text-default {
+  font-family: $font-second;
+  font-size: 1.4rem;
+  color: $color-grey;
+}
+
+.small-line {
+  display: block;
+  width: 64px;
+  height: 2px;
+  border: none;
+  background: $color-main;
+  margin-bottom: 25px;
+}
+

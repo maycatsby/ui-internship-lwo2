@@ -1,0 +1,18 @@
+// Footer
+.footer {
+  background-color: #000;
+  color: rgba(#fff, .5);
+  min-height: 80px;
+  text-align: center;
+
+  &--links-list {
+    max-width: 325px;
+    margin: 0 auto;
+    padding: 2rem 0 1rem;
+    @include d-flex();
+
+    li {
+      cursor: pointer;
+    }
+  }
+}
