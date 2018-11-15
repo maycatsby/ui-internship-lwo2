@@ -10,6 +10,9 @@ body {
   margin: 0;
   padding: 0; }
 
+button:hover {
+  background-color: #f37736; }
+
 .container {
   max-width: 1440px;
   margin: 0 auto; }
@@ -70,6 +73,8 @@ p {
 
 a {
   text-decoration: none; }
+  a:hover {
+    color: #4e4e5e; }
 
 .user-actions {
   width: 20%;
@@ -441,6 +446,8 @@ aside {
       color: #f6f5f3;
       letter-spacing: 0.4px;
       text-decoration: underline; }
+      aside p a:hover {
+        color: #4e4e5e; }
 
 .pointer {
   -webkit-align-self: flex-end;
@@ -539,6 +546,8 @@ footer {
     font-size: 14px;
     font-weight: 400;
     line-height: 30px; }
+    .footer-wrapper a:hover {
+      color: #4e4e5e; }
   .footer-wrapper img {
     position: absolute;
     z-index: -100;
@@ -625,6 +634,8 @@ footer {
     filter: grayscale(100%);
     opacity: 0.5;
     margin-left: 44px; }
+    .follow-us a:hover {
+      color: #4e4e5e; }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
   .user-actions {
@@ -1036,7 +1047,6 @@ footer {
     display: inline-flex;
     height: 43px;
     margin-top: 7px;
-    margin-bottom: 16;
     margin-bottom: 6px;
     margin-right: 12%;
     position: relative;

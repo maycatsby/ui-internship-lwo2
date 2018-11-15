@@ -3,6 +3,10 @@ body {
   padding: 0;
 }
 
+button:hover {
+    background-color: #f37736;
+}
+
 .container {
     max-width: 1440px;
     margin: 0 auto;
@@ -71,6 +75,9 @@ p {
 
 a {
     text-decoration: none;
+    &:hover {
+    color: $founders-color;
+    }
 }
 
 .user-actions {
@@ -387,6 +394,9 @@ aside {
             color: #f6f5f3;
             letter-spacing: 0.4px;
             text-decoration: underline;
+            &:hover {
+                color: $founders-color;
+                }
         }
     }
 }
@@ -481,6 +491,9 @@ footer {
         font-size: 14px;
         font-weight: 400;
         line-height: 30px;
+        &:hover {
+            color: $founders-color;
+            }
     }
     img {
         position: absolute;
@@ -578,5 +591,8 @@ footer {
         filter: grayscale(100%);
         opacity: 0.5;
         margin-left: 44px;
+        &:hover {
+            color: $founders-color;
+            }
     }
 }
