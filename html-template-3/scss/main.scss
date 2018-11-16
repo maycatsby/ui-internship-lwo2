@@ -499,7 +499,7 @@ main {
   position: absolute;
   padding: 11px 16px;
   text-align: center;
-  top: 46%;
+  top: 42%;
 }
 
 .lb-text-block {
@@ -546,4 +546,115 @@ main {
     margin-top: 16px;
   }
 }
+
+.mogo-insta-blogs {
+  padding-top: 61px;
+  background-color: $quote-background;
+}
+
+.mogo-items {
+  @include flex;
+  @include justify-content(space-between);
+  @include align-items(baseline);
+}
+
+.mogo-text {
+  @include flex;
+  @include flex-direction(column);
+  @include align-items(flex-start);
+  flex-basis: 33%;
+}
+
+.mogo-header {
+  color: $logo-color;
+  font-family: $Montserrat;
+  font-size: 46px;
+  font-weight: bold;
+  margin-bottom: 27px;
+}
+
+.mogo-font {
+  line-height: 23px;
+  margin-bottom: 46px;
+}
+
+.followers {
+  text-transform: lowercase;
+  border-bottom: 1px solid $border;
+  margin-bottom: 28px;
+
+  span {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+.mogo-icons {
+  @include flex;
+  @include justify-content(flex-start);
+  margin-bottom: 36px;
+
+  .follow-us {
+    font-style: italic;
+    padding-right: 20px;
+  }
+
+  .fa-icons {
+    color: $riptide;
+
+    .fa {
+      padding-right: 12px;
+    }
+  }
+}
+
+.mogo-form {
+
+  input[type="email"] {
+    background-color: $white;
+    padding: 14px 98px 12px 0px;
+    text-indent: 10px;
+
+    &::placeholder {
+      color: $logo-color;
+      font-family: $Roboto;
+      font-size: 15px;
+      font-style: italic;
+      text-align: left;
+    }
+  }
+
+  input[type="submit"] {
+    background-color: $riptide;
+    font-size: 14px;
+    padding: 14px 94px 12px 0;
+    line-height: auto;
+    text-align: center;
+  }
+}
+
+.blog-item {
+  @include flex;
+}
+
+.blog-text-header {
+  font-size: 12px;
+}
+
+.date {
+  font-style: italic;
+}
+
+.insta-items {
+  @include grid;
+  @include grid-template-columns(1fr 1fr 1fr);
+  @include grid-template-rows(1fr 1fr 1fr);
+}
+
+.insta-par {
+  font-size: 13px;
+  font-style: italic;
+}
+
+
 
