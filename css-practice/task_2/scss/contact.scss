@@ -1,0 +1,128 @@
+.contact {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.contact-main {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.contact-top {
+	margin-top: 8.6%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.contact-top-title {
+	margin-top: .6%;
+	text-align: center;
+	color: $color_6;
+	font-family: $font_family_4;
+	font-size: 36px;
+	line-height: 43px;
+	text-transform: uppercase;
+}
+.contact-top-text {
+	width: 100%;
+	margin-top: 7.7%;
+	text-align: center;
+	opacity: 0.8;
+	color: $color_5;
+	font-family: $font_family_4;
+	font-size: 14px;
+	letter-spacing: .1px;
+}
+.contact-top-line {
+	width: 17.5%;
+	margin-top: 6.3%;
+	border-bottom: 2px solid $color_3;
+}
+.contact-bottom {
+	width: 100%;
+	margin-top: 3.4%;
+	display: flex;
+	justify-content: space-between;
+}
+.contact-bottom-left {
+	width: 48%;
+}
+.contact-bottom-right {
+	width: 47%;
+	margin-top: 4.3%;
+}
+//bottom-form// 
+.bottom-form-title {
+	width: 100%;
+  @extend %round-border-top;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $color_9;
+}
+.bottom-form-title-text {
+	margin: 5% 0 4.3% 0;
+	font-family: $font_family_3;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: .8px;
+	color: $color_2;
+	span {
+		margin: 5% 0 5% 0;
+		font-family: $font_family_3;
+		font-size: 20px;
+		font-weight: 700;
+		letter-spacing: .8px;
+		color: $color_3;
+	}
+}
+.bottom-form-input-container {
+	width: 100%;
+	margin-top: 4%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.bottom-form-input-margin {
+	width: 98%;
+	height: 26px;
+	margin: 5.3% 0 1% 0;
+	border-bottom: 1px solid $color_10;
+	font-family: $font_family_3;
+	font-size: 14px;
+}
+.contact-textarea {
+	width: 100%;
+	border-bottom: 1px solid $color_10;
+	font-size: 14px;
+	resize: none;
+}
+textarea {
+	&::-webkit-input-placeholder {
+		color: $color_4;
+		font-family: $font_family_3;
+		font-size: 14px;
+	}
+}
+.bottom-form-button {
+	width: 13%;
+	margin: 3.2% 0 7.3% 0;
+  @extend %round-border-top;
+  @extend %round-border-bottom;
+	background: $color_3;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+	&:hover {
+		background: $color_8;
+	}
+}
+.bottom-form-button-text {
+	margin: 9% 0 11% 0;
+	color: $color_1;
+	font-family: $font_family_1;
+	font-size: 15px;
+	letter-spacing: .3px;
+}

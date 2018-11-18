@@ -1,0 +1,25 @@
+$color_1: #ffffff;
+$color_2: #333333;
+$color_3: #ff8b38;
+$color_4: #bdbdbd;
+$color_5: #86878b;
+$color_6: #212121;
+$color_7: #000000;
+$color_8: #fc791b;
+$color_9: #f5f5f5;
+$color_10: #d6d6d6;
+$color_12: #b8b8b8;
+
+$font_family_1: 'Open Sans - Semibold', sans-serif;
+$font_family_2: 'Raleway', sans-serif;
+$font_family_3: "Open Sans";
+$font_family_4: 'Raleway';
+
+%round-border-top {
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+%round-border-bottom {
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}

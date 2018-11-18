@@ -1,0 +1,192 @@
+header {
+	width: 100%;
+	background: url(../img/header-main.png) no-repeat, url(../img/header-main-bg.png) no-repeat;
+	background-size: cover;
+}
+.header-nav {
+	width: 100%;
+	position: fixed;
+	background: $color_7;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.header-top {
+	width: 78.57%;
+	margin: 1.6% 0 1.6% 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.logo {
+	width: 79px;
+	height: 27px;
+	background: url(../img/logo.png) no-repeat;
+	background-size: contain;
+	cursor: pointer;
+}
+.info {
+	width: 40%;
+	margin-top: .4%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.info-font {
+	opacity: 0.69;
+	color: $color_1;
+	font-family: $font_family_1;
+	font-size: 14px;
+}
+.info-font:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+.header-main {
+	width: 78.57%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.header-left {
+	width: 33.43%;
+}
+.header-title {
+	width: 175px;
+	height: 60px;
+	margin-top: 29%;
+	background: url(../img/header-title.png) no-repeat;
+	background-size: cover;
+}
+.header-text {
+	width: 141%;
+	margin-top: 8%;
+}
+.header-text-font {
+	color: $color_1;
+	font-family: $font_family_2;
+	font-size: 36px;
+	text-transform: uppercase;
+	line-height: 40px;
+	letter-spacing: -.2px;
+}
+.header-line {
+	width: 18%;
+	margin-top: 9.4%;
+	border-bottom: 2px solid $color_1;
+}
+.header-text-small {
+	width: 128%;
+	margin-top: 10%;
+}
+.header-text-small-font {
+	opacity: 0.8;
+	color: $color_1;
+	font-family: $font_family_2;
+	font-size: 16px;
+	line-height: 23px;
+	letter-spacing: -.1px;
+}
+.header-button {
+	width: 36%;
+	margin: 10.64% 0 38% 0;
+	border: 2px solid $color_1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&:hover {
+		border: 2px solid $color_8;
+		background: $color_8;
+		cursor: pointer;
+	}
+}
+.header-button-name {
+	margin: 10% 0 7% 0;
+	color: $color_1;
+	font-family: $font_family_1;
+	font-size: 16px;
+	font-weight: 400;
+}
+.header-right {
+	width: 32.6%;
+}
+.header-form {
+	width: 100%;
+	margin-top: 38.6%;
+	background: $color_1;
+  @extend %round-border-top;
+  @extend %round-border-bottom;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.form-title {
+	width: 100%;
+  @extend %round-border-top;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $color_9;
+}
+.form-title-text {
+	margin: 5% 0 4.3% 0;
+	font-family: $font_family_3;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: .5px;
+	color: $color_2;
+	span {
+		margin: 5% 0 5% 0;
+		font-family: $font_family_3;
+		font-size: 20px;
+		font-weight: 700;
+		letter-spacing: .8px;
+		color: $color_3;
+	}
+}
+input {
+	&::-webkit-input-placeholder {
+		color: $color_4;
+		font-family: $font_family_3;
+		font-size: 14px;
+		color: $color_4;
+		font-family: $font_family_3;
+		font-size: 14px;
+	}
+}
+.form-input-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.form-input-margin {
+	width: 80%;
+	height: 26px;
+	margin: 9% 0 4% 0;
+	border-bottom: 1px solid $color_10;
+	color: $color_4;
+	font-family: $font_family_3;
+	font-size: 14px;
+}
+.form-button {
+	width: 100%;
+	margin-top: 9%;
+  @extend %round-border-bottom;
+	background: $color_3;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+	&:hover {
+		background: $color_8;
+	}
+}
+.form-button-text {
+	margin: 5.6% 0 5% 0;
+	color: $color_1;
+	font-family: $font_family_1;
+	font-size: 15px;
+	letter-spacing: .4px;
+}
