@@ -622,7 +622,9 @@ main {
 .followers {
   text-transform: lowercase;
   border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 28px; }
+  margin-bottom: 17px;
+  padding-bottom: 12px;
+  width: 100%; }
   .followers span {
     font-size: 18px;
     font-weight: bold; }
