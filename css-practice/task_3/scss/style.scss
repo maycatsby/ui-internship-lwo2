@@ -1,0 +1,556 @@
+* {
+  margin: 0;
+}
+.container {
+   max-width: 1920px;
+   margin: auto;
+}
+
+.title-block {
+    text-align: center;
+ }
+
+ .title {
+    font-family: "Kaushan Script";
+    font-size: 24px;
+}
+.main-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 30px;
+    word-spacing: -4px;
+}
+
+.text {
+    margin: 40px 240px 0px 224px;
+    color: #999999;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;    
+}
+
+header {
+    background: url(../img/bg_image.png);
+                // url(../img/Layer_15.png);
+    height: 1000px;
+    color: #ffffff;
+
+    nav {
+    display: flex;
+    padding: 28px 0px 158px 120px; 
+
+    a {
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    }
+    }
+
+    .title {
+        font-size: 72px;
+     }
+
+    .main-title {
+        padding: 24px 310px 44px 310px;
+        font-size: 150px;
+        line-height: 140px;
+        letter-spacing: -6px;
+    }
+
+    .pages {
+        margin-left: 446px;
+        padding-top: 4px;
+        word-spacing: 1px;
+        a {
+            margin-left: 50px;
+        }
+    }
+   
+    button {
+    width: 160px;
+    height: 40px;
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 46px;
+    }
+
+    .slider {
+    display: flex;
+    justify-content: space-around;
+    margin: 148px 94px 0px 102px;
+    }
+
+    .position {
+    margin-top: 14px;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 18px;
+    text-transform: uppercase;
+    span {
+        font-family: Montserrat;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    }
+}
+
+.about {
+    .title {
+        padding-top: 86px;
+        padding-bottom: 10px;
+        padding-right: 6px;
+    }
+    .main-title {
+        padding: 0px 10px 20px 8px;
+    }
+   
+    .pics {
+        display: flex;
+        justify-content: space-around;
+        margin: 96px 106px 0px 100px;
+    }
+
+    .projects {   
+        display: flex;
+        justify-content: space-around;
+        background-color: #95e1d3;
+        max-width: 1200px;
+        margin: 110px auto 0px;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 70px;
+        padding-bottom: 86px;
+        flex-basis: 20%;
+        border-right: 1px solid #ffffff;
+        &:first-child {
+            border-left: 1px solid #ffffff;
+        }
+    }
+    
+    .number {
+        color: #ffffff;
+        font-family: Montserrat;
+        font-size: 72px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-bottom: 8px;
+    }
+
+    .text-item {
+        color: #ffffff;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    .all {
+        background-color: #95e1d3;
+    }
+       
+}
+
+.services {
+    padding-bottom: 120px;
+
+    .title {
+        padding: 104px 6px 10px 4px;
+    }
+
+    .main-title {
+        padding: 0px 10px 22px 8px;
+    }
+
+    .services-blocks {
+        // margin: 65px 24px 0px 148px;
+        margin-top: 60px;
+        width: 1200px;
+        margin-left: 120px;
+        margin-right: 130px;
+    }
+    
+    img {
+        margin-top: 4px;
+    }
+
+    .service-info {
+        width: 274px;
+        padding-left: 25px;
+    }
+
+    .block-one, .block-two {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 40px;
+        margin-left: 30px;
+    }
+
+    .block-one {
+        margin-bottom: 34px;
+    }
+
+    .block-two {
+        margin-top: 40px;
+    }
+
+    .service-type {
+        display: flex;
+    }
+    
+    .block-name {
+        margin-bottom: 10px;
+        color: #333333;
+        font-family: Montserrat;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    .block-text {
+        color: #999999;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+}
+
+.design {
+    background-image: url(../img/bg-desing.png);
+    height: 850px;
+
+    .title {
+        padding-top: 104px;
+        padding-bottom: 10px;
+    }
+
+    .main-title {
+        padding-bottom: 23px;
+    }
+
+    .ipad {
+        margin-left: 452px;
+        margin-top: 42px;
+        position: relative;
+    }
+
+    .iphone {
+        position: absolute;
+        left: 816px;
+        margin-top: 240px;
+    }
+
+}
+
+.what-we-do {
+    padding-bottom: 116px;
+
+    .title {
+        padding-right: 4px;
+        padding-bottom: 10px;
+        padding-top: 104px;
+    }
+
+    .main-title {
+        padding-bottom: 22px;
+    }
+
+    .color-line {
+        padding-right: 4px;
+    }
+
+    .work {
+        display: flex;
+        margin-top: 86px;
+        margin-left: 118px;
+
+    }
+
+    .inputs {
+        display: flex;
+        flex-direction: column;
+        margin-left: 28px;
+
+        input {
+            width: 600px;
+            height: 56px;
+            border: 1px solid #e5e5e5;
+            background-color: #000000;
+        }
+    }
+}
+
+.quotes {
+    padding-top: 74px;
+    display: flex;
+    background-color: #f8f8f8;
+    padding-bottom: 68px;
+
+    .img-quotes {
+        border: 1px solid #95e1d3;
+        border: 3px solid #95e1d3;
+        padding: 42px 40px 38px 40px;
+        margin: 0px 60px 0px 230px;
+        img {
+            text-align: center;
+        }
+    }
+
+    .quote-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text-quotes {
+        color: #999999;
+        font-family: Roboto;
+        font-style: italic;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+    }
+    .author { 
+        color: #333333;
+        font-family: "Kaushan Script";
+        font-size: 24px;
+        font-weight: 400;
+    }
+   
+}
+
+.team {
+    padding-bottom: 112px;
+    .title {
+       padding: 95px 5px 0px 2px;
+    }
+
+    .main-title {
+        padding-top: 10px;
+        padding-bottom: 24px;
+    }
+    
+    .persons {
+        padding-top: 84px;
+        display: flex;
+        margin-right: 106px;
+        margin-left: 102px;
+        justify-content: space-around;
+    }
+
+    .person-name {
+        text-align: center;
+        color: #333333;
+        font-family: Montserrat;
+        font-size: 14px;
+        text-transform: uppercase;
+        padding-top: 22px;
+        padding-bottom: 8px;
+    }
+
+    .person-prof {
+        text-align: center;
+        color: #999999;
+        font-family: Roboto;
+        font-style: italic;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+}
+
+.partners {
+    background-color: #f8f8f8;
+    background-color: #f8f8f8;
+    padding-left: 115px;
+    padding-top: 50px;
+    padding-bottom: 48px;
+}
+
+.gallery {
+    .title {
+        padding-top: 105px;
+        padding-right: 4px;
+        padding-bottom: 10px;
+    }
+
+    .main-title {
+        padding-bottom: 22px;
+    }
+
+    .color-line {
+        padding-right: 4px;
+    }
+
+    .photos-one {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        // img {
+        //     width: 100%;
+        // }
+    }
+
+    .gallery-photos {
+        // width: 100%;
+        margin-top: 96px;
+        display: flex;
+    }
+}
+
+.reviews {
+    padding-top: 95px;
+    display: flex;
+    padding-bottom: 125px;
+    padding-right: 146px;
+    padding-left: 142px;
+
+     .img-quotes {
+    padding-left: 44px;
+    padding-right: 29px;
+    padding-top: 6px;
+  }
+
+    .quote-info {
+        display: flex;
+        padding-top: 38px;
+        padding-right: 48px;
+        flex-direction: column;
+    }
+
+    .text-quotes {
+        color: #999999;
+        font-family: Roboto;
+        font-style: italic;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+        padding-bottom: 6px;
+    }
+    .author { 
+        color: #333333;
+        font-family: "Kaushan Script";
+        font-size: 24px;
+        font-weight: 400;
+        display: flex;
+    }
+
+    .name {
+        padding-top: 5px;
+        padding-left: 10px;
+    }
+
+    .arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }  
+}
+
+.blog {
+    background-image: url(../img/Layer_53.png);
+    height: 830px;
+    width: 100%;
+
+    .title {
+    padding: 104px 5px 10px 0px;
+    }
+
+    .main-title {
+        padding-bottom: 24px;
+    }
+
+    .color-line {
+        padding-right: 4px;
+    }
+
+    .people-one, .people-two {
+        display: flex;
+    }
+
+    .people-one {
+        padding-bottom: 66px;
+    }
+
+    .people {
+        padding-top: 84px;
+        padding-left: 158px;
+        padding-right: 82px;
+    
+    }
+
+    .people-say {
+        display: flex;
+    }
+
+    .text-people-say {
+        display: flex;
+        flex-direction: column;
+        padding-left: 28px;
+        padding-top: 8px;
+        padding-right: 68px;
+    }
+
+    .name-people-say {
+        color: #333333;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    .prof-people-say {
+        color: #333333;
+        font-family: Roboto;
+        font-style: italic;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px;
+        padding-top: 5px;
+        padding-bottom: 3px;
+    }
+
+    .review-people-say {
+        color: #999999;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px;
+        padding-top: 15px;
+        padding-left: 2px;
+    }
+}
+
+.stories {
+    .title {
+        padding-top: 104px; 
+        padding-bottom: 10px;
+    }
+
+    .main-title {
+        padding-bottom: 22px;
+    }
+
+    .pics {
+        display: flex;
+        justify-content: space-around;
+        margin: 44px 106px 0px 100px;
+    }
+}
+
+
+
+
+
+
+
