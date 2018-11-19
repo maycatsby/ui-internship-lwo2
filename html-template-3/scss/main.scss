@@ -548,20 +548,19 @@ main {
 }
 
 .mogo-insta-blogs {
-  padding-top: 61px;
+  padding: 61px 0 30px 0;
   background-color: $quote-background;
 }
 
 .mogo-items {
-  @include grid;
-  @include grid-template-columns(1.1fr 0.8fr 0.9fr);
+  @include flex;
 }
 
 .mogo-text {
   @include flex;
   @include flex-direction(column);
   @include align-items(flex-start);
-  flex-basis: 33%;
+  flex-basis: 39%;
 }
 
 .mogo-header {
@@ -603,6 +602,11 @@ main {
 
     .fa {
       padding-right: 12px;
+      cursor: pointer;
+
+      &:hover {
+        color: $underlines;
+      }
     }
   }
 }
@@ -613,6 +617,7 @@ main {
     background-color: $white;
     padding: 14px 98px 12px 0px;
     text-indent: 10px;
+    outline: none;
 
     &::placeholder {
       color: $logo-color;
@@ -629,11 +634,16 @@ main {
     text-align: center;
     padding: 10px 30px 9px 30px;
     line-height: 22px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $underlines;
+    }
   }
 }
 
 .mogo-blogs {
-  padding: 14px 0 0 36px;
+  padding: 14px 0 0 79px;
 }
 
 .blog-items {
@@ -652,7 +662,9 @@ main {
 }
 
 .blog-text {
-  width: 100%;
+  @include flex;
+  @include flex-direction(column);
+  margin: 16px 0 0 24px;
 }
 
 .date {
@@ -661,26 +673,44 @@ main {
 
 .mogo-instagram {
   @include flex;
-  @include align-items(flex-end);
-  @include justify-content(space-around);
   @include flex-direction(column);
-}
-
-.mogo-insta-items {
-  @include flex;
-  @include justify-content(flex-start);
-  @include flex-direction(column);
+  padding-top: 15px;
 }
 
 .insta-items {
   @include grid;
   @include grid-template-columns(1fr 1fr 1fr);
   @include grid-template-rows(1fr 1fr 1fr);
+  padding: 31px 6px 21px 0;
 }
 
 .insta-par {
   font-size: 13px;
   font-style: italic;
+}
+
+footer {
+  background-color: $quote-background;
+  text-align: center;
+
+  .footer-par {
+    font-size: 14px;
+    color: $headers;
+    font-family: $Montserrat;
+    border-top: 1px solid $border;
+    padding: 20px 0;
+    margin: 0 125px;
+
+    a {
+      text-decoration: none;
+      color: $underlines;
+      cursor: pointer;
+
+      &:hover {
+        color: $riptide;
+      }
+    }
+  }
 }
 
 

@@ -587,14 +587,13 @@ main {
     margin-top: 16px; }
 
 .mogo-insta-blogs {
-  padding-top: 61px;
+  padding: 61px 0 30px 0;
   background-color: #f8f8f8; }
 
 .mogo-items {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1.1fr 0.8fr 0.9fr;
-  grid-template-columns: 1.1fr 0.8fr 0.9fr; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .mogo-text {
   display: -webkit-box;
@@ -607,7 +606,7 @@ main {
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  flex-basis: 33%; }
+  flex-basis: 39%; }
 
 .mogo-header {
   color: #cccccc;
@@ -642,12 +641,16 @@ main {
   .mogo-icons .fa-icons {
     color: #95e1d3; }
     .mogo-icons .fa-icons .fa {
-      padding-right: 12px; }
+      padding-right: 12px;
+      cursor: pointer; }
+      .mogo-icons .fa-icons .fa:hover {
+        color: #f38181; }
 
 .mogo-form input[type="email"] {
   background-color: #ffffff;
   padding: 14px 98px 12px 0px;
-  text-indent: 10px; }
+  text-indent: 10px;
+  outline: none; }
   .mogo-form input[type="email"]::placeholder {
     color: #cccccc;
     font-family: "Roboto";
@@ -660,10 +663,13 @@ main {
   font-size: 14px;
   text-align: center;
   padding: 10px 30px 9px 30px;
-  line-height: 22px; }
+  line-height: 22px;
+  cursor: pointer; }
+  .mogo-form input[type="submit"]:hover {
+    background-color: #f38181; }
 
 .mogo-blogs {
-  padding: 14px 0 0 36px; }
+  padding: 14px 0 0 79px; }
 
 .blog-items {
   margin-top: 20px;
@@ -686,7 +692,14 @@ main {
   font-size: 12px; }
 
 .blog-text {
-  width: 100%; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: column;
+  -webkit-box-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 16px 0 0 24px; }
 
 .date {
   font-style: italic; }
@@ -695,28 +708,11 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-  -webkit-box-pack: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
   -webkit-box-orient: column;
   -webkit-box-direction: column;
   -ms-flex-direction: column;
-  flex-direction: column; }
-
-.mogo-insta-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: flex-start;
-  -ms-flex-pack: flex-start;
-  justify-content: flex-start;
-  -webkit-box-orient: column;
-  -webkit-box-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  padding-top: 15px; }
 
 .insta-items {
   display: -ms-grid;
@@ -724,8 +720,26 @@ main {
   -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr; }
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 31px 6px 21px 0; }
 
 .insta-par {
   font-size: 13px;
   font-style: italic; }
+
+footer {
+  background-color: #f8f8f8;
+  text-align: center; }
+  footer .footer-par {
+    font-size: 14px;
+    color: #333333;
+    font-family: "Montserrat";
+    border-top: 1px solid #e5e5e5;
+    padding: 20px 0;
+    margin: 0 125px; }
+    footer .footer-par a {
+      text-decoration: none;
+      color: #f38181;
+      cursor: pointer; }
+      footer .footer-par a:hover {
+        color: #95e1d3; }
