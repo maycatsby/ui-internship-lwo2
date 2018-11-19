@@ -553,9 +553,8 @@ main {
 }
 
 .mogo-items {
-  @include flex;
-  @include justify-content(space-between);
-  @include align-items(baseline);
+  @include grid;
+  @include grid-template-columns(1.1fr 0.8fr 0.9fr);
 }
 
 .mogo-text {
@@ -627,22 +626,50 @@ main {
   input[type="submit"] {
     background-color: $riptide;
     font-size: 14px;
-    padding: 14px 94px 12px 0;
-    line-height: auto;
     text-align: center;
+    padding: 10px 30px 9px 30px;
+    line-height: 22px;
   }
 }
 
-.blog-item {
+.mogo-blogs {
+  padding: 14px 0 0 36px;
+}
+
+.blog-items {
+  margin-top: 20px;
   @include flex;
+  @include flex-direction(column);
+}
+.blog-item {
+  @include grid;
+  @include grid-template-columns(0.3fr 0.7fr);
+  padding-bottom: 34px;
 }
 
 .blog-text-header {
   font-size: 12px;
 }
 
+.blog-text {
+  width: 100%;
+}
+
 .date {
   font-style: italic;
+}
+
+.mogo-instagram {
+  @include flex;
+  @include align-items(flex-end);
+  @include justify-content(space-around);
+  @include flex-direction(column);
+}
+
+.mogo-insta-items {
+  @include flex;
+  @include justify-content(flex-start);
+  @include flex-direction(column);
 }
 
 .insta-items {

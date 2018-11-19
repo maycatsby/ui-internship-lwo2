@@ -591,15 +591,10 @@ main {
   background-color: #f8f8f8; }
 
 .mogo-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-between;
-  -ms-flex-pack: space-between;
-  justify-content: space-between;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline; }
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.1fr 0.8fr 0.9fr;
+  grid-template-columns: 1.1fr 0.8fr 0.9fr; }
 
 .mogo-text {
   display: -webkit-box;
@@ -663,20 +658,65 @@ main {
 .mogo-form input[type="submit"] {
   background-color: #95e1d3;
   font-size: 14px;
-  padding: 14px 94px 12px 0;
-  line-height: auto;
-  text-align: center; }
+  text-align: center;
+  padding: 10px 30px 9px 30px;
+  line-height: 22px; }
 
-.blog-item {
+.mogo-blogs {
+  padding: 14px 0 0 36px; }
+
+.blog-items {
+  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-orient: column;
+  -webkit-box-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.blog-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.3fr 0.7fr;
+  grid-template-columns: 0.3fr 0.7fr;
+  padding-bottom: 34px; }
 
 .blog-text-header {
   font-size: 12px; }
 
+.blog-text {
+  width: 100%; }
+
 .date {
   font-style: italic; }
+
+.mogo-instagram {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-box-orient: column;
+  -webkit-box-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.mogo-insta-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+  -webkit-box-orient: column;
+  -webkit-box-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
 
 .insta-items {
   display: -ms-grid;
