@@ -906,6 +906,7 @@ header .header_bottom .divider {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 35px;
+  text-align: center;
 }
 .works_container .divider {
   width: 60px;
