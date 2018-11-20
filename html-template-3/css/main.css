@@ -385,6 +385,9 @@
   margin: 0;
   padding: 0; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   max-width: 1920px; }
 
@@ -481,10 +484,15 @@ main {
     .top-navigation .top-menu .menu-item {
       padding: 0 27px;
       cursor: pointer; }
+    .top-navigation .top-menu .hovered {
+      text-decoration: none; }
     .top-navigation .top-menu .hovered:hover {
       color: #fce38a;
       border-bottom: 3px solid #fce38a;
       padding-bottom: 7px; }
+    .top-navigation .top-menu .hovered:visited {
+      color: #ffffff;
+      text-decoration: none; }
     .top-navigation .top-menu .fa {
       font-size: 16px; }
       .top-navigation .top-menu .fa:hover {
@@ -594,6 +602,18 @@ main {
 
 .pic {
   margin: 0px 15px; }
+
+.animation:hover {
+  -webkit-box-shadow: 10px 10px 0px 1px #95e1d3;
+  -moz-box-shadow: 10px 10px 0px 1px #95e1d3;
+  box-shadow: 10px 10px 0px 1px #95e1d3;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(252, 227, 138, 0.9)), to(rgba(243, 129, 129, 0.9)));
+  background-image: -webkit-linear-gradient(bottom, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+  background-image: -o-linear-gradient(bottom, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+  background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+  background-color: #fce38a;
+  transform: translate(-50px);
+  opacity: 0.9; }
 
 .statistics {
   background-color: #95e1d3; }
