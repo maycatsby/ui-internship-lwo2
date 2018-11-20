@@ -356,6 +356,31 @@
     body .mogo-instagram h5 {
       text-align: center; } }
 
+@media screen and (min-width: 1024px) and (max-width: 1260px) {
+  body .second-back header .small-logo {
+    padding: 17px 25px; }
+  body .top-navigation {
+    margin-right: 0; }
+  body .slider-buttons {
+    flex-basis: 30%;
+    width: 100%; }
+  body .pic {
+    width: 90%; }
+  body .labels img {
+    width: 100%; }
+  body .lb-item {
+    flex-basis: 33%; }
+  body .calendar {
+    top: 38%; }
+  body .mogo-text {
+    margin-left: 35px; }
+  body .mogo-blogs {
+    padding: 14px 0 0 25px; }
+  body .mogo-instagram {
+    margin-right: 30px; }
+  body .mogo-form input[type="submit"] {
+    padding: 9px; } }
+
 * {
   margin: 0;
   padding: 0; }
