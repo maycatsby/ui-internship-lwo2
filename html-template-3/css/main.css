@@ -46,6 +46,12 @@
     -ms-flex-direction: column;
     flex-direction: column; } }
 
+@media screen and (min-width: 426px) and (max-width: 1023px) {
+  body .grid-gallery {
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "man_back roof ceiling" "bridge hole angle" "jellyfish jellyfish jellyfish" "jellyfish jellyfish jellyfish"; } }
+
 @media screen and (min-width: 320px) and (max-width: 425px) {
   body .top-navigation {
     margin: 0; }
@@ -193,6 +199,8 @@
     padding: 10px 70px; }
   body .mogo-blogs {
     padding: 30px 0 0 15px; }
+  body .blog-text {
+    margin: 0 0 0 15px; }
   body footer .footer-par {
     margin: 0 40px; } }
 
@@ -212,9 +220,8 @@
       padding: 0 12px; }
     body .container {
       margin: 0;
-      padding: 40px 0; }
+      padding: 40px 0 0 0; }
     body .align {
-      width: 75%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -224,7 +231,8 @@
       flex-direction: column;
       -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center; }
+      align-items: center;
+      width: 100%; }
     body .main-subheader {
       font-size: 40px; }
     body .main-header {
@@ -236,7 +244,117 @@
       width: 70px;
       font-size: 16px; }
       body .slide span {
-        font-size: 20px; } }
+        font-size: 20px; }
+    body .story-about {
+      padding: 30px 0; }
+    body .gallery {
+      -webkit-box-orient: column;
+      -webkit-box-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding: 10px 0; }
+    body .statistics .stats {
+      -webkit-box-orient: row;
+      -webkit-box-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row; }
+    body .stat {
+      border-right: 1px solid rgba(255, 255, 255, 0.3);
+      border-left: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 0; }
+    body .stat-content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: column;
+      -webkit-box-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 40px 10px; }
+    body .stat-header {
+      font-size: 35px; }
+    body .stat-font {
+      font-size: 10px; }
+    body .wwd-items {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: column;
+      -webkit-box-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+    body .amazing-services {
+      padding: 10px 0; }
+    body .item {
+      padding: 15px 0 15px 20px; }
+    body .item-pic {
+      margin-right: 10px; }
+    body .grey-background {
+      padding-top: 10px; }
+    body .tablet-pic {
+      width: 60%; }
+    body .phone-pic {
+      bottom: -9%;
+      right: 10%;
+      width: 30%; }
+    body .what-we-do {
+      padding: 20px 0 40px 0; }
+    body .wwd-pic {
+      width: 100%;
+      margin-bottom: 10px; }
+    body .future-dropdown {
+      width: 100%; }
+    body .quote-items .quote-img {
+      margin: 0; }
+    body .quote-items .quote-text {
+      margin-left: 20px; }
+    body .meet-our-team {
+      padding: 0; }
+    body .labels img {
+      width: 100%; }
+    body .some-of-our-work {
+      padding: 0; }
+    body .grid-section {
+      padding-top: 40px;
+      margin-bottom: 0px; }
+    body .wps-pic {
+      margin-left: 15px; }
+    body .people {
+      padding: 0; }
+      body .people .people-item {
+        padding: 0 25px 0 20px;
+        display: initial; }
+    body .grey-people {
+      padding-bottom: 40px; }
+    body .latest-blog {
+      padding: 0; }
+    body .calendar {
+      left: 10%; }
+    body .number {
+      font-size: 30px; }
+    body .lb-icons {
+      margin: 15px; }
+    body .lb-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: column;
+      -webkit-box-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    body .mogo-text {
+      align-items: center;
+      padding: 0 35px; }
+    body .mogo-blogs {
+      padding: 30px 0; }
+    body .mogo-instagram h5 {
+      text-align: center; } }
 
 * {
   margin: 0;

@@ -53,3 +53,18 @@
     }
   }
 }
+
+@media screen and (min-width: 426px) and (max-width: 1023px) {
+
+  body {
+
+    .grid-gallery {
+      @include grid-template-columns(1fr 1fr 1fr);
+
+  grid-template-areas: "man_back roof ceiling"
+                       "bridge hole angle"
+                       "jellyfish jellyfish jellyfish"
+                       "jellyfish jellyfish jellyfish";
+    }
+  }
+}
