@@ -724,6 +724,8 @@ main {
   -ms-grid-rows: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   padding: 31px 6px 21px 0; }
+  .insta-items img {
+    border: 1px solid #ffffff; }
 
 .insta-par {
   font-size: 13px;
