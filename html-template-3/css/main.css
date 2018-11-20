@@ -37,6 +37,16 @@
   width: 100%; }
 
 @media screen and (min-width: 320px) and (max-width: 425px) {
+  body .grid-gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: column;
+    -webkit-box-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; } }
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
   body .top-navigation {
     margin: 0; }
   body .top-menu {
@@ -57,16 +67,134 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 40px 0; }
+    padding: 40px 0 0 0; }
   body .align {
     width: 75%; }
+  body .second-back {
+    padding-bottom: 20px; }
   body .main-subheader {
     font-size: 24px; }
   body .main-header {
     line-height: initial;
     font-size: 40px; }
   body .slider-buttons {
-    display: none; } }
+    display: none; }
+  body .story-about {
+    padding: 10px 0; }
+  body .simple-header {
+    text-align: center; }
+  body .paragraph {
+    padding: 0 40px; }
+  body .gallery {
+    -webkit-box-orient: column;
+    -webkit-box-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 30px 0 17px 0; }
+    body .gallery .pic {
+      margin: 25px 15px; }
+  body .stats {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr; }
+    body .stats .stat-content {
+      text-align: center;
+      padding: 0 10px; }
+  body .as-items {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; }
+    body .as-items .item {
+      padding: 0 10px 20px 0; }
+    body .as-items .as-text {
+      padding-left: 15px; }
+  body .grey-background {
+    padding-top: 40px; }
+  body .tablet-pic {
+    margin: 0;
+    width: 100%; }
+  body .phone-pic {
+    width: 40%;
+    right: 0;
+    bottom: -7%; }
+  body .amazing-services {
+    padding: 10px 0; }
+  body .what-we-do {
+    padding: 30px 0 60px 0; }
+  body .wwd-items {
+    -ms-grid-columns: 1.5fr;
+    grid-template-columns: 1.5fr;
+    padding-top: 60px; }
+    body .wwd-items img {
+      width: 100%; }
+  body .drop-iten-header {
+    padding-left: 10px; }
+  body .quote-items {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr; }
+    body .quote-items .quote-img {
+      margin: 0;
+      padding: 20px; }
+  body .labels img {
+    width: 100%; }
+  body .some-of-our-work {
+    padding: 10px 0; }
+  body .grid-section {
+    padding-top: 50px;
+    margin-bottom: 10px; }
+  body .joshua-earle {
+    margin: 0; }
+  body .name {
+    margin: 8px 0 30px 0; }
+  body .grey-people {
+    padding-bottom: 60px; }
+  body .people {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: column;
+    -webkit-box-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0; }
+    body .people .people-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: column;
+      -webkit-box-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    body .people .wps-pic {
+      margin: 0 0 32px 0; }
+  body .latest-blog {
+    padding: 10px 0; }
+  body .pic {
+    width: 100%; }
+  body .calendar {
+    padding: 1px 10px;
+    top: 36%; }
+  body .mogo-items {
+    -webkit-box-orient: column;
+    -webkit-box-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  body .fa-icons {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr; }
+  body .mogo-form input[type=submit] {
+    padding: 10px 70px; }
+  body .mogo-blogs {
+    padding: 30px 0 0 15px; }
+  body footer .footer-par {
+    margin: 0 40px; } }
 
 @media screen and (min-width: 426px) and (max-width: 1023px) {
   body {

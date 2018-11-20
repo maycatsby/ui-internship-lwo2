@@ -42,3 +42,14 @@
   grid-area: angle;
   width: 100%;
 }
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+
+  body {
+
+    .grid-gallery {
+      @include flex;
+      @include flex-direction(column);
+    }
+  }
+}
