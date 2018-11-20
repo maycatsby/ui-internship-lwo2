@@ -1,6 +1,5 @@
-// import { validate_bet } from './bet-validation';
-
-xdescribe('validate_bet', () => {
+import { validate_bet } from './bet-validation';
+describe('validate_bet', () => {
     test("validate bet '1 2 3 4 5' should return [1, 2, 3, 4, 5]", () => {
         expect(validate_bet([5, 90], "1 2 3 4 5").join(',')).toBe('1,2,3,4,5');
     });
