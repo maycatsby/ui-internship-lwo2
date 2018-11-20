@@ -8,7 +8,7 @@ cursive;
 @mixin section() {
   padding: 104px 0 70px 0;
   text-align: center;
-  max-width: 1200px;
+  width: 83%;
 
   .line {
     background-color: #f38181;
@@ -27,7 +27,7 @@ cursive;
 @mixin quote-common() {
   display: grid;
   grid-template-columns: 5% 21.5% 68.5% 5%;
-  max-width: 1200px;
+  width: 83%;
 
   .line {
     display: inline-block;
@@ -42,7 +42,7 @@ cursive;
   p {
     font-size: 24px;
     line-height: 36px;
-    font-family: Roboto;
+    font-family: $font-paragraph-stack;
     font-weight: 300;
     font-style: italic;
     margin-bottom: 10px;
@@ -65,6 +65,7 @@ cursive;
   margin: 0;
   padding: 0;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 body {
@@ -73,7 +74,7 @@ body {
 
 h1 {
   font-family: $font-header-stack;
-  font-size: 150px;
+  font-size: 10.5vw;
   text-transform: uppercase;
   letter-spacing: -7px;
   line-height: 140px;
@@ -106,6 +107,7 @@ p {
 nav {
   width: 80%;
   justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
 nav a {
@@ -157,7 +159,7 @@ nav a:last-child {
 }
 
 .welcome-container {
-  background-image: url(../img/welcome-bg.png);
+  background: url(../img/welcome-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -171,7 +173,7 @@ nav a:last-child {
 
 .nav-side {
   font-size: 14px;
-  width: 52%;
+  min-width: 620px;
   padding-top: 36px;
 }
 
@@ -190,12 +192,12 @@ nav a:last-child {
 
 .welcome {
   color: white;
-  max-width: 1200px;
+  width: 83%;
 }
 
 .title {
   text-align: center;
-  padding: 154px 200px;
+  padding: 154px 100px;
 }
 
 .line {
@@ -250,7 +252,7 @@ nav a:last-child {
 .what-we-do {
   padding: 82px 0 110px 0;
   text-align: center;
-  max-width: 1200px;
+  width: 83%;
 
   .line {
     background-color: #f38181;
@@ -265,11 +267,16 @@ nav a:last-child {
     margin-bottom: 32px;
   }
 
-  .story-image-container {
-    width: 100%;
-    margin-top: 98px;
-    justify-content: space-between;
+  img {
+    width: 32%;
   }
+}
+
+
+.story-image-container {
+  width: 100%;
+  margin-top: 98px;
+  justify-content: space-between;
 }
 
 .statistics {
@@ -278,7 +285,7 @@ nav a:last-child {
 
 .stats-container {
   color: white;
-  max-width: 1200px;
+  width: 83%;
   font-family: $font-header-stack;
   text-align: center;
   text-transform: uppercase;
@@ -325,7 +332,7 @@ nav a:last-child {
   }
 
   &>* {
-    width: 31%;
+    width: 33%;
     padding: 2px 0 36px 28px;
   }
 
@@ -339,12 +346,24 @@ nav a:last-child {
 }
 
 .devices-container {
-  background-image: url(../img/devices-bg.png);
+  position: relative;
+
+  &::after {
+    background-image: url(../img/devices-bg.png);
+    opacity: 0.2;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
 }
 
 .devices {
   padding: 104px 5px 2px 0;
-  max-width: 1200px;
+  width: 83%;
   text-align: center;
 
   img {
@@ -406,7 +425,7 @@ nav a:last-child {
     text-align: left;
 
     p {
-      font-family: Roboto;
+      font-family: $font-paragraph-stack;
       font-weight: 300;
       font-style: italic;
     }
@@ -474,6 +493,7 @@ nav a:last-child {
   &-members {
     margin: 90px 0 0 0;
     justify-content: space-between;
+    width: 100%;
 
     img {
       margin-bottom: 22px;
@@ -484,10 +504,18 @@ nav a:last-child {
       margin-top: 10px;
       display: block;
       color: #999999;
-      font-family: Roboto;
+      font-family: $font-paragraph-stack;
       font-weight: 300;
       font-style: italic;
     }
+  }
+}
+
+.team-member {
+  width: 32%;
+
+  img {
+    width: 100%;
   }
 }
 
@@ -517,6 +545,7 @@ nav a:last-child {
 
   img {
     width: 100%;
+    margin-bottom: -4px;
   }
 }
 
@@ -528,7 +557,7 @@ nav a:last-child {
   .quote-img-container {
     border: none;
     position: relative;
-    margin: 0;
+    margin: 0 1px 0 0;
     padding: 0;
 
     img {
@@ -540,7 +569,20 @@ nav a:last-child {
 }
 
 .happy-clients-section-container {
-  background-image: url(../img/happy-bg.png);
+  position: relative;
+
+  &::after {
+    background-image: url(../img/happy-bg.png);
+    background-size: cover;
+    opacity: 0.2;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
 }
 
 .happy-clients-section {
@@ -552,15 +594,9 @@ nav a:last-child {
     margin-top: 10px;
     display: block;
     color: #999999;
-    font-family: Roboto;
+    font-family: $font-paragraph-stack;
     font-weight: 300;
     font-style: italic;
-  }
-
-  .client-img-container {
-    display: inline-block;
-    width: 30%;
-    padding: 0 28px 0 38px;
   }
 
   .line {
@@ -570,38 +606,46 @@ nav a:last-child {
   .client-text {
     padding: 8px 0 0 0;
   }
+}
 
-  .happy-clients {
-    flex-wrap: wrap;
-    text-align: left;
+.client-img-container {
+  display: inline-block;
+  width: 40%;
+  padding: 0 28px 0 38px;
+}
 
-    .line {
-      margin: 16px 0 20px 0;
-    }
+.happy-clients {
+  flex-wrap: wrap;
+  text-align: left;
 
-    &-item {
-      display: flex;
-      margin-bottom: 64px;
-    }
+  .line {
+    margin: 16px 0 20px 0;
+  }
 
-    &>* {
-      width: 50%;
-    }
+  &-item {
+    display: flex;
+    margin-bottom: 64px;
+    width: 50%;
   }
 }
 
+
 .blog-section {
   @include section();
-
+  padding: 104px 0 112px 0;
 }
 
 .blog-container {
   justify-content: space-between;
-  width: 1200px;
+  width: 100%;
 }
 
 .blog-img-container {
   position: relative;
+
+  img {
+    width: 100%;
+  }
 }
 
 .blog-item {
@@ -633,26 +677,20 @@ nav a:last-child {
   }
 
   .month {
-    font-family: Roboto;
-    font-weight: 300;
-    font-style: italic;
     display: block;
   }
 }
 
 .activities {
   float: left;
-  font-family: Roboto;
-  font-weight: 300;
-  font-style: italic;
   display: block;
   color: #999999;
   font-size: 15px;
 
   img {
     margin-right: 10px;
-    
-    &:nth-child(2){
+
+    &:nth-child(2) {
       margin-left: 10px;
     }
   }
@@ -662,3 +700,462 @@ hr {
   margin: 18px 0;
 }
 
+.open-map {
+  width: 83%;
+  @include section();
+  padding: 62px 0 6px 0;
+
+  h2 {
+    font-size: 24px;
+    color: #f38181;
+    margin-bottom: 20px;
+  }
+
+  &-container {
+    position: relative;
+
+    &::after {
+      background-image: url(../img/open-map-bg.png);
+      opacity: 0.2;
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+}
+
+footer {
+  font-family: $font-header-stack;
+  width: 83%;
+  padding: 62px 0 0 0;
+  flex-wrap: wrap;
+
+  .cursive {
+    color: #999999;
+    text-transform: capitalize;
+  }
+
+  p {
+    padding: 26px 10px 42px 0;
+  }
+
+  h3 {
+    padding-bottom: 36px;
+  }
+
+  hr {
+    margin-bottom: 12px;
+  }
+
+  i {
+    display: inline-block;
+    margin: 0 6px;
+  }
+}
+
+.footer-social {
+  width: 40%;
+
+  i {
+    color: #95e1d3;
+  }
+}
+
+.footer-blogs {
+  padding: 14px 0 0 30px;
+  width: 33%;
+}
+
+.footer-blog-container {
+  flex-direction: column;
+
+  img {
+    display: inline-block;
+    margin-right: 16px;
+    float: left;
+  }
+
+  p {
+    padding: 10px;
+  }
+}
+
+.footer-blog-item {
+  margin-bottom: 32px;
+  font-size: 12px;
+
+  h3 {
+    font-size: 12px;
+    padding: 18px 0 10px 0;
+    font-weight: 700;
+  }
+}
+
+.instagram {
+  padding: 14px 0 0 40px;
+  width: 27%;
+
+  span {
+    font-size: 13px;
+  }
+}
+
+.insta-img-container {
+  width: 280px;
+  margin-bottom: 16px;
+}
+
+.cursive {
+  font-family: $font-paragraph-stack;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.mogo {
+  font-size: 46px;
+  font-weight: 700;
+  color: #999999;
+}
+
+.input-container {
+  width: 380px;
+  height: 40px;
+  margin-top: 36px;
+
+  input {
+    color: #cccccc;
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid #e7e7e7;
+    width: 230px;
+    height: 40px;
+    background-color: #fff;
+    font-family: $font-paragraph-stack;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  button {
+    outline: none;
+    border: none;
+    color: white;
+    font-family: $font-header-stack;
+    height: 40px;
+    width: 150px;
+    background-color: #95e1d3;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (max-width:1439px) {
+
+  h1 {
+    line-height: 100px;
+  }
+
+  .quote,
+  .quote-josh {
+    grid-template-columns: 10% 80% 10%;
+  }
+
+  .quote-img-container {
+    display: none;
+  }
+
+  .footer-social {
+    width: 100%;
+  }
+
+  .footer-blogs,
+  .instagram {
+    width: 50%;
+  }
+
+}
+
+@media only screen and (max-width:1024px) {
+
+  .logos-section-container {
+    display: none;
+  }
+
+  .gallery {
+    padding: 0 0 50px 0;
+  }
+
+  .devices {
+    display: none;
+  }
+
+  .services-2 {
+    padding: 0 0 50px 0;
+  }
+
+  .tablet-img .phone-img {
+    margin: 0 auto;
+  }
+
+  h1 {
+    line-height: 80px;
+    letter-spacing: -3px;
+  }
+
+  .quote,
+  .quote-josh {
+    padding: 30px 0;
+    font-size: 20px;
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .client-img-container {
+    width: 30%;
+  }
+
+  .footer-blogs {
+    display: none;
+  }
+
+  .nav-side {
+    display: none;
+  }
+
+  .instagram {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .title {
+    padding: 75px 100px;
+  }
+
+  .title .subheader {
+    font-size: 5.2vw;
+  }
+
+  .services .grey-line {
+    display: none;
+  }
+
+  .service-item {
+    width: 45%;
+  }
+
+  .service-items-container {
+    justify-content: space-evenly;
+  }
+
+  .services-group-container {
+    width: 100%;
+    margin: 20px auto;
+    flex-direction: column;
+
+    img {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  .services-info-container {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .quote-img-container {
+    opacity: 0;
+  }
+
+  .happy-clients {
+    flex-wrap: wrap;
+  }
+
+  .happy-clients-item {
+    width: 100%;
+  }
+
+  .blog-container {
+    flex-wrap: wrap;
+  }
+
+  .blog-item {
+    width: 60%;
+    margin: 20px auto;
+  }
+
+  .what-we-do {
+    img {
+      width: 100%;
+      max-width: 380px;
+      margin: 0 auto;
+    }
+  }
+
+  .story-image-container {
+    margin-top: 30px;
+  }
+
+  .what-we-do img:nth-child(n + 2) {
+    display: none;
+  }
+
+  .input-container {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width:768px) {
+
+  .services {
+    padding: 50px 0 0 0;
+  }
+
+  .services-info-text {
+    display: none;
+  }
+
+  .meet-our-team {
+    padding: 50px 0;
+  }
+
+  .blog-section {
+    padding: 50px 0;
+  }
+
+  .happy-clients-section .line {
+    margin-bottom: 30px;
+  }
+
+  .title {
+    padding: 60px 30px;
+  }
+
+  .scroll-bar {
+    text-align: center;
+    font-size: 14px;
+
+    span {
+      display: none;
+    }
+  }
+
+  .story-image-container {
+    margin-top: 30px;
+  }
+
+  .stats-container {
+    flex-wrap: wrap;
+  }
+
+  .services-2 {
+    padding: 40px 0;
+  }
+
+  .stat {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 50%;
+    padding: 10px 0;
+
+    &:last-child {
+      width: 100%;
+    }
+  }
+
+  .meet-our-team-members {
+    flex-wrap: wrap;
+  }
+
+  .team-member {
+    width: 45%;
+    margin: 20px auto;
+  }
+
+  .happy-clients-item {
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+
+    .line {
+      margin: 10px auto;
+    }
+
+    .client-img-container {
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
+
+  .blog-item {
+    width: 80%;
+  }
+
+  .client-img-container {
+    width: fit-content;
+  }
+
+  .service-item {
+    width: 80%;
+  }
+
+  p.center-para {
+    padding: 0;
+  }
+
+  .center-para {
+    padding: 0;
+  }
+
+  .meet-our-team-members {
+    margin: 30px 0 0 0;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+
+  .social-logo-container {
+    text-align: center;
+
+    span {
+      display: none;
+    }
+  }
+
+  .team-member {
+    width: 100%;
+  }
+
+  .blog-item h3 {
+    margin-top: 20px;
+  }
+
+  .input-container {
+    width: 270px;
+    height: 40px;
+    margin-top: 36px;
+
+    input {
+      width: 150px;
+      height: 40px;
+    }
+
+    button {
+      height: 40px;
+      width: 120px;
+    }
+  }
+
+  .quote-josh , .quote {
+    p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
