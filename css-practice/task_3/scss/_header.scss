@@ -1,0 +1,332 @@
+header {
+  display: flex;
+  flex-direction: column; 
+  background: url(../img/top-banner.png) no-repeat top center;
+  background-size: cover;
+  
+  .header_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin-top: 20px;
+    
+    h2 {
+      color: $whiteColor;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 30px;  
+    }
+    
+    nav{
+      width: 51%;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    a {
+      color: $whiteColor;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      text-transform: uppercase;
+
+      &:hover {
+        color: #fce38a; 
+        border-bottom: 2px solid #fce38a;
+        padding-bottom: 12px;
+      }
+    }
+
+    i {
+      color: $whiteColor;
+      cursor: pointer;
+    }
+  }
+
+  .header_main_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 155px;
+    width: 60%;
+    
+    h2 {
+      color: $whiteColor;
+      font-size: 72px;
+      font-weight: 400;
+      font-family: 'Kaushan Script', cursive;
+      text-align: center;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    h1 {
+      color: $whiteColor;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 7.9vw;
+      width: 100%;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 62px;
+      letter-spacing: -5px;
+      line-height: .9;
+    }
+
+    .divider {
+      width: 60px;
+      border: 1px solid $whiteColor;
+      margin-bottom: 48px;
+    }
+    
+
+    button {
+      border: 1px solid $whiteColor;
+      padding: 12px 33px;
+      background-color: rgba($color: $whiteColor, $alpha: 0);
+      color: $whiteColor;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 157px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+
+
+  .intro {
+    width: 24%;
+    cursor: pointer;
+    opacity: 0.5;
+    position: relative;
+
+    &:hover {
+      opacity: 1;
+      .red {
+        display: block;
+        width: 60px;
+        height: 2px;
+        position: absolute;
+        background: #f38181;;
+        left: 0px;
+        top: 0;
+      }
+    }
+
+    .divider {
+      width: 100%;
+      border: 1px solid $whiteColor;
+      margin-bottom: 15px;
+    }
+    
+    b {
+      color: $whiteColor;
+      font-size: 18px;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+    } 
+
+    p {
+      color: $whiteColor;
+      font-size: 18px;
+      font-weight: 400;
+      font-family: 'Montserrat', sans-serif;
+    }
+  }
+
+  .header_bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 22px;
+
+
+    .work {
+      width: 24%;
+      cursor: pointer;
+      opacity: 0.5;
+      position: relative;
+
+      &:hover {
+        opacity: 1;
+        .red {
+          display: block;
+          width: 60px;
+          height: 2px;
+          position: absolute;
+          background: #f38181;;
+          left: 0px;
+          top: 0;
+        }
+      }
+    }
+
+    .divider {
+      width: 100%;
+      border: 1px solid $whiteColor;
+      margin-bottom: 25px;
+    }
+    
+    b {
+      color: $whiteColor;
+      font-size: 18px;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+    } 
+
+    p {
+      color: $whiteColor;
+      font-size: 18px;
+      font-weight: 400;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .about {
+      width: 24%;
+      cursor: pointer;
+      opacity: 0.5;
+      position: relative;
+
+      &:hover {
+        opacity: 1;
+        .red {
+          display: block;
+          width: 60px;
+          height: 2px;
+          position: absolute;
+          background: #f38181;;
+          left: 0px;
+          top: 0;
+        }
+      }
+    }
+
+    .divider {
+      width: 100%;
+      border: 1px solid $whiteColor;
+      margin-bottom: 25px;
+    }
+    
+    b {
+      color: $whiteColor;
+      font-size: 22px;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      padding-left: 10px;
+    } 
+
+    p {
+      color: $whiteColor;
+      font-size: 21px;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+    }
+
+    .contact {
+      width: 24%;
+      cursor: pointer;
+      opacity: 0.5;
+      position: relative;
+
+      &:hover {
+        opacity: 1;
+        
+        .red {
+          display: block;
+          width: 60px;
+          height: 2px;
+          position: absolute;
+          background: #f38181;;
+          left: 0px;
+          top: 0;
+        }
+      }
+    }
+
+    .divider {
+      width: 100%;
+      border: 1px solid $whiteColor;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+  .header_top {
+    
+    .disp_none {
+      display: none;
+    }
+
+    a {
+      outline: none;
+
+      &:hover {
+        border-bottom: none;
+      }
+    }
+
+    i {
+      color: $whiteColor;
+      cursor: pointer;
+    }
+  }
+
+  .menu-btn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    
+    span {
+      width: 20px;
+      margin-left: 15px;
+      height: 2px;
+      background-color: #fff;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    :first-child {
+      margin-top: 16px;
+    }
+    
+  }
+  header {
+    .header_bottom {
+      b {
+        font-size: 11px;
+      } 
+    
+      p {
+        font-size: 11px;
+      } 
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  header {
+    .header_main_text {
+      margin-top: 50px;
+
+      h1 {
+        display: none;
+      }
+    }
+    .header_bottom {
+      b {
+        font-size: 9px;
+      } 
+    
+      p {
+        font-size: 9px;
+      } 
+    }
+  }
+}

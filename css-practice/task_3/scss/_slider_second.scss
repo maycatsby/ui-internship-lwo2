@@ -1,0 +1,49 @@
+.slider_second {
+  background-color: #f8f8f8;
+
+  &_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 130px;
+
+    &_content {
+      margin-left: 47px;
+      width: 64%;
+
+      i {
+        color: #999999;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        line-height: 36px;
+      }
+
+      &_name {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 20px;
+
+        .divider {
+          width: 60px;
+          border: 1px solid #f38181;
+          margin-right: 10px;
+        }
+
+        p {
+          color: #333333;
+          font-family: 'Kaushan Script', cursive;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .slider_second {
+    display: none;
+  }
+}

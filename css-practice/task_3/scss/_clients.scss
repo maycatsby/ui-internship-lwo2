@@ -1,0 +1,147 @@
+.clients {
+  background: url(../img/2-layers.png) no-repeat top center;
+  background-size: cover;
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &_main{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      h2 {
+        color: #333333;
+        font-family: 'Kaushan Script', cursive;
+        font-size: 24px;
+        margin-top: 99px;
+        margin-bottom: 8px;
+      }
+
+      h3 {
+        color: #333333;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+      }
+
+      .divider {
+        width: 60px;
+        border: 1px solid #f38181;
+        margin-bottom: 96px;
+      }
+    }
+    
+    &_content {
+      display: flex;
+      flex-direction: column;
+      padding: 0 56px 0 40px;
+      margin-bottom: 55px;
+
+      &_row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 57px; 
+        width: 100%;
+
+        &_reviews {
+          display: flex;
+          width: 45%;
+
+          .img {
+            width: 60%;
+            margin-right: 17px;
+
+            img {
+              width: 100%;
+            }
+          }
+          &_text {
+
+            h2 {
+              color: #333333;
+              font-family: 'Montserrat', sans-serif;
+              font-size: 14px;
+              text-transform: uppercase;
+              margin-bottom: 5px;
+            }
+
+            i {
+              color: #333333;
+              font-family: 'Roboto', sans-serif;
+              font-size: 15px;
+              line-height: 24px;
+            }
+
+            .divider {
+              width: 60px;
+              border: 1px solid #f38181;
+              margin-top: 17px;
+              margin-bottom: 24px;
+            }
+
+            p {
+              color: #999999;
+              font-family: 'Roboto', sans-serif;
+              font-size: 15px;
+              line-height: 24px;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .clients {
+
+    &_container {
+      
+      &_content {
+        padding: 0;
+        margin-bottom: 55px;
+
+        &_row {
+          display: flex;
+          flex-direction: column;
+          align-items: center; 
+          margin-bottom: 17px; 
+
+          &_reviews {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+  
+            .img {
+              width: 20%;
+              margin-right: 0px;
+  
+              img {
+                width: 100%;
+              }
+            }
+            &_text {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+  
+              p {
+                margin-bottom: 30px;
+                text-align: center;
+              }
+            }
+          }  
+        }
+      }
+    }
+  }
+}
