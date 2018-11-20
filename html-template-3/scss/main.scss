@@ -45,7 +45,7 @@ main {
 }
 
 .align {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -328,6 +328,10 @@ main {
   @include grid-template-columns(1fr 1fr);
 
   padding-top: 92px;
+}
+
+.wwd-pic {
+  margin-right: 30px;
 }
 
 .future-dropdown {
@@ -718,6 +722,3 @@ footer {
     }
   }
 }
-
-
-

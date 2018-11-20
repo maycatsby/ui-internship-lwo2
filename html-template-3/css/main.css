@@ -390,7 +390,7 @@ main {
   background-size: cover; }
 
 .align {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto; }
 
 .underline {
@@ -647,6 +647,9 @@ main {
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   padding-top: 92px; }
+
+.wwd-pic {
+  margin-right: 30px; }
 
 .future-dropdown {
   list-style-type: none; }
