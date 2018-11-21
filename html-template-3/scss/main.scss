@@ -1,0 +1,725 @@
+@import "variables";
+@import "mixins";
+@import "grid_gallery";
+@import "media/phone";
+@import "media/tablet";
+@import "media/small_laptop";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1920px;
+}
+
+main {
+  background-image: url(../pics/backgrounds/main-background-picture.png);
+}
+
+.font {
+  font-family: $Roboto;
+  color: $font;
+  font-size: 15px;
+}
+
+.italic-header {
+  color: $headers;
+  font-family: $KaushanScript;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.simple-header {
+  color: $headers;
+  font-family: $Montserrat;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.background {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.align {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.underline {
+  border-top: 3px solid;
+  color: transparent;
+}
+
+.container {
+  @include flex;
+  @include flex-direction(column);
+  @include align-items(center);
+}
+
+.second-back {
+  @include background-image-main;
+
+  background-color: $background-main;
+  opacity: 0.9;
+
+  header {
+    @include flex;
+    @include justify-content(space-between);
+
+    .small-logo {
+      font-size: 30px;
+      font-weight: bold;
+      margin: 0;
+      padding: 17px 0;
+    }
+  }
+}
+
+.main-font {
+  color: $white;
+  font-family: $Montserrat;
+  font-size: 14px;
+}
+
+.top-navigation {
+  @include flex;
+  @include justify-content(space-around);
+
+  padding-top: 36px;
+  margin-right: -29px;
+
+  .top-menu {
+    @include flex;
+    @include justify-content(space-around);
+
+    list-style-type: none;
+    color: $white;
+    text-transform: uppercase;
+
+    .menu-item {
+      padding: 0 27px;
+      cursor: pointer;
+    }
+
+    .hovered:hover {
+      color: $background-main;
+      border-bottom: 3px solid $background-main;
+      padding-bottom: 7px;
+    } 
+
+    .fa {
+      font-size: 16px;
+      &:hover {
+        color: $background-main;
+      }
+    }
+
+    .about:hover, .about:focus-within {
+      border-bottom: 3px solid $background-main;
+    }
+  }
+}
+
+.pad {
+  padding-top: 138px;
+}
+
+.main-subheader {
+  font-family: $KaushanScript;
+  color: $white;
+  font-size: 72px;
+  font-weight: 400;
+}
+
+.main-header {
+  font-family: $Montserrat;
+  color: $white;
+  font-size: 150px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 140px;
+  padding: 27px 0 56px 0;
+}
+
+.white-underline {
+  border-color: $white;
+  padding-top: 30px;
+}
+
+.learn-more {
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 3px solid $white;
+  font-weight: bold;
+  padding: 10px 28px;
+  cursor: pointer;
+
+  &:hover {
+    color: $background-main;
+    border-color: $background-main;
+  }
+}
+
+.slider-buttons {
+  @include flex;
+  @include justify-content(space-around);
+
+  padding-top: 156px;
+}
+
+.slide {
+  text-transform: uppercase;
+  text-decoration: none;
+  border-top: 3px solid $white;
+  opacity: 0.5;
+  font-size: 18px;
+  margin: 0 16px;
+  padding: 20px 0;
+  display: inline-block;
+  width: 278px;
+
+  span {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &:hover, &:focus-within {
+    position: relative;
+    opacity: 1;
+    border: none;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      content: '';
+      background: $underlines;
+      height: 3px;
+      width: 25%;
+    }
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      content: '';
+      background: $white;
+      height: 3px;
+      width: 75%;
+    }
+  }
+}
+
+.story-about {
+  padding: 90px 0;
+}
+
+.paragraph {
+  text-align: center;
+  line-height: 22px;
+  padding: 0 102px;
+}
+
+.color-underline {
+  border-color: $underlines;
+  margin: 39px 0 26px 0;
+}
+
+.gallery {
+  @include flex;
+  @include justify-content(space-between);
+
+  padding: 97px 0 17px 0;
+}
+
+.pic {
+  margin: 0px 15px;
+}
+
+.statistics {
+  background-color: $riptide;
+}
+
+.stats {
+  @include grid;
+  @include grid-template-columns(1fr 1fr 1fr 1fr 1fr);
+}
+
+.stat {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.stat-content {
+  padding: 40px 10px 70px 10px;
+}
+
+.stat-header {
+  font-size: 72px;
+  padding: 0;
+}
+
+.stat-font {
+  color: $white;
+  text-transform: uppercase;
+}
+
+.amazing-services {
+  padding: 108px 0 47px 0;
+}
+
+.as-items {
+  @include grid;
+  @include grid-template-columns(1fr 1fr 1fr);
+  @include grid-template-rows(1fr 1fr);
+}
+
+.item {
+  @include grid;
+  @include grid-template-columns(0.2fr 0.8fr);
+
+  padding: 21px 0 94px 27px;
+}
+
+.as-small-header {
+  text-transform: uppercase;
+  color: $headers;
+}
+
+.as-paragraph {
+  font-family: $Roboto;
+  font-size: 15px;
+  color: $font;
+}
+
+.unique-designs {
+  background-image: url(../pics/backgrounds/uniq-design-background-pic.png);
+}
+
+.grey-background {
+  background-color: $background-section;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding-top: 108px;
+  position: relative;
+}
+
+.tablet-pic {
+  margin-right: 57px;
+}
+
+.phone-pic {
+  position: absolute;
+  z-index: 1;
+  bottom: -11%;
+  right: 25%;
+}
+
+.what-we-do {
+  padding: 109px 0 120px 0;
+}
+
+.wwd-items {
+  @include grid;
+  @include grid-template-columns(1fr 1fr);
+
+  padding-top: 92px;
+}
+
+.wwd-pic {
+  margin-right: 30px;
+}
+
+.future-dropdown {
+  list-style-type: none;
+
+  .drop-item {
+    @include grid;
+    @include grid-template-columns(0.05fr 0.95fr);
+    @include align-items(center);
+  
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border: 1px solid $font;
+    
+    .drop-icon {
+      padding-right: 12px;
+    }
+  }
+}
+
+.drop-item-header {
+  color: $headers;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.quote {
+  background-color: $quote-background;
+  padding-top: 36px;
+}
+
+.quote-items {
+  @include grid;
+  @include grid-template-columns(0.2fr 0.8fr);
+
+  .quote-img {
+    border: 3px solid $riptide;
+    padding: 41px;
+    margin: 34px 67px 69px 106px;
+  }
+  
+  .quote-paragraph {
+    @include flex;
+    @include flex-direction(column);
+  
+    font-style: italic;
+    font-size: 24px;
+    margin-top: 38px;
+    line-height: 36px;
+  }
+}
+
+.quote-underline {
+  margin: 17px 10px 0 0;
+}
+
+.name {
+  @include flex;
+
+  margin-top: 8px;
+}
+
+.meet-our-team {
+  padding: 99px 0;
+}
+
+.mot-pic {
+  margin: 0 30px;
+}
+
+.dev-p {
+  font-style: italic;
+}
+
+.developer {
+  padding-top: 22px;
+  line-height: 22px;
+}
+
+.labels {
+  background-color: $quote-background;
+  padding: 51px 0;
+}
+
+.some-of-our-work {
+  padding: 105px 0;
+}
+
+.grid-section {
+  padding-top: 100px;
+  margin-bottom: 151px;
+}
+
+.joshua-quote {
+  background: transparent;
+  padding-bottom: 128px;
+}
+
+.joshua-text {
+  margin: 0;
+}
+
+.joshua-earle {
+  margin: 2px 36px 2px 75px;
+}
+
+.what-people-say {
+  background-image: url(../pics/backgrounds/uniq-design-background-pic.png);
+}
+
+.grey-people {
+  padding-bottom: 114px;
+}
+
+.people {
+  @include grid;
+  @include grid-template-columns(1fr 1fr);
+  @include grid-template-rows(1fr 1fr);
+  padding-top: 30px;
+  grid-gap: 10px;
+
+  .people-item {
+    @include grid;
+    @include grid-template-columns(0.2fr 0.8fr);
+    grid-gap: 21px;
+    margin-top: 23px;
+  }
+}
+
+.wps-underline {
+  width: 61px;
+  margin: 28px 0 20px 0;
+}
+
+.wps-header {
+  margin-bottom: 6px;
+}
+
+.wps-pic {
+  margin-left: 39px;
+}
+
+.latest-blog {
+  padding: 108px 0;
+}
+
+.lb-gallery {
+  padding-top: 0;
+}
+
+.lb-item {
+  position: relative;
+}
+
+.number {
+  font-size: 30px;
+  line-height: 30px;
+  padding: 0;
+}
+
+.calendar {
+  @include flex;
+  @include flex-direction(column);
+
+  background-color: $riptide;
+  color: $white;
+  font-style: italic;
+  font-weight: 300;
+  position: absolute;
+  padding: 11px 16px;
+  text-align: center;
+  top: 42%;
+}
+
+.lb-text-block {
+  border-bottom: 1px solid $border;
+  padding: 17px 0 33px 10px;
+  margin-right: 17px;
+}
+
+.lb-icons{
+  @include flex;
+  margin-top: 15px;
+
+  .fa {
+    color: $riptide;
+    padding: 0 12px;
+
+    &:before {
+      padding-right: 5px;
+    }
+
+    span {
+      font-style: italic;
+    }
+  }
+}
+
+.open-map {
+  background-image: url(../pics/backgrounds/open-map-background-pic.png);
+
+  .map-background {
+    padding: 48px 0 15px 0;
+  }
+
+  .map-header {
+    color: $underlines;
+    font-size: 24px;
+  }
+
+  img {
+    padding-bottom: 10px;
+  }
+
+  .map-underline {
+    margin-top: 16px;
+  }
+}
+
+.mogo-insta-blogs {
+  padding: 61px 0 30px 0;
+  background-color: $quote-background;
+}
+
+.mogo-items {
+  @include flex;
+}
+
+.mogo-text {
+  @include flex;
+  @include flex-direction(column);
+  @include align-items(flex-start);
+  flex-basis: 39%;
+}
+
+.mogo-header {
+  color: $logo-color;
+  font-family: $Montserrat;
+  font-size: 46px;
+  font-weight: bold;
+  margin-bottom: 27px;
+}
+
+.mogo-font {
+  line-height: 23px;
+  margin-bottom: 46px;
+}
+
+.followers {
+  text-transform: lowercase;
+  border-bottom: 1px solid $border;
+  margin-bottom: 17px;
+  padding-bottom: 12px;
+  width: 100%;
+
+  span {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+.mogo-icons {
+  @include flex;
+  @include justify-content(flex-start);
+  margin-bottom: 36px;
+
+  .follow-us {
+    font-style: italic;
+    padding-right: 20px;
+  }
+
+  .fa-icons {
+    color: $riptide;
+
+    .fa {
+      padding-right: 12px;
+      cursor: pointer;
+
+      &:hover {
+        color: $underlines;
+      }
+    }
+  }
+}
+
+.mogo-form {
+
+  input[type="email"] {
+    background-color: $white;
+    padding: 14px 98px 12px 0px;
+    text-indent: 10px;
+    outline: none;
+
+    &::placeholder {
+      color: $logo-color;
+      font-family: $Roboto;
+      font-size: 15px;
+      font-style: italic;
+      text-align: left;
+    }
+  }
+
+  input[type="submit"] {
+    background-color: $riptide;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 30px 9px 30px;
+    line-height: 22px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $underlines;
+    }
+  }
+}
+
+.mogo-blogs {
+  padding: 14px 0 0 79px;
+}
+
+.blog-items {
+  margin-top: 20px;
+  @include flex;
+  @include flex-direction(column);
+}
+.blog-item {
+  @include grid;
+  @include grid-template-columns(0.3fr 0.7fr);
+  padding-bottom: 34px;
+}
+
+.blog-text-header {
+  font-size: 12px;
+}
+
+.blog-text {
+  @include flex;
+  @include flex-direction(column);
+  margin: 16px 0 0 24px;
+}
+
+.date {
+  font-style: italic;
+}
+
+.mogo-instagram {
+  @include flex;
+  @include flex-direction(column);
+  padding-top: 15px;
+}
+
+.insta-items {
+  @include grid;
+  @include grid-template-columns(1fr 1fr 1fr);
+  @include grid-template-rows(1fr 1fr 1fr);
+  padding: 31px 6px 21px 0;
+
+  img {
+    border: 1px solid $white;
+  }
+}
+
+.insta-par {
+  font-size: 13px;
+  font-style: italic;
+}
+
+footer {
+  background-color: $quote-background;
+  text-align: center;
+
+  .footer-par {
+    font-size: 14px;
+    color: $headers;
+    font-family: $Montserrat;
+    border-top: 1px solid $border;
+    padding: 20px 0;
+    margin: 0 125px;
+
+    a {
+      text-decoration: none;
+      color: $underlines;
+      cursor: pointer;
+
+      &:hover {
+        color: $riptide;
+      }
+    }
+  }
+}
