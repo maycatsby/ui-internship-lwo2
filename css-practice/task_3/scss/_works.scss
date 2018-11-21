@@ -13,32 +13,33 @@
       font-family: 'Kaushan Script', cursive;
       font-size: 24px;
       margin-top: 108px;
-      margin-bottom: 6px;
+      margin-bottom: 11px;
     }
 
     h3 {
       color: #333333;
-      font-size: 30px;
+      font-size: 29px;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       text-transform: uppercase;
-      margin-bottom: 35px;
+      margin-bottom: 36px;
       text-align: center;
     }
 
     .divider {
       width: 60px;
       border: 1px solid #f38181;
-      margin-bottom: 40px;
+      margin-bottom: 41px;
     }
 
     p {
       color: #999999;
-      font-family: 'Roboto', sans-serif;
-      font-size: 15px;  
+      font-family: "Roboto", sans-serif;
+      font-size: 15px;
       line-height: 24px;
-      text-align: center; 
-      margin-bottom: 102px;
+      text-align: center;
+      margin-bottom: 99px;
+      width: 80%; 
     }
   }
   &_img {

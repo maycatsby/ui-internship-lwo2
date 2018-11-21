@@ -11,7 +11,7 @@
       color: #333333;
       font-size: 24px;
       font-family: 'Kaushan Script', cursive;
-      margin-top: 18px;
+      margin-top: 17px;
       margin-bottom: 11px;
     }
     
@@ -36,7 +36,7 @@
       font-family: 'Roboto', sans-serif;
       font-size: 15px;
       line-height: 24px;
-      margin-bottom: 92px;
+      margin-bottom: 89px;
       width: 80%;
     }
 
@@ -64,7 +64,7 @@
           background-color: #fff;
           color: #333333;
           font-family: 'Montserrat', sans-serif;
-          font-size: 14px;
+          font-size: 13px;
           text-transform: uppercase;
           cursor: pointer;
           padding: 12px 16px;
@@ -78,7 +78,7 @@
         }
         
         .accordion:after {
-          content: '\2303';
+          content: '\2304';
           color: #333333;
           font-weight: bold;
           margin-right: 50px;
@@ -87,7 +87,7 @@
         }
         
         .active:after {
-          content: "\2304";
+          content: "\2303";
           color: #333333;
           font-weight: bold;
           margin-right: 50px;

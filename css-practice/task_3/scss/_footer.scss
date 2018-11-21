@@ -3,7 +3,7 @@
   justify-content: space-between;
   margin-top: 65px;
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 
   &_block {
     width: 40%;
@@ -24,10 +24,12 @@
     }
 
     .followers {
+      margin-left: 5px;
       color: #333333;
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
       font-size: 14px;
-      margin-top: 40px;
+      margin-top: 42px;
+      
 
       b {
         font-size: 18px;
@@ -38,7 +40,7 @@
     .divider {
       width: 100%;
       border: 1px solid #e5e5e5;
-      margin-top: 14px;
+      margin-top: 12px;
     }
 
     .follow {
@@ -62,7 +64,7 @@
     form { 
       display: flex;
       width: 80%;
-      margin-top: 30px;
+      margin-top: 33px;
 
       input {
         border: 1px solid #e7e7e7;
@@ -164,7 +166,7 @@
   .divider {
     width: 100%;
     border: 1px solid #e5e5e5;
-    margin-bottom: 17px;
+    margin-bottom: 19px;
   }
 
   p {

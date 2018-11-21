@@ -50,7 +50,7 @@ header {
     flex-direction: column;
     align-items: center;
     margin-top: 155px;
-    width: 60%;
+    width: 64%;
     
     h2 {
       color: $whiteColor;
@@ -65,7 +65,7 @@ header {
     h1 {
       color: $whiteColor;
       font-family: 'Montserrat', sans-serif;
-      font-size: 7.9vw;
+      font-size: 150px;
       width: 100%;
       text-transform: uppercase;
       text-align: center;
@@ -77,13 +77,13 @@ header {
     .divider {
       width: 60px;
       border: 1px solid $whiteColor;
-      margin-bottom: 48px;
+      margin-bottom: 51px;
     }
     
 
     button {
       border: 1px solid $whiteColor;
-      padding: 12px 33px;
+      padding: 10px 33px;
       background-color: rgba($color: $whiteColor, $alpha: 0);
       color: $whiteColor;
       font-size: 14px;
@@ -218,7 +218,7 @@ header {
 
     p {
       color: $whiteColor;
-      font-size: 21px;
+      font-size: 17px;
       font-family: 'Montserrat', sans-serif;
       text-transform: uppercase;
     }
@@ -253,7 +253,34 @@ header {
 }
 
 
+@media only screen and (max-width: 1490px) {
+  header {
 
+    .header_main_text {
+  
+      h1 {
+        font-size: 100px;
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  header {
+
+    .header_main_text {
+  
+      h2 {
+        font-size: 30px;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+    }
+  }
+}
 
 @media only screen and (max-width: 768px) {
 
