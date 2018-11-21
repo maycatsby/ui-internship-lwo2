@@ -31,12 +31,19 @@
           </p>
           <button class="btn-border">Download</button>
         </div>
-        <form class="signup-form mt-md" id="signup" action="#" method="POST" tabindex="1">
+        <form class="signup-form mt-md" id="signup" method="POST">
           <h3 class="signup-form__heading">Try Your <ins>free </ins>Trial Today</h3>
           <fieldset>
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Password" required>
+            <input type="text" name="name" placeholder="Name"
+                   pattern="[a-z]{3,}" 
+                   title="Please use only lowercase latin letters and minlength of name 3" required />
+            <input type="email" name="email" placeholder="Email"
+                   pattern="^[^@]+@[^@]+\.[^@]+$" 
+                   title="Write correct email adress" required />
+            <input type="password" name="password" placeholder="Password"
+                   pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                   title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number."
+                   required />
           </fieldset>
           <input class="signup-form__submit" type="submit" value="Get Started">
         </form>
