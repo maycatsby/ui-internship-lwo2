@@ -68,6 +68,7 @@
 
       .stats {
         @include flex-direction(row);
+        @include justify-content(center);
       }
     }
 
@@ -145,6 +146,7 @@
 
       .quote-text {
         margin-left: 20px;
+        padding-bottom: 40px;
       }
     }
 

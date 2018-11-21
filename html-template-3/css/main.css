@@ -54,7 +54,7 @@
 
 @media screen and (min-width: 320px) and (max-width: 425px) {
   body .top-navigation {
-    margin: 0; }
+    display: none; }
   body .top-menu {
     -webkit-box-orient: column;
     -webkit-box-direction: column;
@@ -90,7 +90,8 @@
   body .simple-header {
     text-align: center; }
   body .paragraph {
-    padding: 0 40px; }
+    padding: 0 40px;
+    text-align: justify; }
   body .gallery {
     -webkit-box-orient: column;
     -webkit-box-direction: column;
@@ -101,7 +102,10 @@
       margin: 25px 15px; }
   body .stats {
     -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr; }
+    grid-template-columns: 1fr;
+    padding-bottom: 40px; }
+    body .stats .stat {
+      border: none; }
     body .stats .stat-content {
       text-align: center;
       padding: 0 10px; }
@@ -111,9 +115,8 @@
     -ms-grid-rows: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr; }
     body .as-items .item {
-      padding: 0 10px 20px 0; }
-    body .as-items .as-text {
-      padding-left: 15px; }
+      padding: 0 10px 20px 0;
+      display: initial; }
   body .grey-background {
     padding-top: 40px; }
   body .tablet-pic {
@@ -132,7 +135,8 @@
     grid-template-columns: 1.5fr;
     padding-top: 60px; }
     body .wwd-items img {
-      width: 100%; }
+      width: 100%;
+      margin-bottom: 10px; }
   body .drop-iten-header {
     padding-left: 10px; }
   body .quote-items {
@@ -141,6 +145,8 @@
     body .quote-items .quote-img {
       margin: 0;
       padding: 20px; }
+  body .meet-our-team {
+    padding: 0; }
   body .labels img {
     width: 100%; }
   body .some-of-our-work {
@@ -257,7 +263,10 @@
       -webkit-box-orient: row;
       -webkit-box-direction: row;
       -ms-flex-direction: row;
-      flex-direction: row; }
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
     body .stat {
       border-right: 1px solid rgba(255, 255, 255, 0.3);
       border-left: 1px solid rgba(255, 255, 255, 0.3);
@@ -310,7 +319,8 @@
     body .quote-items .quote-img {
       margin: 0; }
     body .quote-items .quote-text {
-      margin-left: 20px; }
+      margin-left: 20px;
+      padding-bottom: 40px; }
     body .meet-our-team {
       padding: 0; }
     body .labels img {
@@ -865,7 +875,12 @@ main {
 .lb-gallery {
   padding-top: 0; }
 
+.lb-pic {
+  width: 100%; }
+
 .lb-item {
+  -ms-flex-preferred-size: 32%;
+  flex-basis: 32%;
   position: relative; }
 
 .number {
@@ -940,6 +955,7 @@ main {
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+  -ms-flex-preferred-size: 39%;
   flex-basis: 39%; }
 
 .mogo-header {

@@ -4,6 +4,11 @@
   display: flex;
 }
 
+@mixin flex-basis($value) {
+  -ms-flex-preferred-size: $value;
+  flex-basis: $value;
+}
+
 @mixin justify-content($value) {
   -webkit-box-pack: $value;
   -ms-flex-pack: $value;
