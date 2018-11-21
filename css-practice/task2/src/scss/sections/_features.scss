@@ -1,0 +1,118 @@
+.features {
+
+  section {
+    text-align: left;
+  }
+
+  img {
+    width: 525px;
+    margin: 0 auto;
+  }
+
+  &--first {
+    padding: $padding-feature-1;
+
+    .feature--image {
+      width: 320px;
+      // max-height: 253px;
+      justify-self: center;
+      margin-top: 25px;
+    }
+  }
+  
+  &--second {
+    padding: $padding-feature-2;
+  }
+  
+  &--third {
+    padding: $padding-feature-3;
+
+    .feature--content__side {
+      padding-top: 3rem;
+    }
+  }
+
+  &--first,
+  &--third {
+    background: $color-light;
+  }
+
+  &--btn {
+    @extend %btn-tab;
+    background: $color-dark-1;
+
+    &__active {
+      @extend %btn-tab;
+      background-color: $color-main;
+    }
+  }
+}
+
+.feature {
+
+  &--tabs {
+    @include d-flex(center, column) {
+      align-items: center;
+    }
+
+    button:not(:last-child) {
+      margin-bottom: 1px;
+    }
+
+    button:first-child {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    button:last-child {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+  
+  &--content {
+
+    &__side {
+      line-height: 1;
+    }
+  }
+
+  &--sublist {
+    position: relative;
+    padding: 0 15%;
+
+    .sublist-item {
+  
+      & > figure {
+        @include figureCircle($size-side1);
+        position: absolute;
+        left: 0;
+      }
+  
+      &:nth-child(1) > figure {
+        top: 2%;
+        background-image: $icon-upload;
+      }
+
+      &:nth-child(2) > figure {
+        top: 57%;
+        background-image: $icon-download;
+      }
+    }
+
+    .icon-caption {
+      max-width: 364px;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      position: relative;
+
+      & > span {
+        font-weight: 600;
+      }
+
+      & > p {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

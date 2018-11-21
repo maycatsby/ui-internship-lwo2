@@ -1,0 +1,36 @@
+.social {
+  text-align: left;
+  position: relative;
+  padding: $padding-social;
+  box-shadow: 0px 1px 3px 0px rgba($color-black, .38);
+
+  &--bar {
+    max-width: 380px;
+
+    & > h3 {
+      font-size: 2rem;
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+
+    & > span {
+      line-height: 2rem;
+    }
+  }
+
+  &--links-list {
+    @include d-flex() {
+      flex: 1 0 auto;
+      align-self: center;
+    };
+
+    &__mb {
+      display: none;
+    }
+  }
+}
+
+.custom {
+  padding: $padding-custom;
+  background: url(../img/custom_panel.png) no-repeat center / cover;
+}

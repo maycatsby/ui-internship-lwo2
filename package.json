@@ -6,7 +6,6 @@
     "test": "jest",
     "lint": "./node_modules/.bin/eslint tasks/**/*.js",
     "tdd": "jest --watch",
-    "deploy": "gh-pages -d build",
     "watch:sass": "node-sass -w css-practice/task3/src/scss/ -o css-practice/task3/css/",
     "compile:sass": "node-sass css-practice/task3/src/scss/ -o css-practice/task3/css/",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css-practice/task3/css/*.css -o css-practice/task3/css/style.pre.css",
@@ -35,7 +34,6 @@
     "regenerator-runtime": "^0.11.0"
   },
   "dependencies": {
-    "gh-pages": "^2.0.1",
     "postcss-cli": "^4.1.1",
     "pug": "^2.0.3",
     "pug-cli": "^1.0.0-alpha6",
