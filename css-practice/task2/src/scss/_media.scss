@@ -2,12 +2,12 @@
 @media only screen and (max-width: $screen-xl + 'px') {
   .signup-form {
 
-    &--heading {
+    &__heading {
       padding: 1.5rem;
       font-size: 1.8rem;
     }
 
-    [type="button"] {
+    &__submit {
       line-height: 3.3;
     }
   }
@@ -58,7 +58,7 @@
   // Navbar
   .header {
     
-    &--menu {
+    &__menu {
       display: none;
       position: absolute;
       background: rgba($color-black, .7);
@@ -107,7 +107,7 @@
   .hero {
     grid-gap: 0;
 
-    &--title::after {
+    &__title::after {
       display: none;
     }
   }
@@ -123,32 +123,32 @@
     max-width: 90%;
   }
 
-  .social--bar {
+  .social__bar {
     display: none;
   }
 
   // Features
   .features {
     
-    &--first {
+    &__first {
       grid-gap: 5.5%;
       padding: 9.5rem 7.5% 11rem;
       
-      .feature--content {
+      .feature__content {
         text-align: center;
       }
     }
 
-    &--second {
+    &__second {
       grid-gap: 5%;
     }
 
-    &--third {
+    &__third {
       padding: 7.5rem 10% 2rem;
     }
   }
 
-  .feature--tabs {
+  .feature__tabs {
     flex-direction: row;
 
     button:first-child {
@@ -167,7 +167,7 @@
     }
   }
 
-  .feature--title {
+  .feature__title {
     text-align: center;
     font-size: 3rem;
   }
@@ -236,7 +236,7 @@
           transform: rotate(-90deg);
         }
 
-        .testimonial--avatar {
+        .testimonial__avatar {
           margin-left: auto;
         }
       }
@@ -255,7 +255,7 @@
   .contact-us {
     padding: 4rem 1rem;
 
-    .message--fields {
+    .message__fields {
       padding: 0;
     }
   }
@@ -267,10 +267,10 @@
     font-size: 50%;
   }
   // Social
-  .social--links-list {
+  .social__links-list {
     display: none;
     
-    &__mb {
+    &--mb {
       @include d-flex() {
         flex: 1 0 auto;
         align-self: center;
@@ -279,8 +279,8 @@
   }
 
   // Features
-  .features--btn,
-  .features--btn__active {
+  .features__btn,
+  .features__btn--active {
     width: 80px;
     height: 80px;
   }
@@ -311,7 +311,7 @@
         margin-right: auto;
       }
       
-      &--avatar {
+      &__avatar {
         margin-left: auto;
       }
     }
@@ -325,11 +325,11 @@
       grid-gap: auto;
       padding: 0 2%;
   
-      &--button {
+      &__button {
         grid-column: auto;
       }
   
-      &--fields {
+      &__fields {
         padding-left: 0;
       }
 

@@ -9,10 +9,10 @@
     margin: 0 auto;
   }
 
-  &--first {
+  &__first {
     padding: $padding-feature-1;
 
-    .feature--image {
+    .feature__image {
       width: 320px;
       // max-height: 253px;
       justify-self: center;
@@ -20,28 +20,28 @@
     }
   }
   
-  &--second {
+  &__second {
     padding: $padding-feature-2;
   }
   
-  &--third {
+  &__third {
     padding: $padding-feature-3;
 
-    .feature--content__side {
+    .feature__content--side {
       padding-top: 3rem;
     }
   }
 
-  &--first,
-  &--third {
+  &__first,
+  &__third {
     background: $color-light;
   }
 
-  &--btn {
+  &__btn {
     @extend %btn-tab;
     background: $color-dark-1;
 
-    &__active {
+    &--active {
       @extend %btn-tab;
       background-color: $color-main;
     }
@@ -50,7 +50,7 @@
 
 .feature {
 
-  &--tabs {
+  &__tabs {
     @include d-flex(center, column) {
       align-items: center;
     }
@@ -70,14 +70,14 @@
     }
   }
   
-  &--content {
+  &__content {
 
-    &__side {
+    &--side {
       line-height: 1;
     }
   }
 
-  &--sublist {
+  &__sublist {
     position: relative;
     padding: 0 15%;
 

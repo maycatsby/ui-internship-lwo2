@@ -5,7 +5,7 @@
   font-family: $font-main;
   padding: $padding-hero;
 
-  &--title {
+  &__title {
     text-transform: uppercase;
     font-size: 3.6rem;
     font-weight: 400;
@@ -17,7 +17,7 @@
     }
   }
 
-  &--description {
+  &__description {
     color: rgba($color-white, .8);
     font-size: 1.6rem;
     font-weight: 300;
@@ -30,7 +30,7 @@
   max-width: 520px;
   text-align: left;
 
-  &--name {
+  &__name {
     display: inline-block;
   }
 }
@@ -43,7 +43,7 @@
   max-height: 362px;
   
 
-  &--heading {
+  &__heading {
     background: $color-light;
     color: $color-dark-1;
     font-size: 2rem;
@@ -76,7 +76,7 @@
     border-bottom: 1px solid rgba($color-black, 0.15);
   }
 
-  [type="button"] {
+  &__submit {
     width: 100%;
     padding: 0 2rem;
     background-color: $color-main;

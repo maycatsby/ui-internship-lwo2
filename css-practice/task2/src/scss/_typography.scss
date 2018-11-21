@@ -9,7 +9,7 @@
     transform: translateX(-50%);
   }
 
-  &__white {
+  &--white {
     @extend %base-heading;
     color: $color-white;
 
@@ -47,18 +47,18 @@
 
 .feature {
 
-  &--title {
+  &__title {
     margin-bottom: 25px;
     font-size: 2rem;
     color: $color-black;
 
-    &__tabs {
-      @extend .feature--title;
+    &--tabs {
+      @extend .feature__title;
       line-height: 2;
     }
   }
   
-  &--text {
+  &__text {
     font-size: 1.4rem;
     line-height: 1.5;
     color: $color-grey;

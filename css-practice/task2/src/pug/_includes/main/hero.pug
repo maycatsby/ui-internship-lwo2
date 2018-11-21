@@ -1,22 +1,22 @@
 section#hero.hero
   .company
-    h1.company--name(title="AXIT")
+    h1.company__name(title="AXIT")
       img(src="img/company_logo.png", alt="AXIT Logo")
-    h2.hero--title
+    h2.hero__title
       |modern axure template
       br 
       |for beautiful prototypes
-    p.hero--description.
+    p.hero__description.
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
       euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
     button.btn-border Download
-  form.signup-form.mt-md(action="#")
-    h3.signup-form--heading
+  form#signup.signup-form.mt-md(action="#", method="POST", tabindex="1")
+    h3.signup-form__heading
       |Try Your 
       ins free 
       |Trial Today
     fieldset
-      input(type="text", name="name", placeholder="Name")
-      input(type="email", name="email", placeholder="Email")
-      input(type="password", name="password", placeholder="Password")
-    input(type="button", value="Get Started")
+      input(type="text", name="name", placeholder="Name", required)
+      input(type="email", name="email", placeholder="Email", required)
+      input(type="password", name="password", placeholder="Password", required)
+    input.signup-form__submit(type="submit", value="Get Started")
