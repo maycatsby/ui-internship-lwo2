@@ -112,6 +112,7 @@ main {
 
     .hovered {
       text-decoration: none;
+      color: $white;
     }
 
     .hovered:hover {
@@ -252,22 +253,41 @@ main {
   padding: 97px 0 17px 0;
 }
 
-.pic {
-  margin: 0px 15px;
-}
-
 .animation {
-  
-  
+  position: relative;
+  transition: 0.3s ease-in-out;
+  margin: 0 15px;
+
+  .grad {
+    @include background-image-main;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.3s;
+  }
 
   &:hover {
     @include box-shadow;
-    @include background-image-main;
 
-    background-color: $background-main;
-    transform: translate(-50px);
-    opacity: 0.9;
+    transform: translate(-10px, -10px);  
+
+    .grad {
+      opacity: 0.9;
+    }
   }
+}
+
+.hover-head {
+  @include flex;
+  @include flex-direction(column);
+
+  font-size: 18px;
+  margin-top: 70px;
+  line-height: 50px;
 }
 
 .statistics {
@@ -428,6 +448,25 @@ main {
 
 .mot-pic {
   margin: 0 30px;
+}
+
+.grad-icons {
+  @include flex;
+  @include justify-content(center);
+
+  margin-top: 50%;
+}
+
+.g-hov {
+  color: $underlines;
+  background-color: $background-main;
+  padding: 16px;
+  font-size: 30px;
+
+  &:hover {
+    background-color: $underlines;
+    color: $white;
+  }
 }
 
 .dev-p {

@@ -485,7 +485,8 @@ main {
       padding: 0 27px;
       cursor: pointer; }
     .top-navigation .top-menu .hovered {
-      text-decoration: none; }
+      text-decoration: none;
+      color: #ffffff; }
     .top-navigation .top-menu .hovered:hover {
       color: #fce38a;
       border-bottom: 3px solid #fce38a;
@@ -600,20 +601,41 @@ main {
   justify-content: space-between;
   padding: 97px 0 17px 0; }
 
-.pic {
-  margin: 0px 15px; }
+.animation {
+  position: relative;
+  transition: 0.3s ease-in-out;
+  margin: 0 15px; }
+  .animation .grad {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(252, 227, 138, 0.9)), to(rgba(243, 129, 129, 0.9)));
+    background-image: -webkit-linear-gradient(bottom, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+    background-image: -o-linear-gradient(bottom, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+    background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.3s; }
+  .animation:hover {
+    -webkit-box-shadow: 10px 10px 0px 1px #95e1d3;
+    -moz-box-shadow: 10px 10px 0px 1px #95e1d3;
+    box-shadow: 10px 10px 0px 1px #95e1d3;
+    transform: translate(-10px, -10px); }
+    .animation:hover .grad {
+      opacity: 0.9; }
 
-.animation:hover {
-  -webkit-box-shadow: 10px 10px 0px 1px #95e1d3;
-  -moz-box-shadow: 10px 10px 0px 1px #95e1d3;
-  box-shadow: 10px 10px 0px 1px #95e1d3;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(252, 227, 138, 0.9)), to(rgba(243, 129, 129, 0.9)));
-  background-image: -webkit-linear-gradient(bottom, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
-  background-image: -o-linear-gradient(bottom, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
-  background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
-  background-color: #fce38a;
-  transform: translate(-50px);
-  opacity: 0.9; }
+.hover-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: column;
+  -webkit-box-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 18px;
+  margin-top: 70px;
+  line-height: 50px; }
 
 .statistics {
   background-color: #95e1d3; }
@@ -757,6 +779,24 @@ main {
 
 .mot-pic {
   margin: 0 30px; }
+
+.grad-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 50%; }
+
+.g-hov {
+  color: #f38181;
+  background-color: #fce38a;
+  padding: 16px;
+  font-size: 30px; }
+  .g-hov:hover {
+    background-color: #f38181;
+    color: #ffffff; }
 
 .dev-p {
   font-style: italic; }
