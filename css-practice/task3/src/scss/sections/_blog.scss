@@ -1,0 +1,75 @@
+// Section blog
+.blog {
+  padding: $padding-blog;
+
+  .latest-posts {
+    @include d-flex();
+    margin-top: 3.572em;
+    @media screen and (max-width: $screen-md) {
+      flex-direction: column;
+    }
+  }
+
+  .item-post {
+    max-width: 27.143em;
+    
+    & > figure {
+      position: relative;
+    }
+
+    &__date {
+      position: absolute;
+      width: 60px;
+      height: 70px;
+      left: -10px;
+      bottom: 10px;
+    }
+
+    span:nth-of-type(2) {
+      margin-right: 10px;
+    }
+
+    &__icon {
+      color: $color-grey-l2;
+      font-family: $font-second;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1.5rem;
+      line-height: 2.4rem;
+      margin-right: 10px;
+
+      & > i {
+        color: $color-alt;
+      }
+    }
+  }
+}
+// Section map
+.map {
+  min-height: 14.286em;
+  position: relative;
+  background-image: $gradient-white, $bg-map;
+  @include bg-center();
+
+  .btn-map {
+    color: $color-main;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 2.7;
+    text-transform: uppercase;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translateX(-50%);
+    @include p-el(before, 20px, 26px, $icon-map_pin) {
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include p-el(after, 60px, 3px, $color-main) {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

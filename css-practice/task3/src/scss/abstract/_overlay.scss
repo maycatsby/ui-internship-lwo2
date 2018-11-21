@@ -1,0 +1,25 @@
+// Overlay Effects
+.overlay-box {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all .4s ease;
+  @include p-el(after, 100%, 100%, $gradient-main) {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .4s ease;
+  }
+  
+  &:hover::after,
+  &:focus::after {
+    opacity: 1;
+  }
+
+  &:hover,
+  &:focus {
+    transform: translate(-10px, -10px);
+    box-shadow: 10px 10px 0px 0px $color-alt;
+  }
+}

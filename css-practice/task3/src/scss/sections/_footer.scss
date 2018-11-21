@@ -1,0 +1,146 @@
+.footer {
+  background: $color-light-1;
+  padding-top: $padding-footer;
+
+  h3 {
+    padding: 1.4rem 0 3.6rem;
+  }
+  
+  &__sections {
+    @include d-flex();
+    padding-bottom: 6rem;
+    border-bottom: 1px solid $color-light-2;
+  }
+
+  // Subscribe
+  &__subscribe {
+    max-width: 34.286em;
+
+    & > p {
+      margin-top: 1.733em;
+      margin-bottom: 2.933em;
+      padding-right: .4rem;
+    }
+
+    & > span {
+      display: inline-block;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: $color-dark;
+
+      & > ins {
+        font-weight: 400;
+        font-size: 1.4rem;
+        text-decoration: none;
+      }
+    }
+
+    .follow {
+      @include d-flex(flex-start, column);
+
+      span {
+        font-size: 1.5rem;
+        font-family: $font-second;
+        font-weight: 300;
+        font-style: italic;
+        color: #999;
+        margin-right: 10px;
+      }
+
+      &__list {
+        width: 22.143em;
+        margin-bottom: 2.5em;
+        @include d-flex();
+
+        i {
+          color: $color-alt;
+          font-size: 2rem;
+        }
+      }
+    }
+
+    form {
+      font-size: 0;
+
+      [type="email"] {
+        color: $color-grey-l1;
+        vertical-align: middle;
+        font-size: 1.4rem;
+        font-family: $font-second;
+        font-style: italic;
+        font-weight: 300;
+        line-height: 1.3;
+        padding: 1rem;
+        border-right: none;
+        border: 1px solid #e7e7e7;
+        width: 16.429em;
+      }
+    }
+  }
+
+  // Blogs
+  &__blogs {
+    max-width: 24.286em;
+    margin-right: 4%;
+
+    &-item {
+      height: 5.643em;
+      @include clearfix;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+
+      & > img {
+        float: left;
+      }
+    }
+
+    &-describe{
+      float: left;
+      padding-top: 1.8rem;
+      padding-left: 2rem;
+      width: calc(100% - 120px);
+
+      & > p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        font-weight: 700;
+      }
+      
+      & > span {
+        color: $color-grey-l2;
+        font-family: $font-second;
+        font-weight: 300;
+        font-style: italic;
+        font-size: 1.3rem;
+      }
+    }
+  }
+  
+  // Instagram
+  &__instagram {
+    max-width: 19.286em;
+
+    .photos-grid {
+      @include d-flex();
+    
+      &__col {
+    
+        & > img {
+          width: 88px;
+          margin: 1px;
+        }
+      }
+    }
+
+    & > a {
+      color: $color-dark;
+      font-family: $font-second;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1.3rem;
+      margin-top: 20px;
+    }    
+  }
+}

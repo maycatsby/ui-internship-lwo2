@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 10px ---> 1rem
+  box-sizing: border-box;
+}
+
+body {
+  color: $color-dark;
+  background: $color-white;
+  font-family: $font-main;
+  font-size: 1.4rem;
+  font-weight: 400;
+  overflow-x: hidden; 
+}
+
+a {
+  display: inline-block;
+  vertical-align: middle;
+  color: $color-white;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+input, button {
+  font: inherit;
+  outline: none;
+}
+
+span {
+  display: inline-block;
+}
+
+// fix for IE >= 9
+main {
+  display: block;
+}
+
+hr {
+  margin-top: 1.2rem;
+  margin-bottom: 1.4rem;
+  border-width: 0;
+  border-top: 1px solid $color-light-2;
+}

@@ -1,0 +1,66 @@
+.service {
+  padding: $padding-service;
+  
+  &__grid {
+    margin-top: 4.643em;
+    
+    .row:first-child {
+      border-bottom: 1px solid $color-light-2;
+      @media screen and (max-width: $screen-md) {
+        border: 0;
+      }
+    }
+    
+    .row:last-child {
+      margin-top: 3.429em; 
+    }
+  }
+  
+  &__icon {
+    
+    &-alarm {
+      @include icon-bg($figure-1);
+    }
+    &-graph {
+      @include icon-bg($figure-2);
+    }
+    &-computer {
+      @include icon-bg($figure-3);
+    }
+    &-book {
+      @include icon-bg($figure-4);
+    }
+    &-home {
+      @include icon-bg($figure-5);
+    }
+    &-image {
+      @include icon-bg($figure-6);
+    }
+  }
+  
+  &__grid-item {
+    padding-bottom: 4.6rem;
+    @media screen and (max-width: $screen-md) {
+      @include d-flex(center);
+    }
+    
+    & > figure {
+      float: left;
+      width: 32px;
+      height: 32px;
+      margin: 0 2.15em;
+    }
+  }
+  
+  &__describe {
+    float: left;
+    width: 75%;
+    @media screen and (max-width: $screen-xl) {
+      width: 59%;
+    }
+    
+    h4 {
+      padding-bottom: 1rem;
+    }
+  }
+}

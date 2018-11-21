@@ -1,0 +1,79 @@
+// About
+.about {
+  padding-bottom: $padding-about;
+  
+  &__pictures {
+    margin-top: 7.143em;
+
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  &__info {
+    opacity: 0;
+    color: $color-white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all .4s ease;
+    z-index: 1;
+    @include abs-center;
+  }
+
+  .about__icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    @include icon-bg($icon-users);
+  }
+
+  .overlay-box:hover .about__info, 
+  .overlay-box:focus .about__info {
+    opacity: 1;
+  }
+}
+// Facts
+.facts {
+  color: $color-white;
+  background-color: $color-alt;
+  text-align: center;
+  text-transform: uppercase;
+
+  &__list {
+    max-width: 1200px;
+    margin: 0 auto;
+    @include d-flex() {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item{
+    min-height: 19.286em;
+    border-left: 1px solid rgba($color-white, .3);
+    width: 20%;
+    &:last-child {
+      border-right: 1px solid rgba($color-white, .3);
+      @media screen and (max-width: $screen-md) {
+        width: 100%;
+        border: none;
+      }
+    }
+    @include d-flex(center, column);
+    @media screen and (max-width: $screen-md) {
+      width: 50%;
+      border-bottom: 1px solid rgba($color-white, .3);
+    }
+
+    &--large {
+      font-size: 7.2rem;
+      font-weight: 700;
+      margin-top: -15px;
+    }
+
+    &--small {
+      margin-top: 10px;
+    }
+  }
+}

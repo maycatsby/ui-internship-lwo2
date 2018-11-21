@@ -1,0 +1,279 @@
+// 1199px
+@media screen and (max-width: $screen-xl) {
+  .testimonial {
+
+    .quote__slide {
+      padding: 5rem;
+    }
+  }
+
+  // Quote slide
+  .quote {
+
+    &__slide {
+
+      & > blockquote {
+        max-width: 75%;
+      }
+    }
+
+    & &__slide {
+
+      & > figure {
+        width: 125px;
+        height: 125px;
+      } 
+    } 
+  }
+  .btn-slide {
+
+    &.prev {
+      left: 20px;
+    }
+    &.next {
+      right: 20px;
+    }
+  }
+  // Footer
+  .footer {
+
+    &__blogs {
+      margin: 0 2%;
+    }
+  }
+}
+// 1024px
+@media screen and (max-width: $screen-lg) {
+  // Footer
+  .footer {
+
+    &__sections {
+      flex-wrap: wrap;
+    }
+
+    &__subscribe {
+      max-width: 100%;
+
+      .follow {
+        flex-direction: row;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+
+        &__list {
+          line-height: 4rem;
+          margin-bottom: 10px;
+          margin-right: 2.5%;
+          width: 45%;
+        }
+      }
+
+      form  {
+        flex-grow: 1;
+
+        [type="email"] {
+          width: calc(100% - 150px);
+        }
+      }
+    }
+
+    &__instagram {
+      margin: 0 2%;
+    }
+  }
+}
+// 768 - 1024
+@media screen and (min-width: $screen-md) and (max-width: $screen-lg) {
+  .footer {
+
+    &__blogs {
+      max-width: 50%;
+    }
+  }
+}
+// 768px
+@media screen and (max-width: $screen-md) {
+  // Hero 
+  .welcome-heading {
+    max-width: 92%;
+  }
+
+  .header {
+
+    &__menu {
+      display: none;
+    }
+
+    .menu-opener {
+      display: block;
+      position: relative;
+      width: 55px;
+      height: 40px;
+      border-radius: 7px;
+      background-color: rgba($color-alt, .4);
+
+      & > span {
+        display: block;
+        background-color: $color-white;
+        width: 30px;
+        height: 2px;
+        @include abs-center;
+        @include p-el(before, 30px, 2px) {
+          background: $color-white;
+          top: -7px;
+        }
+        @include p-el(after, 30px, 2px) {
+          background: $color-white;
+          top: 7px;
+        }
+      }
+    }
+  }
+  // Footer
+  .footer {
+
+    &__sections {
+      display: block;
+    }
+
+    &__subscribe {
+
+      form {
+
+        [type="email"] {
+          width: calc(100% - 250px);
+          min-width: 50%;
+        }
+      }
+
+      .follow__list {
+        width: 60%;
+      }
+    }
+
+    &__blogs {
+      max-width: 100%;
+    }
+
+    &__instagram {
+      display: none;
+    }
+  }
+  // Quote slide
+  .quote {
+    &__slide {
+      
+      & > figure {
+        display: none;
+      }
+      
+      & > blockquote {
+        max-width: 100%;
+        font-size: 2rem;
+        margin: 0 !important;
+      }
+    }
+
+    .quote__slide {
+      padding: 6.5rem 0;
+    }
+  }
+
+  .btn-slide {
+    &.prev {
+      left: -4%;
+    }
+    &.next {
+      right: -4%;
+    }
+  }
+
+  .testimonial {
+    .quote__slide {
+      padding: 5rem 0;
+    } 
+  } 
+  // Work Grid
+  .work {
+
+    &__pictures {
+      grid-template-areas: 'picture-1 picture-2'
+                           'picture-3 picture-4'
+                           'picture-5 picture-6'
+                           'picture-5 picture-7';
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto auto;
+      -ms-grid-columns: 1fr 1fr;
+      -ms-grid-rows: auto auto auto auto;  
+    }
+
+    &__pic-5 {
+      -ms-grid-row: 3;
+      -ms-grid-row-span: 2;
+      -ms-grid-column: 1;
+    }
+
+    &__pic-6 {
+      -ms-grid-row: 3;
+      -ms-grid-column: 2;
+    }
+  
+    &__pic-7 {
+      -ms-grid-row: 4;
+      -ms-grid-column: 2;
+    }
+  }
+  // Blog
+  .blog {
+
+    .item-post {
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+
+      &__date {
+        display: none;
+      }
+    }
+  }
+}
+// 475px
+@media screen and (max-width: $screen-sm) {
+  html {
+    font-size: 50%;
+  }
+
+  body {
+    font-size: 1.6rem;
+  }
+  // Hero;
+  .welcome-heading {
+    margin-top: 4em;
+    margin-bottom: 7em;
+  }
+
+  .slider > li > a {
+    font-size: 0;
+  }
+  // Feature
+  .feature {
+    min-height: 47.5em;
+  }
+  // Footer
+  .footer {
+
+    &__subscribe {
+
+      .follow__list {
+        width: 100%;
+      }
+
+      form > [type="submit"],
+      form > [type="email"] {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: .5em;
+      }
+    }
+  }
+}
+

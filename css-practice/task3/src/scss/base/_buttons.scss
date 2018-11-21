@@ -1,0 +1,41 @@
+.btn {
+
+  &-outline {
+    @extend %button;
+    border: 3px solid $color-white;
+    background: transparent;
+    padding: 1rem 3rem;
+    transition: all .4s ease;
+
+    &:hover,
+    &:focus {
+      background: rgba($color-white, .5);
+      color: $color-main;
+      border-color: $color-main; 
+    }
+  }
+
+  &-submit {
+    @extend %button;
+    background: $color-alt;
+    border: none;
+    padding: 1.1rem 3.2rem;
+    min-width: 150px;
+    @media screen and (max-width: $screen-md) {
+      width: 250px;
+      max-width: 50%;
+    }
+  }
+
+  &-slide {
+    display: block; 
+    position: relative;
+    min-width: 60px;
+    min-height: 290px;
+    cursor: pointer;
+    @include icon-bg($icon-arrow);
+    &.next {
+      transform: rotate(180deg);
+    }
+  }
+}
