@@ -1,0 +1,174 @@
+$mobile-s: 320px;
+$mobile-m: 375px;
+$mobile-l: 425px;
+$tablet: 768px;
+$laptop: 1024px;
+$laptop-l: 1440px;
+$laptop-4k: 2560px;
+
+@media screen and (min-width: $mobile-s) and (max-width: $tablet) {
+  .header-top, .header-main, .brand-bar, .features-top, .middle-main, .bottom-main, .pricing-main, .testimonials-main, .custom-main, .contact-main{
+    width: 80%;
+  }
+  .header-nav{
+    display: none;
+  }
+  .header-left{
+    width: 90%;
+  }
+  .header-text{
+    width: 90%;
+  }
+  .header-text-small{
+    width: 90%;
+  }
+  .header-right{
+    display: none;
+  }
+  .brand-bar-left{
+    width: 90%;
+  }
+  .brand-bar-right{
+    display: none;
+  }
+  .features-top{
+    flex-direction: column;
+    align-items: center;
+  }
+  .features-top-left{
+    width: 70%;
+    flex-direction: row;
+    align-items: center;
+  }
+  .tab-margin{
+    margin: 0;
+  }
+  .tab-edges-top{
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 0;
+  }
+  .tab-edges-bottom{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 0;
+  }
+  .features-top-center{
+    width: 70%;
+  }
+  .features-button{
+    width: 50%;
+  }
+  .features-top-right{
+    width: 70%;
+  }
+  .middle-main{
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .middle-left{
+    width: 70%;
+  }
+  .middle-right{
+    width: 70%;
+  }
+  .bottom-main{
+    flex-direction: column;
+    align-items: center;
+  }
+  .bottom-left{
+    width: 70%;
+  }
+  .bottom-right{
+    width: 70%;
+  }
+  .process-top{
+    width: 90%;
+  }
+  .process-bottom-part{
+    flex-direction: column;
+    align-items: center;
+  }
+  .process-bottom{
+    width: 70%;
+    margin-bottom: 15%;
+  }
+  .pricing-top{
+    width: 90%;
+  }
+  .pricing-bottom{
+    flex-direction: column;
+    align-items: center;
+  }
+  .pricing-bottom-side{
+    width: 70%;
+    margin-bottom: 15%;
+  }
+  .pricing-bottom-center{
+    width: 70%;
+    margin-bottom: 15%;
+  }
+  .testimonials-top{
+    width: 90%;
+  }
+  .testimonials-bottom{
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimonials-bottom-part{
+    width: 70%;
+    margin-bottom: 15%;
+  }
+  .custom-button{
+    width: 30%;
+  }
+  .contact-bottom-left{
+    width: 90%;
+  }
+  .contact-bottom-right{
+    width: 90%;
+  }
+  .contact-bottom{
+    flex-direction: column;
+    align-items: center;
+  }
+  .bottom-form-button{
+    width: 50%;
+  }
+  .footer-main{
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: $tablet) and (max-width: $laptop) {
+  .header-top, .header-main, .brand-bar, .features-top, .middle-main, .bottom-main, .pricing-main, .testimonials-main, .custom-main, .contact-main{
+    width: 80%;
+  }
+  .process-top{
+    width: 60%;
+  }
+  .contact-bottom{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: $laptop-l) and (max-width: $laptop-4k) {
+  .header-top, .header-main, .brand-bar, .features-top, .middle-main, .bottom-main, .process-main, .pricing-main, .testimonials-main, .custom-main, .contact-main{
+    width: 70%;
+  }
+  .process-top{
+    width: 70%;
+  }
+}
+@media screen and (min-width: $laptop-4k) {
+  .header-top, .header-main, .brand-bar, .features-top, .middle-main, .bottom-main, .process-main, .pricing-main, .testimonials-main, .custom-main, .contact-main{
+    width: 50%;
+  }
+  .process-top{
+    width: 60%;
+  }
+}

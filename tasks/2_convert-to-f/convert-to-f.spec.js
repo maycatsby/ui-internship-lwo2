@@ -1,7 +1,9 @@
-// import { convertToF } from './convert-to-f';
+ /* eslint "require-jsdoc": 0 */
+ 
+ import { convertToF } from './convert';
 
 
-xdescribe('convert-to-f', () => {
+describe('convert', () => {
     test('should return number', () => {
         expect(typeof convertToF(0)).toBe('number');
     });

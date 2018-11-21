@@ -1,0 +1,62 @@
+.custom {
+	width: 100%;
+	background: url(../img/custom.png) no-repeat, url(../img/custom-black.png) no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+}
+.custom-main {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.custom-top {
+	width: 93%;
+	margin-top: 7.5%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.custom-top-title {
+	margin-top: .6%;
+	text-align: center;
+	color: $color_1;
+	font-family: $font_family_4;
+	font-size: 36px;
+	line-height: 43px;
+	text-transform: uppercase;
+}
+.custom-top-text {
+	width: 100%;
+	margin-top: 4%;
+	text-align: center;
+	opacity: 0.8;
+	color: $color_1;
+	font-family: $font_family_4;
+	font-size: 16px;
+}
+.custom-top-line {
+	width: 9%;
+	margin-top: 2.7%;
+	border-bottom: 2px solid $color_1;
+}
+.custom-button {
+	width: 17%;
+	margin: 4.3% 0 8% 0;
+	border: 2px solid $color_1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&:hover {
+		border: 2px solid $color_8;
+		background: $color_8;
+		cursor: pointer;
+	}
+}
+.custom-button-name {
+	margin: 10% 0 7% 0;
+	color: $color_1;
+	font-family: $font_family_1;
+	font-size: 16px;
+}
