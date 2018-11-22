@@ -6,9 +6,8 @@
     "test": "jest",
     "lint": "./node_modules/.bin/eslint tasks/**/*.js",
     "tdd": "jest --watch",
-    "watch:sass": "node-sass -w css-practice/task_2/scss/main.scss -o css-practice/task_2/css/",
-    "compile:sass": "node-sass css-practice/task_2/scss/main.scss -o css-practice/task_2/css/",
-    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" -d css-practice/task_2/css/ -o  css-practice/task_2/css/main.pre.css"
+    "watch:sass": "node-sass -w css-practice/task_3/scss/main.scss -o css-practice/task_3/css/",
+    "compile:sass": "node-sass css-practice/task_3/scss/main.scss -o css-practice/task_3/css/"
   },
   "husky": {
     "hooks": {
@@ -26,9 +25,8 @@
     "eslint-config-google": "^0.10.0",
     "husky": "^1.1.2",
     "jest": "^21.1.0",
-    "node-sass": "^4.10.0",
-    "postcss-cli": "^6.0.1",
-    "regenerator-runtime": "^0.11.0"
+    "regenerator-runtime": "^0.11.0",
+    "node-sass": "^4.10.0"
   },
   "dependencies": {
     "sass": "^1.14.3"
