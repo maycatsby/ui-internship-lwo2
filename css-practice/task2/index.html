@@ -29,18 +29,27 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
             euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
           </p>
-          <button class="btn-border">Download</button>
+          <button class="btn-outline">Download</button>
         </div>
-        <form class="signup-form mt-md" id="signup" method="POST">
+        <form class="signup-form mt-md" id="signup" method="POST" novalidate>
           <h3 class="signup-form__heading">Try Your <ins>free </ins>Trial Today</h3>
           <fieldset>
-            <input type="text" name="name" placeholder="Name"
-                   data-pattern="[a-z]{3,}" novalidate="true" required />
-            <input type="email" name="email" placeholder="Email"
-                   data-pattern="^[^@]+@[^@]+\.[^@]+$" novalidate="true" required />
-            <input type="password" name="password" placeholder="Password"
-                   data-pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,20}$"
-                   novalidate="true" required />
+            <label>
+              <input type="text" name="name" placeholder="Name"
+              data-pattern="[a-z]{3,}" required />
+              <span class="validate-msg"></span>
+            </label>
+            <label>
+              <input type="email" name="email" placeholder="Email"
+              data-pattern="^[^@]+@[^@]+\.[^@]+$" required />
+              <span class="validate-msg"></span>
+            </label>
+            <label>
+              <input type="password" name="password" placeholder="Password"
+              data-pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,20}$"
+              required />
+              <span class="validate-msg"></span>
+            </label>
           </fieldset>
           <input class="signup-form__submit" type="submit" value="Get Started">
         </form>
@@ -257,7 +266,7 @@
       <section class="custom" id="custom">
         <h2 class="section-heading--white">stylish axure design</h2>
         <p class="custom-heading">Use the sections you need, remove the ones you don't. Create gorgeous prototypes faster than ever!</p>
-        <button class="btn-border">Download</button>
+        <button class="btn-outline">Download</button>
       </section>
       <section class="contact-us" id="contact-us">
         <h2 class="section-heading">contact us</h2><span class="small-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>

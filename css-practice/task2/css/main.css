@@ -3,7 +3,9 @@ textarea {
   display: block;
   font: inherit;
   font-size: 100%;
-  line-height: 1.15; }
+  line-height: 1.15;
+  outline: none;
+  outline-offset: 0; }
 
 .pricing-slot__sub--popular::after {
   color: #fff;
@@ -18,7 +20,7 @@ textarea {
   padding: 2rem;
   position: relative; }
 
-.btn-primary, .btn-border {
+.btn-primary, .btn-outline {
   display: inline-block;
   vertical-align: middle;
   color: #fff;
@@ -71,6 +73,9 @@ a {
   text-decoration: none;
   color: #fff; }
 
+span {
+  display: inline-block; }
+
 main {
   display: block; }
 
@@ -97,14 +102,37 @@ section {
   margin-top: 40px; }
 
 [isvalid="true"] {
-  outline: 1px solid rgba(9, 112, 9, 0.75);
   border-color: transparent;
-  box-shadow: 0px 0px 10px 0px #1aad15; }
+  background-color: rgba(26, 173, 21, 0.05);
+  box-shadow: 0px 0px 10px 0px #1aad15;
+  outline: 1px solid rgba(9, 112, 9, 0.75); }
 
 [isvalid="false"] {
-  outline: 1px solid rgba(244, 67, 54, 0.75);
   border-color: transparent;
-  box-shadow: 0px 0px 10px 0px #e01b1b; }
+  background-color: rgba(224, 27, 27, 0.05);
+  box-shadow: 0px 0px 10px 0px #e01b1b;
+  outline: 1px solid rgba(244, 67, 54, 0.75); }
+
+.validate-msg {
+  position: absolute;
+  display: none;
+  top: -35px;
+  right: 5%;
+  padding: .7rem 1.1rem;
+  color: #fff;
+  background-color: #333;
+  border-radius: 3px; }
+  .validate-msg::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    bottom: -10px;
+    left: 10px;
+    border-top: 7px solid #333;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent; }
 
 .section-heading {
   color: #212121; }
@@ -184,10 +212,18 @@ section {
   line-height: 4.6rem;
   padding: 0 2.2rem; }
 
-.btn-border {
+.btn-outline {
   background: transparent;
   border: 2px solid #fff;
-  padding: 0.9rem 3rem; }
+  padding: 0.9rem 3rem;
+  transition: all .3s ease-out; }
+  .btn-outline:hover, .btn-outline:focus {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: #ff8b38;
+    color: #000;
+    transform: translateY(-3px); }
+  .btn-outline:active {
+    transform: translateY(-1px); }
 
 .btn--active {
   background: #ff8b38; }
@@ -318,6 +354,7 @@ section {
   background-color: #fff;
   border-radius: 3px;
   font-family: "Open Sans", sans-serif;
+  color: #333;
   overflow: hidden;
   height: 362px;
   position: relative; }
@@ -333,6 +370,9 @@ section {
       color: #ff8b38; }
   .signup-form > fieldset {
     padding-top: 2.8rem; }
+  .signup-form label {
+    display: block;
+    position: relative; }
   .signup-form input {
     border: none; }
   .signup-form [type="text"],
@@ -353,8 +393,12 @@ section {
     line-height: 5.4rem;
     cursor: pointer;
     position: absolute;
-    outline: none;
-    bottom: 0; }
+    bottom: 0;
+    transition: .4s ease; }
+    .signup-form__submit:hover, .signup-form__submit:focus {
+      background-color: #4169e1; }
+    .signup-form__submit:active {
+      background-color: #1a3ca2; }
 
 .features section {
   text-align: left; }

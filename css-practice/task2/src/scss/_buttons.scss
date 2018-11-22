@@ -1,7 +1,7 @@
 .btn {
 
   &-primary,
-  &-border {
+  &-outline {
     @extend %button;
   }
 
@@ -13,10 +13,23 @@
     padding: 0 2.2rem;
   }
 
-  &-border {
+  &-outline {
     background: transparent;
     border: 2px solid $color-white;
     padding: 0.9rem 3rem;
+    transition: all .3s ease-out;
+
+    &:hover,
+    &:focus {
+      background-color: rgba($color-white, .5);
+      border-color: $color-main;
+      color: $color-black;
+      transform: translateY(-3px);
+    }
+
+    &:active {
+      transform: translateY(-1px);
+    }
   }
 
   &--active {

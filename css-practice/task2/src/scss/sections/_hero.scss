@@ -39,6 +39,7 @@
   background-color: $color-white;
   border-radius: 3px;
   font-family: $font-second;
+  color: $color-dark-1;
   overflow: hidden;
   height: 362px;
   position: relative;
@@ -59,6 +60,11 @@
 
   & > fieldset {
     padding-top: 2.8rem;
+  }
+
+  label {
+    display: block;
+    position: relative;
   }
 
   input {
@@ -85,7 +91,16 @@
     line-height: 5.4rem;
     cursor: pointer;
     position: absolute;
-    outline: none;
     bottom: 0;
+    transition: .4s ease;
+
+    &:hover,
+    &:focus {
+      background-color: $color-second;
+    }
+
+    &:active {
+      background-color: darken($color-second, 20%);
+    }
   }
 }

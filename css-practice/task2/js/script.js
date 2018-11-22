@@ -1,47 +1,55 @@
 'use strict';
 /* eslint-disable */
 (function(doc) {
+  // 1. Responsive menu section
   const menuBtn = doc.getElementById('menu-btn');
   const navMenu = doc.getElementById('menu');
-  // signup form selectors
-  const formSignup = doc.getElementById('signup');
-  const signupName = formSignup.querySelector('[type="text"]');
-  const signupEmail = formSignup.querySelector('[type="email"]');
-  const signupPass = formSignup.querySelector('[type="password"]');
-  const msgName =
-    'Please use only lowercase latin letters and minlength of name 3';
-  const msgEmail = 'Write correct email adress';
-  const msgPass =
-    'Please include at least 1 uppercase character, 1 lowercase character, and 1 number. Length 6-20';
-  // test values
-  signupName.value = 'andy';
-  signupEmail.value = 'xxx.az@gmail.com';
-  signupPass.value = 'xyZ12';
-  // console.log(document.forms.signup);
-  let menuShow = false; // navMenu State
+  let menuShown = false; // navMenu State
 
-  // Event handlers
-  const toggleMenu = () => {
-    if (!menuShow) {
+  const toggleMenu = (e) => {
+    e.preventDefault();
+    if (!menuShown) {
       navMenu.classList.add('show');
     } else {
       navMenu.classList.remove('show');
     }
-    menuShow = !menuShow;
+    menuShown = !menuShown;
   };
 
+  menuBtn.addEventListener('click', toggleMenu);
+  doc.addEventListener('keydown', (e) => {
+    if (e.keyCode === 27 && menuShown) toggleMenu(e);
+  });
+
+  // 2. Forms validations section
+  // form & input
+  const formSignup = doc.getElementById('signup');
+  const signupName = formSignup.querySelector('[type="text"]');
+  const signupEmail = formSignup.querySelector('[type="email"]');
+  const signupPass = formSignup.querySelector('[type="password"]');
+  // input validity messages
+  const isEmptyMsg = 'Please fill out this field!';
+  const notNameMsg = 'Username should only contain lowercase letters. e.g. john';
+  const notEmailMsg = 'Write correct email adress';
+  const notPassMsg =
+    'Please include at least 1 uppercase character, 1 lowercase character, and 1 number. Length 6-20';
+
+  // event handlers
   const checkField = (evt) => {
-    const element = evt.target || evt;
-    const value = element.value;
+    const input = evt.target || evt;
+    const value = input.value;
     if (!value) {
-      element.setAttribute('isvalid', false);
+      input.setAttribute('isvalid', false);
+      // const validityTip = input.parentNode.lastElementChild;
+      // validityTip.textContent = isEmptyMsg;
+      // validityTip.style = 'display:block';
       return;
     }
-    if (!element.hasAttribute('data-pattern')) return;
-    const pattern = new RegExp(element.getAttribute('data-pattern'));
+    if (!input.hasAttribute('data-pattern')) return;
+    const pattern = new RegExp(input.getAttribute('data-pattern'));
     if (!pattern) return;
     const isValid = pattern.test(value);
-    element.setAttribute('isvalid', isValid);
+    input.setAttribute('isvalid', isValid);
   };
 
   const submitHandle = (evt) => {
@@ -54,14 +62,12 @@
       return (input.getAttribute('isvalid') === 'true');
     });
     if (!preSubmit) {
-      alert('Check your values');
+      console.log('Check your values');
       return;
     }
-    alert('Your form submitted');
+    alert('Your data was submitted');
   };
 
-  // Event listeners
-  menuBtn.addEventListener('click', toggleMenu);
   formSignup.addEventListener('blur', checkField, true);
   formSignup.addEventListener('submit', submitHandle);
 })(document);
