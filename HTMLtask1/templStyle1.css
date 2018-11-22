@@ -121,11 +121,13 @@ html {
     border: 2px solid #ffffff;
     border-top: none;
     position: relative;
+    margin: 50px 510px 115px 510px;
+    width: 641px;
     margin: 50px;
     padding: 55px 120px;
     text-align: center;
     font-size: 14px;
-}
+  }
   
   .serv-par:before {
     display: block;
