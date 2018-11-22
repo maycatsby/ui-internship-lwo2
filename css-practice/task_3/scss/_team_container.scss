@@ -1,0 +1,151 @@
+.team_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  &_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      color: #333333;
+      font-family: 'Kaushan Script', cursive;
+      font-size: 24px;
+      margin-top: 95px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      color: #333333;
+      font-size: 29px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 37px;
+    }
+
+    .divider {
+      width: 60px;
+      border: 1px solid #f38181;
+      margin-bottom: 40px;
+    }
+
+    p {
+      color: #999999;
+      font-family: 'Roboto', sans-serif;
+      font-size: 15px;  
+      line-height: 24px;
+      text-align: center; 
+      margin-bottom: 92px;
+    }
+  }
+
+  &_foto {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 117px;
+    width: 100%;
+
+    &_main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 31%;
+
+      .hover_effect {
+        position: relative;
+        transition: .3s;
+        
+        &:hover {
+            box-shadow: 10px 10px #95e1d3;
+            transition: .3s;
+            transform: translate(-10px, -12px);
+        }
+        
+        &:hover .invisible {
+          opacity: 1;
+          transition: 0.3s;
+        }
+        
+      }
+      .invisible {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+          opacity: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .hidden_item {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .icon {
+            background-color: #fce38a;
+            padding: 10px 16px;
+            font-size: 26px;
+            border-right: 1px solid #f38181;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f38181;
+
+            &:hover {
+              color: #fff;
+              background-color: #f38181;
+            }
+
+            &:last-child {
+              border-right: none;
+            }
+          }
+      }
+
+      img {
+        width: 100%;
+      }
+
+      h2 {
+        color: #333333;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-top: 32px;
+      }
+
+      p {
+        color: #999999;
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        line-height: 24px;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .team_container {
+    &_foto {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 50px;
+
+      &_main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+

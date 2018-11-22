@@ -1,0 +1,61 @@
+.devices{
+  background: url(../img/img_features.png) no-repeat top center;
+  background-size: cover;
+  display: flex;
+
+  &_container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    h2{
+      color: #333333;
+      font-family: 'Kaushan Script', cursive;
+      font-size: 24px;
+      margin-top: 104px;
+      text-align: center;
+    }
+
+    h3{
+      color: #333333;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 29px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-top: 10px;
+    }
+
+    .divider {
+      width: 60px;
+      border: 1px solid #f38181;
+      margin-top: 36px;
+      margin-bottom: 715px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  
+  .devices{
+    background-size: 1000px;
+  
+    &_container {
+  
+      h2{
+        font-size: 20px;
+        margin-top: 20px;
+      }
+  
+      h3{
+        font-size: 26px;
+      }
+  
+      .divider {
+        margin-bottom: 400px;
+      }
+    }
+  }
+  
+}

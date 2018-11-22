@@ -1,0 +1,33 @@
+.map {
+  background: url(../img/img_big_3.png) no-repeat top center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      margin-top: 57px;
+    }
+
+    h2 {
+      color: #f38181;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 23px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-top: 13px;
+      margin-bottom: 17px;
+    }
+
+    .divider {
+      width: 60px;
+      border: 1px solid #f38181;
+      margin-bottom: 57px;
+    }
+  }
+}

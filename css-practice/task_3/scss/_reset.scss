@@ -1,0 +1,17 @@
+* {
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1400px;
+  padding: 0 5%;
+  margin: 0 auto;
+}
+
+a, h2, p, li {
+  text-decoration: none;
+  list-style: none;
+}
