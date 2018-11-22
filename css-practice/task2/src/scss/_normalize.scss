@@ -77,3 +77,15 @@ section {
 .mt-bg {
   margin-top: 40px;
 }
+
+[isvalid="true"] {
+  outline: 1px solid rgba(9, 112, 9, 0.75);
+  border-color: transparent;
+  box-shadow: 0px 0px 10px 0px rgba(26,173,21,1);
+}
+
+[isvalid="false"] {
+  outline: 1px solid rgba(244, 67, 54, 0.75);
+  border-color: transparent;
+  box-shadow: 0px 0px 10px 0px rgba(224,27,27,1);
+}

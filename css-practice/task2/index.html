@@ -35,15 +35,12 @@
           <h3 class="signup-form__heading">Try Your <ins>free </ins>Trial Today</h3>
           <fieldset>
             <input type="text" name="name" placeholder="Name"
-                   pattern="[a-z]{3,}" 
-                   title="Please use only lowercase latin letters and minlength of name 3" required />
+                   data-pattern="[a-z]{3,}" novalidate="true" required />
             <input type="email" name="email" placeholder="Email"
-                   pattern="^[^@]+@[^@]+\.[^@]+$" 
-                   title="Write correct email adress" required />
+                   data-pattern="^[^@]+@[^@]+\.[^@]+$" novalidate="true" required />
             <input type="password" name="password" placeholder="Password"
-                   pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
-                   title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number."
-                   required />
+                   data-pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,20}$"
+                   novalidate="true" required />
           </fieldset>
           <input class="signup-form__submit" type="submit" value="Get Started">
         </form>

@@ -40,8 +40,8 @@
   border-radius: 3px;
   font-family: $font-second;
   overflow: hidden;
-  max-height: 362px;
-  
+  height: 362px;
+  position: relative;
 
   &__heading {
     background: $color-light;
@@ -58,8 +58,7 @@
   }
 
   & > fieldset {
-    padding-bottom: 1.8rem;
-    padding-left: 3.2rem;
+    padding-top: 2.8rem;
   }
 
   input {
@@ -70,7 +69,8 @@
   [type="email"],
   [type="password"] {
     width: 90%;
-    margin: 2rem 0 3rem;
+    margin: 0 auto;
+    margin-top: 20px;
     padding: 0 2rem;
     line-height: 4.1rem;
     border-bottom: 1px solid rgba($color-black, 0.15);
@@ -84,5 +84,8 @@
     font-weight: 600;
     line-height: 5.4rem;
     cursor: pointer;
+    position: absolute;
+    outline: none;
+    bottom: 0;
   }
 }
