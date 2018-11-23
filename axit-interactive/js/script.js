@@ -17,7 +17,7 @@ function validateForm(event, id) {
   for (let i = 0; i < inputArr.length; i++) {
     if (Array.from(inputArr[i].classList).indexOf('error') !== -1) {
       console.log(inputArr[i], inputArr[i].classList);
-      alert('please enter valid shieeet');
+      alert('please enter valid values');
       return;
     }
   }
