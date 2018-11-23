@@ -50,7 +50,7 @@
 }
 .contact-bottom-right {
 	width: 47%;
-	margin-top: 4.3%;
+	margin-top: 6.5%;
 }
 //bottom-form// 
 .bottom-form-title {
@@ -86,7 +86,7 @@
 	align-items: flex-start;
 }
 .bottom-form-input-margin {
-	width: 98%;
+	width: 80%;
 	height: 26px;
 	margin: 5.3% 0 1% 0;
 	border-bottom: 1px solid $color_10;
@@ -109,8 +109,13 @@ textarea {
 .bottom-form-button {
 	width: 13%;
 	margin: 3.2% 0 7.3% 0;
+	padding: 10px 0 10px 0; 
   @extend %round-border-top;
-  @extend %round-border-bottom;
+	@extend %round-border-bottom;
+	color: $color_1;
+	font-family: $font_family_1;
+	font-size: 15px;
+	letter-spacing: .3px;
 	background: $color_3;
 	display: flex;
 	justify-content: center;
@@ -118,11 +123,4 @@ textarea {
 	&:hover {
 		background: $color_8;
 	}
-}
-.bottom-form-button-text {
-	margin: 9% 0 11% 0;
-	color: $color_1;
-	font-family: $font_family_1;
-	font-size: 15px;
-	letter-spacing: .3px;
 }
