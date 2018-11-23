@@ -12,11 +12,9 @@ function validate(id, pattern) {
 }
 
 function validateForm(event, id) {
-  event.preventDefault();
   const inputArr = Array.from(document.getElementById(id).children);
   for (let i = 0; i < inputArr.length; i++) {
     if (Array.from(inputArr[i].classList).indexOf('error') !== -1) {
-      console.log(inputArr[i], inputArr[i].classList);
       alert('please enter valid values');
       return;
     }
