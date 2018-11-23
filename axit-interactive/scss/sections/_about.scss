@@ -1,0 +1,39 @@
+.about {
+  padding: $padding-about;
+}
+
+.benefits {
+  margin-top: 45px;
+
+  &--block {
+
+    & > figure {
+      @include figureCircle($size-side2);
+    }
+
+    &:nth-child(1) > figure {
+      background-image: $icon-bulb;
+    }
+
+    &:nth-child(2) > figure {
+      background-image: $icon-keyboard;
+    }
+
+    &:nth-child(3) > figure {
+      background-image: $icon-lightning;
+    }
+
+    & > h4 {
+      margin: 20px 10px;
+      font-size: 2rem;
+      line-height: 1.2;
+      color: $color-dark-1;
+    }
+
+    & > p {
+      color: $color-grey;
+      line-height: 2rem;
+      padding: 0 1.2rem;
+    }
+  }
+}
