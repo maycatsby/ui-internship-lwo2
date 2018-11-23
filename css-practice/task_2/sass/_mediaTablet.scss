@@ -353,10 +353,38 @@
         form {
           width: 100%;
           margin-bottom: 30px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .input_form {
+            width: 100%;
+            margin-right: 0;
+          }
+  
+          .textarea_form {
+            width: 100%;
+          }
+
+          .input_name, .input_mail, .input_sub {
+            border-bottom: none;
+            padding: 5px 6px;
+            margin-bottom: 30px;
+            input {
+              width: 100%;
+              outline: none;
+              ::placeholder {
+                color: #bdbdbd;
+                font-family: $fontOpenSans;
+                font-size: 14px;
+                font-weight: 400;
+              }
+            }
+          }
         }
         textarea {
-          min-width: 60%;
-          max-width: 80%;
+          min-width: 100%;
+          max-width: 100%;
         }  
       } 
     }

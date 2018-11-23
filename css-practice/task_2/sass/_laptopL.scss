@@ -86,13 +86,11 @@
         background-color: rgba($color: #000000, $alpha: 0);
         border: 1px solid $colorWhite;
         cursor: pointer;
-        a {
-          text-decoration: none;
-          color: $colorWhite;
-          font-family: $fontOpenSans;
-          font-size: 15px;
-          font-weight: 400;
-        }
+        text-decoration: none;
+        color: $colorWhite;
+        font-family: $fontOpenSans;
+        font-size: 15px;
+        font-weight: 400;
       }
     }
     .title {
@@ -129,7 +127,6 @@
         color: #bdbdbd;
         font-family: $fontOpenSans;
         font-size: 14px;
-        padding: 5px;
       }
     }
     .input_psw {
@@ -143,8 +140,18 @@
     .input_name input, .input_mail input, .input_psw input {
       width: 285px;
       border: none;
+      padding: 10px;
       outline: none;
       border-bottom: 1px solid rgba(0, 0, 1, 0.16);
+    }
+
+    .blur_error {
+      box-shadow: 0px 0px 10px #d30202;  
+      background-color: rgba($color: #d30202, $alpha: 0.1);
+    }
+    .blur_success {
+      box-shadow: 0px 0px 10px green;  
+      background-color: rgba($color: green, $alpha: 0.1);
     }
 
     .btn-form {
@@ -155,13 +162,10 @@
       border-bottom-left-radius: 3px;
       border-bottom-right-radius: 3px; 
       cursor: pointer;
-
-      a{
-        color: #ffffff;
-        font-family: $fontOpenSans;
-        font-size: 15px;
-        text-decoration: none;
-      }
+      color: #ffffff;
+      font-family: $fontOpenSans;
+      font-size: 15px;
+      text-decoration: none;
     }
     
   }
@@ -259,6 +263,15 @@
     align-items: flex-start;
     margin-top: 143px;
     margin-bottom: 114px;
+    
+    #tab1 {
+      display: block;
+    }
+
+    #tab2, #tab3 {
+      display: none;
+    }
+
     .info-button {
       display: flex;
       flex-direction: column;
@@ -267,17 +280,22 @@
         padding: 46px 35px; 
         cursor: pointer;
         border-bottom: 1px solid $colorWhite;
-        a {
-          text-decoration: none;
-          color: $colorWhite;
-          font-family: $fontOpenSans;
-          font-size: 14px;
-          text-transform: uppercase;
-          
-        }
+        text-decoration: none;
+        color: $colorWhite;
+        font-family: $fontOpenSans;
+        font-size: 14px;
+        text-transform: uppercase;
       }
       .current {
         background-color: $colorOrange;
+      }
+      @keyframes hidden_visible {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
       }
     }
     img {
@@ -307,13 +325,11 @@
         padding: 12px 23px;
         border-radius: 3px;
         cursor: pointer;
-        a {
-          text-decoration: none;
-          color: $colorWhite;
-          font-family: $fontOpenSans;
-          font-weight: 400;
-          font-size: 15px;
-        }
+        text-decoration: none;
+        color: $colorWhite;
+        font-family: $fontOpenSans;
+        font-weight: 400;
+        font-size: 15px;
       }
     }
   }
@@ -621,18 +637,19 @@
   &-ability{
     ul {
       text-align: center;
-      a {
-        text-decoration: none;
-        color: #86878b;
-        text-transform: uppercase;
-        font-weight: lighter;
-        font-size: 14px;
-        li {
+      li {
           background-color: #fff;
           border-bottom: 1px solid #f5f5f5;
           list-style: none;
           padding-top: 9px;
           padding-bottom: 14px;
+        a {
+          text-decoration: none;
+          color: #86878b;
+          text-transform: uppercase;
+          font-weight: lighter;
+          font-size: 14px;
+          
         }
       }
     }
@@ -791,13 +808,11 @@
       cursor: pointer;
       padding: 9px 31px;
       margin-bottom: 63px;
-      a {
-        color: $colorWhite;
-        font-family: "Open Sans - Semibold";
-        font-size: 17px;
-        font-weight: 400;
-        text-decoration: none;
-      }
+      color: $colorWhite;
+      font-family: "Open Sans - Semibold";
+      font-size: 17px;
+      font-weight: 400;
+      text-decoration: none;
     }
   }
 }
@@ -841,17 +856,28 @@
       }
     }
     .contact-form {
-      display: flex;
-      justify-content: space-between;
       margin-bottom: 43px;
       width: 100%;
       form {
-        width: 50%;
-        .input_name, .input_mail, .input_psw {
-          border-bottom: 2px solid #f3f3f3;
-          padding: 5px 6px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        .input_form {
+          width: 46%;
+          margin-right: 30px;
+        }
+
+        .textarea_form {
+          width: 46%;
+        }
+
+        .input_name, .input_mail, .input_sub {
           margin-bottom: 30px;
           input {
+            border-bottom: 2px solid #f3f3f3;
+            padding: 5px 6px;
             width: 100%;
             outline: none;
             ::placeholder {
@@ -862,17 +888,26 @@
             }
           }
         }
-        .input_psw {
+        .input_sub {
           margin-bottom: 0;
         }
       }
       textarea {
-        min-width: 45%;
-        max-width: 45%;
+        min-width: 100%;
+        max-width: 100%;
         border-bottom: 2px solid #f3f3f3;
         padding: 5px;
         outline: none;
+        height: 123px;
       }  
+    }
+    .blur_error {
+      box-shadow: 0px 0px 10px #d30202;  
+      background-color: rgba($color: #d30202, $alpha: 0.1);
+    }
+    .blur_success {
+      box-shadow: 0px 0px 10px green;  
+      background-color: rgba($color: green, $alpha: 0.1);
     }
     .btn-contact {
       background-color: $colorOrange;
@@ -880,12 +915,12 @@
       padding: 14px 23px;
       margin-bottom: 80px;
       border-radius: 3px;
-      a {
-        color: $colorWhite;
-        font-family: $fontOpenSans;
-        font-size: 15px;
-        font-weight: 400;
-      }
+      color: $colorWhite;
+      font-family: $fontOpenSans;
+      font-size: 15px;
+      font-weight: 400;
+      margin-top: 50px; 
+      outline: none;
     } 
   }
 }
