@@ -42,3 +42,30 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+
+%input-contact {
+  width: 100%;
+  border: none;
+  padding: 0 1em;
+  line-height: 2;
+  border-bottom: 1px solid rgba($color-black, .15);
+
+  &:focus {
+    background-color: #ffffcc;
+    outline: 1px solid $color-grey;
+  }
+}
+
+%input-signup {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 0 20px;
+  line-height: 4.1rem;
+  border-bottom: 1px solid rgba($color-black, 0.15);
+  
+  &:focus {
+    background-color: #ffffcc;
+    outline: 1px solid $color-grey;
+  }
+}

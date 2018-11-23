@@ -74,12 +74,7 @@
   [type="text"],
   [type="email"],
   [type="password"] {
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 20px;
-    padding: 0 2rem;
-    line-height: 4.1rem;
-    border-bottom: 1px solid rgba($color-black, 0.15);
+    @extend %input-signup;
   }
 
   &__submit {

@@ -10,13 +10,24 @@ section#hero.hero
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
       euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
     button.btn-outline Download
-  form#signup.signup-form.mt-md(action="#", method="POST", tabindex="1")
+  form#signup.signup-form.mt-md(action="#", method="POST", novalidate)
     h3.signup-form__heading
       |Try Your 
       ins free 
       |Trial Today
     fieldset
-      input(type="text", name="name", placeholder="Name", required)
-      input(type="email", name="email", placeholder="Email", required)
-      input(type="password", name="password", placeholder="Password", required)
+      label
+        input(type="text", name="name", placeholder="Name",
+              data-pattern="^[a-z]{3,}", required)
+        span.validate-msg
+      label
+        input(type="email", name="email", placeholder="Email",
+              data-pattern="^[^@]+@[^@]+\.[^@]{2,}$", required)
+        span.validate-msg
+      label
+        input(type="password", name="password", placeholder="Password",
+              data-pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,20}",
+              title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number. Length 6-20",
+              required)
+        span.validate-msg
     input.signup-form__submit(type="submit", value="Get Started")

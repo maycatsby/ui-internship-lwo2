@@ -6,23 +6,27 @@
     margin-top: 30px;
     padding: 2.5rem;
 
-    
+    &__fields {
+      padding-left: 3.5rem;
+
+      label {
+        position: relative;
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
     [type="text"],
     [type="email"],
     textarea {
-      width: 100%;
-      border: none;
-      padding: 0 1em;
-      border-bottom: 1px solid rgba($color-black, .15);
+      @extend %input-contact;
     }
 
     textarea {
       resize: none;
+      min-height: 145px;
+      height: 100%;
     }
-    
-    &__fields {
-      padding-left: 3.5rem;
-    }
-
   }
 }

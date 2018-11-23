@@ -22,52 +22,90 @@
   });
 
   // 2. Forms validations section
-  // form & input
+  // signup form inputs
   const formSignup = doc.getElementById('signup');
-  const signupName = formSignup.querySelector('[type="text"]');
-  const signupEmail = formSignup.querySelector('[type="email"]');
-  const signupPass = formSignup.querySelector('[type="password"]');
+  const signupArr = [...formSignup.elements].filter((el) => {
+    return (
+      el.type === 'text' ||
+      el.type === 'password' ||
+      el.type === 'email'
+    );
+  });
+  // message form inputs
+  const formMessage = doc.getElementById('message');
+  const messageArr = [...formMessage.elements].filter((el) => {
+    return (
+      el.type === 'text' ||
+      el.type === 'password' ||
+      el.type === 'email' ||
+      el.tagName === 'TEXTAREA'
+    );
+  });
   // input validity messages
   const isEmptyMsg = 'Please fill out this field!';
-  const notNameMsg = 'Username should only contain lowercase letters. e.g. john';
+  const notNameMsg = 'All lowercase letters & minlength 3';
   const notEmailMsg = 'Write correct email adress';
-  const notPassMsg =
-    'Please include at least 1 uppercase character, 1 lowercase character, and 1 number. Length 6-20';
+  const notPassMsg = "Password didn't match";
 
   // event handlers
   const checkField = (evt) => {
     const input = evt.target || evt;
     const value = input.value;
+    let isValid;
     if (!value) {
       input.setAttribute('isvalid', false);
-      // const validityTip = input.parentNode.lastElementChild;
-      // validityTip.textContent = isEmptyMsg;
-      // validityTip.style = 'display:block';
       return;
     }
-    if (!input.hasAttribute('data-pattern')) return;
-    const pattern = new RegExp(input.getAttribute('data-pattern'));
-    if (!pattern) return;
-    const isValid = pattern.test(value);
+    if (input.hasAttribute('data-pattern')) {
+      const pattern = new RegExp(input.getAttribute('data-pattern'));
+      isValid = pattern.test(value);
+    } else if (input.hasAttribute('maxlength')) {
+      isValid = value.length <= parseInt(input.getAttribute('maxlength'), 10);
+    }
     input.setAttribute('isvalid', isValid);
   };
 
-  const submitHandle = (evt) => {
+  const submitHandle = (array, evt) => {
     evt.preventDefault();
-    const inputsArr = [signupName, signupEmail, signupPass];
-    inputsArr.forEach((el) => {
+    array.forEach((el) => {
       if (!el.hasAttribute('isvalid')) checkField(el);
     });
-    const preSubmit = inputsArr.every((input) => {
-      return (input.getAttribute('isvalid') === 'true');
+    const preSubmit = array.every((input) => {
+      return input.getAttribute('isvalid') === 'true';
     });
     if (!preSubmit) {
-      console.log('Check your values');
+      displayMsg(array);
       return;
     }
     alert('Your data was submitted');
   };
 
+  const displayMsg = (array) => {
+    return array.forEach((input) => {
+      if (input.tagName !== 'TEXTAREA') {
+        const validityTip = input.parentNode.lastElementChild;
+        if (!input.value) {
+          validityTip.textContent = isEmptyMsg;
+        } else if (input.getAttribute('isvalid') === 'false') {
+          if (input.name === 'name') validityTip.textContent = notNameMsg;
+          if (input.name === 'email') validityTip.textContent = notEmailMsg;
+          if (input.name === 'password') validityTip.textContent = notPassMsg;
+        } else {
+          return;
+        }
+        validityTip.style.display = 'block';
+        const removeTip = () => {
+          validityTip.textContent = '';
+          validityTip.style = '';
+          input.removeEventListener('input', removeTip);
+        };
+        input.addEventListener('input', removeTip);
+      }
+    });
+  };
+
   formSignup.addEventListener('blur', checkField, true);
-  formSignup.addEventListener('submit', submitHandle);
+  formMessage.addEventListener('blur', checkField, true);
+  formSignup.addEventListener('submit', submitHandle.bind(null, signupArr));
+  formMessage.addEventListener('submit', submitHandle.bind(null, messageArr));
 })(document);
