@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const menu = document.querySelector('.menu-btn');
 const hiddenMenu = document.querySelector('.burger-menu');
 const regexMessage = /.{1, 250}$/;
