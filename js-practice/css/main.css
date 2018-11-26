@@ -737,21 +737,21 @@ a {
       justify-content: space-between;
       margin-bottom: 43px;
       width: 100%; }
-      .contact-container .contact-form form {
+      .contact-container .contact-form .form {
         width: 50%; }
-        .contact-container .contact-form form .input_name, .contact-container .contact-form form .input_mail, .contact-container .contact-form form .input_psw {
+        .contact-container .contact-form .form .input_name, .contact-container .contact-form .form .input_mail, .contact-container .contact-form .form .input_psw {
           border-bottom: 2px solid #f3f3f3;
           padding: 5px 6px;
           margin-bottom: 30px; }
-          .contact-container .contact-form form .input_name input, .contact-container .contact-form form .input_mail input, .contact-container .contact-form form .input_psw input {
+          .contact-container .contact-form .form .input_name input, .contact-container .contact-form .form .input_mail input, .contact-container .contact-form .form .input_psw input {
             width: 100%;
             outline: none; }
-            .contact-container .contact-form form .input_name input ::placeholder, .contact-container .contact-form form .input_mail input ::placeholder, .contact-container .contact-form form .input_psw input ::placeholder {
+            .contact-container .contact-form .form .input_name input ::placeholder, .contact-container .contact-form .form .input_mail input ::placeholder, .contact-container .contact-form .form .input_psw input ::placeholder {
               color: #bdbdbd;
               font-family: "Open Sans", sans-serif;
               font-size: 14px;
               font-weight: 400; }
-        .contact-container .contact-form form .input_psw {
+        .contact-container .contact-form .form .input_psw {
           margin-bottom: 0; }
       .contact-container .contact-form textarea {
         min-width: 45%;
@@ -841,12 +841,6 @@ footer {
   box-shadow: 5px 5px 10px #d45252;
   border-color: #b03535;
   padding: 10px; }
-
-.invisible-block {
-  display: none; }
-
-.visible-block {
-  display: block; }
 
 @media only screen and (max-width: 1024px) {
   /* Header */

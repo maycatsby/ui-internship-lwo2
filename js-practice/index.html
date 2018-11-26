@@ -366,7 +366,7 @@
               <button class="btn-design" type="button"><a href="">Download</a></button>
           </div>
       </div>
-      <div class="contact">
+      <form name="footer-form" action="" onsubmit="return validate()" method="POST" class="contact">
           <div class="container contact-container">
               <div class="contact-title">
                   <h2>CONTACT US</h2>
@@ -374,7 +374,7 @@
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </div>
               <div class="contact-form">
-                  <form name="footer-form" action="" onsubmit="return validate()" method="POST">
+                  <div class="form">
                       <div class="input_name">
                           <input type="text" 
                                  name="user_name" 
@@ -399,19 +399,20 @@
                                  class="message"
                                  placeholder="Subject">
                       </div>
-                  </form>
+                    </div>
                   <textarea name="Massage" 
                             placeholder="Message"
                             class="message"
                             pattern="^[a-zA-Z]+$"
                             title="Username should only contain latin letters. e.g. John"
-                            minlength="1" 
                             maxlength="250"
-                            required>
-                        </textarea>
+                            minlength="1" 
+                            autofocus
+                            required></textarea>
               </div>
               <button class="btn-contact" type="submit">Send Message</button>
           </div>
+      </form>
       </div>
       <footer>
           <div class="container footer-container">
