@@ -13,57 +13,37 @@ const messageSubject = document.forms['footerForm']['subject'];
 const theMessage = document.forms['footerForm']['message'];
 
 userName.onblur = function() {
-  if (nameReg.test(userName.value)) {
-    userName.style.outline = '2px solid green';
-  } else {
-    userName.style.outline = '2px solid red';
-  }
+  myColorFunc(nameReg, userName);
 };
 
 userNameFooter.onblur = function() {
-  if (nameReg.test(userNameFooter.value)) {
-    userNameFooter.style.outline = '2px solid green';
-  } else {
-    userNameFooter.style.outline = '2px solid red';
-  }
+  myColorFunc(nameReg, userNameFooter);
 };
 
 userEmail.onblur = function() {
-  if (mailReg.test(userEmail.value)) {
-    userEmail.style.outline = '2px solid green';
-  } else {
-    userEmail.style.outline = '2px solid red';
-  }
+  myColorFunc(mailReg, userEmail);
 };
 
 userEmailFooter.onblur = function() {
-  if (mailReg.test(userEmailFooter.value)) {
-    userEmailFooter.style.outline = '2px solid green';
-  } else {
-    userEmailFooter.style.outline = '2px solid red';
-  }
+  myColorFunc(mailReg, userEmailFooter);
 };
 
 userPassword.onblur = function() {
-  if (passReg.test(userPassword.value)) {
-    userPassword.style.outline = '2px solid green';
-  } else {
-    userPassword.style.outline = '2px solid red';
-  }
+  myColorFunc(passReg, userPassword);
 };
 
 messageSubject.onblur = function() {
-  if (subjReg.test(messageSubject.value)) {
-    messageSubject.style.outline = '2px solid green';
-  } else {
-    messageSubject.style.outline = '2px solid red';
-  }
+  myColorFunc(subjReg, messageSubject);
 };
 
 theMessage.onblur = function() {
-  if (textAreaReg.test(theMessage.value)) {
-    theMessage.style.outline = '2px solid green';
+  myColorFunc(textAreaReg, theMessage);
+};
+
+myColorFunc = function(testRule, objectToTest) {
+  if (testRule.test(objectToTest.value)) {
+    objectToTest.style.outline = '2px solid green';
   } else {
-    theMessage.style.outline = '2px solid red';
-  }
+    objectToTest.style.outline = '2px solid red';
+  }  
 };
