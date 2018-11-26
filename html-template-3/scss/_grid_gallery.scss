@@ -1,0 +1,70 @@
+.grid-gallery {
+  @include grid;
+  @include grid-template-columns(1fr 1fr 1fr 1fr);
+  @include grid-template-rows(1fr 1fr);
+
+  grid-template-areas: "man_back roof jellyfish ceiling"
+                       "bridge hole jellyfish angle";
+  width: 100%;
+}
+
+.man_back {
+  grid-area: man_back;
+  width: 100%;
+}
+
+.roof {
+  grid-area: roof;
+  width: 100%;
+}
+
+.jellyfish {
+  grid-area: jellyfish;
+  width: 100%;
+}
+
+.ceiling {
+  grid-area: ceiling;
+  width: 100%;
+}
+
+.bridge {
+  grid-area: bridge;
+  width: 100%;
+}
+
+.hole {
+  grid-area: hole;
+  width: 100%;
+}
+
+.angle {
+  grid-area: angle;
+  width: 100%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+
+  body {
+
+    .grid-gallery {
+      @include flex;
+      @include flex-direction(column);
+    }
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 1023px) {
+
+  body {
+
+    .grid-gallery {
+      @include grid-template-columns(1fr 1fr 1fr);
+
+  grid-template-areas: "man_back roof ceiling"
+                       "bridge hole angle"
+                       "jellyfish jellyfish jellyfish"
+                       "jellyfish jellyfish jellyfish";
+    }
+  }
+}
