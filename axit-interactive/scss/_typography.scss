@@ -22,6 +22,19 @@
   }
 }
 
+.success {
+  outline: 1px solid green !important;
+}
+
+.error {
+  background-color: rgba(255, 0, 0, 0.5);
+  outline: 1px solid red !important;
+}
+
+.tab-active {
+  background-color: #ff8b38 !important;
+}
+
 .small-heading {
   display: block;
   color: $color-grey;
