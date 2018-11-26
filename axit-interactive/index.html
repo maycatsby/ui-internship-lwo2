@@ -8,13 +8,17 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700">
   <link rel="stylesheet" href="css/main.css">
-  <script src="./js/script.js"></script>
 </head>
 
 <body>
   <header class="header" id="header">
-    <nav class="header--nav container"><a class="header--logo" href="#"><img src="img/company_logo.png" alt="AXIT Logo"></a><a
-        class="menu-opener" id="menu-btn" title="burger menu"><span class="icon-bar"></span></a>
+    <nav class="header--nav container">
+      <a class="header--logo" href="#">
+        <img src="img/company_logo.png" alt="AXIT Logo">
+      </a>
+      <a class="menu-opener" id="menu-btn" title="burger menu">
+        <span class="icon-bar"></span>
+      </a>
       <ul class="header--menu" id="menu">
         <li><a href="#features">Features</a></li>
         <li><a href="#about">About</a></li>
@@ -27,7 +31,9 @@
   <main class="container">
     <section class="hero" id="hero">
       <div class="company">
-        <h1 class="company--name" title="AXIT"><img src="img/company_logo.png" alt="AXIT Logo"></h1>
+        <h1 class="company--name" title="AXIT">
+          <img src="img/company_logo.png" alt="AXIT Logo">
+        </h1>
         <h2 class="hero--title">modern axure template<br>for beautiful prototypes</h2>
         <p class="hero--description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
@@ -35,18 +41,14 @@
         </p>
         <button class="btn-border">Download</button>
       </div>
-      <form name="free-trial-form" class="signup-form mt-md" action="#">
+      <form class="signup-form mt-md" id="free-trial-form">
         <h3 class="signup-form--heading">Try Your <ins>free </ins>Trial Today</h3>
         <fieldset id="free-trial-fs">
-          <input required type="text" title="Enter only latin letters" placeholder="Name" id="free-trial-name" onblur="validate('free-trial-name',/^[a-zA-Z ]+$/)"
-            onkeyup="validate('free-trial-name',/^[a-zA-Z ]+$/)">
-          <input type="email" name="email" id="free-trial-email" placeholder="Email" onblur="validate('free-trial-email',/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)"
-            onkeyup="validate('free-trial-email',/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)">
-          <input type="password" title="Password should contain at least 1 lowercase letter,1 uppercase letter, 1 digit and 1 special symbol and be 6+ characters"
-            name="password" id="free-trial-password" placeholder="Password" onblur="validate('free-trial-password',/(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+-]).{6,20}/)"
-            onkeyup="validate('free-trial-password',/(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+-]).{6,20}/)">
+          <input type="text" name="name" title="Enter only latin letters" placeholder="name">
+          <input type="email" name="email" placeholder="Email">
+          <input type="password" name="password" title="Password should contain at least 1 lowercase letter,1 uppercase letter, 1 digit and 1 special symbol and be 6+ characters" name="password" placeholder="Password">
         </fieldset>
-        <input type="submit" value="Get Started" onclick="validateForm('free-trial-fs')">
+        <input type="submit" value="Get Started">
       </form>
     </section>
     <section class="social" id="social">
@@ -76,9 +78,9 @@
     <article class="features" id="features">
       <section class="features--first">
         <div class="feature--tabs" id='feature-tabs'>
-          <button class="features--btn tab-active" id="features-tab-0" onclick="tabSwitch('features-tab-0')">Tab1</button>
-          <button class="features--btn" id="features-tab-1" onclick="tabSwitch('features-tab-1')">Tab2</button>
-          <button class="features--btn" id="features-tab-2" onclick="tabSwitch('features-tab-2')">Tab3</button>
+          <button class="features--btn tab-active" id="features-tab-0">Tab1</button>
+          <button class="features--btn" id="features-tab-1">Tab2</button>
+          <button class="features--btn" id="features-tab-2">Tab3</button>
         </div>
         <div class="feature--content" id="feature-content">
           <h3 class="feature--title__tabs">Tabs with soft transitioning effect.</h3>
@@ -232,36 +234,48 @@
         </div>
       </div>
     </section>
-    <section class="reviews" id="reviews">
-      <h2 class="section-heading">what our customers are saying</h2><span class="small-heading">Lorem ipsum dolor sit
-        amet, consectetur adipiscing elit.</span>
+    <section class="reviews">
+      <h2 class="section-heading">what our customers are saying</h2>
+      <span class="small-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
       <div class="users-list">
         <div class="testimonial">
           <blockquote>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat
-              similique odio aspernatur ex, architecto eaque quo suscipit.</p>
-          </blockquote><a class="testimonial--avatar" href="img/avatar1.jpeg" target="_blank" rel="noopener noreferrer"><img
-              class="avatar" src="img/avatar1.jpeg" alt="User Avatar"></a>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat
+              similique odio aspernatur ex, architecto eaque quo suscipit.
+            </p>
+          </blockquote>
+            <a class="testimonial--avatar" href="img/avatar1.jpeg" target="_blank" rel="noopener noreferrer">
+              <img class="avatar" src="img/avatar1.jpeg" alt="User Avatar">
+            </a>
           <div class="user-details">
-            <h4 class="review-author">Jeremy H.</h4><span class="review-position">Freelancer</span>
+            <h4 class="review-author">Jeremy H.</h4>
+            <span class="review-position">Freelancer</span>
           </div>
         </div>
         <div class="testimonial">
           <blockquote>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat
               similique odio aspernatur ex, architecto eaque quo suscipit.</p>
-          </blockquote><a class="testimonial--avatar" href="img/avatar2.jpeg" target="_blank" rel="noopener noreferrer"><img
-              class="avatar" src="img/avatar2.jpeg" alt="User Avatar"></a>
+          </blockquote>
+          <a class="testimonial--avatar" href="img/avatar2.jpeg" target="_blank" rel="noopener noreferrer">
+            <img class="avatar" src="img/avatar2.jpeg" alt="User Avatar">
+          </a>
           <div class="user-details">
-            <h4 class="review-author">Susan W.</h4><span class="review-position">Realtor</span>
+            <h4 class="review-author">Susan W.</h4>
+            <span class="review-position">Realtor</span>
           </div>
         </div>
         <div class="testimonial">
           <blockquote>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat
-              similique odio aspernatur ex, architecto eaque quo suscipit.</p>
-          </blockquote><a class="testimonial--avatar" href="img/avatar3.jpeg" target="_blank" rel="noopener noreferrer"><img
-              class="avatar" src="img/avatar3.jpeg" alt="User Avatar"></a>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat
+              similique odio aspernatur ex, architecto eaque quo suscipit.
+            </p>
+          </blockquote>
+          <a class="testimonial--avatar" href="img/avatar3.jpeg" target="_blank" rel="noopener noreferrer">
+            <img class="avatar" src="img/avatar3.jpeg" alt="User Avatar">
+          </a>
           <div class="user-details">
             <h4 class="review-author">Erik F.</h4><span class="review-position">Manager</span>
           </div>
@@ -275,21 +289,20 @@
       <button class="btn-border">Download</button>
     </section>
     <section class="contact-us" id="contact-us">
-      <h2 class="section-heading">contact us</h2><span class="small-heading">Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit.</span>
-      <form class="message" action="#">
+      <h2 class="section-heading">contact us</h2>
+      <span class="small-heading">Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit.
+      </span>
+      <form class="message" action="#" id="send-message-form">
         <div class="message--fields" id="send-message">
-          <input required type="text" name="name" placeholder="Name" id="contact-name" onblur="validate('contact-name',/^[a-zA-Z ]+$/)"
-            onkeyup="validate('contact-name',/^[a-zA-Z ]+$/)">
-          <input required type="email" name="email" id="contact-email" placeholder="Email" onblur="validate('contact-email',/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)"
-            onkeyup="validate('contact-email',/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)">
-          <input required type="password" name="password" title="should contain at least 1 lowercase letter,1 uppercase letter, 1 digit and 1 special symbol and be 6+ characters"
-            id="contact-password" placeholder="Password" onblur="validate('contact-password',/(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+-]).{6,20}/)"
-            onkeyup="validate('contact-password',/(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+-]).{6,20}/)">
+          <input type="text" name="name" placeholder="Name">
+          <input name="email">
+          <input name="password" type="password" title="should contain at least 1 lowercase letter,1 uppercase letter, 1 digit and 1 special symbol and be 6+ characters"
+            placeholder="Password">
         </div>
-        <textarea name="message" placeholder="Message" rows="9" required></textarea>
+        <textarea name="message" placeholder="Message" rows="9" id="textarea-message"></textarea>
         <fieldset class="message--button">
-          <input class="btn-primary" type="submit" value="Send Message" onclick="validateForm('send-message')">
+          <input class="btn-primary" type="submit" value="Send Message" id="send-message-btn">
         </fieldset>
       </form>
     </section>
@@ -305,27 +318,7 @@
       <li><a class="social-link__rss-sm" href="#" title="RSS chanel"></a></li>
     </ul><span class="copyright">&copy; 2018 Axure Themes</span>
   </footer>
-  <script>
-    'use strict';
-
-    (function (d) {
-      const menuBtn = d.getElementById('menu-btn');
-      const navMenu = d.getElementById('menu');
-      // navMenu State
-      let menuShow = false;
-
-      menuBtn.addEventListener('click', () => {
-        if (!menuShow) {
-          navMenu.classList.add('show');
-        } else {
-          navMenu.classList.remove('show');
-        }
-        // change navMenu state
-        menuShow = !menuShow;
-      });
-    })(document);
-
-  </script>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

@@ -1,51 +1,86 @@
-function validate(id, pattern) {
-  const node = document.getElementById(id);
+const trialSubmitForm = document.getElementById('free-trial-form');
+const sendMessageFrom = document.getElementById('send-message-form');
+const trialSubmitButton = document.getElementById('free-trial-btn');
+const featureTabs = document.getElementById('feature-tabs');
 
-  if (pattern.test(node.value)) {
-    node.classList.remove('error');
-    node.classList.add('success');
-    return;
-  }
+featureTabs.addEventListener('click', tabSwitch);
+trialSubmitForm.addEventListener('submit', validateForm.bind(null, 'free-trial-fs'), true);
+trialSubmitForm.addEventListener('keyup', validate, true);
+sendMessageFrom.addEventListener('keyup', validate, true);
+sendMessageFrom.addEventListener('submit', validateForm.bind(null, 'send-message'), true);
 
-  node.classList.remove('success');
-  node.classList.add('error');
-}
+
+const patterns = {
+  email: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+  name: /^[a-zA-Z]+$/,
+  password: /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+-]).{6,20}/,
+};
 
 function validateForm(id) {
   const inputArr = Array.from(document.getElementById(id).children);
+
   for (let i = 0; i < inputArr.length; i++) {
-    if (Array.from(inputArr[i].classList).indexOf('error') !== -1) {
-      alert('please enter valid values');
-      return;
+    if (inputArr[i].classList.contains('error')) {
+      return false;
     }
   }
 }
 
-function tabSwitch(id) {
+function validate(e) {
+  const pattern = patterns[e.target.name];
+
+  if (e.target.id === 'textarea-message') {
+    if (e.target.value) {
+      e.target.classList.remove('error');
+      e.target.classList.add('success');
+    } else {
+      e.target.classList.remove('success');
+      e.target.classList.add('error');
+    }
+  }
+
+  if (!e.target.value) {
+    e.target.classList.remove('success');
+    e.target.classList.add('error');
+
+    return false;
+  }
+  if (pattern.test(e.target.value)) {
+    e.target.classList.remove('error');
+    e.target.classList.add('success');
+  } else {
+    e.target.classList.remove('success');
+    e.target.classList.add('error');
+  }
+}
+
+function tabSwitch(e) {
   const featureParas = ['Lorem ipsum dolor sit amet, consectetur adipiscing elit Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.',
     'Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.',
-    'Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.'
+    'Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.',
   ];
-  const featureTabs = document.getElementById('feature-tabs').children;
-  const node = document.getElementById(id);
+  const featureTabsArr = featureTabs.children;
+  if (!e.target.classList.contains('features--btn')) {
+    return;
+  }
 
-  if (node.classList.contains('tab-active')) {
+  if (e.target.classList.contains('tab-active')) {
     return;
   } else {
-    for (let i = 0; i < featureTabs.length; i++) {
-      featureTabs[i].classList.remove('tab-active');
+    for (let i = 0; i < featureTabsArr.length; i++) {
+      featureTabsArr[i].classList.remove('tab-active');
     }
-    node.classList.add('tab-active');
-    document.getElementById('features-para').innerText = featureParas[node.id.slice(-1)];
-    var myopacity = 0;
+    e.target.classList.add('tab-active');
+    document.getElementById('features-para').innerText = featureParas[e.target.id.slice(-1)];
+    let myopacity = 0;
     paraFade();
 
     function paraFade() {
       if (myopacity < 1) {
         myopacity += .03;
         setTimeout(function () {
-          paraFade()
-        }, 16);
+          paraFade();
+        }, 15);
       }
       document.getElementById('feature-content').style.opacity = myopacity;
     }
