@@ -125,11 +125,11 @@
   <section class="section-7">
     <span class="red">NEW FEATURES</span>
     <h2>Over 1000 designers are using ...</h2>
-    <form>
-      <input type="text" placeholder="FULL NAME">
-      <input type="text" placeholder="YOUR EMAIL">
-      <input type="text" placeholder="PASSWORD">
-      <button>TRY NOW</button>
+    <form action="test.php" method="POST" name="contact-form" id="contact-form">
+      <input type="text" name="name" placeholder="FULL NAME" id="cf-name">
+      <input type="email" name="email" placeholder="YOUR EMAIL" id="cf-email">
+      <input type="password" name="password" placeholder="PASSWORD" id="cf-pass">
+      <button type="submit">TRY NOW</button>
     </form>
     <span class="sign">By Signing up you agree to our <a href="#">terms & Services.</a></span>
   </section>
@@ -165,5 +165,5 @@
     </div>
   </section>
 </body>
-
+<script type="text/javascript" src="script.js"></script>
 </html>

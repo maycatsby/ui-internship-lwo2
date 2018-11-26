@@ -3,11 +3,15 @@
     font-size: 45px; }
   h2 {
     font-size: 35px; }
-  .section-4, .founder-container, .section-8 .info, form {
+  .section-4,
+  .founder-container,
+  .section-8 .info,
+  form {
     flex-direction: column; }
   .info > * {
     width: 100%; }
-  .section-4, .founder-container {
+  .section-4,
+  .founder-container {
     width: 100%; }
   header {
     padding: 0; }
