@@ -800,7 +800,8 @@ footer {
       border-left: none;
       outline: none;
       min-width: 80%;
-      max-width: 80%; }
+      max-width: 80%;
+      margin-bottom: 25px; }
       .contact .contact-form textarea::placeholder {
         font-size: 14px;
         color: #bdbdbd; }

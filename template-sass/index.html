@@ -37,11 +37,11 @@
     </div>
     <div class="main-form">
       <h3 class="form-header header">Try Your <span class="free-word">Free</span> Trial Today</h3>
-      <form name="l-form" method="POST" class="login-form form" id="login-form" onsubmit="event.preventDefault()">
+      <form name="l-form" method="POST" action="test.php" class="login-form form" id="login-form">
         <input type="text" name="username" placeholder="Name" id="l-form-name"/>
         <input type="email" name="email" placeholder="Email" id="l-form-email"/>
         <input type="password" name="password" placeholder="Password" id="l-form-pass"/>
-        <input type="submit" value="Get started" class="button"/>
+        <button type="submit" class="button">Get started</button>
       </form>
     </div>
   </main>
@@ -281,17 +281,17 @@
     <h2 class="section-header header">Contact Us</h2>
     <p class="section-paragraph font">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     <div>
-      <form action="#" method="POST" class="form contact-form" id="contact-form" name="contact-form" onsubmit="event.preventDefault()">
-        <div class="inputs">
+      <form action="test.php" method="POST"  class="form contact-form" id="contact-form" name="contact-form">
+        <!-- <div class="inputs"> -->
           <input type="text" name="username" placeholder="Name" id="c-form-name" />
           <input type="email" name="email" placeholder="Email" id="c-form-email"/>
           <input type="text" name="subject" placeholder="Subject" id="c-form-subj" />
-        </div>
-        <textarea name="message" rows="4" cols="50" placeholder="Message" class="separate" id="separate" onblur="validTextarea()"></textarea>
+        <!-- </div> -->
+        <textarea name="message" rows="4" cols="50" placeholder="Message" class="separate" id="separate"></textarea>
+        <button type="submit" class="tabs-button font">Send Message</button>
       </form>
 
     </div>
-    <button class="tabs-button font" onsubmit="event.preventDefault()">Send Message</button>
   </section>
   <footer>
     <div class="social-icons soc-ic-foot">
