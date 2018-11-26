@@ -66,21 +66,29 @@
   }
 })();
 
-function tabsChange(id) {
-  const tabs = document.getElementsByClassName('tabs-text');
-  const selectedTab = document.getElementById(`tabs-text-${id}`);
-  for (let i = 1; i <= tabs.length; i++) {
-    const tab = document.getElementById(`tabs-text-${i}`);
-    const tabButton = document.getElementById(i)
-    if (selectedTab === tab) {
-      tab.classList.add('show');
-      tab.classList.remove('hidden');
-      tabButton.classList.add('active');
-    } else {
-      tab.classList.add('hidden');
-      tab.classList.remove('show');
-      tabButton.classList.remove('active');
+
+(() => {
+  const tabButtons = document.getElementById("tabs");
+  tabButtons.addEventListener("click", e => tabsChange(e.target.id))
+
+  function tabsChange(id) {
+    const tabs = document.getElementsByClassName('tabs-text');
+    const selectedTab = document.getElementById(`tabs-text-${id}`);
+    for (let i = 1; i <= tabs.length; i++) {
+      const tab = document.getElementById(`tabs-text-${i}`);
+      const tabButton = document.getElementById(i)
+      if (selectedTab === tab) {
+        tab.classList.add('show');
+        tab.classList.remove('hidden');
+        tabButton.classList.add('active');
+      } else {
+        tab.classList.add('hidden');
+        tab.classList.remove('show');
+        tabButton.classList.remove('active');
+      }
     }
   }
-}
+})();
+
+
 
