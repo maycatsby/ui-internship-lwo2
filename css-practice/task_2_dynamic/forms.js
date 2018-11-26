@@ -12,6 +12,14 @@ const userPassword = document.forms['headerForm']['user_password'];
 const messageSubject = document.forms['footerForm']['subject'];
 const theMessage = document.forms['footerForm']['message'];
 
+myColorFunc = function(testRule, objectToTest) {
+  if (testRule.test(objectToTest.value)) {
+    objectToTest.style.outline = '2px solid green';
+  } else {
+    objectToTest.style.outline = '2px solid red';
+  }  
+};
+
 userName.onblur = function() {
   myColorFunc(nameReg, userName);
 };
@@ -40,10 +48,3 @@ theMessage.onblur = function() {
   myColorFunc(textAreaReg, theMessage);
 };
 
-myColorFunc = function(testRule, objectToTest) {
-  if (testRule.test(objectToTest.value)) {
-    objectToTest.style.outline = '2px solid green';
-  } else {
-    objectToTest.style.outline = '2px solid red';
-  }  
-};
