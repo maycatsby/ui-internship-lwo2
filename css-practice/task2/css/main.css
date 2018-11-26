@@ -164,6 +164,15 @@ section {
     border-left: 7px solid transparent;
     border-right: 7px solid transparent; }
 
+.transition {
+  animation: opacity-transition 1s cubic-bezier(0.96, 0.42, 0.54, 0.58); }
+
+@keyframes opacity-transition {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 .section-heading {
   color: #212121; }
   .section-heading::after {
@@ -480,6 +489,11 @@ section {
 
 .feature__content--side {
   line-height: 1; }
+
+.feature__text > a {
+  color: #ff8b38; }
+  .feature__text > a:hover, .feature__text > a:focus {
+    color: #2791cf; }
 
 .feature__sublist {
   position: relative;

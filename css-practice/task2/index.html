@@ -35,13 +35,17 @@
           <h3 class="signup-form__heading">Try Your <ins>free </ins>Trial Today</h3>
           <fieldset>
             <label>
-              <input type="text" name="name" placeholder="Name" data-pattern="^[a-z]{3,}" required><span class="validate-msg"></span>
+              <input type="text" name="name" placeholder="Name" data-pattern="^[a-z]{3,}" required>
+              <span class="validate-msg"></span>
             </label>
             <label>
-              <input type="email" name="email" placeholder="Email" data-pattern="^[^@]+@[^@]+.[^@]{2,}$" required><span class="validate-msg"></span>
+              <input type="email" name="email" placeholder="Email" data-pattern="^[^@]+@[^@]+.[^@]{2,}$" required>
+              <span class="validate-msg"></span>
             </label>
             <label>
-              <input type="password" name="password" placeholder="Password" data-pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,20}" title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number. Length 6-20" required><span class="validate-msg"></span>
+              <input type="password" name="password" placeholder="Password" data-pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,20}" 
+                     title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number. Length 6-20" required>
+              <span class="validate-msg"></span>
             </label>
           </fieldset>
           <input class="signup-form__submit" type="submit" value="Get Started">
