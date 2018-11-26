@@ -46,7 +46,6 @@
   const notNameMsg = 'All lowercase letters & minlength 3';
   const notEmailMsg = 'Write correct email adress';
   const notPassMsg = "Password didn't match";
-
   // event handlers
   const checkField = (evt) => {
     const input = evt.target || evt;
@@ -108,4 +107,46 @@
   formMessage.addEventListener('blur', checkField, true);
   formSignup.addEventListener('submit', submitHandle.bind(null, signupArr));
   formMessage.addEventListener('submit', submitHandle.bind(null, messageArr));
+
+  // 3. tabs with transition
+  const featureTabs = doc.querySelector('.feature__tabs');
+  const tabsButtons = [...featureTabs.querySelectorAll('button')];
+  const featureContent = doc.querySelector('.feature__content');
+  // console.log(featureContent.children[0]);
+  // console.log(featureContent.children[1]);
+  const content = {
+    'tab1': {
+      0: 'heading test1',
+      1: 'paragraph test1'
+    },
+    'tab2': {
+      0: 'heading test2',
+      1: 'paragraph test2'
+    },
+    'tab3': {
+      0: 'heading test3',
+      1: 'paragraph test 3'
+    }
+  }
+
+  const switchTabs = (evt) => {
+    const tabBtn = evt.target;
+    const index = tabsButtons.indexOf(tabBtn);
+    if (!tabBtn.classList.contains('active')) {
+      tabsButtons.forEach((el) => {
+        el.classList.remove('active');
+      });
+      tabBtn.classList.add('active');
+      showTab(index);
+    }
+    return;
+  }
+
+  const showTab = (index) => {
+    const tabsArray = ['tab1', 'tab2', 'tab3'];
+    featureContent.children[0].innerText = content[tabsArray[index]][0];
+    featureContent.children[1].innerText = content[tabsArray[index]][1];
+  };
+
+  featureTabs.addEventListener('click', switchTabs, true);
 })(document);

@@ -14,7 +14,6 @@
 
     .feature__image {
       width: 320px;
-      // max-height: 253px;
       justify-self: center;
       margin-top: 25px;
     }
@@ -40,9 +39,19 @@
   &__btn {
     @extend %btn-tab;
     background: $color-dark-1;
+    transition: all .3s ease;
+    
+    &:hover,
+    &:focus {
+      outline: none;
+      background-color: lighten($color-main, 15%);
+    }
 
-    &--active {
-      @extend %btn-tab;
+    &:active {
+      background-color: darken($color-main, 15%);
+    }
+
+    &.active {
       background-color: $color-main;
     }
   }

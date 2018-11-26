@@ -26,7 +26,7 @@ section#hero.hero
         span.validate-msg
       label
         input(type="password", name="password", placeholder="Password",
-              data-pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,20}",
+              data-pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,20}",
               title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number. Length 6-20",
               required)
         span.validate-msg

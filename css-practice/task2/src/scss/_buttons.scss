@@ -11,6 +11,19 @@
     background: $color-main;
     line-height: 4.6rem;
     padding: 0 2.2rem;
+    transition: all .3s ease;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      background-color: $color-second;
+      transform: translateY(-3px);
+    }
+    
+    &:active {
+      transform: translateY(-1px);
+      background-color: darken($color-second, 15%);
+    }
   }
 
   &-outline {
@@ -21,18 +34,15 @@
 
     &:hover,
     &:focus {
+      color: $color-black;
+      outline: none;
       background-color: rgba($color-white, .5);
       border-color: $color-main;
-      color: $color-black;
       transform: translateY(-3px);
     }
 
     &:active {
       transform: translateY(-1px);
     }
-  }
-
-  &--active {
-    background: $color-main;
   }
 }

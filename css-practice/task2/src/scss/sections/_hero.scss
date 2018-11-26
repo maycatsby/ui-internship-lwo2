@@ -91,11 +91,12 @@
 
     &:hover,
     &:focus {
+      outline: none;
       background-color: $color-second;
     }
 
     &:active {
-      background-color: darken($color-second, 20%);
+      background-color: darken($color-second, 15%);
     }
   }
 }

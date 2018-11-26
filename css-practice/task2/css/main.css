@@ -28,7 +28,7 @@ textarea {
   font-size: 1.5rem;
   cursor: pointer; }
 
-.features__btn, .features__btn--active {
+.features__btn {
   border: none;
   width: 112px;
   height: 112px;
@@ -240,7 +240,15 @@ section {
   border-radius: 3px;
   background: #ff8b38;
   line-height: 4.6rem;
-  padding: 0 2.2rem; }
+  padding: 0 2.2rem;
+  transition: all .3s ease; }
+  .btn-primary:hover, .btn-primary:focus {
+    outline: none;
+    background-color: #2791cf;
+    transform: translateY(-3px); }
+  .btn-primary:active {
+    transform: translateY(-1px);
+    background-color: #1b648f; }
 
 .btn-outline {
   background: transparent;
@@ -248,15 +256,13 @@ section {
   padding: 0.9rem 3rem;
   transition: all .3s ease-out; }
   .btn-outline:hover, .btn-outline:focus {
+    color: #000;
+    outline: none;
     background-color: rgba(255, 255, 255, 0.5);
     border-color: #ff8b38;
-    color: #000;
     transform: translateY(-3px); }
   .btn-outline:active {
     transform: translateY(-1px); }
-
-.btn--active {
-  background: #ff8b38; }
 
 .social-link--fb-sm, .social-link--tw-sm, .social-link--gp-sm, .social-link--pn-sm, .social-link--ins-sm, .social-link--stu-sm, .social-link--rss-sm {
   display: block;
@@ -417,9 +423,10 @@ section {
     bottom: 0;
     transition: .4s ease; }
     .signup-form__submit:hover, .signup-form__submit:focus {
-      background-color: #4169e1; }
+      outline: none;
+      background-color: #2791cf; }
     .signup-form__submit:active {
-      background-color: #1a3ca2; }
+      background-color: #1b648f; }
 
 .features section {
   text-align: left; }
@@ -447,8 +454,14 @@ section {
   background: #f5f5f5; }
 
 .features__btn {
-  background: #333; }
-  .features__btn--active {
+  background: #333;
+  transition: all .3s ease; }
+  .features__btn:hover, .features__btn:focus {
+    outline: none;
+    background-color: #ffb885; }
+  .features__btn:active {
+    background-color: #eb6200; }
+  .features__btn.active {
     background-color: #ff8b38; }
 
 .feature__tabs {
