@@ -1,0 +1,233 @@
+@media screen and (min-width: 320px) and (max-width: 425px) {
+
+  body {
+
+    .top-navigation {
+      display: none;
+    }
+
+    .top-menu {
+      @include flex-direction(column);
+    }
+
+    .menu-item {
+      padding: 7px 0;
+    }
+
+    .container {
+      @include flex;
+      @include flex-direction(column);
+      @include align-items(center);
+
+      padding: 40px 0 0 0;
+    }
+
+    .align {
+      width: 75%;
+    }
+
+    .second-back {
+      padding-bottom: 20px;
+    }
+
+    .main-subheader {
+      font-size: 24px;
+    }
+
+    .main-header {
+      line-height: initial;
+      font-size: 40px;
+    }
+
+    .slider-buttons {
+      display: none;
+    }
+
+    .story-about {
+      padding: 10px 0;
+    }
+
+    .simple-header {
+      text-align: center;
+    }
+
+    .paragraph {
+      padding: 0 40px;
+      text-align: justify;
+    }
+
+    .gallery {
+      @include flex-direction(column);
+
+      padding: 30px 0 17px 0;
+
+      .pic {
+        margin: 25px 15px;
+      }
+    }
+
+    .stats {
+      @include grid-template-columns(1fr);
+
+      padding-bottom: 40px;
+
+      .stat {
+        border: none;
+      }
+
+      .stat-content {
+        text-align: center;
+        padding: 0 10px;
+      }
+    }
+    
+    .as-items {
+      @include grid-template-columns(1fr 1fr);
+      @include grid-template-rows(1fr 1fr 1fr);
+
+      .item {
+        padding: 0 10px 20px 0;
+        display: initial;
+      }
+    }
+
+    .grey-background {
+      padding-top: 40px;
+    }
+
+    .tablet-pic {
+      margin: 0;
+      width: 100%;
+    }
+
+    .phone-pic {
+      width: 40%;
+      right: 0;
+      bottom: -7%;
+    }
+
+    .amazing-services {
+      padding: 10px 0;
+    }
+
+    .what-we-do {
+      padding: 30px 0 60px 0;
+    }
+
+    .wwd-items {
+      @include grid-template-columns(1.5fr);
+      padding-top: 60px;
+
+      img {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+
+    .drop-iten-header {
+      padding-left: 10px;
+    }
+
+    .quote-items {
+      @include grid-template-columns(1fr);
+
+      .quote-img {
+        margin: 0;
+        padding: 20px;
+      }
+    }
+
+    .meet-our-team {
+      padding: 0;
+    }
+
+    .labels {
+      img {
+        width: 100%;
+      }
+    }
+
+    .some-of-our-work {
+      padding: 10px 0;
+    }
+
+    .grid-section {
+      padding-top: 50px;
+      margin-bottom: 10px;
+    }
+
+    .joshua-earle {
+      margin: 0;
+    }
+
+    .name {
+      margin: 8px 0 30px 0;
+    }
+
+    .grey-people {
+      padding-bottom: 60px;
+    }
+
+    .people {
+      @include flex;
+      @include flex-direction(column);
+
+      padding: 0;
+
+      .people-item {
+        @include flex;
+        @include flex-direction(column);
+        @include align-items(center);
+      }
+
+      .wps-pic {
+        margin: 0 0 32px 0;
+      }
+
+    }
+
+    .latest-blog {
+      padding: 10px 0;
+    }
+
+    .pic {
+      width: 100%;
+    }
+
+    .calendar {
+      padding: 1px 10px;
+      top: 36%;
+    }
+    
+    .mogo-items {
+      @include flex-direction(column);
+    }
+
+    .fa-icons {
+      @include grid;
+      @include grid-template-rows(1fr 1fr);
+      @include grid-template-columns(1fr 1fr 1fr 1fr);
+    }
+
+    .mogo-form {
+
+      input[type=submit] {
+        padding: 10px 70px;
+      }
+    }
+
+    .mogo-blogs {
+      padding: 30px 0 0 15px;
+    }
+
+    .blog-text {
+      margin: 0 0 0 15px;
+    }
+
+    footer {
+      .footer-par {
+        margin: 0 40px;
+      }
+    }
+  }
+}

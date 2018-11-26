@@ -1,4 +1,4 @@
-// import { binaryDecode } from './binary-decode';
+import { binaryDecode } from './binary-decode';
 
 export const TEST_BLOCKS = [
     {
@@ -22,8 +22,7 @@ export const TEST_BLOCKS = [
         text: "The Earth is 98% full ... please delete anyone you can."
     }
 ];
-
-xdescribe('binary-decode', () => {
+describe('binary-decode', () => {
     test('should return a string', () => {
         expect(typeof binaryDecode()).toBe('string');
     });

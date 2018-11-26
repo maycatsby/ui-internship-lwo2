@@ -1,12 +1,12 @@
-// import { binaryEncode } from './binary-encode';
-// import { TEST_BLOCKS } from '../70_binary-decode/binary-decode.spec';
+import { binaryEncode } from './binary-encode';
+import { TEST_BLOCKS } from '../70_binary-decode/binary-decode.spec';
 
-xdescribe('binary-encode', () => {
+describe('binary-encode', () => {
     test('should return a string', () => {
         expect(typeof binaryEncode()).toBe('string');
     });
 
     test(`should return correct encoded values`, () => {
-        TEST_BLOCKS.forEach(({text, binary}) => expect(binaryEncode(text)).toBe(binary));
+        TEST_BLOCKS.forEach(({ text, binary }) => expect(binaryEncode(text)).toBe(binary));
     });
 });
