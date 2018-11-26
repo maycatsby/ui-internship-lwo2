@@ -1,5 +1,6 @@
 'use strict';
-/* eslint-disable */
+/* global document, alert */
+
 (function(doc) {
   // 1. Responsive menu section
   const menuBtn = doc.getElementById('menu-btn');
@@ -28,13 +29,15 @@
   });
   const formMessage = doc.getElementById('message');
   const messageArr = [...formMessage.elements].filter((el) => {
-    return el.type === 'text' || el.type === 'email' || el.tagName === 'TEXTAREA';
+    return (
+      el.type === 'text' || el.type === 'email' || el.tagName === 'TEXTAREA'
+    );
   });
   // input validity messages
   const isEmptyMsg = 'Please fill out this field!';
   const notNameMsg = 'All lowercase letters & minlength 3';
   const notEmailMsg = 'Write correct email adress';
-  const notPassMsg = "Password didn't match";
+  const notPassMsg = 'Password didn\'t match';
   // event handlers
   const checkField = (evt) => {
     const input = evt.target || evt;
@@ -101,73 +104,22 @@
   const featureTabs = doc.querySelector('.feature__tabs');
   const tabsButtons = [...featureTabs.querySelectorAll('button')];
   const featureContent = doc.querySelector('.feature__content');
-  const signs = {
-    tab1: {
-      0: `Aard sign`,
-      1: `The Aard sign is a simple magical sign used by witchers.
-          It is comprised of a telekinetic thrust that can stun,
-          repel, knock down, or disarm opponents,
-          as well as remove barriers and other objects.<br/>
-          <a href="https://witcher.fandom.com/wiki/Aard_sign" target="_blank">Read more...</a>`.replace(/\n/g, ''),
-    },
-    tab2: {
-      0: `Igni sign`,
-      1: `The Igni sign is a simple magical sign used by witchers.
-          It is comprised of a pyrokinetic burst that can repel and ignite opponents,
-          as well as start fires.<br/>
-          <a href="https://witcher.fandom.com/wiki/Igni_sign" target="_blank">Read more...</a>`.replace(/\n/g, ''),
-    },
-    tab3: {
-      0: `Yrden sign`,
-      1: `The Yrden Sign is a simple magical sign used by witchers.
-          It forms a magical trap on the ground that triggers a limited number
-          of times when traversed by a foe causing knock back, damage,
-          and a chance of inflicting status ailments.<br/>
-          <a href="https://witcher.fandom.com/wiki/Yrden_sign" target="_blank">Read more...</a>`.replace(/\n/g, ''),
-    },
-    tab4: {
-      0: `Quen sign`,
-      1: `The Quen sign is a simple magical sign used by witchers.
-          When cast it forms a protective field around the casting witcher.<br/>
-          <a href="https://witcher.fandom.com/wiki/Quen_sign" target="_blank">Read more...</a>`.replace(/\n/g, ''),
-    },
-    tab5: {
-      0: `Axii sign`,
-      1: `The Axii sign is a simple magical sign comprised of a hypnotic effect
-          and is used by witchers. It can calm down people and creatures or be
-          used to hex enemies, causing them to fight alongside the caster.
-          The effect wears off over time or can be prematurely broken if they
-          take damage from the caster.<br/>
-          <a href="https://witcher.fandom.com/wiki/Axii_sign" target="_blank">Read more...</a>`.replace(/\n/g, ''),
-    },
-  };
+  const contentSigns = [
+    ...featureContent.querySelectorAll('.feature__content-sign'),
+  ];
+  let indexLB = 0;
 
   const switchTabs = (evt) => {
     const tabBtn = evt.target;
     if (!tabBtn.classList.contains('active')) {
-      tabsButtons.forEach((el) => {
-        el.classList.remove('active');
-      });
+      contentSigns[indexLB].classList.remove('show-sign');
+      tabsButtons[indexLB].classList.remove('active');
+      indexLB = tabsButtons.indexOf(tabBtn);
       tabBtn.classList.add('active');
-      showTab();
+      contentSigns[indexLB].classList.add('show-sign');
     }
     return;
   };
 
-  const showTab = () => {
-    const tabsArray = ['tab1', 'tab2', 'tab3', 'tab4', 'tab5'];
-    const index = Math.floor(Math.random() * tabsArray.length);
-    // opacity-transition animation
-    featureContent.children[0].classList.remove('transition');
-    featureContent.children[1].classList.remove('transition');
-    setTimeout(() => {
-      featureContent.children[0].classList.add('transition');
-      featureContent.children[1].classList.add('transition');
-    }, 10);
-    // change content
-    featureContent.children[0].innerHTML = signs[tabsArray[index]][0];
-    featureContent.children[1].innerHTML = signs[tabsArray[index]][1];
-  };
-
-  featureTabs.addEventListener('click', switchTabs, true);
+  featureTabs.addEventListener('click', switchTabs);
 })(document);

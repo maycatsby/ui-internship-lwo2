@@ -53,8 +53,12 @@
   }
 }
 
-.transition {
-  animation: opacity-transition 1s cubic-bezier(0.96, 0.42, 0.54, 0.58);
+.feature__content {
+
+  .show-sign {
+    display: block;
+    animation: opacity-transition 1s cubic-bezier(0.96, 0.42, 0.54, 0.58);
+  }
 }
 
 @keyframes opacity-transition {

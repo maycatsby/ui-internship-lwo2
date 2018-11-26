@@ -35,17 +35,13 @@
           <h3 class="signup-form__heading">Try Your <ins>free </ins>Trial Today</h3>
           <fieldset>
             <label>
-              <input type="text" name="name" placeholder="Name" data-pattern="^[a-z]{3,}" required>
-              <span class="validate-msg"></span>
+              <input type="text" name="name" placeholder="Name" data-pattern="^[a-z]{3,}" required><span class="validate-msg"></span>
             </label>
             <label>
-              <input type="email" name="email" placeholder="Email" data-pattern="^[^@]+@[^@]+.[^@]{2,}$" required>
-              <span class="validate-msg"></span>
+              <input type="email" name="email" placeholder="Email" data-pattern="^[^@]+@[^@]+.[^@]{2,}$" required><span class="validate-msg"></span>
             </label>
             <label>
-              <input type="password" name="password" placeholder="Password" data-pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,20}" 
-                     title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number. Length 6-20" required>
-              <span class="validate-msg"></span>
+              <input type="password" name="password" placeholder="Password" data-pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,20}" title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number. Length 6-20" required><span class="validate-msg"></span>
             </label>
           </fieldset>
           <input class="signup-form__submit" type="submit" value="Get Started">
@@ -82,16 +78,40 @@
             <button class="features__btn">Tab3</button>
           </div>
           <div class="feature__content">
-            <h3 class="feature__title--tabs">Tabs with soft transitioning effect.</h3>
-            <p class="feature__text mt-bg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus 
-              accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
-              Cum sociis natoque penatibus et magnis dis parturient montes.
-              <br/><br/>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              euismod bibendum laoreet.
-            </p>
+            <div class="feature__content-sign show-sign">
+              <h3 class="feature__title--tabs">Tabs with soft transitioning effect.</h3>
+              <p class="feature__text mt-bg">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus 
+                accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+                Cum sociis natoque penatibus et magnis dis parturient montes.
+                <br/><br/>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                euismod bibendum laoreet.
+              </p>
+            </div>
+            <div class="feature__content-sign">
+              <h3 class="feature__title--tabs">Igni sign</h3>
+              <p class="feature__text mt-bg">
+                The Igni sign is a simple magical sign used by witchers.
+                It is comprised of a pyrokinetic burst that can repel
+                and ignite opponents, as well as start fires.
+                <br/><br/>
+                <a href="https://witcher.fandom.com/wiki/Igni_sign" target="_blank">Read more...</a>
+              </p>
+            </div>
+            <div class="feature__content-sign">
+              <h3 class="feature__title--tabs">Axii sign</h3>
+              <p class="feature__text mt-bg">
+                The Axii sign is a simple magical sign comprised of a hypnotic effect
+                and is used by witchers. It can calm down people and creatures or be
+                used to hex enemies, causing them to fight alongside the caster.
+                The effect wears off over time or can be prematurely broken if they
+                take damage from the caster.
+                <br/><br/>
+                <a href="https://witcher.fandom.com/wiki/Axii_sign" target="_blank">Read more...</a>
+              </p>
+            </div>
             <button class="btn-primary mt-md">Download</button>
           </div><img class="feature__image" src="img/skyscrapers.png" alt="Skyscrappers">
         </section>
@@ -138,7 +158,7 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
               euismod bibendum laoreet.
             </p>
-          </div><img src="img/image_city_2.png" alt="Image of City 2">
+          </div><img src="img/image_city_2.png" alt="Image of City">
         </section>
       </article>
       <section class="about" id="about">
@@ -277,7 +297,7 @@
               <input type="text" name="subject" placeholder="Subject" maxlength="30" required><span class="validate-msg"></span>
             </label>
           </fieldset>
-          <textarea name="message" placeholder="Message" maxlength="250">default text</textarea>
+          <textarea name="message" placeholder="Message" maxlength="250"></textarea>
           <fieldset class="message__button">
             <input class="btn-primary" type="submit" value="Send Message">
           </fieldset>
