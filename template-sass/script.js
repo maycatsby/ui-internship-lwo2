@@ -66,7 +66,6 @@
   }
 })();
 
-
 (() => {
   const tabButtons = document.getElementById("tabs");
   tabButtons.addEventListener("click", e => tabsChange(e.target.id))
