@@ -24,6 +24,16 @@ textarea {
   font-style: normal;
 }
 
+.opacity-0 {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.opacity-1 {
+  opacity: 1;
+  transition: 0.5s;
+}
+
 .section-heading,
 .section-heading__white {
   font-family: "Raleway", sans-serif;
@@ -807,21 +817,21 @@ section {
   padding: 8rem 6% 5.6rem;
 }
 
-.contact-us .message {
+.contact-us .message-form {
   margin-top: 30px;
   padding: 2.5rem;
 }
 
-.contact-us .message [type="text"],
-.contact-us .message [type="email"],
-.contact-us .message textarea {
+.contact-us .message-form [type="text"],
+.contact-us .message-form [type="email"],
+.contact-us .message-form textarea {
   width: 100%;
   border: none;
   padding: 0 1em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-.contact-us .message textarea {
+.contact-us .message-form textarea {
   resize: none;
 }
 
@@ -970,7 +980,7 @@ section {
   grid-gap: 10%;
 }
 
-.message {
+.message-form {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -1348,7 +1358,7 @@ section {
     margin-left: auto;
   }
 
-  .contact-us .message {
+  .contact-us .message-form {
     -ms-grid-columns: auto;
     grid-template-columns: auto;
     grid-gap: auto;
@@ -1363,9 +1373,9 @@ section {
     padding-left: 0;
   }
 
-  .contact-us .message [type="text"],
-  .contact-us .message [type="email"],
-  .contact-us .message textarea {
+  .contact-us .message-form [type="text"],
+  .contact-us .message-form [type="email"],
+  .contact-us .message-form textarea {
     padding: 0.5em;
   }
 }

@@ -44,11 +44,11 @@
       <form class="signup-form mt-md" id="free-trial-form">
         <h3 class="signup-form--heading">Try Your <ins>free </ins>Trial Today</h3>
         <fieldset id="free-trial-fs">
-          <input type="text" name="name" title="Enter only latin letters" placeholder="name">
-          <input type="email" name="email" placeholder="Email">
-          <input type="password" name="password" title="Password should contain at least 1 lowercase letter,1 uppercase letter, 1 digit and 1 special symbol and be 6+ characters" name="password" placeholder="Password">
+          <input type="text" data-form="name" title="Enter only latin letters" placeholder="name">
+          <input type="email" data-form="email" placeholder="Email">
+          <input type="password" data-form="password" title="Password should contain at least 1 lowercase letter,1 uppercase letter, 1 digit and 1 special symbol and be 6+ characters" placeholder="Password">
         </fieldset>
-        <input type="submit" value="Get Started">
+        <input type="submit" value="Get Started" class="submit-btn">
       </form>
     </section>
     <section class="social" id="social">
@@ -293,14 +293,14 @@
       <span class="small-heading">Lorem ipsum dolor sit amet, consectetur
         adipiscing elit.
       </span>
-      <form class="message" action="#" id="send-message-form">
+      <form class="message-form" id="send-message-form">
         <div class="message--fields" id="send-message">
-          <input type="text" name="name" placeholder="Name">
-          <input name="email">
-          <input name="password" type="password" title="should contain at least 1 lowercase letter,1 uppercase letter, 1 digit and 1 special symbol and be 6+ characters"
+          <input type="text" data-form="name" placeholder="Name">
+          <input data-form="email">
+          <input data-form="password" type="password" title="should contain at least 1 lowercase letter,1 uppercase letter, 1 digit and 1 special symbol and be 6+ characters"
             placeholder="Password">
         </div>
-        <textarea name="message" placeholder="Message" rows="9" id="textarea-message"></textarea>
+        <textarea placeholder="Message" rows="9" id="textarea-message"></textarea>
         <fieldset class="message--button">
           <input class="btn-primary" type="submit" value="Send Message" id="send-message-btn">
         </fieldset>
