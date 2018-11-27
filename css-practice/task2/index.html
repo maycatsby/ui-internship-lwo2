@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Exo:100,400,500" rel="stylesheet">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./css/media.css">
   <title>Template</title>
@@ -12,10 +13,16 @@
 
 <body>
   <div class="bg-container">
+    <video autoplay muted loop id="back-video">
+      <source src="/img/Beetle-Nut-Trees.mp4" type="video/mp4">
+    </video>
     <section class="header-info">
       <header>
         <h1>There is no other platforms for you as like </h1>
-        <img src="./img/play-icon.svg" alt="play">
+        <div class="player">
+          <i class="fas fa-play-circle none"></i>
+          <i class="fas fa-pause-circle"></i>
+        </div>
         <button>try now</button>
         <span class="mark">* No need to add cards details</span>
       </header>
@@ -129,7 +136,7 @@
       <input type="text" name="name" placeholder="FULL NAME" id="cf-name">
       <input type="email" name="email" placeholder="YOUR EMAIL" id="cf-email">
       <input type="password" name="password" placeholder="PASSWORD" id="cf-pass">
-      <button type="submit">TRY NOW</button>
+      <button type="submit" id="submit-button">TRY NOW</button>
     </form>
     <span class="sign">By Signing up you agree to our <a href="#">terms & Services.</a></span>
   </section>

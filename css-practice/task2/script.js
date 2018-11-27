@@ -33,6 +33,7 @@
 
     input.classList.add(addClass);
     input.classList.remove(removeClass);
+    disable();
   }
 
   function isValidValue(val, pattern) {
@@ -57,4 +58,32 @@
       });
     }
   }
+  
+  const buttonSub = document.getElementById('submit-button');
+
+  function disable() {
+    const inputs = [...document.forms['contact-form'].querySelectorAll('input')];
+    if (inputs.some(el => el.classList.contains('error') || el.value === '')) {
+      buttonSub.classList.add('disabled');
+    } else {
+      buttonSub.classList.remove('disabled');
+    }
+  }
+  disable();
 })();
+
+(() => {
+const videoState = document.querySelector('.player');
+const pauseVideo = document.querySelector('.fa-pause-circle');
+const playVideo = document.querySelector('.fa-play-circle');
+
+videoState.addEventListener('click', pauseVideoFunc);
+
+function pauseVideoFunc() {
+  const video = document.querySelector('video');
+  video.paused ? video.play() : video.pause();
+  pauseVideo.classList.toggle('none');
+  playVideo.classList.toggle('none');
+
+}
+})()

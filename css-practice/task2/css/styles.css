@@ -5,11 +5,12 @@
 
 body {
   font-family: "Exo", sans-serif;
-  font-size: 14px; }
+  font-size: 14px;
+  overflow-x: hidden; }
 
 h1 {
   font-size: 60px;
-  font-weight: 100;
+  font-weight: 200;
   line-height: 74px; }
 
 h2 {
@@ -20,9 +21,6 @@ h3 {
   font-size: 22px;
   font-weight: 400;
   margin-bottom: 8px; }
-
-.bg-container {
-  background-image: url(../img/header-bg.png); }
 
 .dots {
   color: #ff6d6d;
@@ -50,13 +48,32 @@ button {
   outline: none;
   cursor: pointer; }
 
-button:hover {
-  transition: 0.7s;
-  border: #ff6d6d;
-  background-color: red; }
-
 header {
-  padding: 0 20%; }
+  padding: 0 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+video {
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -100;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  opacity: 0.7; }
+
+.fas {
+  color: #323969;
+  font-size: 60px;
+  opacity: 0.6;
+  transition: .2s;
+  margin: 20px 0;
+  cursor: pointer; }
+
+.none {
+  display: none; }
 
 .red {
   font-size: 16px;
@@ -298,6 +315,10 @@ header {
   -webkit-box-shadow: 0px 0px 20px 3px #eb1e1e;
   -moz-box-shadow: 0px 0px 20px 3px #eb1e1e;
   box-shadow: 0px 0px 20px 3px #eb1e1e; }
+
+.disabled {
+  cursor: not-allowed !important;
+  opacity: 0.7; }
 
 input {
   font-size: 16px;
