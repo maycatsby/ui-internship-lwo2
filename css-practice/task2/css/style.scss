@@ -3,6 +3,24 @@ $color-button-dots: #ff6d6d;
 $color-input-border-and-social: #c8c8c8;
 $color-input: #f6f5f3;
 
+.disabled {
+  background-color: grey !important;
+  cursor: not-allowed !important;
+}
+
+.enabled {
+  background-color: $color-button-dots !important;
+  cursor: pointer !important;
+}
+
+.success {
+  outline: 3px solid green !important;
+}
+
+.error {
+  outline: 3px solid #ff6d6d !important;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -48,17 +66,18 @@ input {
 }
 
 button {
+  outline: none;
   appearance: none;
   letter-spacing: 2.4px;
   text-transform: uppercase;
   color: white;
   background-color: $color-button-dots;
+  cursor: pointer;
   border-radius: 3px;
   font-size: 16px;
   font-weight: 100;
   padding: 16px 50px;
   transition: 0.7s;
-  cursor: pointer;
 }
 
 header {
@@ -87,7 +106,7 @@ header {
 }
 
 .header-container {
-  background-image: url(../img/section-1-bg.png);
+  background-image: url(../img/header-bg.png);
   background-position: center;
   background-size: cover;
 }
@@ -167,7 +186,7 @@ header {
 }
 
 .design-container {
-  background-image: url(../img/section-4-bg.png);
+  background-image: url(../img/design-bg.png);
   background-position: -924px -100px;
   padding: 7% 4%;
   background-repeat: no-repeat;
@@ -204,7 +223,7 @@ header {
 }
 
 .founder-section-container {
-  background: url(../img/section-5-bg.png);
+  background: url(../img/founder-bg.png);
   padding: 108px 0 76px;
   position: relative;
   
@@ -315,7 +334,7 @@ header {
 
   img {
     display: block;
-    background-image: url(../img/section-7-30-days.png);
+    background-image: url(../img/30-days.png);
     position: absolute;
     top: -70px;
   }
@@ -363,7 +382,7 @@ input:focus::placeholder {
 }
 
 .contact-info {
-  background-image: url(../img/section-8-bg.png);
+  background-image: url(../img/contact-info-bg.png);
   background-repeat: no-repeat;
   background-position-x: 1086px;
   background-position-y: -803px;
