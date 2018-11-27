@@ -161,7 +161,7 @@ footer {
     font-weight: 400;
     padding: 4px 0 5px 15px;
     margin-bottom: 46px; }
-  .main-form button {
+  .main-form .button {
     width: 100%;
     color: #ffffff;
     font-size: 15px;
@@ -171,7 +171,7 @@ footer {
     background-color: #ff8b38;
     padding: 18px;
     position: absolute;
-    bottom: 0;
+    bottom: -47px;
     left: 0; }
 
 .under-banner-panel {
@@ -265,19 +265,20 @@ footer {
   border: 1px solid #c7c7c7;
   border-radius: 4px;
   width: 110px; }
-  .tabs .tab {
-    height: 110px;
-    background-color: #000000;
-    padding-top: 44px;
-    text-align: center;
-    border: 1px solid #c7c7c7;
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 700;
-    text-transform: uppercase; }
 
 .tab.active {
   background-color: #ff8b38; }
+
+.tab {
+  height: 110px;
+  background-color: #000000;
+  padding-top: 44px;
+  text-align: center;
+  border: 1px solid #c7c7c7;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase; }
 
 .tab-description {
   width: 43.5%;
