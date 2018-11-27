@@ -11,10 +11,19 @@
   </head>
   <body>
     <header class="header">
+      <div class="header__video">
+        <video muted loop>
+          <source src="video/motion.mp4" type="video/mp4" />
+          <source src="video/motion.ogv" type="video/ogv" />
+          <source src="video/motion.webm" type="video/webm" />
+          Your browser doesn't support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+      </div>
       <div class="container animated zoomIn">
         <h1 class="heading-main">There is no other platforms for you as like</h1>
         <div class="header__buttons d-flex">
-          <button class="btn-play">play</button>
+          <button class="btn-video play">play/pause</button>
           <button class="btn-try">Try now</button>
         </div>
         <span>* No need to add cards details</span>
@@ -133,21 +142,19 @@
           </div>
         </section>
         <section class="contact">
-          <div class="container">
-            <h2 class="section-heading white">
-              <span class="new-feature--c">new featues</span>
-              Over 1000 designers are using us ...
-            </h2>
-            <form class="contact__form" method="POST" action="#">
-                <input type="text" name="yourName" placeholder="full name" id="fullName">
-                <input type="email" name="yourEmail" placeholder="your email" 
-                id="emailAddress">
-                <input type="password" name="yourPass" placeholder="password" id="password">
-                <span class="form-trial">30 days free trial for all</span>
-                <input type="submit" value="try now" class="btn-try">
-            </form>
-            <p class="contact__terms">By Signing up you agree to our <a href="#">terms &amp; Services.</a></p>
-          </div>
+          <h2 class="section-heading white">
+            <span class="new-feature--c">new featues</span>
+            Over 1000 designers are using us ...
+          </h2>
+          <form class="contact__form" method="POST" action="#">
+            <input type="text" name="yourName" placeholder="full name" id="fullName">
+            <input type="email" name="yourEmail" placeholder="your email" 
+            id="emailAddress">
+            <input type="password" name="yourPass" placeholder="password" id="password">
+            <span class="form-trial">30 days free trial for all</span>
+            <input type="submit" value="try now" class="btn-try">
+          </form>
+          <p class="contact__terms">By Signing up you agree to our <a href="#">terms &amp; Services.</a></p>
         </div>
       </section>
     </main>
@@ -186,14 +193,15 @@
             </button>
           </label>
           <div class="social-medias">
-              <i class="fab fa-dribbble"></i>
-              <i class="fab fa-facebook-f"></i>
-              <i class="fab fa-google-plus-g"></i>
-              <i class="fab fa-twitter"></i>
-            </div>
+            <i class="fab fa-dribbble"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-google-plus-g"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
         </div>
       </nav>
       <img src="img/footer-shape.png" class="footer__triangle" />
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
