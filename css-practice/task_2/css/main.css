@@ -146,6 +146,7 @@ header {
     font-family: "Open Sans";
     font-size: 20px;
     font-weight: 700;
+    text-transform: uppercase;
     letter-spacing: .8px;
     color: #ff8b38; }
 
@@ -165,11 +166,18 @@ input::-webkit-input-placeholder {
   align-items: center; }
 
 .form-input-margin {
+  position: relative;
   width: 80%;
   height: 26px;
   margin: 9% 0 4% 0;
   border-bottom: 1px solid #d6d6d6;
   color: #bdbdbd;
+  font-family: "Open Sans";
+  font-size: 14px; }
+
+.hint {
+  text-align: center;
+  color: #ff8b38;
   font-family: "Open Sans";
   font-size: 14px; }
 

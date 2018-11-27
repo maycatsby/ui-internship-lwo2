@@ -1,86 +1,80 @@
 const featureContentChange = () => {
-  const elem1 = document.querySelector('#features-1');
-  const elem2 = document.querySelector('#features-2');
-  const elem3 = document.querySelector('#features-3');
-  const btn1 = document.querySelector('#but-1');
-  const btn2 = document.querySelector('#but-2');
-  const btn3 = document.querySelector('#but-3');
-  const elemArr = [elem1, elem2, elem3];
-  const butArr = [btn1, btn2, btn3];
+  const featuresBlock1 = document.querySelector('#features-1');
+  const featuresBlock2 = document.querySelector('#features-2');
+  const featuresBlock3 = document.querySelector('#features-3');
+  const tabButton1 = document.querySelector('#tab-Button1');
+  const tabButton2 = document.querySelector('#tab-Button2');
+  const tabButton3 = document.querySelector('#tab-Button3');
+  const featureBlockArr = [featuresBlock1, featuresBlock2, featuresBlock3];
+  const tabButtonArr = [tabButton1, tabButton2, tabButton3];
   const hideElems = () => {
-    elemArr.forEach(element => {
+    featureBlockArr.forEach(element => {
       element.style.display = 'none';
     });
   }
   const removeClassActive = () => {
-    butArr.forEach(element => {
+    tabButtonArr.forEach(element => {
       element.classList.remove('tab-active');
     });
   }
   const showElems = (elem) => {
     elem.style.display = 'block';
     elem.style.animation = 'opacityBorn 3s';
-
   }
-  btn1.onclick = () => {
+  tabButton1.onclick = () => {
     hideElems();
-    showElems(elem1);
+    showElems(featuresBlock1);
     removeClassActive();
-    btn1.classList.add('tab-active');
+    tabButton1.classList.add('tab-active');
   }
-  btn2.onclick = () => {
+  tabButton2.onclick = () => {
     hideElems();
-    showElems(elem2);
+    showElems(featuresBlock2);
     removeClassActive();
-    btn2.classList.add('tab-active');
+    tabButton2.classList.add('tab-active');
   }
-  btn3.onclick = () => {
+  tabButton3.onclick = () => {
     hideElems();
-    showElems(elem3);
+    showElems(featuresBlock3);
     removeClassActive();
-    btn3.classList.add('tab-active');
+    tabButton3.classList.add('tab-active');
   }
 }
 featureContentChange();
 
 const formValidator = () => {
-  const nameInput = document.querySelector('#nameInput');
-  const emailInput = document.querySelector('#emailInput');
-  const passwordInput = document.querySelector('#passwordInput');
-  const nameInputBottom = document.querySelector('#nameInputBottom');
-  const emailInputBottom = document.querySelector('#emailInputBottom');
-  const subjectInputBottom = document.querySelector('#subjectInputBottom');
-  const regexName = /^[a-zA-Z ]{2,25}$/;
-  const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const regexPassword = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+-]).{6,16}/;
-  const regexSubject = /.{0,30}$/;
   const checkInput = (reg, element) => {
     if (reg.test(element.value)) {
       element.classList.add('input-green');
       element.classList.remove('input-red');
+      return true
     } else {
       element.classList.add('input-red');
       element.classList.remove('input-green');
+      return false
     }
   }
-  nameInput.onblur = () => {
-    checkInput(regexName, nameInput);
-  }
-  emailInput.onblur = () => {
-    checkInput(regexEmail, emailInput);
-  }
-  passwordInput.onblur = () => {
-    checkInput(regexPassword, passwordInput);
-  }
-  subjectInputBottom.onblur = () => {
-    checkInput(regexSubject, subjectInputBottom );
-  }
-  nameInputBottom.onblur = () => {
-    checkInput(regexName, nameInputBottom);
-  }
-  emailInputBottom.onblur = () => {
-    checkInput(regexEmail, emailInputBottom);
-  }
+  const forms = [...document.forms];
+  forms.forEach((el) => {
+    el.onclick = (e) => {
+      e.target.onblur = function () {
+        const currentPattern = new RegExp(this.getAttribute('pattern'));
+        if (checkInput(currentPattern, this) === false) {
+          const hintArr = [...document.getElementsByClassName('hint')];
+          const elHint = this.getAttribute('data-text');
+          hintArr.forEach(el => {
+            el.innerHTML = elHint;
+          })
+        }
+      }
+      e.target.onfocus = function () {
+        const hintArr = [...document.getElementsByClassName('hint')];
+        const elHint = this.getAttribute('data-text');
+        hintArr.forEach(el => {
+          el.innerHTML = elHint;
+        })
+      }
+    }
+  })
 }
-
 formValidator();
