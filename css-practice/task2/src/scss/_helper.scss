@@ -26,7 +26,7 @@
   display: inline-block;
   vertical-align: middle;
   color: $color-white;
-  font-family: $font-second;
+  font-family: $font-open_sans;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -51,7 +51,7 @@
   border-bottom: 1px solid rgba($color-black, .15);
 
   &:focus {
-    background-color: #ffffcc;
+    background-color: $color-focus;
     outline: 1px solid $color-grey;
   }
 }
@@ -65,7 +65,7 @@
   border-bottom: 1px solid rgba($color-black, 0.15);
   
   &:focus {
-    background-color: #ffffcc;
+    background-color: $color-focus;
     outline: 1px solid $color-grey;
   }
 }
