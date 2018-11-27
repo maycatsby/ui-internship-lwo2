@@ -1,9 +1,6 @@
 /* global document, window, innerWidth */
 
-const video = document.querySelector('video');
-const playVideo = document.querySelector('.video-player');
-const continueVideo = document.querySelector('.fa-play-circle');
-const pauseVideo = document.querySelector('.fa-pause-circle');
+/* Code By Taras */
 const support = document.querySelector('.support h3');
 const about = document.querySelector('.about_us h3');
 const dropdownSupp = document.querySelector('.support ul');
@@ -16,19 +13,6 @@ const hideEl = (el) => {
 const showEl = (el) => {
   el.classList.remove(dNone);
 };
-video.pause();
-playVideo.onclick = () => {
-  if (video.paused) {
-    hideEl(continueVideo);
-    showEl(pauseVideo);
-    video.play();
-  } else {
-    showEl(continueVideo);
-    hideEl(pauseVideo);
-    video.pause();
-  }
-};
-
 if (innerWidth <= width768) {
   hideEl(dropdownAbout);
   hideEl(dropdownSupp);
@@ -66,3 +50,63 @@ about.onmouseleave = (e) => {
     hideEl(dropdownAbout);
   }
 };
+
+
+/* Video */
+const video = document.querySelector('video');
+const playVideo = document.querySelector('.video-player');
+const continueVideo = document.querySelector('.fa-play-circle');
+const pauseVideo = document.querySelector('.fa-pause-circle');
+// playVideo.onclick = () => {
+//   if (video.paused) {
+//     hideEl(continueVideo);
+//     showEl(pauseVideo);
+//     video.play();
+//   } else {
+//     showEl(continueVideo);
+//     hideEl(pauseVideo);
+//     video.pause();
+//   }
+// };
+
+playVideo.onclick = () => {
+  if (video.paused) {
+    hideEl(continueVideo);
+    showEl(pauseVideo);
+    video.play();
+  } else {
+    showEl(continueVideo);
+    hideEl(pauseVideo);
+    video.pause();
+  }
+};
+
+
+/* Form Validation */
+(function() {
+  const form = Array.from(document.querySelectorAll('form'));
+  const button = document.querySelector('button');
+  form.forEach((el) => {
+    const inputs = Array.from(el.querySelectorAll('input'));
+    inputs.forEach(function(el) {
+      const currPattern = new RegExp(el.getAttribute('pattern'));
+      el.onkeyup = function() {
+        valid(currPattern, el);
+        if (inputs.every((el) => el.classList.contains('blur_success'))) {
+          button.classList.remove('btn_disable');
+        } else {
+          button.classList.add('btn_disable');
+        }
+      };
+    });
+  });
+  const valid = (reg, el) => {
+    if (reg.test(el.value)) {
+      el.classList.add('blur_success');
+      el.classList.remove('blur_error');
+    } else {
+      el.classList.add('blur_error');
+      el.classList.remove('blur_success');
+    }
+  };
+})();

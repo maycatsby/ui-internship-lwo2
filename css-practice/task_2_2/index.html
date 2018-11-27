@@ -15,7 +15,7 @@
 
   <header>
     <video autoplay muted loop id="myVideo">
-      <source src="./images/Mt_Baker.mp4" type="video/mp4">
+      <source src="./images/Clouds_Fly_By.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
 
@@ -23,8 +23,8 @@
       <h1>There is no other platforms for you as like </h1>
 
       <div class="video-player cursor-pointer">
-        <i class="fas fa-play-circle"></i>
-        <i class="fas fa-pause-circle disp-none"></i>
+        <i class="fas fa-play-circle disp-none"></i>
+        <i class="fas fa-pause-circle"></i>
       </div>
 
       <a href="#">TRY NOW</a>
@@ -136,14 +136,13 @@
     <div class="form">
       <h5 class="h5_big">NEW FEATURES</h5>
       <h3 class="h3_big">Over 1000 designers are using ...</h3>
-
-      <div class="inputs">
-        <input type="text" placeholder="FULL NAME" class="info_inp">
-        <input type="email" placeholder="YOUR EMAIL" class="info_inp">
-        <input type="password" placeholder="PASSWORD" class="info_inp">
+      <form method="POST" class="inputs">  
+        <input type="text" placeholder="FULL NAME" class="info_inp" pattern="^[a-zA-Z ]{2,25}$" required>
+        <input type="email" placeholder="YOUR EMAIL" class="info_inp" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
+        <input type="password" placeholder="PASSWORD" class="info_inp" pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+-]).{6,16}" required>
         <img src="./images/trial.png" alt="trial 30 days">
-        <input type="submit" value="TRY NOW" class="info_inp cursor-pointer">
-      </div>
+        <button type="submit" class="info_inp cursor-pointer btn_disable">TRY NOW</button>
+      </form>
 
       <h6>By Signing up you agree to our <span class="cursor-pointer">terms & Services.</span></h6>
     </div>

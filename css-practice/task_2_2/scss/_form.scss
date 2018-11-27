@@ -17,6 +17,7 @@
     position: relative;
 
     .info_inp {
+
       border: 1px solid $white_color;
       background-color: #464c77;
       border-radius: 3px;
@@ -25,7 +26,9 @@
       color: #f6f5f3;
       font-size: 16px;
       padding: 0 26px;
+      outline: none;
       box-sizing: border-box;
+      
       
       &::placeholder {
         color: #f6f5f3;
@@ -40,6 +43,20 @@
         height: 50px;
         padding: 0;
       }
+    }
+
+    .blur_success {
+      background-color: #464c77ff;
+      border: 1px solid green;
+    }
+    .blur_error {
+      background-color: #464c77ff;
+      border: 1px solid $red_color;
+    }
+
+    .btn_disable {
+      cursor: not-allowed;
+      opacity: 0.7;
     }
 
     img {

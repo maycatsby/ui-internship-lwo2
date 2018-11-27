@@ -113,7 +113,7 @@ header {
   flex-flow: row nowrap;
   width: 100%;
   height: 813px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
 }
@@ -489,6 +489,7 @@ header .container .small {
   color: #f6f5f3;
   font-size: 16px;
   padding: 0 26px;
+  outline: none;
   box-sizing: border-box;
 }
 .form .inputs .info_inp::placeholder {
@@ -502,6 +503,18 @@ header .container .small {
   width: 23%;
   height: 50px;
   padding: 0;
+}
+.form .inputs .blur_success {
+  background-color: #464c77ff;
+  border: 1px solid green;
+}
+.form .inputs .blur_error {
+  background-color: #464c77ff;
+  border: 1px solid #ff6d6d;
+}
+.form .inputs .btn_disable {
+  cursor: not-allowed;
+  opacity: 0.7;
 }
 .form .inputs img {
   position: absolute;
