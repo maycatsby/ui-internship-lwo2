@@ -3,6 +3,16 @@ $color-button-dots: #ff6d6d;
 $color-input-border-and-social: #c8c8c8;
 $color-input: #f6f5f3;
 
+video {
+  position: absolute; 
+  top: 0; left:0;
+  width: 100%; height: 100%; 
+  z-index: -1;
+  background-color: grey;
+}
+
+
+
 .disabled {
   background-color: grey !important;
   cursor: not-allowed !important;
@@ -87,6 +97,7 @@ header {
   padding: 224px 15% 15% 15%;
   
   img {
+    height: 60px;
     display: block;
     margin: 40px auto;
   }
@@ -106,7 +117,7 @@ header {
 }
 
 .header-container {
-  background-image: url(../img/header-bg.png);
+  position: relative;
   background-position: center;
   background-size: cover;
 }

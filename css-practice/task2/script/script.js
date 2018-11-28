@@ -5,7 +5,10 @@ const patterns = {
   name: /^[a-zA-Z]+$/,
   password: /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+-]).{6,20}/,
 };
+const videoEl = document.querySelector('video');
+const playButton = document.getElementById('play-button');
 
+playButton.addEventListener('click', videoToggle);
 trialSubmitForm.addEventListener('keyup', validate, true);
 trialSubmitForm.addEventListener('focus', validate, true);
 trialSubmitForm.addEventListener('keyup', validateForm.bind(null, 'free-trial-form'), true);
@@ -51,4 +54,12 @@ function validate(e) {
     e.target.classList.remove('success');
     e.target.classList.add('error');
   }
+}
+
+function videoToggle() {
+  if (videoEl.paused) {
+    videoEl.play();
+    return;
+  }
+  videoEl.pause();
 }
