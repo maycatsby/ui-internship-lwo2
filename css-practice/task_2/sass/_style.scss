@@ -14,7 +14,7 @@ button:hover {
 
 header {
     background: none;
-    padding-top: 135px;
+    padding-top: 96px;
     padding-bottom: 188px;
     position: relative;
     h1{
@@ -38,7 +38,7 @@ header {
         top: 0;
         z-index: -5;
         width: 100%;
-        height: 100%;
+        opacity: 0.5;
     } 
 }
 
@@ -137,6 +137,19 @@ a {
     background-position: center;
     margin-left: 40%;
     opacity: 0.5;
+    &:focus {
+        outline: none;
+      }
+    }
+.play {
+    background-image: url(../img/Polygon_1.png);
+}
+.pause {
+    background-image: url(../img/pause-icon-18-24.png);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    opacity: 0.3;
 }
 .intro {
     @include flexbox();
@@ -175,12 +188,12 @@ a {
     width: 39.5%;
     padding-top: 363px;
     padding-bottom: 361px;
-    background-color: $crossed-div-background-color;
+    background-color: rgba(237,237,237,0.4);
     background-image: url(../img/Rectangle_21_copy.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
-    z-index: +3;
+    z-index: -6;
 }
 
 .about {

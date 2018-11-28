@@ -12,15 +12,16 @@
 <body>
     <div class="container">
         <header>
-            <video autoplay src="video/Make-A-Wish.mp4" type="video/mp4">
+            <video id="myvid" muted loop src="video/Sunset-Lapse.mp4">
             </video>
             <h1>There is no other platforms for you as like </h1>
             <div class="user-actions">
-                <button class="play-mode"></button>
+                <button class="play-mode play" id="vidbutton"></button>
                 <button class="try-now">TRY NOW</button>
                 <h6>* No need to add cards details</h6>
             </div>
         </header>
+        <script src="video.js"></script>
         <main>
             <div class="intro">
                 <article>
@@ -127,12 +128,12 @@
                 <img src="img/ARROW.png" alt="arrow">
                 <p>30 days free trial for all.</p>
             </div>
-            <div class="feedback">
-                <input type="text" placeholder="FULL NAME">
-                <input type="text" placeholder="YOUR EMAIL">
-                <input type="password" placeholder="PASSWORD">
+            <form class="feedback" method="POST">
+                <input type="text" placeholder="FULL NAME" pattern="^[a-zA-Z ]{2,25}$"> 
+                <input type="email" placeholder="YOUR EMAIL" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+                <input type="password" placeholder="PASSWORD" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$">
                 <button class="try-now big">TRY NOW</button>
-            </div>
+            </form>
             <p>By Signing up you agree to our <a href="#">terms & Services.</a></p>
         </aside>
         <footer>
@@ -172,6 +173,7 @@
             </div>
         </footer>
     </div>
+    <script src="form.js"></script>
 </body>
 
 </html>
