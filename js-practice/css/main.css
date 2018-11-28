@@ -842,6 +842,14 @@ footer {
   border-color: #b03535;
   padding: 10px; }
 
+.blur-message {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+  display: none;
+  text-shadow: 0 0 10px black; }
+
 @media only screen and (max-width: 1024px) {
   /* Header */
   .top-bar .flex {
