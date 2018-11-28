@@ -1,0 +1,70 @@
+.panel {
+  
+  &-item {
+    box-shadow: 0 1px 1px rgba($color-dark, .05);
+    margin-bottom: 20px;
+
+    &+& {
+      margin-top: 5px;
+    }
+  }
+
+  &-heading {
+    border: 1px solid $color-light-2;
+    padding: .5rem;
+  }
+
+  &-title {
+    position: relative;
+    
+    & > a {
+      display: block;
+      color: inherit;
+      line-height: 4.5rem;
+      padding: 0 1rem;
+      cursor: pointer;
+    }
+    
+    .fas {
+      cursor: pointer;
+      z-index: -1;
+      
+      &.left {
+        position: relative;
+        margin-right: 15px;
+        color: $color-alt;
+        font-size: 3rem;
+        vertical-align: middle;
+      }
+
+      &.right {
+        position: absolute;
+        color: $color-grey-l1;
+        font-size: 2.4rem;
+        top: 50%;
+        right: 2%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &-collapse {
+    display: none;
+    visibility: hidden;
+
+    &.in {
+      display: block;
+      visibility: visible;
+    }
+  }
+
+  &-body {
+    border: 1px solid #e5e5e5;
+    border-top: 0;
+
+    & > p {
+      font-style: italic;
+      padding: 1.6rem;
+    }
+  }
+}
