@@ -2,16 +2,8 @@
 
   body {
 
-    .top-navigation {
+    header {
       display: none;
-    }
-
-    .top-menu {
-      @include flex-direction(column);
-    }
-
-    .menu-item {
-      padding: 7px 0;
     }
 
     .container {

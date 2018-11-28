@@ -7,7 +7,7 @@
   navigation.addEventListener('click', e => addBorder(e.target.id));
 
   function addBackground() {
-    if(document.documentElement.scrollTop > 900) {
+    if(document.documentElement.scrollTop > 0) {
       head.classList.add('add-background');
     } else {
       head.classList.remove('add-background');
