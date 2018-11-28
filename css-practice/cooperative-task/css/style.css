@@ -65,10 +65,6 @@ button {
   text-align: center;
 }
 
-.mt-30 {
-  margin-top: 30px;
-}
-
 .white {
   color: #fff;
 }
@@ -86,7 +82,8 @@ button {
 
 /* typography */
 .heading-main {
-  max-width: 50%;
+  max-width: 720px;
+  width: 65vw;
   margin: 0 auto;
   font-size: 6rem;
   line-height: 7.5rem;
@@ -200,7 +197,8 @@ button {
 /* header section */
 .header {
   text-align: center;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 750px;
   background: url(../img/header-bg.png) no-repeat center / cover;
   background-attachment: fixed;
   position: relative;
@@ -208,7 +206,7 @@ button {
 
 .header > .container {
   position: relative;
-  padding-top: 20vh;
+  padding-top: 25%;
   z-index: 3;
 }
 
@@ -227,14 +225,16 @@ button {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
-  max-height: 100vh;
-  overflow-y: hidden;
+  height: 100vh;
+  min-height: 750px;
+  width: 100%;
+  overflow: hidden;
   z-index: 1;
 }
 
 .header__video > video {
-  max-width: 100%; 
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .video-overlay {
@@ -249,27 +249,32 @@ button {
 
 /* info section */
 .info {
-  display: flex;
-  min-height: 550px;
   background: #fff;
+  position: relative;
+  display: flex;
 }
 
 .info__content {
   flex-basis: 60%;
   margin-right: auto;
-  padding: 8em;
+  padding: 8em 7.5%;
 }
 
 .info__picture {
   display: flex;
-  margin-top: auto;
   background-color: #ececec;
+  flex: 1;
+  max-width: 570px;
+  width: 40%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
   align-items: flex-end;
-  min-height: 720px;
 }
 
 .info__picture > img {
-  max-width: 570px;
+  max-width: 100%;
 }
 
 /* features section */
@@ -282,6 +287,7 @@ button {
 .features__cards {
   display: flex;
   justify-content: space-around;
+  margin-top: 30px;
   margin-right: 10%;
   margin-left: 10%;
 }
@@ -298,14 +304,19 @@ button {
 
 /* responsive section */
 .responsive {
+  display: flex;
   padding: 5em 0 8em;
   background-color: #fff;
   background-image: url(../img/triangle-2.png);
   background-repeat: no-repeat;
   background-position: 0 -85px;
-  background-attachment: fixed;
-  display: flex;
   justify-content: space-around;
+}
+
+.responsive__notebook {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .responsive__content {
@@ -365,7 +376,7 @@ button {
 .partners__list {
   min-height: 100px;
   margin-top: 5em;
-  padding: 0 10%;
+  padding: 0 5%;
 }
 
 .partner-logo {
@@ -439,13 +450,11 @@ button {
 .contact__form {
   padding: 3.5em 0;
   position: relative;
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.contact__form > [type="text"], 
-.contact__form > [type="email"], 
-.contact__form > [type="password"] {
+.contact__form > input {
   height: 48px;
   margin-right: 30px;
   font: inherit;
@@ -459,12 +468,22 @@ button {
   color: #fff;
 }
 
-.contact__form > input {
+.contact__form > input,
+.contact__form > fieldset {
   width: 260px;
 }
 
 .contact__form > input::placeholder {
 	color: inherit;
+}
+
+.contact__form > fieldset {
+  display: inline-block;
+  border: none;
+}
+
+.contact__form > fieldset > .btn-try {
+  width: 100%;
 }
 
 .form-trial {
