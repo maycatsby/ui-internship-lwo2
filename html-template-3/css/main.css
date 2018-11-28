@@ -147,8 +147,9 @@
       padding: 20px; }
   body .meet-our-team {
     padding: 0; }
-  body .labels img {
-    width: 100%; }
+  body .label-items {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
   body .some-of-our-work {
     padding: 10px 0; }
   body .grid-section {
@@ -323,8 +324,9 @@
       padding-bottom: 40px; }
     body .meet-our-team {
       padding: 0; }
-    body .labels img {
-      width: 100%; }
+    body .label-items {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
     body .some-of-our-work {
       padding: 0; }
     body .grid-section {
@@ -402,7 +404,30 @@ body {
   max-width: 1920px; }
 
 main {
-  background-image: url(../pics/backgrounds/main-background-picture.png); }
+  background-image: url(../pics/backgrounds/main-background-picture.png);
+  z-index: 1;
+  position: relative; }
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  right: 0;
+  left: 0; }
+  header .small-logo {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    padding: 17px 0;
+    cursor: pointer;
+    text-decoration: none; }
+    header .small-logo:hover {
+      color: #fce38a; }
 
 .font {
   font-family: "Roboto";
@@ -454,18 +479,18 @@ main {
   background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
   background-color: #fce38a;
   opacity: 0.9; }
-  .second-back header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-between;
-    -ms-flex-pack: space-between;
-    justify-content: space-between; }
-    .second-back header .small-logo {
-      font-size: 30px;
-      font-weight: bold;
-      margin: 0;
-      padding: 17px 0; }
+
+.add-background {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(252, 227, 138, 0.9)), to(rgba(243, 129, 129, 0.9)));
+  background-image: -webkit-linear-gradient(bottom, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+  background-image: -o-linear-gradient(bottom, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+  background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+  padding: 0 120px; }
+
+.add-border {
+  color: #fce38a;
+  border-bottom: 3px solid #fce38a;
+  padding-bottom: 10px; }
 
 .main-font {
   color: #ffffff;
@@ -479,7 +504,9 @@ main {
   -webkit-box-pack: space-around;
   -ms-flex-pack: space-around;
   justify-content: space-around;
-  padding-top: 36px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-right: -29px; }
   .top-navigation .top-menu {
     display: -webkit-box;
@@ -494,22 +521,13 @@ main {
     .top-navigation .top-menu .menu-item {
       padding: 0 27px;
       cursor: pointer; }
-    .top-navigation .top-menu .hovered {
+    .top-navigation .top-menu .menu-link {
       text-decoration: none;
       color: #ffffff; }
-    .top-navigation .top-menu .hovered:hover {
-      color: #fce38a;
-      border-bottom: 3px solid #fce38a;
-      padding-bottom: 7px; }
-    .top-navigation .top-menu .hovered:visited {
-      color: #ffffff;
-      text-decoration: none; }
+      .top-navigation .top-menu .menu-link:hover {
+        color: #fce38a; }
     .top-navigation .top-menu .fa {
       font-size: 16px; }
-      .top-navigation .top-menu .fa:hover {
-        color: #fce38a; }
-    .top-navigation .top-menu .about:hover, .top-navigation .top-menu .about:focus-within {
-      border-bottom: 3px solid #fce38a; }
 
 .pad {
   padding-top: 138px; }
@@ -818,6 +836,22 @@ main {
 .labels {
   background-color: #f8f8f8;
   padding: 51px 0; }
+
+.label-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around; }
+  .label-items img:hover {
+    animation: 1s scale; }
+
+@keyframes scale {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.2); } }
 
 .some-of-our-work {
   padding: 105px 0; }

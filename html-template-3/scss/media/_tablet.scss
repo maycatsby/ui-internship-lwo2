@@ -154,11 +154,8 @@
       padding: 0;
     }
 
-    .labels {
-      
-      img {
-        width: 100%;
-      }
+    .label-items {
+      @include flex-wrap(wrap);
     }
 
     .some-of-our-work {

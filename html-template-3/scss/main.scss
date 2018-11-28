@@ -20,6 +20,31 @@ body {
 
 main {
   background-image: url(../pics/backgrounds/main-background-picture.png);
+  z-index: 1;
+  position: relative;
+}
+
+header {
+  @include flex;
+  @include justify-content(space-between);
+
+  position: fixed;
+  width: 100%;
+  right: 0;
+  left: 0;
+
+  .small-logo {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    padding: 17px 0;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      color: $background-main;
+    }
+  }
 }
 
 .font {
@@ -70,18 +95,18 @@ main {
 
   background-color: $background-main;
   opacity: 0.9;
+}
 
-  header {
-    @include flex;
-    @include justify-content(space-between);
+.add-background {
+  @include background-image-main;
 
-    .small-logo {
-      font-size: 30px;
-      font-weight: bold;
-      margin: 0;
-      padding: 17px 0;
-    }
-  }
+  padding: 0 120px;
+}
+
+.add-border {
+  color: $background-main;
+  border-bottom: 3px solid $background-main;
+  padding-bottom: 10px;
 }
 
 .main-font {
@@ -93,8 +118,8 @@ main {
 .top-navigation {
   @include flex;
   @include justify-content(space-around);
+  @include align-items(center);
 
-  padding-top: 36px;
   margin-right: -29px;
 
   .top-menu {
@@ -110,31 +135,17 @@ main {
       cursor: pointer;
     }
 
-    .hovered {
+    .menu-link {
       text-decoration: none;
       color: $white;
-    }
 
-    .hovered:hover {
-      color: $background-main;
-      border-bottom: 3px solid $background-main;
-      padding-bottom: 7px;
-    } 
-
-    .hovered:visited {
-      color: $white;
-      text-decoration: none;
-    }
-
-    .fa {
-      font-size: 16px;
       &:hover {
         color: $background-main;
       }
     }
 
-    .about:hover, .about:focus-within {
-      border-bottom: 3px solid $background-main;
+    .fa {
+      font-size: 16px;
     }
   }
 }
@@ -481,6 +492,24 @@ main {
 .labels {
   background-color: $quote-background;
   padding: 51px 0;
+}
+
+.label-items {
+  @include flex;
+  @include justify-content(space-around);
+
+  img:hover {
+    animation: 1s scale;
+  }
+  
+  @keyframes scale {
+    from {
+      transform: scale(1.0);
+    }
+    to {
+      transform: scale(1.2);
+    }
+  }
 }
 
 .some-of-our-work {
