@@ -342,9 +342,9 @@ input:disabled {
 /* founders section */
 .founders {
   background-color: #000;
-  background: url(../img/founders-bg.jpg) no-repeat center / cover;
+  background: url(../img/founders-bg.jpg) center / contain;
+  background-attachment: fixed;
   color: #fff;
-  min-height: 648px;
   padding: 7em 0 4.5em;
 }
 
@@ -353,13 +353,12 @@ input:disabled {
   width: 90%;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
 }
 
 .founder {
   text-align: center;
-  width: 25%;
+  flex-basis: 25%;
 }
 
 .founder > figure {
@@ -444,10 +443,12 @@ input:disabled {
 
 .browser img {
   display: block;
+  margin: 0 auto;
+  margin-top: 30px;
 }
 
 .browser > .container {
-  max-width: 57%;
+  width: 57%;
 }
 
 .browser > p {
@@ -544,14 +545,6 @@ input:disabled {
   z-index: 1;
 }
 
-.footer h3 {
-  color: #282828;
-}
-
-.footer h3 > span {
-  display: inline;
-}
-
 .footer__triangle {
   position: absolute;
   top: 0;
@@ -563,7 +556,14 @@ input:disabled {
   display: flex;
   width: 80%;
   margin: 0 auto;
-  justify-content: space-between
+  justify-content: space-between;
+}
+
+.footer__nav h3 {
+  color: #282828;
+  font-size: 2.2rem;
+  line-height: 5rem;
+  font-weight: 500;
 }
 
 .footer__newsletter,
@@ -583,30 +583,34 @@ input:disabled {
   margin-bottom: 0.5em;
 }
 
-.footer__support, {
-  flex-basis: 125px;
+.footer__links {
+  display: flex;
+  flex-basis: 30%;
+  padding-right: 2rem;
+  justify-content: space-evenly;
 }
 
-.footer__support > h3,
-.footer__newsletter > h3 {
-  font-size: 2.2rem;
-  line-height: 5rem;
-  font-weight: 500;
-}
-
-.footer__support a {
+.footer__links a {
   font-size: 1.4rem;
   line-height: 2;
   font-weight: 400;
 }
 
-.footer__support a:hover,
-.footer__support a:focus {
+.footer__links a:hover,
+.footer__links a:focus {
   text-decoration: underline;
 }
 
+.footer__links h3 > span {
+  display: inline;
+}
+
+.footer__support {
+  margin-right: 10%;
+}
+
 .footer__newsletter {
-  margin-right: 15%;
+  margin-right: auto;
 }
 
 .footer__newsletter > fieldset {
@@ -617,13 +621,14 @@ input:disabled {
 }
 
 .footer__newsletter [type="email"] {
-  width: 220px;
+  width: calc(100% - 50px);
   font: inherit;
   height: 48px;
   line-height: 2em;
   text-transform: uppercase;
   padding: 0 1.5em;
   border: 1px solid #b8b8bf;
+  border-right: 0;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   color: rgba(0, 0, 0, 0.4);
@@ -637,6 +642,8 @@ input:disabled {
   font-size: 2.8rem;
   color: rgba(255, 255, 255, 0.7);
   background: #ff6d6d;
+  border: 1px solid #b8b8bf;
+  border-left: 0;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   text-align: center;
