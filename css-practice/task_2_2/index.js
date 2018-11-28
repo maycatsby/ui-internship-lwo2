@@ -68,6 +68,12 @@ const pauseVideo = document.querySelector('.fa-pause-circle');
 //     video.pause();
 //   }
 // };
+// .disp-none {
+//   display: none;
+// }
+// .disp-block {
+//   display: block;
+// }
 
 playVideo.onclick = () => {
   if (video.paused) {
@@ -86,11 +92,18 @@ playVideo.onclick = () => {
 (function() {
   const form = Array.from(document.querySelectorAll('form'));
   const button = document.querySelector('button');
+  const hint = document.getElementById('hint');
   form.forEach((el) => {
     const inputs = Array.from(el.querySelectorAll('input'));
     inputs.forEach(function(el) {
       const currPattern = new RegExp(el.getAttribute('pattern'));
       el.onkeyup = function() {
+        const elHint = this.getAttribute('data-text');
+        if (el.classList.contains('blur_error')) {
+          hint.innerHTML = elHint;
+        } else {
+          hint.innerHTML = '';
+        }
         valid(currPattern, el);
         if (inputs.every((el) => el.classList.contains('blur_success'))) {
           button.classList.remove('btn_disable');
@@ -104,9 +117,13 @@ playVideo.onclick = () => {
     if (reg.test(el.value)) {
       el.classList.add('blur_success');
       el.classList.remove('blur_error');
+      el.classList.add('valid');
+      el.classList.remove('invalid');
     } else {
       el.classList.add('blur_error');
       el.classList.remove('blur_success');
+      el.classList.add('invalid');
+      el.classList.remove('valid');
     }
   };
 })();

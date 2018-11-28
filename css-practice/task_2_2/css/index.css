@@ -479,6 +479,7 @@ header .container .small {
   margin-top: 94px;
   justify-content: space-between;
   position: relative;
+  flex-wrap: wrap;
 }
 .form .inputs .info_inp {
   border: 1px solid #fff;
@@ -503,6 +504,18 @@ header .container .small {
   width: 23%;
   height: 50px;
   padding: 0;
+}
+.form .inputs .valid {
+  background: url(../images/check-mark.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 150px 15px;
+}
+.form .inputs .invalid {
+  background: url(../images/warning-sign.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 160px 13px;
 }
 .form .inputs .blur_success {
   background-color: #464c77ff;
@@ -533,6 +546,11 @@ header .container .small {
 }
 .form h6 span {
   text-decoration: underline;
+}
+
+#hint {
+  color: #fb8686;
+  font-size: 12px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -585,6 +603,7 @@ footer .contact_info h2 {
 }
 footer .contact_info h3 {
   color: #282828;
+  cursor: pointer;
 }
 footer .contact_info ul {
   line-height: 29px;

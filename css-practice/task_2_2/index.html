@@ -133,16 +133,17 @@
       </div>
     </div>
 
-    <div class="form">
+    <div class="form" novalid>
       <h5 class="h5_big">NEW FEATURES</h5>
       <h3 class="h3_big">Over 1000 designers are using ...</h3>
       <form method="POST" class="inputs">  
-        <input type="text" placeholder="FULL NAME" class="info_inp" pattern="^[a-zA-Z ]{2,25}$" required>
-        <input type="email" placeholder="YOUR EMAIL" class="info_inp" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
-        <input type="password" placeholder="PASSWORD" class="info_inp" pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+-]).{6,16}" required>
+        <input type="text" data-text="Enter valid: *Just Latin Characters" placeholder="FULL NAME" class="info_inp" pattern="^[a-zA-Z ]{2,25}$" required>
+        <input type="email" data-text="Enter valid: *must have @ characters" placeholder="YOUR EMAIL" class="info_inp" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
+        <input type="password" data-text="Enter valid: *latin letters, 1 capital letter, 1 lower case, 1 digit, 1 special character" placeholder="PASSWORD" class="info_inp" pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+-]).{6,16}" required>
         <img src="./images/trial.png" alt="trial 30 days">
         <button type="submit" class="info_inp cursor-pointer btn_disable">TRY NOW</button>
       </form>
+      <span id="hint"></span>
 
       <h6>By Signing up you agree to our <span class="cursor-pointer">terms & Services.</span></h6>
     </div>
