@@ -20,6 +20,10 @@
 	width: 100%;
 	background: $color_2;
 }
+.tab-active {
+	background: $color_3;
+	opacity: 1;
+}
 .tab-hover {
 	&:hover {
 		background: $color_3;
@@ -47,6 +51,24 @@
 }
 .features-top-center {
 	width: 43%;
+}
+#features-1{
+	display: block;
+}
+#features-2{
+	display: none;
+}
+#features-3{
+	display: none;
+}
+
+@keyframes opacityBorn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .features-top-right {
 	width: 29%;
