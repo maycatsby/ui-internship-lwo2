@@ -467,6 +467,12 @@ aside {
         background-color: rgba(246,245,243, 0.05);
         margin-left: 29px;
         padding-left: 25px;
+        color: $section-background-color;
+        font-family: $font-main;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 75px;
+        letter-spacing: 0.64px;
         &::placeholder {
             color: $section-background-color;
             font-family: $font-main;
@@ -607,7 +613,11 @@ footer {
         z-index: 3;
     }
 }
-
+.disabled {
+    cursor: not-allowed; 
+    background-color: gray;
+    opacity: 0.7;
+}
 .follow-us {
     margin-top: 30px;
     margin-left: 10px;
