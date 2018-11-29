@@ -24,12 +24,6 @@
   const inputsArr = [...contactForm.elements].filter((el) => {
     return el.type === 'text' || el.type === 'email' || el.type === 'password';
   });
-  /* input invalid messages
-  const isEmptyMsg = 'Please fill out this field!';
-  const notNameMsg = 'All lowercase letters & minlength 3';
-  const notEmailMsg = 'Write correct email adress';
-  const notPassMsg = 'Password didn\'t match';
-  */
 
   const checkUserInput = (input) => {
     const value = input.value;
@@ -58,8 +52,4 @@
   };
 
   contactForm.addEventListener('input', submitSwitch, true);
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Success!!!');
-  });
 })();
