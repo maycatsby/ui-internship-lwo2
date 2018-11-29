@@ -5,6 +5,18 @@ sans-serif;
 $font-fancy-stack: 'Kaushan Script',
 cursive;
 
+.height-0 {
+  overflow: hidden;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  height: 0 !important;
+  transition: 0.5s ease-out;
+}
+.height-auto {
+  height: auto;
+  transition: 0.5s ease-out;
+}
+
 @mixin section() {
   padding: 104px 0 70px 0;
   text-align: center;
@@ -27,7 +39,7 @@ cursive;
 
 @mixin quote-common() {
   display: grid;
-  grid-template-columns: 5% 21.5% 68.5% 5%;
+  grid-template-columns: 5% 90% 5%;
   width: 83%;
   max-width: 1200px;
 
@@ -47,10 +59,11 @@ cursive;
     font-family: $font-paragraph-stack;
     font-weight: 300;
     font-style: italic;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
   }
 
   i {
+    z-index: 1;
     text-align: center;
     font-size: 36px;
     color: #cccccc;
@@ -59,7 +72,9 @@ cursive;
   }
 
   &-text {
+    padding: 6px 0 0 60px;
     text-align: unset;
+    overflow: unset;
   }
 }
 
@@ -68,6 +83,10 @@ cursive;
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -122,7 +141,7 @@ nav a {
   &:visited {
     color: white;
 
-    &:hover {
+    &:hover, &:active {
       color: #fce38a;
     }
   }
@@ -173,10 +192,16 @@ nav a:last-child {
 }
 
 .nav-container {
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  padding: 0 13% 24px 13%;
+  background-color: rgba(243,129,129,0.8);
   text-transform: uppercase;
   font-family: $font-header-stack;
   justify-content: space-between;
-  width: 100%;
 }
 
 .nav-side {
@@ -331,7 +356,7 @@ nav a:last-child {
 
 .service-items-container {
   flex-wrap: wrap;
-  justify-content: space-between;
+  // justify-content: space-between;
   text-align: left;
 
   h3,
@@ -492,7 +517,38 @@ nav a:last-child {
       margin: 42px;
     }
   }
+}
 
+.carousel-container {
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+}
+
+.carousel-item {
+  &-1,&-2,&-3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.active-carou-item{
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.prev-carou-item {
+  z-index: -1;
+  transform: translate(-100%, 0) !important;
+  transition: 0.5s;
+}
+
+.next-carou-item {
+  z-index: -1;
+  transition: 0.5s;
+  transform: translate(100%, 0) !important;
 }
 
 .meet-our-team {
