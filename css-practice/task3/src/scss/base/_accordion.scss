@@ -4,6 +4,18 @@
     box-shadow: 0 1px 1px rgba($color-dark, .05);
     margin-bottom: 20px;
 
+    &.open > .panel-collapse {
+      opacity: 1;
+      max-height: 250px;
+      visibility: visible;
+    }
+
+    &.close > .panel-collapse {
+      opacity: 0;
+      max-height: 0;
+      visibility: hidden;
+    }
+    
     &+& {
       margin-top: 5px;
     }
@@ -49,13 +61,7 @@
   }
 
   &-collapse {
-    display: none;
-    visibility: hidden;
-
-    &.in {
-      display: block;
-      visibility: visible;
-    }
+    transition: all .5s ease;
   }
 
   &-body {
@@ -66,5 +72,14 @@
       font-style: italic;
       padding: 1.6rem;
     }
+  }
+}
+
+.accordion-pic {
+  display: none;
+
+  &.in {
+    display: block;
+    animation: opacity-transition 1s ease-in;
   }
 }
