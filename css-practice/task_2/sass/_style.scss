@@ -151,6 +151,7 @@ footer {
     padding: 18px;
     position: absolute;
     bottom: 0;
+    left: 0;
   }
 }
 .under-banner-panel {
@@ -222,7 +223,11 @@ footer {
 .tab.active {
   background-color: $orangeColor;
 }
+.tab-description.active {
+  display: block;
+}
 .tab-description {
+  display: none;
   width: 43.5%;
   padding-left: 2px;
   padding-top: 2px;
@@ -512,7 +517,7 @@ footer {
 }
 .feedbacks {
   @include flex-row-spacebetween();
-  @include flex-wrap(wrap) ;
+  @include flex-wrap(wrap);
   margin-top: 54px;
   margin-bottom: 98px;
 }
@@ -620,6 +625,7 @@ p {
 }
 .contact-form form {
   @include flex-row-spacebetween();
+  @include flex-wrap(wrap);
   margin-top: 84px;
 }
 .left-column-form {
@@ -659,8 +665,7 @@ p {
   font-weight: 400;
   font-size: 15px;
   letter-spacing: 0.9px;
-  margin-top: 2px;
-  margin-bottom: 82px;
+  margin: 2px auto 82px;
 }
 .footer-icons {
   color: $socialIconsColor;
@@ -676,4 +681,28 @@ p {
   font-size: 12px;
   font-weight: 400;
   padding-bottom: 12px;
+}
+.tab-description {
+    animation: fadeEffect 2s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+textarea.invalid, input.invalid {
+  border-bottom: 1px solid #ff0000;
+  background-image: url(../img/invalid-icon.png);
+  background-size: 20px;
+  background-position: right top;
+  background-repeat: no-repeat;
+  -moz-box-shadow: none;
+}
+textarea.valid, input.valid {
+  border-bottom: 1px solid #7dbb46;
+  background-image: url(../img/valid-icon.png);
+  background-size: 20px;
+  background-position: right top;
+  background-repeat: no-repeat;
+  -moz-box-shadow: none;
 }
