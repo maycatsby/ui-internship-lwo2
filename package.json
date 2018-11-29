@@ -6,8 +6,9 @@
     "test": "jest",
     "lint": "./node_modules/.bin/eslint tasks/**/*.js",
     "tdd": "jest --watch",
-    "watch:sass": "node-sass -w html-template-3/scss/ -o html-template-3/css/",
-    "compile:sass": "node-sass html-template-3/scss/ -o html-template-3/css/"
+    "watch:sass": "node-sass -w template-sass/scss/ -o template-sass/css/",
+    "compile:sass": "node-sass template-sass/scss/ -o template-sass/css/"
+
   },
   "husky": {
     "hooks": {
@@ -30,4 +31,5 @@
   "dependencies": {
     "sass": "^1.14.3"
   }
+
 }
