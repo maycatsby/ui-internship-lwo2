@@ -78,8 +78,9 @@
   box-shadow: 10px 10px 0px 1px rgba(149,225,211,1);
 }
 
-@mixin transition($val1) {
-  -webkit-transition: $val1;
-  -o-transition: $val1;
-  transition: $val1;
+@mixin transform-origin($val) {
+  -webkit-transform-origin: $val;
+  -o-transform-origin: $val;
+  -ms-transform-origin: $val;
+  transform-origin: $val;
 }

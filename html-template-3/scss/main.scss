@@ -32,6 +32,7 @@ header {
   width: 100%;
   right: 0;
   left: 0;
+  padding-top: 10px;
 
   .small-logo {
     font-size: 30px;
@@ -144,14 +145,14 @@ header {
       }
     }
 
-    .fa {
+    .fas {
       font-size: 16px;
     }
   }
 }
 
 .pad {
-  padding-top: 138px;
+  padding-top: 209px;
 }
 
 .main-subheader {
@@ -397,24 +398,62 @@ header {
   list-style-type: none;
 
   .drop-item {
-    @include grid;
-    @include grid-template-columns(0.05fr 0.95fr);
-    @include align-items(center);
+    @include flex;
+    @include flex-direction(column);
   
     padding: 10px 15px;
     margin-bottom: 10px;
     border: 1px solid $font;
+    cursor: pointer;
     
     .drop-icon {
       padding-right: 12px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
 
 .drop-item-header {
+  @include flex;
+  @include align-items(center);
+
   color: $headers;
   text-transform: uppercase;
   font-weight: 400;
+}
+
+.close .drop-item-content{
+  height: 0px;
+  transition: transform 0.1s linear;
+  transform: scaleY(0);
+  max-height: 170px;
+  overflow: hidden;
+  padding: 10px 20px 0 20px;
+}
+
+.open .drop-item-content{
+  @include box-sizing(border-box);
+  @include transform-origin(top);
+
+  padding: 20px;
+  width: 100%;
+  margin-bottom: 10px;
+  display: block;
+  transform: scaleY(1);
+  transition: transform 0.2s linear;
+  max-height: 170px;
+  overflow: scroll;
+
+  :-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  :-webkit-scrollbar-thumb {
+    background: $riptide;
+  }
 }
 
 .quote {
@@ -423,13 +462,19 @@ header {
 }
 
 .quote-items {
-  @include grid;
-  @include grid-template-columns(0.2fr 0.8fr);
+  @include flex;
+  @include align-items(center);
+
+  .fas {
+    font-size: 30px;
+    color: $headers;
+    cursor: pointer;
+  }
 
   .quote-img {
     border: 3px solid $riptide;
     padding: 41px;
-    margin: 34px 67px 69px 106px;
+    margin: 34px 57px 69px 94px;
   }
   
   .quote-paragraph {
@@ -438,7 +483,6 @@ header {
   
     font-style: italic;
     font-size: 24px;
-    margin-top: 38px;
     line-height: 36px;
   }
 }
@@ -451,6 +495,44 @@ header {
   @include flex;
 
   margin-top: 8px;
+}
+
+.visible {
+  @include flex;
+
+  animation: slideInLeft 2s;
+}
+
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.hidden {
+  display: none;
+
+  animation: slideInRight 2s;
+}
+
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .meet-our-team {
@@ -618,7 +700,20 @@ header {
   @include flex;
   margin-top: 15px;
 
-  .fa {
+  .fas {
+    color: $riptide;
+    padding: 0 12px;
+
+    &:before {
+      padding-right: 5px;
+    }
+
+    span {
+      font-style: italic;
+    }
+  }
+
+  .far {
     color: $riptide;
     padding: 0 12px;
 
@@ -708,7 +803,7 @@ header {
   .fa-icons {
     color: $riptide;
 
-    .fa {
+    .fab {
       padding-right: 12px;
       cursor: pointer;
 
