@@ -13,19 +13,19 @@
 }
 
 // Features Section
-.features--first {
+.features__first {
   display: grid;
   grid-template-columns: 20% minmax(auto, 500px) auto;
   grid-gap: 2.5%;
 }
 
-.features--second {
+.features__second {
   display: grid;
   grid-template-columns: auto minmax(auto, 500px);
   grid-gap: 5.5%;
 }
 
-.features--third {
+.features__third {
   display: grid;
   grid-template-columns: minmax(auto, 500px) auto;
   grid-gap: 11%;
@@ -60,13 +60,13 @@
   grid-column-gap: 60px;
   grid-row-gap: 42px;
 
-  &--fields {
+  &__fields {
     display: grid;
     grid-auto-rows: auto;
     grid-row-gap: 30px;
   }
 
-  &--button {
+  &__button {
     grid-column: 1 / 3;
   }
 }
@@ -81,9 +81,9 @@
   }
 
   .features {
-    &--first,
-    &--second,
-    &--third {
+    &__first,
+    &__second,
+    &__third {
       grid-template-columns: auto;
     }
   }

@@ -10,7 +10,7 @@
     display: none;
   }
 
-  &--logo {
+  &__logo {
     margin-left: 1%;
     width: 80px;
     height: 80px;
@@ -24,12 +24,12 @@
     }
   }
 
-  &--nav {
+  &__nav {
     @include d-flex();
     padding: 0 10%;
   }
 
-  &--menu {
+  &__menu {
     @include d-flex();
     line-height: 5;
     width: 435px;

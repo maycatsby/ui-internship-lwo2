@@ -4,7 +4,7 @@
   padding: $padding-social;
   box-shadow: 0px 1px 3px 0px rgba($color-black, .38);
 
-  &--bar {
+  &__bar {
     max-width: 380px;
 
     & > h3 {
@@ -18,13 +18,13 @@
     }
   }
 
-  &--links-list {
+  &__links-list {
     @include d-flex() {
       flex: 1 0 auto;
       align-self: center;
     };
 
-    &__mb {
+    &--mb {
       display: none;
     }
   }

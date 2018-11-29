@@ -5,7 +5,7 @@
 .benefits {
   margin-top: 45px;
 
-  &--block {
+  &__block {
 
     & > figure {
       @include figureCircle($size-side2);
