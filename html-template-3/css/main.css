@@ -8,33 +8,40 @@
   grid-template-areas: "man_back roof jellyfish ceiling" "bridge hole jellyfish angle";
   width: 100%; }
 
-.man_back {
+#man_back {
   grid-area: man_back;
-  width: 100%; }
+  width: 100%;
+  cursor: pointer; }
 
-.roof {
+#roof {
   grid-area: roof;
-  width: 100%; }
+  width: 100%;
+  cursor: pointer; }
 
-.jellyfish {
+#jellyfish {
   grid-area: jellyfish;
-  width: 100%; }
+  width: 100%;
+  cursor: pointer; }
 
-.ceiling {
+#ceiling {
   grid-area: ceiling;
-  width: 100%; }
+  width: 100%;
+  cursor: pointer; }
 
-.bridge {
+#bridge {
   grid-area: bridge;
-  width: 100%; }
+  width: 100%;
+  cursor: pointer; }
 
-.hole {
+#hole {
   grid-area: hole;
-  width: 100%; }
+  width: 100%;
+  cursor: pointer; }
 
-.angle {
+#angle {
   grid-area: angle;
-  width: 100%; }
+  width: 100%;
+  cursor: pointer; }
 
 @media screen and (min-width: 320px) and (max-width: 425px) {
   body .grid-gallery {
@@ -148,6 +155,8 @@
   body .grid-section {
     padding-top: 50px;
     margin-bottom: 10px; }
+  body .popup-content {
+    width: 100%; }
   body .joshua-earle {
     margin: 0; }
   body .name {
@@ -328,6 +337,8 @@
     body .grid-section {
       padding-top: 40px;
       margin-bottom: 0px; }
+    body .popup-content {
+      width: 100%; }
     body .wps-pic {
       margin-left: 15px; }
     body .people {
@@ -772,6 +783,10 @@ header {
   color: #333333;
   text-transform: uppercase;
   font-weight: 400; }
+  .drop-item-header .fas {
+    margin-left: auto;
+    font-size: 25px;
+    color: #999999; }
 
 .close .drop-item-content {
   height: 0px;
@@ -796,10 +811,6 @@ header {
   transition: transform 0.2s linear;
   max-height: 170px;
   overflow: scroll; }
-  .open .drop-item-content :-webkit-scrollbar {
-    width: 8px; }
-  .open .drop-item-content :-webkit-scrollbar-thumb {
-    background: #95e1d3; }
 
 .quote {
   background-color: #f8f8f8;
@@ -926,6 +937,36 @@ header {
 .grid-section {
   padding-top: 100px;
   margin-bottom: 151px; }
+
+.popup {
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.9); }
+  .popup .popup-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    animation: scaleImg 0.6s; }
+
+@keyframes scaleImg {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(1); } }
+
+.block {
+  display: block !important; }
+
+.none {
+  display: none; }
 
 .joshua-quote {
   background: transparent;

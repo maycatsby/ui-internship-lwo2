@@ -1,5 +1,5 @@
 /* eslint-disable */
-(() => {
+(function scroll() {
   const head = document.getElementById('head');
 
   document.addEventListener('scroll', addBackground);
@@ -28,23 +28,56 @@
       }
     }
   }
+})();
 
+(function accordion() {
   const accItem = document.getElementsByClassName('drop-item');
   const accHD = document.getElementsByClassName('drop-item-header');
+  const arrow = document.querySelectorAll('.arrow');
+
   for (let i = 0; i < accHD.length; i++) {
-    accHD[i].addEventListener('click', toggleItem, false);
+    accHD[i].addEventListener('click', toggleItem);
   }
 
   function toggleItem() {
     const itemClass = this.parentNode.className;
+    const thisArrow = this.querySelector('i');
     for (let i = 0; i < accItem.length; i++) {
       accItem[i].className = 'drop-item close';
+      arrow[i].className = 'fas fa-angle-down'
     }
     if (itemClass === 'drop-item close') {
       this.parentNode.className = 'drop-item open';
+      thisArrow.className = 'fas fa-angle-up';
+    }
+  }
+})();
+
+(function popUpClick() {
+  const popupContainer = document.getElementById('popup');
+  const images = document.querySelector('.grid-gallery');
+  const popupImg = document.getElementById('img');
+
+  images.addEventListener('click', e => clicked(e.target));
+  popupContainer.addEventListener('click', function(e) {
+    // if(e.target.tagName !== 'IMG') {
+      popupContainer.classList.remove('block');
+      popupContainer.classList.add('none');
+    // }
+  })
+
+  function clicked(target) {
+
+    if(target === event.target) {
+      popupContainer.classList.toggle('block');
+      popupImg.src = target.src;
     }
   }
 
+  // document.addEventListener('click', hide);
+  //     function hide() {
+  //       popupContainer.toggle('none');
+  //     }
 })();
 
 
