@@ -1,9 +1,9 @@
 /* eslint-disable */
-(() => {
+(function initFormValidation() {
   const PATTERNS = {
     name: /[A-Za-z]{2,20}/g,
     email: /^([,a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/g,
-    password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/g
+    password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/g,
   };
 
   const FORMS_ON_PAGE = document.querySelectorAll('form');
@@ -18,11 +18,10 @@
   function handleFormValidation(formName) {
     const form = document.forms[formName];
     form.addEventListener('keyup', (e) => validateInput(e.target), true);
-    form.addEventListener('keyup', (e) => resetForm(e.target), true);
   }
 
   function validateInput(input) {
-    const { value, name } = input;
+    const {value, name} = input;
 
     const pattern = PATTERNS[name];
 
@@ -34,6 +33,7 @@
     input.classList.add(addClass);
     input.classList.remove(removeClass);
     disable();
+    resetForm(input);
   }
 
   function isValidValue(val, pattern) {
@@ -49,21 +49,34 @@
 
   function submit(e) {
     const inputs = [...this.elements];
-    if (inputs.some((el) => (el.value === '' && el['type'] !== 'submit') || isValidValue(el.value, PATTERNS[el.name]) === false)) {
+
+    const isEmptyOrSubmit = function(el) {
+      return el.value === '' && el['type'] !== 'submit'
+    }
+
+    const isValid = function(el) {
+      return isValidValue(el.value, PATTERNS[el.name]);
+    }
+
+    if (inputs.some((el) => isEmptyOrSubmit(el) || !isValid(el))) {
       e.preventDefault();
       inputs.forEach((el) => {
-        if (el.value === '' && el['type'] !== 'submit') {
+        if (isEmptyOrSubmit(el)) {
           el.classList.add('error');
         }
       });
     }
   }
-  
+
   const buttonSub = document.getElementById('submit-button');
 
   function disable() {
     const inputs = [...document.forms['contact-form'].querySelectorAll('input')];
-    if (inputs.some(el => el.classList.contains('error') || el.value === '')) {
+
+    const invalid = function(el) {
+      return el.classList.contains('error') || el.value === '';
+    }
+    if (inputs.some((el) => invalid(el))) {
       buttonSub.classList.add('disabled');
     } else {
       buttonSub.classList.remove('disabled');
@@ -72,18 +85,17 @@
   disable();
 })();
 
-(() => {
-const videoState = document.querySelector('.player');
-const pauseVideo = document.querySelector('.fa-pause-circle');
-const playVideo = document.querySelector('.fa-play-circle');
+(function initVideo() {
+  const videoState = document.querySelector('.player');
+  const pauseVideo = document.querySelector('.fa-pause-circle');
+  const playVideo = document.querySelector('.fa-play-circle');
 
-videoState.addEventListener('click', pauseVideoFunc);
+  videoState.addEventListener('click', pauseVideoFunc);
 
-function pauseVideoFunc() {
-  const video = document.querySelector('video');
-  video.paused ? video.play() : video.pause();
-  pauseVideo.classList.toggle('none');
-  playVideo.classList.toggle('none');
-
-}
-})()
+  function pauseVideoFunc() {
+    const video = document.querySelector('video');
+    video.paused ? video.play() : video.pause();
+    pauseVideo.classList.toggle('none');
+    playVideo.classList.toggle('none');
+  }
+})();
