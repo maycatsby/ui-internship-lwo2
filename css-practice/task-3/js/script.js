@@ -20,16 +20,51 @@ function toggleShow(e) {
   e.currentTarget.nextElementSibling.classList.toggle('height-auto');
 }
 
-const rightArrow = document.querySelector('.fa-angle-right');
+const rightArrows = document.querySelectorAll('.fa-angle-right');
+const leftArrows = document.querySelectorAll('.fa-angle-left');
 const carouContainer = document.querySelector('.carousel-container');
 
-rightArrow.addEventListener('click', carouselNext);
+leftArrows.forEach((el) => {
+  el.addEventListener('click', carouselPrev);
+})
+rightArrows.forEach((el) => {
+  el.addEventListener('click', carouselNext);
+})
 
-function carouselNext() {
-  console.log(document.querySelector('.active-carou-item'));
-  document.querySelector('.active-carou-item').classList.add('prev-carou-item');
-  document.querySelector('.active-carou-item').classList.remove('active-carou-item');
-  document.querySelector('.next-carou-item').classList.add('active-carou-item');
-  document.querySelector('.next-carou-item').classList.remove('next-carou-item');
+function carouselNext(e) {
+  let active = e.currentTarget.parentElement.querySelector('.active-carou-item');
+
+  if(!active.nextElementSibling) {
+    active.classList.remove('active-carou-item');
+    active.classList.add('next-carou-item');
+    active.previousElementSibling.classList.remove('prev-carou-item');
+    active.previousElementSibling.classList.add('next-carou-item');
+    active.previousElementSibling.previousElementSibling.classList.remove('prev-carou-item');
+    active.previousElementSibling.previousElementSibling.classList.add('active-carou-item');
+    return;
+  };
+  
+  active.classList.remove('active-carou-item');
+  active.classList.add('prev-carou-item');
+  active.nextElementSibling.classList.remove('next-carou-item');
+  active.nextElementSibling.classList.add('active-carou-item');
 }
 
+function carouselPrev(e) {
+  let active = e.currentTarget.parentElement.querySelector('.active-carou-item');
+
+  if(!active.previousElementSibling) {
+    active.classList.remove('active-carou-item');
+    active.classList.add('prev-carou-item');
+    active.nextElementSibling.classList.remove('next-carou-item');
+    active.nextElementSibling.classList.add('prev-carou-item');
+    active.nextElementSibling.nextElementSibling.classList.remove('next-carou-item');
+    active.nextElementSibling.nextElementSibling.classList.add('active-carou-item');
+    return;
+  };
+
+  active.classList.remove('active-carou-item');
+  active.classList.add('next-carou-item');
+  active.previousElementSibling.classList.remove('prev-carou-item');
+  active.previousElementSibling.classList.add('active-carou-item');
+}

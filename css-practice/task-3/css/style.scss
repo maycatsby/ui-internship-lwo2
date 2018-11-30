@@ -12,6 +12,7 @@ cursive;
   height: 0 !important;
   transition: 0.5s ease-out;
 }
+
 .height-auto {
   height: auto;
   transition: 0.5s ease-out;
@@ -38,6 +39,7 @@ cursive;
 }
 
 @mixin quote-common() {
+  overflow: hidden;
   display: grid;
   grid-template-columns: 5% 90% 5%;
   width: 83%;
@@ -141,7 +143,8 @@ nav a {
   &:visited {
     color: white;
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
       color: #fce38a;
     }
   }
@@ -198,7 +201,7 @@ nav a:last-child {
   z-index: 1;
   width: 100vw;
   padding: 0 13% 24px 13%;
-  background-color: rgba(243,129,129,0.8);
+  background-color: rgba(243, 129, 129, 0.8);
   text-transform: uppercase;
   font-family: $font-header-stack;
   justify-content: space-between;
@@ -520,35 +523,33 @@ nav a:last-child {
 }
 
 .carousel-container {
-  overflow: hidden;
   z-index: 0;
   position: relative;
 }
 
 .carousel-item {
-  &-1,&-2,&-3{
+
+  &-1,
+  &-2,
+  &-3 {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
   }
 }
 
-.active-carou-item{
+.active-carou-item {
   transition: 0.5s;
-  z-index: 1;
 }
 
 .prev-carou-item {
-  z-index: -1;
-  transform: translate(-100%, 0) !important;
+  transform: translate(-120%, 0);
   transition: 0.5s;
 }
 
 .next-carou-item {
-  z-index: -1;
   transition: 0.5s;
-  transform: translate(100%, 0) !important;
+  transform: translate(120%, 0);
 }
 
 .meet-our-team {
@@ -652,12 +653,14 @@ nav a:last-child {
     position: relative;
     margin: 0 1px 0 0;
     padding: 0;
+    width: fit-content;
 
     img {
-      position: absolute;
-      top: -48%;
-      left: -16%;
+      margin: -28px 20px 0 20px;
     }
+  }
+  .quote-text {
+    padding: 6px 0 0 6px;
   }
 }
 
@@ -1154,7 +1157,7 @@ footer {
 
   .what-we-do {
     padding: 50px 0;
-    
+
     img {
       width: 100%;
       max-width: 380px;
@@ -1253,6 +1256,10 @@ footer {
     }
   }
 
+  .quote {
+    height: fit-content;
+  }
+  
   .team-member {
     width: 45%;
     margin: 20px auto;

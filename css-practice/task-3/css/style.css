@@ -380,6 +380,7 @@ nav a:last-child {
   background-color: #f8f8f8; }
 
 .quote {
+  overflow: hidden;
   display: grid;
   grid-template-columns: 5% 90% 5%;
   width: 83%;
@@ -426,29 +427,24 @@ nav a:last-child {
   margin: 42px; }
 
 .carousel-container {
-  overflow: hidden;
   z-index: 0;
   position: relative; }
 
 .carousel-item-1, .carousel-item-2, .carousel-item-3 {
   position: absolute;
   top: 0;
-  left: 0;
-  z-index: -1; }
+  left: 0; }
 
 .active-carou-item {
-  transition: 0.5s;
-  z-index: 1; }
+  transition: 0.5s; }
 
 .prev-carou-item {
-  z-index: -1;
-  transform: translate(-100%, 0) !important;
+  transform: translate(-120%, 0);
   transition: 0.5s; }
 
 .next-carou-item {
-  z-index: -1;
   transition: 0.5s;
-  transform: translate(100%, 0) !important; }
+  transform: translate(120%, 0); }
 
 .meet-our-team {
   padding: 104px 0 70px 0;
@@ -548,6 +544,7 @@ nav a:last-child {
   box-shadow: 10px 10px 0 0 #95e1d3; }
 
 .quote-josh {
+  overflow: hidden;
   display: grid;
   grid-template-columns: 5% 90% 5%;
   width: 83%;
@@ -587,12 +584,14 @@ nav a:last-child {
   border: none;
   position: relative;
   margin: 0 1px 0 0;
-  padding: 0; }
+  padding: 0;
+  width: fit-content; }
 
 .quote-josh .quote-img-container img {
-  position: absolute;
-  top: -48%;
-  left: -16%; }
+  margin: -28px 20px 0 20px; }
+
+.quote-josh .quote-text {
+  padding: 6px 0 0 6px; }
 
 .happy-clients-section-container {
   position: relative; }
@@ -1050,6 +1049,8 @@ footer i {
     width: fit-content; }
   .story-image-container .story-container:nth-child(n+2) {
     display: none; }
+  .quote {
+    height: fit-content; }
   .team-member {
     width: 45%;
     margin: 20px auto; }
