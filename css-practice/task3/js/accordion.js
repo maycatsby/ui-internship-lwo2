@@ -1,9 +1,6 @@
 'use strict';
 /* global document */
 (function() {
-  // window.addEventListener('scroll', () => {
-  //   console.log(window.pageYOffset);
-  // });
   const accordion = document.getElementById('accordion');
   const panelsArr = Array.from(accordion.children);
   const iconsArr = Array.from(accordion.querySelectorAll('.right'));

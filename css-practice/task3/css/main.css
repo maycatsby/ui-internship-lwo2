@@ -7,14 +7,6 @@
   text-transform: uppercase;
   cursor: pointer; }
 
-@keyframes opacity-transition {
-  0% {
-    opacity: 0;
-    visibility: hidden; }
-  100% {
-    opacity: 1;
-    visibility: visible; } }
-
 .overlay-box {
   position: relative;
   width: fit-content;
@@ -303,6 +295,74 @@ h4 {
   .btn-slide.next {
     transform: rotate(180deg); }
 
+.header {
+  min-height: 4.3em; }
+  .header__nav {
+    position: relative;
+    min-height: 4.3em;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-end; }
+    .header__nav.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(243, 129, 129, 0.9);
+      align-items: center;
+      padding: 0 1rem;
+      z-index: 2; }
+    .header__nav > ul.icon-group {
+      width: 60px;
+      margin-left: 20px; }
+      .header__nav > ul.icon-group > li {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 4rem;
+        transition: transform .2s; }
+        .header__nav > ul.icon-group > li:hover, .header__nav > ul.icon-group > li:focus {
+          transform: scale(1.2); }
+        .header__nav > ul.icon-group > li:first-child {
+          margin-right: 10px; }
+  .header__menu {
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-basis: 43em; }
+    .header__menu > li {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 3.2rem;
+      padding-bottom: 3px;
+      transition: .3s; }
+    .header__menu > li:hover,
+    .header__menu > li:focus,
+    .header__menu > li.active {
+      border-bottom: 3px solid #fce38a;
+      padding-bottom: 0; }
+      .header__menu > li:hover a,
+      .header__menu > li:focus a,
+      .header__menu > li.active a {
+        color: #fce38a; }
+  .header .menu-opener {
+    display: none; }
+
+.welcome-heading {
+  margin-top: 10.75em;
+  margin-bottom: 11em; }
+
+.icon {
+  display: block;
+  width: 18px;
+  height: 18px; }
+  .icon__shoping {
+    background: url(../img/icons/shoping_cart.svg) no-repeat 50% 50%; }
+  .icon__glass {
+    background: url(../img/icons/magnifying_glass.svg) no-repeat 50% 50%; }
+
 .quote > .container {
   display: flex;
   justify-content: space-between;
@@ -367,7 +427,8 @@ h4 {
       transform: translateY(-50%); }
 
 .panel-collapse {
-  transition: all .5s ease; }
+  transition: all .5s ease;
+  will-change: auto; }
 
 .panel-body {
   border: 1px solid #e5e5e5;
@@ -377,10 +438,13 @@ h4 {
     padding: 1.6rem; }
 
 .accordion-pic {
-  display: none; }
+  display: none;
+  will-change: auto; }
   .accordion-pic.in {
     display: block;
-    animation: opacity-transition 1s ease-in; }
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: both; }
 
 .banner {
   background-color: #f38181;
@@ -389,50 +453,6 @@ h4 {
   background-position: 50% 50%;
   background-size: cover;
   background-attachment: fixed; }
-
-.header__nav {
-  min-height: 4.26em;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: flex-end; }
-
-.header__menu {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-basis: 44.286em; }
-  .header__menu > li {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 3.2rem;
-    padding-bottom: 3px;
-    transition: .3s; }
-  .header__menu > li:hover,
-  .header__menu > li:focus {
-    border-bottom: 3px solid #fce38a;
-    padding-bottom: 0; }
-    .header__menu > li:hover a,
-    .header__menu > li:focus a {
-      color: #fce38a; }
-
-.header .menu-opener {
-  display: none; }
-
-.welcome-heading {
-  margin-top: 10.75em;
-  margin-bottom: 11em; }
-
-.icon {
-  display: block;
-  width: 18px;
-  height: 18px; }
-  .icon__shoping {
-    background: url(../img/icons/shoping_cart.svg) no-repeat 50% 50%; }
-  .icon__glass {
-    background: url(../img/icons/magnifying_glass.svg) no-repeat 50% 50%; }
 
 .slider {
   display: flex;
@@ -1018,17 +1038,50 @@ h4 {
     max-width: 50%; } }
 
 @media screen and (max-width: 768px) {
+  .banner > .container {
+    max-width: 100%;
+    padding: 0; }
+  .banner .slider {
+    padding: 0 1rem; }
   .welcome-heading {
-    max-width: 92%; }
+    max-width: 90%; }
   .header__menu {
-    display: none; }
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-start;
+    top: 4.3em;
+    left: 0;
+    padding: 1rem 1.5rem;
+    background-color: rgba(51, 51, 51, 0.9);
+    width: 100%;
+    max-height: 0;
+    visibility: hidden;
+    will-change: auto;
+    transition: all 1s ease; }
+    .header__menu > li {
+      opacity: 0;
+      will-change: auto;
+      transition: all .75s ease; }
+    .header__menu.open {
+      max-height: 250px;
+      visibility: visible; }
+      .header__menu.open > li {
+        opacity: 1; }
+  .header__nav {
+    align-items: center;
+    padding: 0 1rem; }
   .header .menu-opener {
     display: block;
-    position: relative;
-    width: 55px;
+    position: absolute;
+    right: 90px;
+    width: 50px;
     height: 40px;
     border-radius: 7px;
-    background-color: rgba(149, 225, 211, 0.4); }
+    border: 1px solid #fff;
+    transition: all .3s;
+    will-change: contents; }
+    .header .menu-opener:hover, .header .menu-opener:focus {
+      background-color: rgba(149, 225, 211, 0.3); }
     .header .menu-opener > span {
       display: block;
       background-color: #fff;
@@ -1125,3 +1178,46 @@ h4 {
     width: 100%;
     max-width: 100%;
     margin-bottom: .5em; } }
+
+/*!
+ * animate.css -http://daneden.me/animate
+ * Version - 3.7.0
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2018 Daniel Eden
+ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden; }
+  to {
+    opacity: 1;
+    visibility: visible; } }
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn; }
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown; }
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn; }
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }

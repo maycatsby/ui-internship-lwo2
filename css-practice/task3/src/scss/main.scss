@@ -8,6 +8,7 @@
 @import 'base/utilities';
 @import 'base/typography';
 @import 'base/buttons';
+@import 'base/header';
 @import 'base/quote-slide';
 @import 'base/accordion';
 // Sections
@@ -23,3 +24,6 @@
 // Media & Grid-system
 @import 'layout/grid';
 @import 'layout/media';
+// Animate.CSS
+@import 'vendor/animate';
+
