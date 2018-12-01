@@ -4,6 +4,7 @@
   &__nav {
     position: relative;
     min-height: 4.3em;
+    z-index: 1;
     @include d-flex() {
       align-items: flex-end;
     }

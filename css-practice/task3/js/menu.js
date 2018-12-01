@@ -14,16 +14,15 @@
     4: '#blog',
     5: '#footer',
   };
-  // console.log(burgerBtn);
-  // console.log(sectionsObj);
-  // console.log([header, headerNav, headerMenu]);
-  // console.log(document.documentElement.scrollHeight);
+  const fixedMenuAfter = Math.floor(
+      doc.querySelector('#about')
+          .getBoundingClientRect().top);
 
   // Fading menu after pageYOffset;
   const menuFade = () => {
     headerMenu.classList.remove('open');
     const offset = window.pageYOffset;
-    if (offset >= 948) {
+    if (offset >= fixedMenuAfter) {
       headerNav.classList.add('fixed', 'animated', 'fadeInDown');
     } else {
       headerNav.classList.remove('fixed', 'animated', 'fadeInDown');
@@ -35,7 +34,6 @@
     const target = doc.querySelector(sectionsObj[index]);
     const targetPos = target.getBoundingClientRect().top;
     const startPos = window.pageYOffset;
-    const distance = targetPos - startPos;
     let startTime = null;
 
     const animation = (currentTime) => {
@@ -43,7 +41,7 @@
         startTime = currentTime;
       }
       const timeElapsed = currentTime - startTime;
-      const run = ease(timeElapsed, startPos, distance, duration);
+      const run = ease(timeElapsed, startPos, targetPos, duration);
       window.scrollTo(0, run);
       if (timeElapsed < duration) {
         requestAnimationFrame(animation);
@@ -52,17 +50,12 @@
 
     /* http://www.gizma.com/easing/ */
     const ease = (t, b, c, d) => {
-      t /= d / 2;
-      if (t < 1) return (c / 2) * t * t + b;
-      t--;
-      return (-c / 2) * (t * (t - 2) - 1) + b;
+      return c * ( -Math.pow( 2, -10 * t / d ) + 1 ) + b;
     };
     requestAnimationFrame(animation);
-    // console.log(target);
-    // console.log(distance);
   };
 
-  // Change active link & start animation scroll effect;
+  // Change active link & start smooth-scroll effect;
   const menuClickHandler = (e) => {
     e.preventDefault();
     const link = e.target;
@@ -78,7 +71,7 @@
 
   window.addEventListener('scroll', menuFade);
   headerMenu.addEventListener('click', menuClickHandler);
-  burgerBtn.addEventListener('click', function(e) {
+  burgerBtn.addEventListener('click', (e) => {
     e.preventDefault();
     headerMenu.classList.toggle('open');
   });

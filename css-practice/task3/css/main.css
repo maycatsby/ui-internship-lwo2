@@ -300,6 +300,7 @@ h4 {
   .header__nav {
     position: relative;
     min-height: 4.3em;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
