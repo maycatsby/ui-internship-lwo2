@@ -59,25 +59,45 @@
   const popupImg = document.getElementById('img');
 
   images.addEventListener('click', e => clicked(e.target));
-  popupContainer.addEventListener('click', function(e) {
+  popupContainer.addEventListener('click', function (e) {
     // if(e.target.tagName !== 'IMG') {
-      popupContainer.classList.remove('block');
-      popupContainer.classList.add('none');
+    popupContainer.classList.remove('block');
+    popupContainer.classList.add('none');
     // }
   })
 
   function clicked(target) {
-
-    if(target === event.target) {
+    if (target === event.target) {
       popupContainer.classList.toggle('block');
       popupImg.src = target.src;
     }
   }
-
-  // document.addEventListener('click', hide);
-  //     function hide() {
-  //       popupContainer.toggle('none');
-  //     }
 })();
 
 
+let slideIndex = 1;
+
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  const slides = document.getElementsByClassName('quote-block');
+
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slides[slideIndex - 1].style.display = "flex";
+
+}

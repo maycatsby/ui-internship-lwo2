@@ -467,6 +467,7 @@ header {
     font-size: 30px;
     color: $headers;
     cursor: pointer;
+    transition: 0.6s ease;
   }
 
   .quote-img {
@@ -482,6 +483,20 @@ header {
     font-style: italic;
     font-size: 24px;
     line-height: 36px;
+  }
+}
+
+.fade {
+  animation: slide 1s;
+
+  @keyframes slide {
+    from {
+      opacity: 4;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 }
 
