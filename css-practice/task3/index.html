@@ -22,7 +22,7 @@
               <li class="nav-item"><a href="#blog">Blog</a></li>
               <li class="nav-item"><a href="#footer">Contact</a></li>
             </ul>
-            <ul class="icon-group">              
+            <ul class="icon-group">
               <li><a href="#"><i class="icon icon__shoping"></i></a></li>
               <li><a href="#"><i class="icon icon__glass"></i></a></li>
             </ul>
@@ -33,7 +33,7 @@
           <h1 class="welcome-heading__main">Welcome to MoGo</h1>
           <button class="btn-outline mt-lg">Learn more</button>
         </div>
-        <ul class="slider">
+        <ul class="section-tab">
           <li><a href="#"><span>01</span> intro</a></li>
           <li><a href="#"><span>02</span> work</a></li>
           <li><a href="#"><span>03</span> about</a></li>
@@ -149,7 +149,7 @@
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
           <div class="row mt-90">
-            <div class="col-1-of-2"><img class="accordion-pic in" src="img/service1.png" alt="Photography"><img class="accordion-pic" src="img/creative4.png" alt="Creativity"><img class="accordion-pic" src="img/web_design.jpg" alt="Web Design"></div>
+            <div class="col-1-of-2 center-item"><img class="accordion-pic in" src="img/service1.png" alt="Photography"><img class="accordion-pic" src="img/creative4.png" alt="Creativity"><img class="accordion-pic" src="img/web_design.png" alt="Web Design"></div>
             <div class="col-1-of-2">
               <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 <div class="panel-item open">
@@ -202,9 +202,9 @@
           </div>
         </div>
       </section>
-      <section class="quote">
-        <div class="container"><a class="btn-slide prev" href="#" title="Previous slide"></a>
-          <div class="quote__slide">
+      <section class="quote slider"><a class="btn-slide prev" href="#" title="Previous slide"></a>
+        <div class="slides-holder">
+          <div class="slide-quote prev">
             <figure><img src="img/icons/speech_icon.svg" alt="Speech Icon"></figure>
             <blockquote>
               <p><i>
@@ -212,8 +212,26 @@
                   Ut enim ad minim veniam, quis nostrud exercitation.”</i></p>
               <cite class="quote__author">Jon Doe</cite>
             </blockquote>
-          </div><a class="btn-slide next" href="#" title="Next slide"></a>
-        </div>
+          </div>
+          <div class="slide-quote current">
+            <figure><img src="img/icons/speech_icon.svg" alt="Speech Icon"></figure>
+            <blockquote>
+              <p><i>
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation.”</i></p>
+              <cite class="quote__author">Jon Doe</cite>
+            </blockquote>
+          </div>
+          <div class="slide-quote next">
+            <figure><img src="img/icons/speech_icon.svg" alt="Speech Icon"></figure>
+            <blockquote>
+              <p><i>
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation.”</i></p>
+              <cite class="quote__author">Jon Doe</cite>
+            </blockquote>
+          </div>
+        </div><a class="btn-slide next" href="#" title="Next slide"></a>
       </section>
       <section class="team">
         <div class="container">
@@ -275,15 +293,35 @@
           </p>
         </div>
         <div class="work__pictures"><img class="work__pic-1" src="img/creative1.png" alt="Creative picture"><img class="work__pic-2" src="img/creative2.png" alt="Creative picture"><img class="work__pic-3" src="img/creative3.png" alt="Creative picture"><img class="work__pic-4" src="img/creative4.png" alt="Creative picture"><img class="work__pic-5" src="img/creative5.png" alt="Creative picture"><img class="work__pic-6" src="img/creative6.png" alt="Creative picture"><img class="work__pic-7" src="img/creative7.png" alt="Creative picture"></div>
-        <div class="testimonial container"><a class="btn-slide prev" href="#" title="Previous slide"></a>
-          <div class="quote__slide">
-            <figure><img src="img/joshua.png" alt="Joshua"></figure>
-            <blockquote>
-              <p><i>
-                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation.”</i></p>
-              <cite class="quote__author">Joshua Earle</cite>
-            </blockquote>
+        <div class="testimonial slider"><a class="btn-slide prev" href="#" title="Previous slide"></a>
+          <div class="slides-holder">
+            <div class="slide-quote prev">
+              <figure><img src="img/joshua.png" alt="Joshua"></figure>
+              <blockquote>
+                <p><i>
+                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation.”</i></p>
+                <cite class="quote__author">Joshua Earle</cite>
+              </blockquote>
+            </div>
+            <div class="slide-quote current">
+              <figure><img src="img/joshua.png" alt="Joshua"></figure>
+              <blockquote>
+                <p><i>
+                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation.”</i></p>
+                <cite class="quote__author">Joshua Earle</cite>
+              </blockquote>
+            </div>
+            <div class="slide-quote next">
+              <figure><img src="img/joshua.png" alt="Joshua"></figure>
+              <blockquote>
+                <p><i>
+                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation.”</i></p>
+                <cite class="quote__author">Joshua Earle</cite>
+              </blockquote>
+            </div>
           </div><a class="btn-slide next" href="#" title="Next slide"></a>
         </div>
       </section>

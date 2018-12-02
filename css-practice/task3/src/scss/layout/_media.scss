@@ -1,38 +1,21 @@
 // 1199px
 @media screen and (max-width: $screen-xl) {
-  .testimonial {
+  // Quote slide
+  .slide-quote {
 
-    .quote__slide {
-      padding: 5rem;
+    & > blockquote {
+      max-width: 75%;
     }
   }
+  .quote > .slide-quote {
 
-  // Quote slide
-  .quote {
-
-    &__slide {
-
-      & > blockquote {
-        max-width: 75%;
-      }
-    }
-
-    & &__slide {
-
-      & > figure {
-        width: 125px;
-        height: 125px;
-      } 
+    & > figure {
+      width: 125px;
+      height: 125px;
     } 
   }
-  .btn-slide {
-
-    &.prev {
-      left: 20px;
-    }
-    &.next {
-      right: 20px;
-    }
+  .testimonial > .slide-quote {
+    padding: 5rem;
   }
   // Footer
   .footer {
@@ -100,7 +83,7 @@
       padding: 0;
     }
 
-     .slider {
+     .section-tab {
       padding: 0 1rem;
     }
   } 
@@ -149,21 +132,22 @@
     & .menu-opener {
       display: block;
       position: absolute;
-      right: 90px;
+      right: 80px;
       width: 50px;
       height: 40px;
-      border-radius: 7px;
-      border: 1px solid #fff;
       transition: all .3s;
       will-change: contents;
       
-      &:hover,
-      &:focus {
-        background-color: rgba($color-alt, .3);
+      &:hover > span,
+      &:focus > span {
+        background-color: $color-second;
+        &::before,
+        &::after {
+          background-color: $color-second;
+        }
       }
 
       & > span {
-        display: block;
         background-color: $color-white;
         width: 30px;
         height: 2px;
@@ -209,40 +193,23 @@
       display: none;
     }
   }
-  // Quote slide
-  .quote {
-    &__slide {
+  // slide-quote
+  .slide-quote {
       
-      & > figure {
-        display: none;
-      }
-      
-      & > blockquote {
-        max-width: 100%;
-        font-size: 2rem;
-        margin: 0 !important;
-      }
+    & > figure {
+      display: none;
     }
-
-    .quote__slide {
-      padding: 6.5rem 0;
+      
+    & > blockquote {
+      max-width: 100%;
+      font-size: 2rem;
+      margin: 0 !important;
     }
   }
 
-  .btn-slide {
-    &.prev {
-      left: -4%;
-    }
-    &.next {
-      right: -4%;
-    }
+  .slider > .slide-quote {
+    padding: 5rem 1rem;
   }
-
-  .testimonial {
-    .quote__slide {
-      padding: 5rem 0;
-    } 
-  } 
   // Work Grid
   .work {
 
@@ -306,7 +273,7 @@
     margin-bottom: 7em;
   }
 
-  .slider > li > a {
+  .section-tab > li > a {
     font-size: 0;
   }
   // Feature

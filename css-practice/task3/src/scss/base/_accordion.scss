@@ -2,11 +2,11 @@
   
   &-item {
     box-shadow: 0 1px 1px rgba($color-dark, .05);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
     &.open > .panel-collapse {
       opacity: 1;
-      max-height: 250px;
+      max-height: 150px;
       visibility: visible;
     }
 
@@ -68,6 +68,8 @@
   &-body {
     border: 1px solid #e5e5e5;
     border-top: 0;
+    max-height: 150px;
+    overflow-y: scroll;
 
     & > p {
       font-style: italic;

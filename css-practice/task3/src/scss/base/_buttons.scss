@@ -33,6 +33,7 @@
     min-width: 60px;
     min-height: 290px;
     cursor: pointer;
+    outline: none;
     @include icon-bg($icon-arrow);
     &.next {
       transform: rotate(180deg);

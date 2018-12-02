@@ -14,15 +14,13 @@
     4: '#blog',
     5: '#footer',
   };
-  const fixedMenuAfter = Math.floor(
-      doc.querySelector('#about')
-          .getBoundingClientRect().top);
+  const fixedMenuAfter = doc.querySelector('#banner').offsetHeight;
 
   // Fading menu after pageYOffset;
   const menuFade = () => {
     headerMenu.classList.remove('open');
     const offset = window.pageYOffset;
-    if (offset >= fixedMenuAfter) {
+    if (offset >= (fixedMenuAfter - 5)) {
       headerNav.classList.add('fixed', 'animated', 'fadeInDown');
     } else {
       headerNav.classList.remove('fixed', 'animated', 'fadeInDown');
@@ -65,7 +63,7 @@
         li.classList.remove('active');
       });
       menuLinks[i].classList.add('active');
-      smoothScroll(i, 3000);
+      smoothScroll(i, 2000);
     }
   };
 

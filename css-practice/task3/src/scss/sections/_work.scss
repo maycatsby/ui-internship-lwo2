@@ -56,21 +56,3 @@
     -ms-grid-column: 4;
   }
 }
-
-.testimonial {
-  @include d-flex();
-  
-  .quote__slide {
-    padding: $padding-testimonial;
-
-    & > figure {
-      align-self: center;
-      margin-right: 2.429em;
-    }
-  
-    & > blockquote {
-      margin-right: 1.333em;
-      margin-top: 1.250em;
-    }
-  }
-}
