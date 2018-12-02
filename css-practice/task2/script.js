@@ -3,6 +3,7 @@
 function initFormValidation() {
   const PATTERNS = {
     name: /[A-Za-z]{2,20}/g,
+    /* eslint-disable-next-line */
     email: /^([,a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/g,
     /* eslint-disable-next-line */
     password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/g,
@@ -58,10 +59,10 @@ function initFormValidation() {
     const isValid = function(el) {
       return isValidValue(el.value, PATTERNS[el.name]);
     };
-    const isAnyEmptyOrTypeofSubmit = inputs.some(isEmptyOrSubmit);
-    const isAnyInvalid = inputs.some(!isValid);
+    const isAnyEmptyOrTypeofSubmitOrInvalid = inputs
+        .some(isEmptyOrSubmit || !isValid);
 
-    if (isAnyEmptyOrTypeofSubmit || isAnyInvalid) {
+    if (isAnyEmptyOrTypeofSubmitOrInvalid) {
       e.preventDefault();
       inputs.forEach((el) => {
         if (isEmptyOrSubmit(el)) {
