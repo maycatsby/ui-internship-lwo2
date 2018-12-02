@@ -1,8 +1,10 @@
-/* eslint-disable */
-(function initFormValidation() {
+/* global document:true */
+/* eslint-disable no-invalid-this */
+function initFormValidation() {
   const PATTERNS = {
     name: /[A-Za-z]{2,20}/g,
     email: /^([,a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/g,
+    /* eslint-disable-next-line */
     password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/g,
   };
 
@@ -51,14 +53,15 @@
     const inputs = [...this.elements];
 
     const isEmptyOrSubmit = function(el) {
-      return el.value === '' && el['type'] !== 'submit'
-    }
-
+      return el.value === '' && el['type'] !== 'submit';
+    };
     const isValid = function(el) {
       return isValidValue(el.value, PATTERNS[el.name]);
-    }
+    };
+    const isAnyEmptyOrTypeofSubmit = inputs.some(isEmptyOrSubmit);
+    const isAnyInvalid = inputs.some(!isValid);
 
-    if (inputs.some((el) => isEmptyOrSubmit(el) || !isValid(el))) {
+    if (isAnyEmptyOrTypeofSubmit || isAnyInvalid) {
       e.preventDefault();
       inputs.forEach((el) => {
         if (isEmptyOrSubmit(el)) {
@@ -71,21 +74,26 @@
   const buttonSub = document.getElementById('submit-button');
 
   function disable() {
-    const inputs = [...document.forms['contact-form'].querySelectorAll('input')];
-
+    const inputs = [...document.forms['contact-form']
+        .querySelectorAll('input')];
     const invalid = function(el) {
       return el.classList.contains('error') || el.value === '';
-    }
-    if (inputs.some((el) => invalid(el))) {
+    };
+    const isAnyInvalid = inputs.some(invalid);
+
+    if (isAnyInvalid) {
       buttonSub.classList.add('disabled');
     } else {
       buttonSub.classList.remove('disabled');
     }
   }
-  disable();
-})();
 
-(function initVideo() {
+  disable();
+}
+
+initFormValidation();
+
+function initVideo() {
   const videoState = document.querySelector('.player');
   const pauseVideo = document.querySelector('.fa-pause-circle');
   const playVideo = document.querySelector('.fa-play-circle');
@@ -94,8 +102,12 @@
 
   function pauseVideoFunc() {
     const video = document.querySelector('video');
+
     video.paused ? video.play() : video.pause();
     pauseVideo.classList.toggle('none');
     playVideo.classList.toggle('none');
   }
-})();
+}
+
+initVideo();
+
