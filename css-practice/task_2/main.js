@@ -1,28 +1,33 @@
-/* eslint-disable */
+/* global  document, window*/
 window.onload = function() {
   const video = document.getElementById('my-video');
   const btnVideo = document.getElementById('play');
   if (btnVideo) {
-    btnVideo.addEventListener('click', makePlay, false);
+    btnVideo.addEventListener('click', togglePlay, false);
   }
 
-  function makePlay() {
+  function togglePlay() {
     if (video.paused) {
-      video.play();
-      btnVideo.classList.remove('paused');
-      btnVideo.classList.add('play');
+      playVideo();
     } else {
-      video.pause();
-      btnVideo.classList.remove('play');
-      btnVideo.classList.add('paused');
+      pauseVideo();
     }
   }
 
-  const loginFormInpunts = document.forms['main-form'].getElementsByTagName('input');
-  for (let i = 0; i < loginFormInpunts.length; i++) {
-    loginFormInpunts[i].addEventListener('keyup', validate, false);
+  function playVideo() {
+    video.play();
+    btnVideo.classList.remove('play');
+    btnVideo.classList.add('paused');
   }
 
+  function pauseVideo() {
+    video.pause();
+    btnVideo.classList.remove('paused');
+    btnVideo.classList.add('play');
+  }
+
+  const loginFormInpunts = document.forms['main-form'].addEventListener('keyup', validate);
+ 
   function validate(event) {
     if (!event.target.validity.valid || !event.target.value) {
       event.target.classList.add('invalid');
@@ -40,4 +45,4 @@ window.onload = function() {
       sendBtn.classList.remove('disabled');
     }
   }
-}
+};
