@@ -7,25 +7,48 @@
     let currSlide = 1;
     const allSlides = Array.from(slider.querySelectorAll('.slide-quote'));
     const slidesLen = allSlides.length;
-    slider.addEventListener('click', (e) => {
+
+    const nextSlide = () => {
+      allSlides[currSlide].classList.remove('current');
+      allSlides[currSlide].classList.add('prev');
+      currSlide++;
+      allSlides[currSlide].classList.remove('next');
+      allSlides[currSlide].classList.add('current');
+    };
+
+    const prevSlide = () => {
+      allSlides[currSlide].classList.remove('current');
+      allSlides[currSlide].classList.add('next');
+      currSlide--;
+      allSlides[currSlide].classList.remove('prev');
+      allSlides[currSlide].classList.add('current');
+    };
+
+    const slideHandler = (e) => {
       e.preventDefault();
       if (e.target.classList.contains('btn-slide')) {
         const btnOfSlide = e.target;
-        if (btnOfSlide.classList.contains('next') && currSlide < slidesLen - 1) {
-          allSlides[currSlide].classList.remove('current');
-          allSlides[currSlide].classList.add('prev');
-          currSlide++;
-          allSlides[currSlide].classList.remove('next');
-          allSlides[currSlide].classList.add('current');
-        } else if (btnOfSlide.classList.contains('prev') && currSlide > 0) {
-          allSlides[currSlide].classList.remove('current');
-          allSlides[currSlide].classList.add('next');
-          currSlide--;
-          allSlides[currSlide].classList.remove('prev');
-          allSlides[currSlide].classList.add('current');
+        if (btnOfSlide.classList.contains('next')) {
+          if (currSlide < slidesLen - 1) {
+            nextSlide();
+          } else {
+            prevSlide();
+            prevSlide();
+          }
+        }
+
+        if (btnOfSlide.classList.contains('prev')) {
+          if (currSlide > 0) {
+            prevSlide();
+          } else {
+            nextSlide();
+            nextSlide();
+          }
         }
       }
-    });
+    };
+
+    slider.addEventListener('click', slideHandler);
   };
 
   slidersArr.forEach((slider) => {

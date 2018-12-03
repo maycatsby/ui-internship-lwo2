@@ -47,6 +47,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.4rem;
   font-weight: 400;
+  position: relative;
   overflow-x: hidden; }
 
 a {
@@ -300,6 +301,8 @@ h4 {
   background: url(../img/icons/arrow.svg) no-repeat 50% 50%; }
   .btn-slide.next {
     transform: rotate(180deg); }
+  .btn-slide:hover {
+    background-size: 30%; }
 
 .header {
   min-height: 4.3em; }
@@ -496,6 +499,29 @@ h4 {
     .testimonial .slide-quote > blockquote {
       margin-right: 1.333em;
       margin-top: 1.250em; }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1; }
+  .modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(51, 51, 51, 0.7);
+    z-index: 2; }
+  .modal__window {
+    position: relative;
+    max-height: 80vh;
+    box-shadow: 0 0 10px rgba(51, 51, 51, 0.7);
+    border-radius: 7px;
+    overflow-y: hidden;
+    z-index: 3; }
 
 .banner {
   background-color: #f38181;
@@ -735,6 +761,14 @@ h4 {
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
     -ms-grid-rows: auto auto;
     margin-top: 7.286em; }
+    .work__pictures > figure {
+      background: linear-gradient(to bottom, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%); }
+      .work__pictures > figure > img {
+        transition: .5s;
+        cursor: pointer; }
+      .work__pictures > figure > img:hover,
+      .work__pictures > figure > img:focus {
+        opacity: .4; }
   .work__pic-1 {
     grid-area: picture-1;
     -ms-grid-row: 1;
@@ -1171,7 +1205,9 @@ h4 {
     .blog .item-post__date {
       display: none; }
   .panel-group {
-    margin-top: 20px; } }
+    margin-top: 20px; }
+  .modal__window {
+    max-width: 90%; } }
 
 @media screen and (max-width: 475px) {
   html {
@@ -1191,7 +1227,9 @@ h4 {
   .footer__subscribe form > [type="email"] {
     width: 100%;
     max-width: 100%;
-    margin-bottom: .5em; } }
+    margin-bottom: .5em; }
+  .modal__window {
+    max-width: 75%; } }
 
 /*!
  * animate.css -http://daneden.me/animate
@@ -1218,24 +1256,6 @@ h4 {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
 
-@keyframes slideInLeft {
-  from {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    visibility: visible; }
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); } }
-
-@keyframes slideInRight {
-  from {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    visibility: visible; }
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); } }
-
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn; }
@@ -1243,14 +1263,6 @@ h4 {
 .fadeInDown {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown; }
-
-.slideInRight {
-  -webkit-animation-name: slideInRight;
-  animation-name: slideInRight; }
-
-.slideInLeft {
-  -webkit-animation-name: slideInLeft;
-  animation-name: slideInLeft; }
 
 .animated {
   -webkit-animation-duration: 1s;

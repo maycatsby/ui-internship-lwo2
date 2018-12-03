@@ -257,6 +257,10 @@
   .panel-group {
     margin-top: 20px;
   }
+  // Modal Window
+  .modal__window {
+    max-width: 90%;
+  }
 }
 // 475px
 @media screen and (max-width: $screen-sm) {
@@ -296,6 +300,10 @@
         margin-bottom: .5em;
       }
     }
+  }
+  // Modal Window
+  .modal__window {
+    max-width: 75%;
   }
 }
 

@@ -11,6 +11,20 @@
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
     -ms-grid-rows: auto auto;
     margin-top: 7.286em;
+
+    & > figure {
+      background: $gradient-main;
+      
+      & > img {
+        transition: .5s;
+        cursor: pointer;
+      }
+
+      & > img:hover,
+      & > img:focus {
+        opacity: .4;
+      }
+    }
   }
 
   &__pic-1 {
