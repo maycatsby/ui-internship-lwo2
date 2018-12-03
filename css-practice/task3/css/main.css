@@ -304,6 +304,20 @@ h4 {
   .btn-slide:hover {
     background-size: 30%; }
 
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: -10%;
+  font-size: 5rem;
+  color: #e5e5e5;
+  transition: color .3s;
+  z-index: 3; }
+  .btn-close:hover, .btn-close:focus {
+    outline: none;
+    color: #fce38a;
+    cursor: pointer;
+    transform: scale(1.2); }
+
 .header {
   min-height: 4.3em; }
   .header__nav {
@@ -516,12 +530,17 @@ h4 {
     background: rgba(51, 51, 51, 0.7);
     z-index: 2; }
   .modal__window {
-    position: relative;
-    max-height: 80vh;
     box-shadow: 0 0 10px rgba(51, 51, 51, 0.7);
-    border-radius: 7px;
-    overflow-y: hidden;
-    z-index: 3; }
+    border-radius: 3px;
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .modal__window > figure {
+      max-height: 80vh;
+      overflow: hidden;
+      border-radius: 3px; }
 
 .banner {
   background-color: #f38181;
