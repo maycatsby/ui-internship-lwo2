@@ -64,7 +64,9 @@ header video {
 }
 
 .header-info {
-  width: 80%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   padding: 12.5% 0 15.5%;
@@ -150,6 +152,7 @@ header {
   flex-direction: column;
   justify-content: flex-end;
   width: 40%;
+  margin-top: 0;
 }
 
 .section-3 {
@@ -503,3 +506,4 @@ span a {
   display: block;
   font-weight: 500;
 }
+
