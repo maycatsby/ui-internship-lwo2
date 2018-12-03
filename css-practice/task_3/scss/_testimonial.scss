@@ -7,10 +7,20 @@
   @extend .quote-arrow;
   margin-top: -4%;
 }
+.testimonial-content{
+  width: 86.9%;
+  overflow: hidden;
+}
+.testimonial-box-content{
+  width: 300%;
+  display: flex;
+  transition: .7s;
+  transform: translateX(0);
+}
 .testimonial-box{
   @extend .quote-box;
   width: 87%;
-  margin-bottom: 10.8%;
+  margin-bottom: 3.8%;
 }
 .testimonial-box-left{
   @extend .quote-box-left;
