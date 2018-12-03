@@ -94,7 +94,6 @@
     }
     offset = (parseInt(offset) - 1150) + 'px';
     move();
-    console.log(offset);
   }, false);
 
   prev.addEventListener('click', function() {
@@ -103,7 +102,6 @@
     }
     offset = (parseInt(offset) + 1150) + 'px';
     move();
-    console.log(offset);
   }, false);
 }());
 
