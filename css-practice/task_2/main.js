@@ -1,4 +1,4 @@
-/* global  document, window*/
+/* global  document, window */
 window.onload = function() {
   const video = document.getElementById('my-video');
   const btnVideo = document.getElementById('play');
@@ -7,11 +7,7 @@ window.onload = function() {
   }
 
   function togglePlay() {
-    if (video.paused) {
-      playVideo();
-    } else {
-      pauseVideo();
-    }
+    video.paused ? playVideo() : pauseVideo();
   }
 
   function playVideo() {
