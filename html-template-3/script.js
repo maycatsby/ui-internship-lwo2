@@ -1,6 +1,7 @@
 /* global document:true, event:true */
 /* eslint-disable no-invalid-this */
-(function scroll() {
+(function fixedScroll() {
+  'use strict';
   const head = document.getElementById('head');
 
   document.addEventListener('scroll', addBackground);
@@ -29,9 +30,10 @@
       }
     }
   }
-})();
+}());
 
 (function accordion() {
+  'use strict';
   const accItem = document.getElementsByClassName('drop-item');
   const accHD = document.getElementsByClassName('drop-item-header');
   const arrow = document.querySelectorAll('.arrow');
@@ -51,9 +53,10 @@
       thisArrow.className = 'fas fa-angle-up';
     }
   }
-})();
+}());
 
 (function popUpClick() {
+  'use strict';
   const popupContainer = document.getElementById('popup');
   const images = document.querySelector('.grid-gallery');
   const popupImg = document.getElementById('img');
@@ -72,43 +75,77 @@
       popupImg.src = target.src;
     }
   }
-})();
+}());
 
-const slideBlock = document.querySelector('.quotes');
-const slides = document.getElementsByClassName('quote-block');
-const left = document.querySelector('.fa-angle-left');
-const right = document.querySelector('.fa-angle-right');
+(function slider() {
+  'use strict';
+  const next = document.querySelector('.fa-angle-right');
+  const prev = document.querySelector('.fa-angle-left');
+  const menu = document.querySelector('.quote-slider');
+  let offset = 0;
 
-slideBlock.addEventListener('click', (e) => {
-  if (e.target === left) {
-    plusSlides(1);
-  } else if (e.target === right) {
-    plusSlides(-1);
-  }
-});
-
-let slideIndex = 1;
-
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
-  if (n > slides.length) {
-    slideIndex = 1;
+  function move() {
+    menu.style['transform'] = 'translate3d(' + offset + ', 0, 0)';
   }
 
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
+  next.addEventListener('click', function() {
+    if (parseInt(offset) <= -2300) {
+      offset = 1150;
+    }
+    offset = (parseInt(offset) - 1150) + 'px';
+    move();
+    console.log(offset);
+  }, false);
 
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].classList.add('hidden');
-    slides[i].classList.remove('visible');
-  }
+  prev.addEventListener('click', function() {
+    if (parseInt(offset) >= 0) {
+      offset = -3450;
+    }
+    offset = (parseInt(offset) + 1150) + 'px';
+    move();
+    console.log(offset);
+  }, false);
+}());
 
-  slides[slideIndex - 1].classList.add('visible');
-  slides[slideIndex - 1].classList.remove('hidden');
-}
+// (function() {
+//   'use strict';
+//   const slideBlock = document.querySelector('.quotes');
+//   const slides = document.getElementsByClassName('quote-block');
+//   const left = document.querySelector('.fa-angle-left');
+//   const right = document.querySelector('.fa-angle-right');
+
+//   slideBlock.addEventListener('click', (e) => {
+//     if (e.target === left) {
+//       plusSlides(1);
+//     } else if (e.target === right) {
+//       plusSlides(-1);
+//     }
+//   });
+
+//   let slideIndex = 1;
+
+//   showSlides(slideIndex);
+
+//   function plusSlides(n) {
+//     showSlides(slideIndex += n);
+//   }
+
+//   function showSlides(n) {
+//     if (n > slides.length) {
+//       slideIndex = 1;
+//     }
+
+//     if (n < 1) {
+//       slideIndex = slides.length;
+//     }
+
+//     for (let i = 0; i < slides.length; i++) {
+//       slides[i].classList.add('hidden');
+//       slides[i].classList.remove('visible');
+//     }
+
+//     slides[slideIndex - 1].classList.add('visible');
+//     slides[slideIndex - 1].classList.remove('hidden');
+//   }
+// }());
+
