@@ -81,11 +81,11 @@
   'use strict';
   const next = document.querySelector('.fa-angle-right');
   const prev = document.querySelector('.fa-angle-left');
-  const menu = document.querySelector('.quote-slider');
+  const slide = document.querySelector('.quote-slider');
   let offset = 0;
 
   function move() {
-    menu.style['transform'] = 'translate3d(' + offset + ', 0, 0)';
+    slide.style['transform'] = 'translate3d(' + offset + ', 0, 0)';
   }
 
   next.addEventListener('click', function() {
