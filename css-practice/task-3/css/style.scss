@@ -5,6 +5,42 @@ sans-serif;
 $font-fancy-stack: 'Kaushan Script',
 cursive;
 
+.block {
+  display: flex !important;
+}
+
+.none {
+  display: none !important;
+}
+
+.modal {
+  align-items: center;
+  justify-content: center;
+  display: none;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  animation-name: zoom;
+  animation-duration: 0.7s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
 .height-0 {
   overflow: hidden;
   padding-top: 0 !important;
@@ -16,6 +52,11 @@ cursive;
 .height-auto {
   height: auto;
   transition: 0.5s ease-out;
+}
+
+.rotate-180 {
+  transform: rotateX(180deg);
+  transition: 0.3s ease-out;
 }
 
 @mixin section() {
@@ -65,7 +106,6 @@ cursive;
   }
 
   i {
-    z-index: 1;
     text-align: center;
     font-size: 36px;
     color: #cccccc;
@@ -456,7 +496,6 @@ nav a:last-child {
   &-info-container {
     width: 50%;
     flex-flow: column nowrap;
-    justify-content: space-between;
   }
 
   &-info {
@@ -464,6 +503,11 @@ nav a:last-child {
     vertical-align: middle;
     line-height: 28px;
     text-align: left;
+    margin-top: 10px;
+
+    &:first-child {
+      margin-top: 0;
+    }
 
     p {
       font-family: $font-paragraph-stack;
@@ -485,10 +529,21 @@ nav a:last-child {
     }
 
     &-text {
+      overflow: scroll;
       word-spacing: -1.4px;
       padding: 16px 42px 20px 18px;
     }
   }
+}
+
+.fa-angle-up,
+.fa-angle-down {
+  transition: 0.3s;
+  float: right;
+  margin-top: -30px;
+  font-size: 34px;
+  font-weight: 700;
+  color: #8e8c8c;
 }
 
 .services-2 {
@@ -502,9 +557,16 @@ nav a:last-child {
 
 .quote-container {
   background-color: #f8f8f8;
+  
+  i:hover {
+    transition: 0.3s;
+    font-size: 50px;
+    color: #fce38a;
+  }
 }
 
 .quote {
+
   @include quote-common();
 
   padding: 68px 0;
@@ -521,6 +583,7 @@ nav a:last-child {
     }
   }
 }
+
 
 .carousel-container {
   z-index: 0;
@@ -659,6 +722,7 @@ nav a:last-child {
       margin: -28px 20px 0 20px;
     }
   }
+
   .quote-text {
     padding: 6px 0 0 6px;
   }
@@ -1004,6 +1068,11 @@ footer {
   box-shadow: 10px 10px 0 0 #95e1d3;
 }
 
+.services-info-container {
+  margin-left: 20px;
+}
+
+
 @media only screen and (min-width:1440px) {
   .welcome .subheader {
     font-size: 72px;
@@ -1044,6 +1113,9 @@ footer {
 }
 
 @media only screen and (max-width:1024px) {
+  .quote-text {
+    padding: 0;
+  }
 
   .logos-section-container {
     display: none;
@@ -1118,6 +1190,10 @@ footer {
     justify-content: space-evenly;
   }
 
+  .services-info-container {
+    margin-left: unset;
+  }
+
   .services-group-container {
     width: 100%;
     margin: 20px auto;
@@ -1181,7 +1257,7 @@ footer {
   }
 
   .services-info-text {
-    display: none;
+    height: 100px;
   }
 
   .meet-our-team {
@@ -1259,7 +1335,7 @@ footer {
   .quote {
     height: fit-content;
   }
-  
+
   .team-member {
     width: 45%;
     margin: 20px auto;
@@ -1302,6 +1378,14 @@ footer {
 
   .meet-our-team-members {
     margin: 30px 0 0 0;
+  }
+
+  .quote-josh,
+  .quote {
+    p {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 }
 
