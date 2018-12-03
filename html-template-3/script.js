@@ -1,4 +1,5 @@
-/* eslint-disable */
+/* global document:true, event:true */
+/* eslint-disable no-invalid-this */
 (function scroll() {
   const head = document.getElementById('head');
 
@@ -15,7 +16,7 @@
   const navigation = document.querySelector('.top-navigation');
   const menuItem = document.getElementsByClassName('menu-item');
 
-  navigation.addEventListener('click', e => addBorder(e.target.id));
+  navigation.addEventListener('click', (e) => addBorder(e.target.id));
 
   function addBorder(id) {
     const selectedLink = document.getElementById(`${id}`);
@@ -34,7 +35,6 @@
   const accItem = document.getElementsByClassName('drop-item');
   const accHD = document.getElementsByClassName('drop-item-header');
   const arrow = document.querySelectorAll('.arrow');
-
   for (let i = 0; i < accHD.length; i++) {
     accHD[i].addEventListener('click', toggleItem);
   }
@@ -44,7 +44,7 @@
     const thisArrow = this.querySelector('i');
     for (let i = 0; i < accItem.length; i++) {
       accItem[i].className = 'drop-item close';
-      arrow[i].className = 'fas fa-angle-down'
+      arrow[i].className = 'fas fa-angle-down';
     }
     if (itemClass === 'drop-item close') {
       this.parentNode.className = 'drop-item open';
@@ -58,13 +58,13 @@
   const images = document.querySelector('.grid-gallery');
   const popupImg = document.getElementById('img');
 
-  images.addEventListener('click', e => clicked(e.target));
-  popupContainer.addEventListener('click', function (e) {
+  images.addEventListener('click', (e) => clicked(e.target));
+  popupContainer.addEventListener('click', function(e) {
     // if(e.target.tagName !== 'IMG') {
     popupContainer.classList.remove('block');
     popupContainer.classList.add('none');
     // }
-  })
+  });
 
   function clicked(target) {
     if (target === event.target) {
@@ -74,6 +74,18 @@
   }
 })();
 
+const slideBlock = document.querySelector('.quotes');
+const slides = document.getElementsByClassName('quote-block');
+const left = document.querySelector('.fa-angle-left');
+const right = document.querySelector('.fa-angle-right');
+
+slideBlock.addEventListener('click', (e) => {
+  if (e.target === left) {
+    plusSlides(1);
+  } else if (e.target === right) {
+    plusSlides(-1);
+  }
+});
 
 let slideIndex = 1;
 
@@ -84,8 +96,6 @@ function plusSlides(n) {
 }
 
 function showSlides(n) {
-  const slides = document.getElementsByClassName('quote-block');
-
   if (n > slides.length) {
     slideIndex = 1;
   }
@@ -95,9 +105,10 @@ function showSlides(n) {
   }
 
   for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    slides[i].classList.add('hidden');
+    slides[i].classList.remove('visible');
   }
 
-  slides[slideIndex - 1].style.display = "flex";
-
+  slides[slideIndex - 1].classList.add('visible');
+  slides[slideIndex - 1].classList.remove('hidden');
 }

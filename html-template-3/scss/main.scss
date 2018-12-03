@@ -390,7 +390,7 @@ header {
   padding-top: 92px;
 }
 
-.wwd-pic {
+.wwd-pics {
   margin-right: 30px;
 }
 
@@ -459,21 +459,26 @@ header {
   padding-top: 36px;
 }
 
+.quotes {
+  @include flex;
+  @include align-items(center);
+}
+
+.fas {
+  font-size: 30px;
+  color: $headers;
+  cursor: pointer;
+  transition: 0.6s ease;
+}
+
 .quote-items {
   @include flex;
   @include align-items(center);
 
-  .fas {
-    font-size: 30px;
-    color: $headers;
-    cursor: pointer;
-    transition: 0.6s ease;
-  }
-
   .quote-img {
     border: 3px solid $riptide;
     padding: 41px;
-    margin: 34px 57px 69px 94px;
+    margin: 34px 57px 69px 56px;
   }
   
   .quote-paragraph {
@@ -486,16 +491,19 @@ header {
   }
 }
 
-.fade {
+.slide {
   animation: slide 1s;
 
   @keyframes slide {
     from {
-      opacity: 4;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
     }
-
+  
     to {
-      opacity: 1;
+      visibility: hidden;
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
     }
   }
 }
@@ -513,39 +521,37 @@ header {
 .visible {
   @include flex;
 
-  animation: slideInLeft 2s;
+  animation: arise 2s;
 }
 
-@keyframes slideInLeft {
+@keyframes arise {
   from {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    visibility: visible;
+    opacity: 0;
+    -webkit-transform: scale(0.1) rotate(30deg);
+    transform: scale(0.1) rotate(30deg);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+
+  50% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+
+  70% {
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
   }
 
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
 
 .hidden {
   display: none;
-
-  animation: slideInRight 2s;
-}
-
-@keyframes slideInRight {
-  from {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    visibility: visible;
-  }
-
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
 }
 
 .meet-our-team {
@@ -653,6 +659,10 @@ header {
 
 .none {
   display: none;
+}
+
+.flex {
+  @include flex;
 }
 
 

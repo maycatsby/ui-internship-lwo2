@@ -178,9 +178,14 @@
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
         ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
       <div class="wwd-items align">
-        <img src="pics/diff/wwd-section-pic.png" alt="Man" class="wwd-pic" />
-        <ul class="future-dropdown">
-          <li class="drop-item open">
+        <div class="wwd-pics">
+            <img src="pics/diff/wwd-section-pic.png" alt="Man" id="1-pic" class="block" />
+            <img src="pics/diff/wwd-section-pic2.jpg" alt="Hand" id="2-pic" class="none" />
+            <img src="pics/diff/wwd-section-pic3.jpg" alt="Tablet" id="3-pic" class="none" />
+        </div>
+        
+        <ul class="future-dropdown"> 
+          <li class="drop-item open" id="1-item">
             <h4 class="main-font drop-item-header">
               <img src="pics/icons/PICTURE.png" alt="picture" class="drop-icon" />Photography
               <i class="fas fa-angle-up arrow" id="arrow1"></i>
@@ -204,7 +209,7 @@
               </p>
             </div>
           </li>
-          <li class="drop-item close">
+          <li class="drop-item close" id="2-item">
             <h4 class="main-font drop-item-header">
               <img src="pics/icons/EQUALIZER.png" alt="equalizer" class="drop-icon" />Creativity
               <i class="fas fa-angle-down arrow" id="arrow2"></i>
@@ -228,7 +233,7 @@
               </p>
             </div>
           </li>
-          <li class="drop-item close">
+          <li class="drop-item close" id="3-item">
             <h4 class="main-font drop-item-header">
               <img src="pics/icons/BULLSEYE.png" alt="bullseye" class="drop-icon" />Web Design
               <i class="fas fa-angle-down arrow" id="arrow3"></i>
@@ -258,8 +263,8 @@
   </section>
   <section class="quote container">
     <div class="quotes align">
-      <div class="quote-items quote-block fade" id="1-quote">
-        <i class='fas fa-angle-left' onclick="plusSlides(1)"></i>
+        <i class='fas fa-angle-left'></i>
+      <div class="quote-items quote-block visible" id="1-quote">
         <img src="pics/icons/comments.png" alt="comment icon" class="quote-img" />
         <div class="quote-text">
           <p class="quote-paragraph font">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -270,10 +275,8 @@
             <h5 class="italic-header">Jon Doe</h5>
           </div>
         </div>
-        <i class='fas fa-angle-right' onclick="plusSlides(-1)"></i>
       </div>
-      <div class="quote-items quote-block fade" id="2-quote">
-        <i class='fas fa-angle-left' onclick="plusSlides(1)"></i>
+      <div class="quote-items quote-block hidden" id="2-quote">
         <img src="pics/icons/comments.png" alt="comment icon" class="quote-img" />
         <div class="quote-text">
           <p class="quote-paragraph font">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -284,10 +287,8 @@
             <h5 class="italic-header">Bob Dylan</h5>
           </div>
         </div>
-        <i class='fas fa-angle-right' onclick="plusSlides(-1)"></i>
       </div>
-      <div class="quote-items quote-block fade" id="3-quote">
-        <i class='fas fa-angle-left' onclick="plusSlides(1)"></i>
+      <div class="quote-items quote-block hidden" id="3-quote">
         <img src="pics/icons/comments.png" alt="comment icon" class="quote-img" />
         <div class="quote-text">
           <p class="quote-paragraph font">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -298,8 +299,8 @@
             <h5 class="italic-header">Sten Lee</h5>
           </div>
         </div>
-        <i class='fas fa-angle-right' onclick="plusSlides(-1)"></i>
       </div>
+      <i class='fas fa-angle-right'></i>
     </div>
   </section>
   <section class="meet-our-team">

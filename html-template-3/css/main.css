@@ -751,7 +751,7 @@ header {
   grid-template-columns: 1fr 1fr;
   padding-top: 92px; }
 
-.wwd-pic {
+.wwd-pics {
   margin-right: 30px; }
 
 .future-dropdown {
@@ -816,6 +816,20 @@ header {
   background-color: #f8f8f8;
   padding-top: 36px; }
 
+.quotes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.fas {
+  font-size: 30px;
+  color: #333333;
+  cursor: pointer;
+  transition: 0.6s ease; }
+
 .quote-items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -823,14 +837,10 @@ header {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-  .quote-items .fas {
-    font-size: 30px;
-    color: #333333;
-    cursor: pointer; }
   .quote-items .quote-img {
     border: 3px solid #95e1d3;
     padding: 41px;
-    margin: 34px 57px 69px 94px; }
+    margin: 34px 57px 69px 56px; }
   .quote-items .quote-paragraph {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -842,6 +852,18 @@ header {
     font-style: italic;
     font-size: 24px;
     line-height: 36px; }
+
+.slide {
+  animation: slide 1s; }
+
+@keyframes slide {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0); } }
 
 .quote-underline {
   margin: 17px 10px 0 0; }
@@ -856,29 +878,28 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  animation: slideInLeft 2s; }
+  animation: arise 2s; }
 
-@keyframes slideInLeft {
+@keyframes arise {
   from {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    visibility: visible; }
+    opacity: 0;
+    -webkit-transform: scale(0.1) rotate(30deg);
+    transform: scale(0.1) rotate(30deg);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom; }
+  50% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg); }
+  70% {
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg); }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); } }
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
 
 .hidden {
-  display: none;
-  animation: slideInRight 2s; }
-
-@keyframes slideInRight {
-  from {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    visibility: visible; }
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); } }
+  display: none; }
 
 .meet-our-team {
   padding: 99px 0; }
@@ -967,6 +988,11 @@ header {
 
 .none {
   display: none; }
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .joshua-quote {
   background: transparent;
