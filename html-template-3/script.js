@@ -82,29 +82,33 @@
 
 (function slider() {
   'use strict';
-  const next = document.querySelector('.fa-angle-right');
-  const prev = document.querySelector('.fa-angle-left');
-  const slide = document.querySelector('.quote-slider');
+  const next = [...document.querySelectorAll('.fa-angle-right')];
+  const prev = [...document.querySelectorAll('.fa-angle-left')];
+  const slide = [...document.querySelectorAll('.quote-slider')];
   let offset = 0;
 
   function move() {
-    slide.style['transform'] = 'translate3d(' + offset + ', 0, 0)';
+    for (let i = 0; i < slide.length; i++) {
+      slide[i].style['transform'] = 'translate3d(' + offset + ', 0, 0)';
+    }
   }
 
-  next.addEventListener('click', function() {
-    if (parseInt(offset) <= -2300) {
-      offset = 1150;
-    }
-    offset = (parseInt(offset) - 1150) + 'px';
-    move();
-  }, false);
+  for (let i = 0; i < next.length; i++) {
+    next[i].addEventListener('click', function() {
+      if (parseInt(offset) <= -2300) {
+        offset = 1150;
+      }
+      offset = (parseInt(offset) - 1150) + 'px';
+      move();
+    }, false);
 
-  prev.addEventListener('click', function() {
-    if (parseInt(offset) >= 0) {
-      offset = -3450;
-    }
-    offset = (parseInt(offset) + 1150) + 'px';
-    move();
-  }, false);
+    prev[i].addEventListener('click', function() {
+      if (parseInt(offset) >= 0) {
+        offset = -3450;
+      }
+      offset = (parseInt(offset) + 1150) + 'px';
+      move();
+    }, false);
+  }
 }());
 
