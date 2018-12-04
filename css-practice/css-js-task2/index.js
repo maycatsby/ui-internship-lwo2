@@ -1,17 +1,14 @@
-const validation = () => {
-  const formLogin = document.getElementById('form-login');
-  const button = document.getElementById('but');
-  const inputs = [...formLogin.querySelectorAll('input')];
-  const formValidator = () => {
-    const passed = inputs.every((el) => el.checkValidity());
-    if (passed) {
-      button.classList.remove('disable');
-      button.disabled = false;
-    } else {
-      button.classList.add('disable');
-      button.disabled = true;
-    }
+const formLogin = document.getElementById('form-login');
+const submitInput = document.getElementById('but');
+const inputs = [...formLogin.querySelectorAll('input')];
+const formValidator = () => {
+  const passed = inputs.every((el) => el.checkValidity());
+  if (passed) {
+    submitInput.classList.remove('disable');
+    submitInput.disabled = false;
+  } else {
+    submitInput.classList.add('disable');
+    submitInput.disabled = true;
   }
-  formLogin.addEventListener('input', formValidator, true);
 }
-validation();
+formLogin.addEventListener('input', formValidator, true);
