@@ -488,7 +488,7 @@ letter-spacing: 0.56px;
     @include flex-prefix;
     display: flex;
     justify-content: space-around;
-    
+
     img {
       cursor: pointer;
     }
@@ -499,6 +499,7 @@ letter-spacing: 0.56px;
   box-shadow: 5px 5px 10px green;
   border-color: #28921f;
 }
+
  .invalid {
   box-shadow: 5px 5px 10px #d45252;
   border-color: #b03535;
