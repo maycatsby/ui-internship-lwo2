@@ -8,6 +8,7 @@
   max-width: 1440px;
   min-width: 960px;
   margin: auto;
+
     header {
       height: 814px;
       @include flex-prefix;
@@ -16,6 +17,7 @@
       position: relative;
       overflow: hidden;
       text-align: center;
+
       video {
         position: absolute;
         top: 0;
@@ -26,6 +28,7 @@
         height: auto; 
         z-index: -1;
       }
+
       .main-info {
         margin-top: 220px;
         @include flex-prefix;
@@ -33,6 +36,7 @@
         align-items: center;
         flex-direction: column;
       }
+
       h1 {
         font-family: $titleFont;
         color: $mainColor;
@@ -41,6 +45,7 @@
         letter-spacing: 3px;
         z-index: 1;
       }
+
       .play {
         background-image: url(../img/music-play.png);
       }
@@ -131,6 +136,7 @@ h2 {
   line-height: 50px;
   word-spacing: -4px;
   letter-spacing: 1.6px;
+
   span {
     color: $colorDecor;
   }
@@ -228,9 +234,11 @@ h2 {
 
 .text-responsive {
   margin: 140px 200px 116px 50px;
+
   .label {
     margin-bottom: 15px;
   }
+
   .text {
   margin-top: 30px;
   }
@@ -281,6 +289,7 @@ h2 {
   font-size: 16px;
 
 }
+
 .pic-about {
   margin: 110px 0px 80px 0px;
   height: 85px;
@@ -331,20 +340,24 @@ h2 {
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
+
   h2 {
     margin: 6px 10px 30px 0px;
     color: $fonColor;
   }
+
   .limit {
     margin-left: 880px;
     color: $fonColor;
     position: relative;
   }
+
   .limit::before {
     content: url(../img/ARROW.png);
     position: absolute;
     left: -38px;
   }
+
   input {
     margin-right: 30px;
     padding-left: 10px;
@@ -387,6 +400,7 @@ h2 {
     opacity: 0.6;
     line-height: 75px;
     letter-spacing: 0.64px;
+
     span {
     text-decoration: underline;
     }
@@ -416,6 +430,7 @@ font-size: 22px;
 display: flex;
 justify-content: space-around;
 letter-spacing: 0.88px;
+
 img {
   margin-top: -10px;
 }
@@ -433,6 +448,7 @@ letter-spacing: 0.56px;
 .input-wrapper{
   position: relative;
   margin: 20px 0px 20px 0px;
+
   input {
     width: 263px;
     height: 49px;
@@ -441,6 +457,7 @@ letter-spacing: 0.56px;
     background-color: #8d8d8d;
     opacity: 0.4;
   }
+
   input::-webkit-input-placeholder { 
     color: #000000;
     padding-left: 30px;
@@ -471,6 +488,7 @@ letter-spacing: 0.56px;
     @include flex-prefix;
     display: flex;
     justify-content: space-around;
+    
     img {
       cursor: pointer;
     }
