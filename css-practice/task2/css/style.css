@@ -8,18 +8,18 @@ video {
   background-color: grey; }
 
 .disabled {
-  background-color: grey !important;
-  cursor: not-allowed !important; }
+  background-color: grey;
+  cursor: not-allowed; }
 
 .enabled {
-  background-color: #ff6d6d !important;
-  cursor: pointer !important; }
+  background-color: #ff6d6d;
+  cursor: pointer; }
 
 .success {
-  outline: 3px solid green !important; }
+  outline: 3px solid green; }
 
 .error {
-  outline: 3px solid #ff6d6d !important; }
+  outline: 3px solid #ff6d6d; }
 
 * {
   margin: 0;
@@ -69,6 +69,9 @@ button {
   font-size: 16px;
   font-weight: 100;
   padding: 16px 50px;
+  transition: 0.7s; }
+
+.free-trial-btn {
   transition: 0.7s; }
 
 header {
@@ -310,7 +313,8 @@ header img {
 .designer-features form input {
   border: 1px solid #ffffff; }
 
-.designer-features form input, .designer-features form button {
+.designer-features form input,
+.designer-features form button {
   border-radius: 3px;
   width: 23.2%;
   height: 50px; }
@@ -433,11 +437,13 @@ span.card-details {
   .design-container {
     background-image: none;
     padding: 10% 0; }
-  .design .img-container, .design article {
+  .design .img-container,
+  .design article {
     width: 67%;
     margin: 0 auto;
     text-align: center; }
-  .design img, .design h2 {
+  .design img,
+  .design h2 {
     padding: 0;
     width: 100%; }
   .design .img-container {
@@ -514,5 +520,6 @@ span.card-details {
     margin-bottom: 40px; }
   .sign {
     padding: 0 20px; }
-  .feature, .founder p {
+  .feature,
+  .founder p {
     padding: 0; } }

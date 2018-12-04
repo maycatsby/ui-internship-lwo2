@@ -14,13 +14,16 @@
 
 <body>
   <div class="header-container">
-    <video autoplay src="./img/The-Slow-Dock.mp4"></video>
-      <header>
-        <h1>There is no other platforms for you as like </h1>
-        <img src="./img/playhmmm.svg" alt="play button" id='play-button'>
-        <button>try now</button>
-        <span class="card-details">* No need to add cards details</span>
-      </header>
+    <video>
+      <source src="./img/The-Slow-Dock.mp4" type="video/mp4">
+      <source src="./img/The-Slow-Dock.ogg" type="video/ogg">
+    </video>
+    <header>
+      <h1>There is no other platforms for you as like </h1>
+      <img src="./img/playhmmm.svg" alt="play button" id='play-button'>
+      <button>try now</button>
+      <span class="card-details">* No need to add cards details</span>
+    </header>
   </div>
 
   <section class="platforms flexible">
@@ -130,7 +133,7 @@
       <input type="text" data-form="name" placeholder="FULL NAME">
       <input type="email" data-form="email" placeholder="YOUR EMAIL">
       <input type="password" data-form="password" placeholder="PASSWORD">
-      <button type="submit" class="free-trial-btn"><img src="./img/30-days.png" alt="30 free days of trial"> TRY NOW</button>
+      <input type="submit" class="free-trial-btn" value="TRY NOW">
     </form>
     <span class="sign">By Signing up you agree to our <u>terms & Services.</u></span>
   </section>

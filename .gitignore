@@ -10,5 +10,4 @@ node_modules
 *.log.*
 .DS_STORE
 .DS_Store
-._*
 *.css
