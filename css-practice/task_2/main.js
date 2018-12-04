@@ -23,7 +23,6 @@ window.onload = function() {
   }
 
   const loginFormInpunts = document.forms['main-form'].addEventListener('keyup', validate);
- 
   function validate(event) {
     if (!event.target.validity.valid || !event.target.value) {
       event.target.classList.add('invalid');
