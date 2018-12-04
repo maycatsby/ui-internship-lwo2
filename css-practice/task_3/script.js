@@ -25,13 +25,13 @@ const accordeon = () => {
   const chapterTopArr = [...document.getElementsByClassName('chapter-top')];
   const chapterBoxArr = [...document.getElementsByClassName('chapter-text-box')];
   const chapterArrow = [...document.getElementsByClassName('chapter-arrow')];
+  const bottomLeftArr = [...document.getElementsByClassName('bottom-left')];
   const hideAllBox = () => {
     chapterBoxArr.forEach((e) => e.classList.add('display-none'));
   }
   const hideAllImg = () => {
-    chapterBoxArr.forEach((e) => e.classList.add('display-none'));
+    bottomLeftArr.forEach((e) => e.classList.add('hide'));
   }
-
   const noRotate = () => {
     chapterArrow.forEach((e) => e.classList.remove('rotate-arrow'))
   }
@@ -40,6 +40,8 @@ const accordeon = () => {
       chapterTopArr[i].onclick = () => {
         if (chapterBoxArr[i].classList.contains('display-none')) {
           hideAllBox();
+          hideAllImg();
+          bottomLeftArr[i].classList.toggle('hide');
           chapterBoxArr[i].classList.toggle('display-none');
           noRotate();
           chapterArrow[i].classList.toggle('rotate-arrow');
@@ -65,20 +67,20 @@ const slider = () => {
   const testimonialContent = document.getElementById('testimonial-box-content');
   let counter = 0;
   const nextSlide = (content) => {
-    if (counter === -66) {
+    if (counter === -66.66666) {
       counter = 0;
       content.style.transform = 'translateX(' + counter + '%)';
     } else {
-      counter -= 33;
+      counter -= 33.33333;
       content.style.transform = 'translateX(' + counter + '%)';
     }
   };
   const prevSlide = (content) => {
     if (counter === 0) {
-      counter = -66;
+      counter = -66.66666;
       content.style.transform = 'translateX(' + counter + '%)';
     } else {
-      counter += 33;
+      counter += 33.33333;
       content.style.transform = 'translateX(' + counter + '%)';
     }
   };
@@ -88,3 +90,22 @@ const slider = () => {
   testimonialArrowRight.addEventListener('click', () => nextSlide(testimonialContent));
 }
 slider();
+
+const popUp = () => {
+  const workImgArr = [...document.getElementsByClassName('work-img')];
+  const img = document.getElementById('img');
+  const modal = document.querySelector('.modal');
+  workImgArr.forEach(e => {
+    e.onclick = function () {
+      console.log(e);
+      modal.classList.add('modal-flex');
+      img.src = this.src;
+    }
+  });
+  modal.onclick = () => {
+    modal.classList.remove('modal-flex');
+  }
+}
+popUp();
+
+

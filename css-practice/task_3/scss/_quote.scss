@@ -4,23 +4,13 @@
   width: 1.1%;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .quote-box{
   width: 100%;
   margin-bottom: 2.5%;
   display: flex;
   justify-content: space-between;
-}
-.hide-quote{
-  animation: hideQuote 3s;
-}
-@keyframes hideQuote {
-  0% {
-   width: 0;
-  }
-  100% {
-    width: 100px;
-  }
 }
 .quote-content{
   width: 86.9%;
@@ -36,9 +26,6 @@
   width: 15.4%;
   margin-top: 7.2%;
   transition: transform 1s;
-}
-.quote-box-left:hover{
-  transform: scale(1.1);
 }
 .quote-box-right{
   width: 78.5%;
