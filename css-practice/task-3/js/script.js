@@ -1,15 +1,15 @@
 /* global document*/
-const conts = document.querySelectorAll('.services-info-title');
-const eks = document.querySelectorAll('.services-info-text');
+const containers = document.querySelectorAll('.services-info-title');
+const servicesAccordionText = document.querySelectorAll('.services-info-text');
 
-conts.forEach((el) => {
+containers.forEach((el) => {
   el.addEventListener('click', toggleShow);
 });
 
 function toggleShow(e) {
-
   const textClassList = e.currentTarget.nextElementSibling.classList;
-  conts.forEach((el) => {
+
+  containers.forEach((el) => {
     if (el !== e.currentTarget) {
       el.querySelector('i').classList.remove('rotate-180');
     }
@@ -18,7 +18,8 @@ function toggleShow(e) {
   e.currentTarget.querySelector('i').classList.toggle('rotate-180');
 
   if (e.currentTarget.nextElementSibling.classList.contains('height-0')) {
-    eks.forEach((el) => {
+    changeAccordionImage(e.currentTarget.getAttribute('data-image'));
+    servicesAccordionText.forEach((el) => {
       el.classList.remove('height-auto');
       el.classList.add('height-0');
     });
@@ -29,6 +30,14 @@ function toggleShow(e) {
   }
   textClassList.toggle('height-0');
   textClassList.toggle('height-auto');
+}
+
+function changeAccordionImage(imageIndex) {
+  const servicesImagesGroup = Array.from(document.querySelectorAll('.services-group-container > img'));
+  servicesImagesGroup.forEach((el) => {
+    el.classList.add('none');
+  });
+  servicesImagesGroup[imageIndex].classList.remove('none');
 }
 
 // carousel
@@ -94,12 +103,11 @@ function showPopup(e) {
   const modalImg = modal.querySelector('.modal-content');
 
   modal.classList.remove('none');
-  modal.classList.add('block');
+  modal.classList.add('display--flex');
   modalImg.src = galleryImage.src;
   modal.addEventListener('click', closePopup);
 }
 
-
 function closePopup(e) {
-  document.querySelector('.block').classList.replace('block', 'none');
+  document.querySelector('.display--flex').classList.replace('display--flex', 'none');
 }

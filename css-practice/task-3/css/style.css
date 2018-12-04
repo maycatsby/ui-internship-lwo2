@@ -1,8 +1,8 @@
-.block {
+.display--flex {
   display: flex !important; }
 
 .none {
-  display: none !important; }
+  display: none; }
 
 .modal {
   align-items: center;

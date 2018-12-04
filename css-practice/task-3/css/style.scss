@@ -1,16 +1,13 @@
-$font-header-stack: 'Montserrat',
-sans-serif;
-$font-paragraph-stack: 'Roboto',
-sans-serif;
-$font-fancy-stack: 'Kaushan Script',
-cursive;
+$font-header-stack: 'Montserrat', sans-serif;
+$font-paragraph-stack: 'Roboto', sans-serif;
+$font-fancy-stack: 'Kaushan Script', cursive;
 
-.block {
+.display--flex {
   display: flex !important;
 }
 
 .none {
-  display: none !important;
+  display: none;
 }
 
 .modal {
