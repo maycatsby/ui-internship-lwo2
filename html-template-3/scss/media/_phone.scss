@@ -104,6 +104,7 @@
 
     .what-we-do {
       padding: 30px 0 60px 0;
+      background-color: $quote-background;
     }
 
     .wwd-items {
@@ -111,7 +112,7 @@
       padding-top: 60px;
 
       img {
-        width: 100%;
+        width: 115%;
         margin-bottom: 10px;
       }
     }
@@ -120,13 +121,8 @@
       padding-left: 10px;
     }
 
-    .quote-items {
-      @include grid-template-columns(1fr);
-
-      .quote-img {
-        margin: 0;
-        padding: 20px;
-      }
+    .quote {
+      display: none;
     }
 
     .meet-our-team {

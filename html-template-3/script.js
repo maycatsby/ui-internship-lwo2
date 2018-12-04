@@ -34,23 +34,28 @@
 
 (function accordion() {
   'use strict';
-  const accItem = document.getElementsByClassName('drop-item');
+  const accItem = [...document.getElementsByClassName('drop-item')];
   const accHD = document.getElementsByClassName('drop-item-header');
   const arrow = document.querySelectorAll('.arrow');
+  const pics = document.getElementsByClassName('pics');
+
   for (let i = 0; i < accHD.length; i++) {
     accHD[i].addEventListener('click', toggleItem);
   }
 
   function toggleItem() {
     const itemClass = this.parentNode.className;
-    const thisArrow = this.querySelector('i');
+    const thisArrow = this.querySelector('.fas');
+    const currentElementIndex = accItem.indexOf(this.parentNode);
     for (let i = 0; i < accItem.length; i++) {
       accItem[i].className = 'drop-item close';
       arrow[i].className = 'fas fa-angle-down';
+      pics[i].className = 'none pics';
     }
     if (itemClass === 'drop-item close') {
       this.parentNode.className = 'drop-item open';
       thisArrow.className = 'fas fa-angle-up';
+      pics[currentElementIndex].className = 'block pics';
     }
   }
 }());

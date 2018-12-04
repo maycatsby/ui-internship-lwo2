@@ -8,6 +8,7 @@
       @include flex-direction(column);
 
       margin: 0;
+      position: initial;
     }
 
     .top-navigation {
@@ -132,10 +133,11 @@
 
     .what-we-do {
       padding: 20px 0 40px 0;
+      background-color: $quote-background;
     }
 
-    .wwd-pic {
-      width: 100%;
+    .pics {
+      width: 115%;
       margin-bottom: 10px;
     }
 
@@ -143,16 +145,8 @@
       width: 100%;
     }
 
-    .quote-items {
-
-      .quote-img {
-        margin: 0;
-      }
-
-      .quote-text {
-        margin-left: 20px;
-        padding-bottom: 40px;
-      }
+    .quote{
+      display: none;
     }
 
     .meet-our-team {
