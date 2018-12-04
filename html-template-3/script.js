@@ -68,10 +68,8 @@
 
   images.addEventListener('click', (e) => clicked(e.target));
   popupContainer.addEventListener('click', function(e) {
-    // if(e.target.tagName !== 'IMG') {
     popupContainer.classList.remove('block');
     popupContainer.classList.add('none');
-    // }
   });
 
   function clicked(target) {
@@ -109,46 +107,4 @@
     move();
   }, false);
 }());
-
-// (function() {
-//   'use strict';
-//   const slideBlock = document.querySelector('.quotes');
-//   const slides = document.getElementsByClassName('quote-block');
-//   const left = document.querySelector('.fa-angle-left');
-//   const right = document.querySelector('.fa-angle-right');
-
-//   slideBlock.addEventListener('click', (e) => {
-//     if (e.target === left) {
-//       plusSlides(1);
-//     } else if (e.target === right) {
-//       plusSlides(-1);
-//     }
-//   });
-
-//   let slideIndex = 1;
-
-//   showSlides(slideIndex);
-
-//   function plusSlides(n) {
-//     showSlides(slideIndex += n);
-//   }
-
-//   function showSlides(n) {
-//     if (n > slides.length) {
-//       slideIndex = 1;
-//     }
-
-//     if (n < 1) {
-//       slideIndex = slides.length;
-//     }
-
-//     for (let i = 0; i < slides.length; i++) {
-//       slides[i].classList.add('hidden');
-//       slides[i].classList.remove('visible');
-//     }
-
-//     slides[slideIndex - 1].classList.add('visible');
-//     slides[slideIndex - 1].classList.remove('hidden');
-//   }
-// }());
 
