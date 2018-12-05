@@ -1,24 +1,5 @@
-'use strict';
 /* global document */
-(function() {
-  // Background video playback
-  const playBtn = document.querySelector('.btn-video');
-  const bgVideo = document.querySelector('video');
-
-  const playState = (evt) => {
-    evt.preventDefault();
-    if (playBtn.classList.contains('pause')) {
-      bgVideo.play();
-    } else {
-      bgVideo.pause();
-    }
-    playBtn.classList.toggle('play');
-    playBtn.classList.toggle('pause');
-  };
-
-  playBtn.addEventListener('click', playState);
-
-  // Form validation
+const formValidation = (() => {
   const contactForm = document.querySelector('.contact__form');
   const submitBtn = contactForm.querySelector('[type="submit"]');
   // select inputs from form
@@ -56,5 +37,11 @@
     }
   };
 
-  contactForm.addEventListener('input', submitSwitch, true);
+  return {
+    init: () => {
+      contactForm.addEventListener('input', submitSwitch, true);
+    },
+  };
 })();
+
+formValidation.init();
