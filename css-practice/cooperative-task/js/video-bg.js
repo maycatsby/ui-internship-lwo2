@@ -21,4 +21,4 @@ const videoModule = (() => {
   };
 })();
 
-videoModule.init();
+export default videoModule;

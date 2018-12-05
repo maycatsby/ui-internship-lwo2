@@ -44,4 +44,4 @@ const formValidation = (() => {
   };
 })();
 
-formValidation.init();
+export default formValidation;
