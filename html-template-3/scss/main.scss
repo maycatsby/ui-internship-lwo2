@@ -481,7 +481,7 @@ header {
 .quotes-content {
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: auto;
+  overflow-x: hidden;
   width: 1150px;
 
   .quote-slider {
