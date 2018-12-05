@@ -28,6 +28,6 @@
   },
   "dependencies": {
     "node-sass": "^4.10.0",
-    "sass": "^1.14.3"
+    "sass": "^1.15.1"
   }
 }
