@@ -10,7 +10,7 @@ const test_passed = {'user_name': false, 'user_mail': false, 'user_password': fa
 const myForm = document.querySelectorAll('form,input');
 btn.disabled = true;
 
-newDisableFunc = function() {
+const newDisableFunc = function() {
   if (test_rules[this.name].test(this.value)) {
     this.style.outline = '2px solid green';
     test_passed[this.name] = true;
@@ -31,6 +31,13 @@ newDisableFunc = function() {
   }
 };
 
-myForm.forEach(function(element) {
-  element.addEventListener('blur', newDisableFunc, false);
-});
+const formAPI = {
+  init: () => {
+    myForm.forEach(function(element) {
+      element.addEventListener('blur', newDisableFunc, false);
+    });
+  },
+};
+
+export default formAPI;
+

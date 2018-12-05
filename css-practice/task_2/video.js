@@ -1,5 +1,4 @@
 const ppbutton = document.getElementById('vidbutton');
-ppbutton.addEventListener('click', playPause);
 const myVideo = document.getElementById('myvid');
 function playPause() {
   if (myVideo.paused) {
@@ -12,3 +11,11 @@ function playPause() {
     ppbutton.classList.add('pause');
   }
 }
+
+const videoAPI = {
+  init: () => {
+    ppbutton.addEventListener('click', playPause);
+  },
+};
+
+export default videoAPI;
