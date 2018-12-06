@@ -1,0 +1,90 @@
+// Hero Section
+.hero {
+  display: grid;
+  grid-template-columns: minmax(65%, 520px) auto;
+  grid-gap: 2%;
+}
+
+// Social Section
+.social {
+  display: grid;
+  grid-gap: 5%;
+  grid-template-columns: minmax(min-content, 380px) auto;
+}
+
+// Features Section
+.features--first {
+  display: grid;
+  grid-template-columns: 20% minmax(auto, 500px) auto;
+  grid-gap: 2.5%;
+}
+
+.features--second {
+  display: grid;
+  grid-template-columns: auto minmax(auto, 500px);
+  grid-gap: 5.5%;
+}
+
+.features--third {
+  display: grid;
+  grid-template-columns: minmax(auto, 500px) auto;
+  grid-gap: 11%;
+}
+
+// About Section
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+// Pricing Section
+.cards-holder {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+// Reviews Section
+.users-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10%;
+}
+
+// Contact Section
+.message {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  grid-column-gap: 60px;
+  grid-row-gap: 42px;
+
+  &--fields {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-row-gap: 30px;
+  }
+
+  &--button {
+    grid-column: 1 / 3;
+  }
+}
+
+@media only screen and (max-width: $screen-md + 'px') {
+  .hero,
+  .social,
+  .benefits,
+  .users-list, 
+  .cards-holder {
+    grid-template-columns: auto;
+  }
+
+  .features {
+    &--first,
+    &--second,
+    &--third {
+      grid-template-columns: auto;
+    }
+  }
+}
