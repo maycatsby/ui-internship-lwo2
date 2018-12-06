@@ -3,6 +3,8 @@
   font: inherit;
   font-size: 100%;
   line-height: 1.15;
+  outline: none;
+  outline-offset: 0; 
 }
 
 %font-base {
@@ -24,7 +26,7 @@
   display: inline-block;
   vertical-align: middle;
   color: $color-white;
-  font-family: $font-second;
+  font-family: $font-open_sans;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -39,4 +41,31 @@
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+%input-contact {
+  width: 100%;
+  border: none;
+  padding: 0 1em;
+  line-height: 2;
+  border-bottom: 1px solid rgba($color-black, .15);
+
+  &:focus {
+    background-color: $color-focus;
+    outline: 1px solid $color-grey;
+  }
+}
+
+%input-signup {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 0 20px;
+  line-height: 4.1rem;
+  border-bottom: 1px solid rgba($color-black, 0.15);
+  
+  &:focus {
+    background-color: $color-focus;
+    outline: 1px solid $color-grey;
+  }
 }

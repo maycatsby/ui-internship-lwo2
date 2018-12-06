@@ -1,22 +1,33 @@
 section#hero.hero
   .company
-    h1.company--name(title="AXIT")
+    h1.company__name(title="AXIT")
       img(src="img/company_logo.png", alt="AXIT Logo")
-    h2.hero--title
+    h2.hero__title
       |modern axure template
       br 
       |for beautiful prototypes
-    p.hero--description.
+    p.hero__description.
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
       euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
-    button.btn-border Download
-  form.signup-form.mt-md(action="#")
-    h3.signup-form--heading
+    button.btn-outline Download
+  form#signup.signup-form.mt-md(action="#", method="POST", novalidate)
+    h3.signup-form__heading
       |Try Your 
       ins free 
       |Trial Today
     fieldset
-      input(type="text", name="name", placeholder="Name")
-      input(type="email", name="email", placeholder="Email")
-      input(type="password", name="password", placeholder="Password")
-    input(type="button", value="Get Started")
+      label
+        input(type="text", name="name", placeholder="Name",
+              data-pattern="^[a-z]{3,}", required)
+        span.validate-msg
+      label
+        input(type="email", name="email", placeholder="Email",
+              data-pattern="^[^@]+@[^@]+\.[^@]{2,}$", required)
+        span.validate-msg
+      label
+        input(type="password", name="password", placeholder="Password",
+              data-pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,20}",
+              title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number. Length 6-20",
+              required)
+        span.validate-msg
+    input.signup-form__submit(type="submit", value="Get Started")

@@ -1,11 +1,20 @@
 section#contact-us.contact-us
   h2.section-heading contact us
   span.small-heading Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  form(action="#", class="message")
-    .message--fields
-      input(type="text", name="name", placeholder="Name")
-      input(type="email", name="email", placeholder="Email")
-      input(type="text", name="subject", placeholder="Subject")
-    textarea(name="message", placeholder="Message", rows="9")
-    fieldset.message--button
-      input(class="btn-primary", type="button", value="Send Message")
+  form#message.message(action="#", method="POST", novalidate)
+    fieldset.message__fields
+      label
+        input(type="text", name="name", placeholder="Name",
+              data-pattern="^[a-z]{3,}", required)
+        span.validate-msg
+      label
+        input(type="email", name="email", placeholder="Email",
+              data-pattern="^[^@]+@[^@]+\.[^@]+$", required)
+        span.validate-msg
+      label
+        input(type="text", name="subject", placeholder="Subject",
+              maxlength="30", required)
+        span.validate-msg
+    textarea(name="message", placeholder="Message", maxlength="250")
+    fieldset.message__button
+      input(class="btn-primary", type="submit", value="Send Message")

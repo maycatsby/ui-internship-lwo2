@@ -1,78 +1,78 @@
 .social-link {
 
-  &__fb-sm,
-  &__tw-sm,
-  &__gp-sm,
-  &__pn-sm,
-  &__ins-sm,
-  &__stu-sm,
-  &__rss-sm {
+  &--fb-sm,
+  &--tw-sm,
+  &--gp-sm,
+  &--pn-sm,
+  &--ins-sm,
+  &--stu-sm,
+  &--rss-sm {
     @include socialLinks($sprite-sm, 29px, 23px);
   }
 
-  &__fb-sm {
+  &--fb-sm {
     background-position: 8px 0;
   }
 
-  &__tw-sm {
+  &--tw-sm {
     background-position: -39px 0;
   }
 
-  &__gp-sm {
+  &--gp-sm {
     background-position: -91px 0;
   }
 
-  &__pn-sm {
+  &--pn-sm {
     background-position: -137px 0;
   }
 
-  &__ins-sm {
+  &--ins-sm {
     background-position: -187px 0;
   }
 
-  &__stu-sm {
+  &--stu-sm {
     background-position: -241px 0;
   }
 
-  &__rss-sm {
+  &--rss-sm {
     background-position: -294px 0;
   }
 
-  &__fb,
-  &__tw,
-  &__gp,
-  &__pn,
-  &__ins,
-  &__stu,
-  &__rss {
+  &--fb,
+  &--tw,
+  &--gp,
+  &--pn,
+  &--ins,
+  &--stu,
+  &--rss {
     @include socialLinks($sprite-bg, 55px, 46px);
   }
 
-  &__fb {
+  &--fb {
     background-position: 10px 0;
   }
 
-  &__tw {
+  &--tw {
     background-position: -85px 0;
   }
 
-  &__gp {
+  &--gp {
     background-position: -190px 0;
   }
 
-  &__pn {
+  &--pn {
     background-position: -280px 0;
   }
 
-  &__ins {
+  &--ins {
     background-position: -381px 0;
   }
 
-  &__stu {
+  &--stu {
     background-position: -483px 0;
   }
 
-  &__rss {
+  &--rss {
     background-position: -592px 0;
   }
 }

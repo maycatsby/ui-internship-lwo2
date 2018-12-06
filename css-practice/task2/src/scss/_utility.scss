@@ -1,0 +1,72 @@
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+// Utility
+.mb-md {
+  margin-bottom: 30px;
+}
+
+.mt-md {
+  margin-top: 30px;
+}
+
+.mb-bg {
+  margin-bottom: 40px;
+}
+
+.mt-bg {
+  margin-top: 40px;
+}
+
+[isvalid="true"] {
+  border-color: transparent;
+  background-color: rgba($color-success, .05);
+  outline: 1px solid rgba(9, 112, 9, 0.75);
+}
+
+[isvalid="false"] {
+  border-color: transparent;
+  background-color: rgba($color-error, .05);
+  outline: 1px solid rgba(244, 67, 54, 0.75);
+}
+
+.validate-msg {
+  position: absolute;
+  display: none;
+  bottom: 35px;
+  left: 5%;
+  padding: .7rem 1.1rem;
+  color: $color-error;
+  background-color: $color-white;
+  border: 1px solid $color-error;
+  border-radius: 3px;
+  z-index: 1;
+  box-shadow: 2px 2px 3px 0px $color-dark-1;
+  @include p-el(after, 10px, 10px) {
+    bottom: -10px;
+    left: 10px;
+    border-top: 7px solid $color-error;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+  }
+}
+
+.feature__content {
+
+  .show-sign {
+    display: block;
+    animation: opacity-transition 1s cubic-bezier(0.96, 0.42, 0.54, 0.58);
+  }
+}
+
+@keyframes opacity-transition {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

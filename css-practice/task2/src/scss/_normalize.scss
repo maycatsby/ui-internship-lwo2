@@ -10,14 +10,14 @@
 }
 
 html {
-  font-size: 62.5%; // default 16px --> 10px = 1rem;
+  font-size: 62.5%; // default 16px __> 10px = 1rem;
   box-sizing: border-box;
 }
 
 body {
   color: $color-dark-1;
   font-size: 1.4rem;
-  font-family: $font-second;
+  font-family: $font-open_sans;
   overflow-x: hidden;
   font-weight: 400;
 }
@@ -39,6 +39,10 @@ a {
   color: #fff;
 }
 
+span {
+  display: inline-block;
+}
+
 main {
   display: block;
 }
@@ -54,26 +58,4 @@ fieldset {
 
 section {
   text-align: center;
-}
-
-.container {
-  max-width: $max-width;
-  margin: 0 auto;
-}
-
-// Utility
-.mb-md {
-  margin-bottom: 30px;
-}
-
-.mt-md {
-  margin-top: 30px;
-}
-
-.mb-bg {
-  margin-bottom: 40px;
-}
-
-.mt-bg {
-  margin-top: 40px;
 }
