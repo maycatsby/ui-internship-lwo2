@@ -3,12 +3,39 @@ $color-button-dots: #ff6d6d;
 $color-input-border-and-social: #c8c8c8;
 $color-input: #f6f5f3;
 
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: grey;
+}
+
+.disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+.enabled {
+  background-color: $color-button-dots;
+  cursor: pointer;
+}
+
+.success {
+  outline: 3px solid green;
+}
+
+.error {
+  outline: 3px solid #ff6d6d;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 
 body {
   font-family: 'Exo', sans-serif;
@@ -44,21 +71,26 @@ input {
     color: $color-input;
     padding: 10px 15px;
     font-weight: 100;
-  }  
+  }
 }
 
 button {
+  outline: none;
   appearance: none;
   letter-spacing: 2.4px;
   text-transform: uppercase;
   color: white;
   background-color: $color-button-dots;
+  cursor: pointer;
   border-radius: 3px;
   font-size: 16px;
   font-weight: 100;
   padding: 16px 50px;
   transition: 0.7s;
-  cursor: pointer;
+}
+
+.free-trial-btn {
+  transition: 0.7s;
 }
 
 header {
@@ -66,8 +98,9 @@ header {
   margin: 0 auto;
   text-align: center;
   padding: 224px 15% 15% 15%;
-  
+
   img {
+    height: 60px;
     display: block;
     margin: 40px auto;
   }
@@ -87,14 +120,14 @@ header {
 }
 
 .header-container {
-  background-image: url(../img/section-1-bg.png);
+  position: relative;
   background-position: center;
   background-size: cover;
 }
 
 .platforms {
   width: 100%;
-  
+
   article {
     justify-content: space-between;
     margin: 150px 0 75px 0;
@@ -109,13 +142,12 @@ header {
     color: grey;
     line-height: 26px;
     margin: 6.9% 0 0 0;
-    
+
     &:last-child {
       margin-top: 4.5%;
     }
   }
 }
-
 
 .bg {
   background-color: #ececec;
@@ -131,6 +163,7 @@ header {
   margin: 0 auto;
   position: relative;
   text-align: center;
+
   span {
     display: block;
     margin: 3px auto;
@@ -147,11 +180,13 @@ header {
 .features-container {
   justify-content: space-between;
   margin-top: 6.6%;
+
   img {
     margin: 0 auto;
     display: block;
     margin-bottom: 26px;
   }
+
   p {
     padding: 0 2px 0 8px;
     opacity: 0.66;
@@ -167,7 +202,7 @@ header {
 }
 
 .design-container {
-  background-image: url(../img/section-4-bg.png);
+  background-image: url(../img/design-bg.png);
   background-position: -924px -100px;
   padding: 7% 4%;
   background-repeat: no-repeat;
@@ -204,10 +239,10 @@ header {
 }
 
 .founder-section-container {
-  background: url(../img/section-5-bg.png);
+  background: url(../img/founder-bg.png);
   padding: 108px 0 76px;
   position: relative;
-  
+
   &::after {
     background-color: black;
     opacity: 0.8;
@@ -217,7 +252,7 @@ header {
     bottom: 0;
     right: 0;
     position: absolute;
-    z-index: -1;   
+    z-index: -1;
   }
 }
 
@@ -233,11 +268,12 @@ header {
     width: 67.2%;
     margin: 0 auto;
     margin-top: 62px;
-    img{
+
+    img {
       width: 100%;
     }
   }
-} 
+}
 
 .founder-container {
   margin: 0 auto;
@@ -247,6 +283,7 @@ header {
 .founder {
   text-align: center;
   width: 34%;
+
   p {
     color: white;
     opacity: 0.66;
@@ -263,11 +300,11 @@ header {
     margin-top: 14px;
     margin-bottom: 4px;
   }
+
   .red {
     text-transform: capitalize;
   }
 }
-
 
 .browser-features {
   background-color: $color-input;
@@ -308,14 +345,14 @@ header {
   button {
     border: none;
     letter-spacing: -1px;
-    font-weight: 100; 
+    font-weight: 100;
     position: relative;
     padding: 0;
   }
 
   img {
     display: block;
-    background-image: url(../img/section-7-30-days.png);
+    background-image: url(../img/30-days.png);
     position: absolute;
     top: -70px;
   }
@@ -332,7 +369,7 @@ header {
     margin-bottom: 94px;
   }
 
-  form{
+  form {
     text-align: justify;
     width: 79.5%;
     margin: 0 auto;
@@ -341,7 +378,9 @@ header {
     input {
       border: 1px solid #ffffff;
     }
-    input, button {
+
+    input,
+    button {
       border-radius: 3px;
       width: 23.2%;
       height: 50px;
@@ -359,16 +398,16 @@ header {
 }
 
 input:focus::placeholder {
- color: transparent;
+  color: transparent;
 }
 
 .contact-info {
-  background-image: url(../img/section-8-bg.png);
+  background-image: url(../img/contact-info-bg.png);
   background-repeat: no-repeat;
   background-position-x: 1086px;
   background-position-y: -803px;
   padding: 106px 340px 102px 148px;
-  
+
   pre {
     font-family: Exo;
   }
@@ -383,6 +422,7 @@ input:focus::placeholder {
   letter-spacing: 5px;
   font-size: 26px;
 }
+
 .social-container i:hover {
   color: black;
   transition: 0.7s;
@@ -390,14 +430,17 @@ input:focus::placeholder {
 
 .startex {
   width: 31.5%;
+
   span {
     position: relative;
     color: white;
+
     img {
       z-index: -1;
       position: absolute;
       top: -5px;
-      left: -2px;    }
+      left: -2px;
+    }
   }
 
   h3 {
@@ -422,22 +465,22 @@ input:focus::placeholder {
 }
 
 .email-container {
-  display: flex;   
-  
-  input{
-    color : $color-input-border-and-social;
+  display: flex;
+
+  input {
+    color: $color-input-border-and-social;
     background-color: #f6f6f6;
-    border-radius:  3px;
+    border-radius: 3px;
     border: 1px solid $color-input-border-and-social;
     height: 49px;
     width: 80%;
-    
+
     &::placeholder {
-      color: $color-input-border-and-social;  
+      color: $color-input-border-and-social;
     }
   }
 
-  button{
+  button {
     height: 49px;
     width: 20%;
     padding: 0;
@@ -451,7 +494,7 @@ input:focus::placeholder {
 a {
   margin-top: 10px;
   display: block;
-  color : #282828;
+  color: #282828;
   text-decoration: none;
 }
 
@@ -469,36 +512,43 @@ span.card-details {
 
 @media only screen and (max-width: 1024px) {
   .flexible {
-      flex-direction: column;
+    flex-direction: column;
   }
-  .flexible > * {
+
+  .flexible>* {
     width: 100%
   }
+
   .bg {
     display: none;
   }
-  .platforms article{
+
+  .platforms article {
     width: 100%;
     text-align: center;
     margin-top: 50px;
     padding: 0 50px;
-  } 
+  }
+
   .feature {
     margin-bottom: 26px;
     padding: 0 15%;
   }
+
   .design-container {
     background-image: none;
     padding: 10% 0;
   }
 
-  .design .img-container, .design article {
+  .design .img-container,
+  .design article {
     width: 67%;
     margin: 0 auto;
     text-align: center;
   }
 
-  .design img , .design h2{
+  .design img,
+  .design h2 {
     padding: 0;
     width: 100%;
   }
@@ -506,11 +556,11 @@ span.card-details {
   .design .img-container {
     margin-bottom: 20px;
   }
-  
+
   .design article {
     padding: 0;
   }
-  
+
   .design h2 span {
     display: none;
   }
@@ -526,25 +576,25 @@ span.card-details {
 
   .browser-features {
     padding: 0 15%;
-    
+
     article {
       padding: 50px 0 0 0;
       margin-bottom: 50px;
     }
   }
 
-  .designer-features  {
+  .designer-features {
     padding: 50px 0;
-    
+
     form {
       flex-direction: row;
     }
-    
+
     button img {
       display: none;
     }
   }
-  
+
   .social-container {
     flex-wrap: nowrap;
     margin: 0 auto;
@@ -555,7 +605,7 @@ span.card-details {
     background-image: none;
     margin-bottom: 50px;
     padding: 50px 10%;
-    
+
     .flexible {
       flex-direction: row;
       padding: 0;
@@ -566,13 +616,13 @@ span.card-details {
       }
     }
 
-    .flexible > * {
+    .flexible>* {
       margin-bottom: 20px;
       width: 50%;
     }
   }
-} 
-  
+}
+
 @media only screen and (max-width: 768px) {
   header {
     padding: 100px 25px;
@@ -583,16 +633,16 @@ span.card-details {
     line-height: 50px;
   }
 
-  .designer-features .flexible{
+  .designer-features .flexible {
     flex-flow: row wrap
   }
 
-  .designer-features .flexible > * {
+  .designer-features .flexible>* {
     margin-bottom: 20px;
     width: 100%;
   }
 
-  .contact-info .flexible > * {
+  .contact-info .flexible>* {
     width: 80%;
     text-align: center;
     margin: 20px auto;
@@ -602,10 +652,12 @@ span.card-details {
     margin: 0 auto;
     width: 263px;
   }
+
   .contact-info {
     margin-bottom: 20px;
   }
 }
+
 @media only screen and (max-width: 425px) {
   h1 {
     font-size: 30px;
@@ -628,8 +680,9 @@ span.card-details {
   .sign {
     padding: 0 20px;
   }
-  
-  .feature , .founder p{
+
+  .feature,
+  .founder p {
     padding: 0;
   }
 }

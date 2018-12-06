@@ -14,12 +14,16 @@
 
 <body>
   <div class="header-container">
-      <header>
-        <h1>There is no other platforms for you as like </h1>
-        <img src="./img/play-icon.svg" alt="play button">
-        <button>try now</button>
-        <span class="card-details">* No need to add cards details</span>
-      </header>
+    <video>
+      <source src="./img/The-Slow-Dock.mp4" type="video/mp4">
+      <source src="./img/The-Slow-Dock.ogg" type="video/ogg">
+    </video>
+    <header>
+      <h1>There is no other platforms for you as like </h1>
+      <img src="./img/playhmmm.svg" alt="play button" id='play-button'>
+      <button>try now</button>
+      <span class="card-details">* No need to add cards details</span>
+    </header>
   </div>
 
   <section class="platforms flexible">
@@ -125,11 +129,11 @@
   <section class="designer-features">
     <span class="red">new features</span>
     <h2>Over 1000 designers are using ...</h2>
-    <form action="#" class="flexible">
-      <input type="text" placeholder="FULL NAME">
-      <input type="text" placeholder="YOUR EMAIL">
-      <input type="text" placeholder="PASSWORD">
-      <button><img src="./img/30-days.png" alt="30 free days of trial"> TRY NOW</button>
+    <form class="flexible" action="test.php" id="free-trial-form">
+      <input type="text" data-form="name" placeholder="FULL NAME">
+      <input type="email" data-form="email" placeholder="YOUR EMAIL">
+      <input type="password" data-form="password" placeholder="PASSWORD">
+      <input type="submit" class="free-trial-btn" value="TRY NOW">
     </form>
     <span class="sign">By Signing up you agree to our <u>terms & Services.</u></span>
   </section>
@@ -173,6 +177,7 @@ Address: 34 Brokel Rd. NY
       </div>
     </div>
   </section>
+  <script type="module" src="./script/script.js"></script>
 </body>
 
 </html>
