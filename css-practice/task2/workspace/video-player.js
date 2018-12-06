@@ -1,5 +1,6 @@
 /* global document */
 const video = document.querySelector('video');
+const videoHandler = document.querySelector('.video-player');
 const continueVideoButton = document.querySelector('.fa-play-circle');
 const pauseVideoButton = document.querySelector('.fa-pause-circle');
 const hideElement = 'disp-none';
@@ -26,14 +27,18 @@ const videoPause = () => {
 
 video.pause();
 
-const test = {
-  videoHandler: () => {
-    if (video.paused) {
-      videoPlay();
-    } else {
-      videoPause();
-    }
+const playStopHandler = () => {
+  if (video.paused) {
+    videoPlay();
+  } else {
+    videoPause();
+  }
+};
+
+const videoPlayer = {
+  init: function() {
+    videoHandler.addEventListener('click', playStopHandler);
   },
 };
 
-export default test;
+export default videoPlayer;

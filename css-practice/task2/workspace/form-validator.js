@@ -1,4 +1,5 @@
 /* global document */
+// const formValidator = (() => {
 const subscribeFrom = document.querySelector('form');
 const formSubmit = subscribeFrom.querySelector('button');
 const inputValidClass = 'border-success';
@@ -41,5 +42,10 @@ const formHandler = (e) => {
   }
 };
 
-export default formHandler;
+const formValidator = {
+  init: () => {
+    subscribeFrom.addEventListener('keyup', formHandler);
+  },
+};
 
+export default formValidator;
