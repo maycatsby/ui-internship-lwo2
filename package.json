@@ -26,9 +26,8 @@
     "eslint-config-google": "^0.10.0",
     "husky": "^1.1.2",
     "jest": "^21.1.0",
-    "node-sass": "^4.10.0",
-    "postcss-cli": "^6.0.1",
-    "regenerator-runtime": "^0.11.0"
+    "regenerator-runtime": "^0.11.0",
+    "node-sass": "^4.10.0"
   },
   "dependencies": {
     "sass": "^1.14.3"

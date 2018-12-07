@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +11,10 @@
   <link rel="stylesheet" href="css/main.css">
   <title>task2 [Pavlo Turchyn]</title>
 </head>
+
 <body>
   <header>
-    <div class="header-nav">
+    <nav class="header-nav">
       <nav class="header-top">
         <div class="logo"></div>
         <div class="info">
@@ -23,13 +25,14 @@
           <a class="info-font" href="#contact">Contact</a>
         </div>
       </nav>
-    </div>
+    </nav>
     <div class="header-main">
       <div class="header-left">
         <div class="header-title"></div>
-        <div class="header-text header-text-font">MODERN AXURE TEMPLATE FOR BEAUTIFUL PROTOTYPES</div>
+        <div class="header-text header-text-font">Modern axure template for beautiful prototypes</div>
         <div class="header-line"></div>
-        <div class="header-text-small header-text-small-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</div>
+        <div class="header-text-small header-text-small-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</div>
         <div class="header-button">
           <div class="header-button-name">Download</div>
         </div>
@@ -37,16 +40,15 @@
       <div class="header-right">
         <div class="header-form">
           <div class="form-title">
-            <div class="form-title-text">Try Your <span>FREE</span> Trial Today</div>
+            <div class="form-title-text">Try Your <span>free</span> Trial Today</div>
           </div>
-          <div class="form-input-container">
-            <input type="text" class="form-input-margin" placeholder="Name">
-            <input type="email" class="form-input-margin" placeholder="Email">
-            <input type="password" class="form-input-margin" placeholder="Password">
-            <div class="form-button">
-              <div class="form-button-text">Get Started</div>
-            </div>
-          </div>
+          <form class="form-input-container" id="form-login" method="POST" enctype="multipart/form-data">
+            <input id="name-Input" data-text="Use at least 2 latin characters" type="text" class="form-input-margin" placeholder="Name" pattern="^[a-zA-Z ]{2,25}$" required>
+            <input id="email-Input" data-text="Write youe e-mail in format: aaa@aaa.aaa" type="email" class="form-input-margin" placeholder="Email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
+            <input id="password-Input" data-text="Use at least 6 latin characters, 1 capital letter, 1 lower case, 1 digit, 1 special character" type="password" class="form-input-margin" placeholder="Password" pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+-]).{6,16}" required>
+            <div class="hint"></div>
+            <input class="form-button" type="submit" value="Get Started" form="form-login">
+          </form>
         </div>
       </div>
     </div>
@@ -55,7 +57,8 @@
     <div class="brand-bar">
       <div class="brand-bar-left">
         <div class="title-main">Social Media</div>
-        <div class="text-main">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</div>
+        <div class="text-main">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+          laoreet.</div>
       </div>
       <div class="brand-bar-right">
         <div class="facebook icon-size item-hover"></div>
@@ -72,19 +75,39 @@
     <div class="features">
       <div class="features-top">
         <div class="features-top-left">
-          <div class="tab tab-edges-top tab-hover">
-            <div class="tab-text">TAB 1</div>
-          </div>
-          <div class="tab tab-margin tab-hover">
-            <div class="tab-text">TAB 2</div>
-          </div>
-          <div class="tab tab-edges-bottom tab-margin tab-hover">
-            <div class="tab-text">TAB 3</div>
+          <button id="tab-Button1" class="tab tab-edges-top tab-hover tab-active">
+            <div class="tab-text">tab 1</div>
+          </button>
+          <button id="tab-Button2" class="tab tab-margin tab-hover">
+            <div class="tab-text">tab 2</div>
+          </button>
+          <button id="tab-Button3" class="tab tab-edges-bottom tab-margin tab-hover">
+            <div class="tab-text">tab 3</div>
+          </button>
+        </div>
+        <div id="features-1" class="features-top-center">
+          <div class="feature-top-title title-main">Tabs with soft transitioning effect.</div>
+          <div class="feature-top-text text-main">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+            sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes. <br><br>Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</div>
+          <div class="features-button">
+            <div class="features-button-name">Download</div>
           </div>
         </div>
-        <div class="features-top-center">
-          <div class="feature-top-title title-main">Tabs with soft transitioning effect.</div>
-          <div class="feature-top-text text-main">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes. <br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</div>
+        <div id="features-2" class="features-top-center">
+          <div class="feature-top-title title-main">But I must explain to you how all this mistaken idea</div>
+          <div class="feature-top-text text-main">Nor again is there anyone who loves or pursues or desires to obtain
+            pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can
+            procure him some great pleasure. </div>
+          <div class="features-button">
+            <div class="features-button-name">Download</div>
+          </div>
+        </div>
+        <div id="features-3" class="features-top-center">
+          <div class="feature-top-title title-main">At vero eos et accusamus et iusto odio dignissimos ducimus </div>
+          <div class="feature-top-text text-main">Et harum quidem rerum facilis est et expedita distinctio. Nam libero
+            tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere
+            possimus</div>
           <div class="features-button">
             <div class="features-button-name">Download</div>
           </div>
@@ -101,7 +124,8 @@
           <div class="middle-right">
             <div class="middle-title title-main">Sub list section</div>
             <div class="middle-line"></div>
-            <div class="middle-text text-main">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</div>
+            <div class="middle-text text-main">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
+              bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</div>
             <div class="middle-mini-main">
               <div class="middle-mini">
                 <div class="middle-mini-left">
@@ -109,7 +133,8 @@
                 </div>
                 <div class="middle-mini-right">
                   <div class="mini-title">Title</div>
-                  <div class="mini-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</div>
+                  <div class="mini-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
+                    bibendum laoreet.</div>
                 </div>
               </div>
               <div class="middle-mini mini-bottom">
@@ -118,7 +143,8 @@
                 </div>
                 <div class="middle-mini-right">
                   <div class="mini-title">Title</div>
-                  <div class="mini-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</div>
+                  <div class="mini-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
+                    bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</div>
                 </div>
               </div>
             </div>
@@ -130,7 +156,10 @@
           <div class="bottom-left">
             <div class="bottom-title title-main">Standard Picture Section</div>
             <div class="bottom-line"></div>
-            <div class="bottom-text text-main">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean<br>euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.<br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</div>
+            <div class="bottom-text text-main">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean<br>euismod
+              bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales
+              pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.<br><br> Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</div>
             <div class="bottom-mini-main">
             </div>
           </div>
@@ -145,7 +174,7 @@
     <div class="process">
       <div class="process-main">
         <div class="process-top">
-          <div class="process-top-title">WHY THIS IS AWESOME</div>
+          <div class="process-top-title">Why this is awesome</div>
           <div class="process-top-line"></div>
           <div class="process-top-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
         </div>
@@ -155,21 +184,24 @@
               <img src="./img/process-left.png" alt="seo" width="100%">
             </div>
             <div class="process-bottom-title">Thoughtful Design</div>
-            <div class="process-bottom-text">Lorem ipsum dolor sit amet, consectetur adipiscing<br>elit. Aenean euismod bibendum laoreet. Proin gravida<br>dolor sit amet lacus accumsan et viverra.</div>
+            <div class="process-bottom-text">Lorem ipsum dolor sit amet, consectetur adipiscing<br>elit. Aenean euismod
+              bibendum laoreet. Proin gravida<br>dolor sit amet lacus accumsan et viverra.</div>
           </div>
           <div class="process-bottom">
             <div class="process-bottom-item">
               <img src="./img/process-center.png" alt="seo" width="100%">
             </div>
             <div class="process-bottom-title">Well Crafted</div>
-            <div class="process-bottom-text">Lorem ipsum dolor sit amet, consectetur adipiscing<br>elit. Aenean euismod bibendum laoreet. Proin gravida<br>dolor sit amet lacus accumsan et viverra.</div>
+            <div class="process-bottom-text">Lorem ipsum dolor sit amet, consectetur adipiscing<br>elit. Aenean euismod
+              bibendum laoreet. Proin gravida<br>dolor sit amet lacus accumsan et viverra.</div>
           </div>
           <div class="process-bottom">
             <div class="process-bottom-item">
               <img src="./img/process-right.png" alt="seo" width="100%">
             </div>
             <div class="process-bottom-title">Easy to Customize</div>
-            <div class="process-bottom-text">Lorem ipsum dolor sit amet, consectetur adipiscing<br>elit. Aenean euismod bibendum laoreet. Proin gravida<br>dolor sit amet lacus accumsan et viverra.</div>
+            <div class="process-bottom-text">Lorem ipsum dolor sit amet, consectetur adipiscing<br>elit. Aenean euismod
+              bibendum laoreet. Proin gravida<br>dolor sit amet lacus accumsan et viverra.</div>
           </div>
         </div>
       </div>
@@ -179,7 +211,7 @@
     <div class="pricing">
       <div class="pricing-main">
         <div class="pricing-top">
-          <div class="pricing-top-title">PRICING OPTIONS</div>
+          <div class="pricing-top-title">Pricing options</div>
           <div class="pricing-top-line"></div>
           <div class="process-top-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
         </div>
@@ -225,7 +257,7 @@
               <div class="panel-price-text-center">Monthly Payment</div>
             </div>
             <div class="panel-line-center">
-              <div class="panel-line-text">OUR MOST POPULAR</div>
+              <div class="panel-line-text">our most popular</div>
             </div>
             <div class="panel-item">
               <div class="panel-item-text">5 gb of space</div>
@@ -284,14 +316,15 @@
     <div class="testimonials">
       <div class="testimonials-main">
         <div class="testimonials-top">
-          <div class="pricing-top-title">WHAT OUR CUSTOMERS ARE SAYING</div>
+          <div class="pricing-top-title">what our customers are saying</div>
           <div class="testimonials-top-line"></div>
           <div class="testimonials-top-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
         </div>
         <div class="testimonials-bottom">
           <div class="testimonials-bottom-part">
             <div class="phrase">
-              <div class="phrase-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex, architecto eaque quo suscipit.</div>
+              <div class="phrase-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus
+                expedita repellat similique odio aspernatur ex, architecto eaque quo suscipit.</div>
             </div>
             <div class="manager">
               <div class="manager-left">
@@ -305,7 +338,8 @@
           </div>
           <div class="testimonials-bottom-part">
             <div class="phrase">
-              <div class="phrase-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex, architecto eaque quo suscipit.</div>
+              <div class="phrase-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus
+                expedita repellat similique odio aspernatur ex, architecto eaque quo suscipit.</div>
             </div>
             <div class="manager">
               <div class="manager-left">
@@ -319,7 +353,8 @@
           </div>
           <div class="testimonials-bottom-part">
             <div class="phrase">
-              <div class="phrase-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex, architecto eaque quo suscipit.</div>
+              <div class="phrase-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus
+                expedita repellat similique odio aspernatur ex, architecto eaque quo suscipit.</div>
             </div>
             <div class="manager">
               <div class="manager-left">
@@ -339,9 +374,10 @@
     <div class="custom">
       <div class="custom-main">
         <div class="custom-top">
-          <div class="custom-top-title">STYLISH AXURE DESIGN</div>
+          <div class="custom-top-title">stylish axure design</div>
           <div class="custom-top-line"></div>
-          <div class="custom-top-text">Use the sections you need, remove the ones you don't. Create gorgeous prototypes faster than ever!</div>
+          <div class="custom-top-text">Use the sections you need, remove the ones you don't. Create gorgeous prototypes
+            faster than ever!</div>
           <div class="custom-button">
             <div class="custom-button-name">Download</div>
           </div>
@@ -353,27 +389,26 @@
     <div class="contact">
       <div class="contact-main">
         <div class="contact-top">
-          <div class="contact-top-title">CONTACT US</div>
+          <div class="contact-top-title">contact us</div>
           <div class="contact-top-line"></div>
           <div class="contact-top-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
         </div>
-        <div class="contact-bottom">
+        <form class="contact-bottom" id="form-login-bottom" method="POST" enctype="multipart/form-data">
           <div class="contact-bottom-left">
             <div class="bottom-form">
               <div class="bottom-form-input-container">
-                <input type="text" class="bottom-form-input-margin" placeholder="Name">
-                <input type="email" class="bottom-form-input-margin" placeholder="Email">
-                <input type="text" class="bottom-form-input-margin" placeholder="Subject">
-              </div>
+                  <input id="name-Input-Bottom" data-text="Use at least 2 latin characters" type="text" class="form-input-margin" placeholder="Name" pattern="^[a-zA-Z ]{2,25}$" title="Use at least 6 latin characters" required>
+                  <input id="email-Input-Bottom" data-text="Write youe e-mail in format: aaa@aaa.aaa" type="email" class="form-input-margin" placeholder="Email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
+                  <input id="subject-Input-Bottom" type="text" class="bottom-form-input-margin" placeholder="Subject" pattern=".{0,30}$" required>
+                  <div class="hint"></div>
+                </div>
             </div>
           </div>
           <div class="contact-bottom-right">
-            <textarea class="contact-textarea" cols="30" rows="9" placeholder="Message"></textarea>
+            <textarea class="contact-textarea" cols="30" rows="11" placeholder="Message" maxlength="250" required></textarea>
           </div>
-        </div>
-        <div class="bottom-form-button">
-          <div class="bottom-form-button-text">Send Message</div>
-        </div>
+        </form>
+        <input class="bottom-form-button" type="submit" value="Get Started" form="form-login-bottom" required>
       </div>
     </div>
   </section>
@@ -405,5 +440,7 @@
       <div class="copy-right">© 2015 Axure Themes</div>
     </div>
   </footer>
+  <script src="./script/script.js"></script>
 </body>
+
 </html>
