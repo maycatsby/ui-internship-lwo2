@@ -35,20 +35,25 @@ const accordeon = () => {
   const noRotate = () => {
     chapterArrow.forEach((e) => e.classList.remove('rotate-arrow'))
   }
+
+  const hideAll = (chapterBox, chapterArrow) => {
+    hideAllBox();
+    noRotate();
+    chapterBox.classList.toggle('display-none');
+    chapterArrow.classList.toggle('rotate-arrow');
+  }
+
   const accordeonButtons = () => {
     for (let i = 0; i < chapterTopArr.length; i++) {
       chapterTopArr[i].onclick = () => {
-        if (chapterBoxArr[i].classList.contains('display-none')) {
-          hideAllBox();
+        const containsDisplayNone = chapterBoxArr[i].classList.contains('display-none');
+        if (containsDisplayNone) {
           hideAllImg();
+          hideAll(chapterBoxArr[i], chapterArrow[i]);
           bottomLeftArr[i].classList.toggle('hide');
-          chapterBoxArr[i].classList.toggle('display-none');
-          noRotate();
-          chapterArrow[i].classList.toggle('rotate-arrow');
         } else {
-          chapterBoxArr[i].classList.toggle('display-none');
+          hideAll(chapterBoxArr[i], chapterArrow[i])
           hideAllBox();
-          chapterArrow[i].classList.toggle('rotate-arrow');
           noRotate();
         }
       }
@@ -66,22 +71,27 @@ const slider = () => {
   const testimonialArrowRight = document.getElementById('testimonial-arrow-right');
   const testimonialContent = document.getElementById('testimonial-box-content');
   let counter = 0;
+  const translateOnce = 33.33333;
+  const translateTwice = 66.66666;
+  const translate = (content, counter) => {
+    content.style.transform = 'translateX(' + counter + '%)';
+  }
   const nextSlide = (content) => {
-    if (counter === -66.66666) {
+    if (counter === -translateTwice) {
       counter = 0;
-      content.style.transform = 'translateX(' + counter + '%)';
+      translate(content, counter);
     } else {
-      counter -= 33.33333;
-      content.style.transform = 'translateX(' + counter + '%)';
+      counter -= translateOnce;
+      translate(content, counter);
     }
   };
   const prevSlide = (content) => {
     if (counter === 0) {
-      counter = -66.66666;
-      content.style.transform = 'translateX(' + counter + '%)';
+      counter = -translateTwice;
+      translate(content, counter);
     } else {
-      counter += 33.33333;
-      content.style.transform = 'translateX(' + counter + '%)';
+      counter += translateOnce;
+      translate(content, counter);
     }
   };
   quoteArrowLeft.addEventListener('click', () => prevSlide(quoteContent));
@@ -97,7 +107,6 @@ const popUp = () => {
   const modal = document.querySelector('.modal');
   workImgArr.forEach(e => {
     e.onclick = function () {
-      console.log(e);
       modal.classList.add('modal-flex');
       img.src = this.src;
     }
