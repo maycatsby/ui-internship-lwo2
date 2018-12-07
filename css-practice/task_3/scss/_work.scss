@@ -1,0 +1,41 @@
+.work{
+  width: 100%;
+  flex-direction: column;
+  background: #ffffff;
+}
+.work-main{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.work-kau-title-all{
+  margin-top: 9.3%;
+}
+.work-title-all{
+  margin-top: 1.5%;
+}
+.work-line-all{
+  margin-top: 3%;
+}
+.work-text-all{
+  margin-top: 3.5%;
+}
+.work-bottom{
+  width: 100%;
+  margin-top: 7.1%;
+  display: flex;
+  justify-content: space-between;
+}
+.work-double-box{
+  width: 25%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.work-bottom-box{
+  width: 100%;
+}
+.work-bottom-box img{
+  display: block;
+}
