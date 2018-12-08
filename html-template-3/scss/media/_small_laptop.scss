@@ -12,6 +12,14 @@
       }
     }
 
+    .align {
+      max-width: 1000px;
+    }
+
+    .add-background {
+      padding: 0 10px;
+    }
+
     .top-navigation {
       margin-right: 0;
     }
@@ -30,6 +38,19 @@
       img {
         width: 100%;
       }
+    }
+
+    .quote-content {
+      width: 950px;
+
+      .quote-block {
+        width: 950px;
+      }
+    }
+
+    .quote-paragraph {
+      font-size: 18px !important;
+      width: 690px;
     }
 
     .lb-item {

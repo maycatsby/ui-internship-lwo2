@@ -40,6 +40,11 @@
   flex-direction: $value;
 }
 
+@mixin flex-wrap($val) {
+  -ms-flex-wrap: $val;
+  flex-wrap: $val;
+}
+
 @mixin box-sizing($value) {
   -webkit-box-sizing: $value;
   box-sizing: $value;
@@ -71,4 +76,11 @@
   -webkit-box-shadow: 10px 10px 0px 1px rgba(149,225,211,1);
   -moz-box-shadow: 10px 10px 0px 1px rgba(149,225,211,1);
   box-shadow: 10px 10px 0px 1px rgba(149,225,211,1);
+}
+
+@mixin transform-origin($val) {
+  -webkit-transform-origin: $val;
+  -o-transform-origin: $val;
+  -ms-transform-origin: $val;
+  transform-origin: $val;
 }

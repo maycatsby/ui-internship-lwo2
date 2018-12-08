@@ -20,6 +20,32 @@ body {
 
 main {
   background-image: url(../pics/backgrounds/main-background-picture.png);
+  z-index: 1;
+  position: relative;
+}
+
+header {
+  @include flex;
+  @include justify-content(space-between);
+
+  position: fixed;
+  width: 100%;
+  right: 0;
+  left: 0;
+  padding-top: 10px;
+
+  .small-logo {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    padding: 17px 0;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      color: $background-main;
+    }
+  }
 }
 
 .font {
@@ -70,18 +96,18 @@ main {
 
   background-color: $background-main;
   opacity: 0.9;
+}
 
-  header {
-    @include flex;
-    @include justify-content(space-between);
+.add-background {
+  @include background-image-main;
 
-    .small-logo {
-      font-size: 30px;
-      font-weight: bold;
-      margin: 0;
-      padding: 17px 0;
-    }
-  }
+  padding: 0 120px;
+}
+
+.add-border {
+  color: $background-main;
+  border-bottom: 3px solid $background-main;
+  padding-bottom: 10px;
 }
 
 .main-font {
@@ -93,8 +119,8 @@ main {
 .top-navigation {
   @include flex;
   @include justify-content(space-around);
+  @include align-items(center);
 
-  padding-top: 36px;
   margin-right: -29px;
 
   .top-menu {
@@ -110,37 +136,23 @@ main {
       cursor: pointer;
     }
 
-    .hovered {
+    .menu-link {
       text-decoration: none;
       color: $white;
-    }
 
-    .hovered:hover {
-      color: $background-main;
-      border-bottom: 3px solid $background-main;
-      padding-bottom: 7px;
-    } 
-
-    .hovered:visited {
-      color: $white;
-      text-decoration: none;
-    }
-
-    .fa {
-      font-size: 16px;
       &:hover {
         color: $background-main;
       }
     }
 
-    .about:hover, .about:focus-within {
-      border-bottom: 3px solid $background-main;
+    .fas {
+      font-size: 16px;
     }
   }
 }
 
 .pad {
-  padding-top: 138px;
+  padding-top: 209px;
 }
 
 .main-subheader {
@@ -288,6 +300,11 @@ main {
   font-size: 18px;
   margin-top: 70px;
   line-height: 50px;
+
+  i {
+    font-size: 18px !important;
+    color: $white !important;
+  }
 }
 
 .statistics {
@@ -378,7 +395,7 @@ main {
   padding-top: 92px;
 }
 
-.wwd-pic {
+.wwd-pics {
   margin-right: 30px;
 }
 
@@ -386,24 +403,62 @@ main {
   list-style-type: none;
 
   .drop-item {
-    @include grid;
-    @include grid-template-columns(0.05fr 0.95fr);
-    @include align-items(center);
+    @include flex;
+    @include flex-direction(column);
   
     padding: 10px 15px;
     margin-bottom: 10px;
     border: 1px solid $font;
+    cursor: pointer;
     
     .drop-icon {
       padding-right: 12px;
+      color: $riptide;
+      font-size: 31px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
 
 .drop-item-header {
+  @include flex;
+  @include align-items(center);
+
   color: $headers;
   text-transform: uppercase;
   font-weight: 400;
+
+  .fas {
+    margin-left: auto;
+    font-size: 25px;
+    color: $font;
+  }
+}
+
+.close .drop-item-content{
+  height: 0px;
+  transition: transform 0.1s linear;
+  transform: scaleY(0);
+  max-height: 170px;
+  overflow: hidden;
+  padding: 10px 20px 0 20px;
+}
+
+.open .drop-item-content{
+  @include box-sizing(border-box);
+  @include transform-origin(top);
+
+  padding: 20px;
+  width: 100%;
+  margin-bottom: 10px;
+  display: block;
+  transform: scaleY(1);
+  transition: transform 0.2s linear;
+  max-height: 170px;
+  overflow: scroll;
 }
 
 .quote {
@@ -411,14 +466,47 @@ main {
   padding-top: 36px;
 }
 
+.quotes {
+  @include flex;
+  @include align-items(center);
+
+  .fas {
+    font-size: 30px;
+    color: $headers;
+    cursor: pointer;
+    transition: 0.6s ease;
+  }
+}
+
+.quotes-content {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  width: 1150px;
+
+  .quote-slider {
+    @include flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    width: 3450px;
+    transition: transform 1s;
+  }
+}
+
+.quote-block {
+  flex: 0 0 auto;
+  width: 1150px;
+  height: 252px;
+}
+
 .quote-items {
-  @include grid;
-  @include grid-template-columns(0.2fr 0.8fr);
+  @include flex;
+  @include align-items(center);
 
   .quote-img {
     border: 3px solid $riptide;
     padding: 41px;
-    margin: 34px 67px 69px 106px;
+    margin: 34px 57px 69px 56px;
   }
   
   .quote-paragraph {
@@ -427,8 +515,24 @@ main {
   
     font-style: italic;
     font-size: 24px;
-    margin-top: 38px;
     line-height: 36px;
+  }
+}
+
+.slider {
+  animation: slide 1s;
+
+  @keyframes slide {
+    from {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    to {
+      visibility: hidden;
+      -webkit-transform: translate3d(-1150px, 0, 0);
+      transform: translate3d(-1150px, 0, 0);
+    }
   }
 }
 
@@ -440,6 +544,42 @@ main {
   @include flex;
 
   margin-top: 8px;
+}
+
+.visible {
+  @include flex;
+
+  animation: arise 2s;
+}
+
+@keyframes arise {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.1) rotate(30deg);
+    transform: scale(0.1) rotate(30deg);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+
+  50% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+
+  70% {
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.hidden {
+  display: none;
 }
 
 .meet-our-team {
@@ -483,6 +623,24 @@ main {
   padding: 51px 0;
 }
 
+.label-items {
+  @include flex;
+  @include justify-content(space-around);
+
+  img:hover {
+    animation: 1s scale;
+  }
+  
+  @keyframes scale {
+    from {
+      transform: scale(1.0);
+    }
+    to {
+      transform: scale(1.2);
+    }
+  }
+}
+
 .some-of-our-work {
   padding: 105px 0;
 }
@@ -491,6 +649,50 @@ main {
   padding-top: 100px;
   margin-bottom: 151px;
 }
+
+.popup {
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: $background-section;
+  background-color: rgba(0,0,0,0.9);
+
+  .popup-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    animation: scaleImg 0.6s;
+
+    @keyframes scaleImg {
+      from {
+        transform: scale(0) 
+      }
+
+      to { 
+        transform: scale(1) 
+      }
+    }
+  }
+}
+
+.block {
+  display: block!important;
+}
+
+.none {
+  display: none;
+}
+
+.flex {
+  @include flex;
+}
+
 
 .joshua-quote {
   background: transparent;
@@ -589,7 +791,20 @@ main {
   @include flex;
   margin-top: 15px;
 
-  .fa {
+  .fas {
+    color: $riptide;
+    padding: 0 12px;
+
+    &:before {
+      padding-right: 5px;
+    }
+
+    span {
+      font-style: italic;
+    }
+  }
+
+  .far {
     color: $riptide;
     padding: 0 12px;
 
@@ -679,12 +894,12 @@ main {
   .fa-icons {
     color: $riptide;
 
-    .fa {
+    .fab {
       padding-right: 12px;
-      cursor: pointer;
 
       &:hover {
         color: $underlines;
+        cursor: pointer;
       }
     }
   }
