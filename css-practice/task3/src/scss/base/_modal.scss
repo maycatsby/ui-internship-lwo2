@@ -1,0 +1,31 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color-dark, .7);
+    z-index: 2;
+  }
+
+  &__window {
+    box-shadow: 0 0 10px rgba($color-dark, 0.7);
+    border-radius: 3px;
+    z-index: 3;
+    @include abs-center;
+    
+    & > figure {
+      max-height: 80vh;
+      overflow: hidden;
+      border-radius: 3px;
+    }
+  }
+}

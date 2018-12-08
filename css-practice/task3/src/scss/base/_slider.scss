@@ -1,0 +1,90 @@
+// Slider
+.slider {
+  margin: 0 auto;
+  max-width: $max-width;
+  @include d-flex();
+}
+
+.slides-holder {
+  position: relative;
+  overflow: hidden;
+  margin: 0 20px;
+}
+
+.slide-quote {
+  @include d-flex();
+  // opacity: 0;
+  transition: transform .6s ease-out;
+  
+  &.current {
+    position: static;
+    opacity: 1;
+    transition: transform .6s ease-out;
+  }
+
+  &.prev {
+    position: absolute;
+    top: 0;
+    animation: fadeIn .3s both reverse;
+    transform: translate3d(-105%, 0, 0);
+  }
+  
+  &.next {
+    position: absolute;
+    top: 0;
+    animation: fadeIn .3s both reverse;
+    transform: translate3d(105%, 0, 0);
+  }
+
+  & > blockquote {
+    max-width: 31.96em;
+    color: $color-grey-l2;
+    font-family: $font-second;
+    font-size: 2.4rem;
+    padding-top: .3rem;
+    letter-spacing: -0.4px;
+    line-height: 3.6rem;
+
+    & > p {
+      margin-bottom: 11px;
+    }
+  }
+}
+
+.quote {
+  background-color: $color-light-1;
+
+  .slide-quote {
+    padding: $padding-quote;
+    flex-grow: 1;
+
+    & > figure {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      border: 3px solid $color-alt;
+      margin-right: 35px;
+    }
+    
+    img {
+      @include abs-center;
+    }
+  }
+}
+
+.testimonial {
+  
+  .slide-quote {
+    padding: $padding-testimonial;
+
+    & > figure {
+      align-self: center;
+      margin-right: 2.429em;
+    }
+  
+    & > blockquote {
+      margin-right: 1.333em;
+      margin-top: 1.250em;
+    }
+  }
+}
