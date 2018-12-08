@@ -23,11 +23,11 @@
           <div class="logo-container"><img src="./img/mogo-logo.png" alt="logomogo"></div>
           <div class="nav-side flexible">
             <nav>
-              <a href="#">about</a>
-              <a href="#">service</a>
-              <a href="#">work</a>
-              <a href="#">blog</a>
-              <a href="#">contact</a>
+              <a href="#about">about</a>
+              <a href="#service">service</a>
+              <a href="#work">work</a>
+              <a href="#blog">blog</a>
+              <a href="#contact">contact</a>
             </nav>
             <div class="search-and-cart-container">
               <i class="fas fa-shopping-cart"></i>
@@ -52,7 +52,7 @@
       </section>
     </div>
   </div>
-  <section class="what-we-do center">
+  <section class="what-we-do center" id="about">
     <div class="subheader">
       What we do
     </div>
@@ -64,15 +64,21 @@
     <div class="story-image-container flexible">
       <div class="story-container">
         <img src="./img/laptop.png" alt="laptop">
-        <div class="hover-grad"><div class="hover-head"><i class="fas fa-users"></i>super team</div></div>
+        <div class="hover-grad">
+          <div class="hover-head"><i class="fas fa-users"></i>super team</div>
+        </div>
       </div>
       <div class="story-container">
         <img src="./img/workspace.png" alt="workspace">
-        <div class="hover-grad"><div class="hover-head"><i class="fas fa-users"></i>super team</div></div>
+        <div class="hover-grad">
+          <div class="hover-head"><i class="fas fa-users"></i>super team</div>
+        </div>
       </div>
       <div class="story-container">
         <img src="./img/table.png" alt="table">
-        <div class="hover-grad"><div class="hover-head"><i class="fas fa-users"></i>super team</div></div>
+        <div class="hover-grad">
+          <div class="hover-head"><i class="fas fa-users"></i>super team</div>
+        </div>
       </div>
     </div>
   </section>
@@ -85,7 +91,7 @@
       <div class="stat"><span>24</span>members</div>
     </div>
   </section>
-  <section class="services center">
+  <section class="services center" id="service">
     <div class="subheader">We work with</div>
     <h2>Amazing Services</h2>
     <div class="line center"></div>
@@ -137,13 +143,16 @@
       ex ea commodo consequat. </p>
     <div class="services-group-container flexible">
       <img src="./img/dude-by-the-wall.png" alt="dude image">
+      <img src="http://placekitten.com/570/380" class="none" alt="cat image">
+      <img src="http://loremflickr.com/570/380" class="none" alt="cat image">
       <div class="services-info-container flexible center">
         <div class="services-info">
-          <div class="services-info-title">
+          <div class="services-info-title" data-image="0">
             <img src="./img/picture.png" alt="image">
             <h3>photography</h3>
+            <i class="fas fa-angle-down rotate-180"></i>
           </div>
-          <div class="services-info-text">
+          <div class="services-info-text height-auto">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
               ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
@@ -152,14 +161,31 @@
           </div>
         </div>
         <div class="services-info">
-          <div class="services-info-title">
+          <div class="services-info-title" data-image="1">
             <img src="./img/equalizer.png" alt="equalizer">
             <h3>creativity</h3>
+            <i class="fas fa-angle-down"></i>
+          </div>
+          <div class="services-info-text height-0">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum.</p>
           </div>
         </div>
         <div class="services-info">
-          <div class="services-info-title"><img src="./img/bullseye.png" alt="bullseye">
+          <div class="services-info-title" data-image="2">
+            <img src="./img/bullseye.png" alt="bullseye">
             <h3>web design</h3>
+            <i class="fas fa-angle-down"></i>
+          </div>
+          <div class="services-info-text height-0">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum.</p>
           </div>
         </div>
       </div>
@@ -168,15 +194,43 @@
   <div class="quote-container">
     <div class="quote center">
       <i class="fas fa-angle-left"></i>
-      <div class="quote-img-container">
-        <img src="./img/quote.png" alt="quote">
-      </div>
-      <div class="quote-text">
-        <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
-        <div class="line"></div>
-        <div class="subheader">Jon Doe</div>
+      <div class="carousel-container">
+        <div class="carousel-item-1 flexible prev-carou-item">
+          <div class="quote-img-container">
+            <img src="./img/quote.png" alt="quote">
+          </div>
+          <div class="quote-text">
+            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+            <div class="line"></div>
+            <div class="subheader">Jon Doe</div>
+          </div>
+        </div>
+        <div class="carousel-item-2 flexible active-carou-item">
+          <div class="quote-img-container">
+            <img src="./img/quote.png" alt="quote">
+          </div>
+          <div class="quote-text">
+            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+            <div class="line"></div>
+            <div class="subheader">Jon Doe</div>
+          </div>
+        </div>
+        <div class="carousel-item-3 flexible next-carou-item">
+          <div class="quote-img-container">
+            <img src="./img/quote.png" alt="quote">
+          </div>
+          <div class="quote-text">
+            <p>“amansbdmandbmnbd sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+            <div class="line"></div>
+            <div class="subheader">Jon Doe</div>
+          </div>
+        </div>
       </div>
       <i class="fas fa-angle-right"></i>
     </div>
@@ -191,15 +245,24 @@
       consequat.
     </div>
     <div class="meet-our-team-members flexible">
-      <div class="team-member"><div class="team-member-img-container"><div class="hover-grad"></div><img src="./img/team-person-1.png" alt="team-person-1"></div>
+      <div class="team-member">
+        <div class="team-member-img-container">
+          <div class="hover-grad"></div><img src="./img/team-person-1.png" alt="team-person-1">
+        </div>
         <h3>Matthew Dix</h3>
         <span class="center">Graphic Design</span>
       </div>
-      <div class="team-member"><div class="team-member-img-container"><div class="hover-grad"></div><img src="./img/team-person-2.png" alt="team-person-2"></div>
+      <div class="team-member">
+        <div class="team-member-img-container">
+          <div class="hover-grad"></div><img src="./img/team-person-2.png" alt="team-person-2">
+        </div>
         <h3>Christopher Campbell</h3>
         <span class="center">Branding/UX design</span>
       </div>
-      <div class="team-member"><div class="team-member-img-container"><div class="hover-grad"></div><img src="./img/team-person-3.png" alt="team-person-3"></div>
+      <div class="team-member">
+        <div class="team-member-img-container">
+          <div class="hover-grad"></div><img src="./img/team-person-3.png" alt="team-person-3">
+        </div>
         <h3>Michael Fertig</h3>
         <span class="center">Developer</span>
       </div>
@@ -210,7 +273,7 @@
       <img src="./img/logos-group.png" alt="logos">
     </div>
   </div>
-  <div class="gallery-section-container">
+  <div class="gallery-section-container" id="work">
     <section class="gallery center">
       <div class="subheader">
         What we do
@@ -223,38 +286,113 @@
     </section>
     <div class="gallery-container flexible">
       <div class="gallery-column flexible">
-
-        <div class="gallery-item"><div class="hover-grad"></div><img src="./img/gaylerry-guy.png" alt="guy"></div>
-        <div class="gallery-item"><div class="hover-grad"></div><img src="./img/gallery-bridge.png" alt="bridge"></div>
+        <div class="gallery-item">
+          <div class="hover-grad"></div><img src="./img/gaylerry-guy.png" alt="guy" id="myImg">
+          <div class="modal">
+            <div class="modal-content-container">
+              <img class="modal-content">
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="hover-grad"></div><img src="./img/gallery-bridge.png" alt="bridge">
+          <div class="modal">
+            <div class="modal-content-container">
+              <img class="modal-content">
+            </div>
+          </div>
+        </div>
       </div>
       <div class="gallery-column flexible">
-        <div class="gallery-item"><div class="hover-grad"></div>
-          <img src="./img/gallery-construstion.png" alt=""></div>
-        <div class="gallery-item"><div class="hover-grad"></div><img src="./img/gallery-perspective.png" alt="perspective"></div>
-
+        <div class="gallery-item">
+          <div class="hover-grad"></div>
+          <img src="./img/gallery-construstion.png" alt="">
+            <div class="modal">
+              <div class="modal-content-container">
+                <img class="modal-content">
+              </div>
+            </div>
+        </div>
+        <div class="gallery-item">
+          <div class="hover-grad"></div><img src="./img/gallery-perspective.png" alt="perspective">
+          <div class="modal">
+            <div class="modal-content-container">
+              <img class="modal-content">
+            </div>
+          </div>
+        </div>
       </div>
       <div class="gallery-column flexible">
-        <div class="gallery-item"><div class="hover-grad"></div><img src="./img/gallery-jellyfish.png" alt="jellyfish"></div>
+        <div class="gallery-item">
+          <div class="hover-grad"></div><img src="./img/gallery-jellyfish.png" alt="jellyfish">
+          <div class="modal">
+            <div class="modal-content-container">
+              <img class="modal-content">
+            </div>
+          </div>
+        </div>
       </div>
       <div class="gallery-column flexible">
-        <div class="gallery-item"><div class="hover-grad"></div><img src="./img/gallery-white.png" alt="white ceiling"></div>
-        <div class="gallery-item"><div class="hover-grad"></div><img src="./img/gallery-cube.png" alt="cube"></div>
+        <div class="gallery-item">
+          <div class="hover-grad"></div><img src="./img/gallery-white.png" alt="white ceiling">
+          <div class="modal">
+            <div class="modal-content-container">
+              <img class="modal-content">
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="hover-grad"></div><img src="./img/gallery-cube.png" alt="cube">
+          <div class="modal">
+            <div class="modal-content-container">
+              <img class="modal-content">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <div class="quote-container">
     <div class="quote-josh center">
       <i class="fas fa-angle-left"></i>
-      <div class="quote-img-container">
-        <img src="./img/joshua.png" alt="quote">
-      </div>
-      <div class="quote-text">
-        <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
-        <div class="line"></div>
-        <div class="subheader">Joshua Earle</div>
-      </div>
-      <i class="fas fa-angle-right"></i>
+      <div class="carousel-container">
+        <div class="carousel-item-1 flexible prev-carou-item">
+          <div class="quote-img-container">
+            <img src="./img/joshua.png" alt="quote">
+          </div>
+          <div class="quote-text">
+            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+            <div class="line"></div>
+            <div class="subheader">Jon Doe</div>
+          </div>
+        </div>
+        <div class="carousel-item-2 flexible active-carou-item">
+          <div class="quote-img-container">
+            <img src="./img/joshua.png" alt="quote">
+          </div>
+          <div class="quote-text">
+            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+            <div class="line"></div>
+            <div class="subheader">Jon Doe</div>
+          </div>
+        </div>
+        <div class="carousel-item-3 flexible next-carou-item">
+          <div class="quote-img-container">
+            <img src="./img/joshua.png" alt="quote">
+          </div>
+          <div class="quote-text">
+            <p>“amansbdmandbmnbd sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+            <div class="line"></div>
+            <div class="subheader">Jon Doe</div>
+          </div>
+        </div>
+      </div> <i class="fas fa-angle-right"></i>
     </div>
   </div>
   <div class="happy-clients-section-container">
@@ -310,7 +448,7 @@
       </div>
     </section>
   </div>
-  <section class="blog-section center">
+  <section class="blog-section center" id="blog">
     <div class="subheader">Our stories</div>
     <h2>latest blog</h2>
     <div class="line center"></div>
@@ -354,7 +492,7 @@
       <div class="line center"></div>
     </section>
   </div>
-  <footer class="flexible center">
+  <footer class="flexible center" id="contact">
     <div class="footer-social center">
       <span class="mogo">MoGo</span>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -422,6 +560,7 @@
       <span class="cursive">View More photos</span>
     </div>
   </footer>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
