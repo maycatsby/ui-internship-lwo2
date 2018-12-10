@@ -1,3 +1,7 @@
+.width-33-percent {
+  width: 33%;
+}
+
 footer {
   background: #f8f8f8;
   padding-top: 64px;
@@ -65,6 +69,8 @@ footer {
 .blogs {
   flex-basis: 32%;
   padding: 12px 0 0 6px;
+  height: 82vh;
+  overflow: scroll;
     
     p {
         font-size: 1.3rem;

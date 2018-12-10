@@ -735,14 +735,26 @@ section.our-team {
 .blog-container {
   padding-top: 6px;
   padding-left: 8.2%;
-  padding-right: 8.2%; }
+  padding-right: 8.2%;
+  flex-wrap: wrap; }
   .blog-container .blog-item {
-    flex-basis: 32%; }
+    flex-basis: 32%;
+    flex-grow: 1;
+    margin: 8px; }
+    .blog-container .blog-item h4 {
+      height: 36px;
+      overflow: scroll; }
     .blog-container .blog-item p {
-      margin-top: 12px; }
+      margin-top: 12px;
+      height: 100px;
+      overflow-y: scroll; }
   .blog-container .blog-img {
     margin-bottom: 10px;
-    position: relative; }
+    position: relative;
+    width: 100%;
+    height: 240px;
+    background-position: bottom;
+    background-size: cover; }
     .blog-container .blog-img .date {
       width: 60px;
       height: 70px;
@@ -797,6 +809,9 @@ section.our-team {
   .map .spot {
     margin-bottom: 8px; }
 
+.width-33-percent {
+  width: 33%; }
+
 footer {
   background: #f8f8f8;
   padding-top: 64px; }
@@ -840,7 +855,9 @@ footer {
 
 .blogs {
   flex-basis: 32%;
-  padding: 12px 0 0 6px; }
+  padding: 12px 0 0 6px;
+  height: 82vh;
+  overflow: scroll; }
   .blogs p {
     font-size: 1.3rem; }
   .blogs img {
