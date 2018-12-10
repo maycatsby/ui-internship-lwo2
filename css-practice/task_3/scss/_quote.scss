@@ -4,20 +4,28 @@
   width: 1.1%;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .quote-box{
-  width: 81.9%;
-  margin-bottom: 5.8%;
+  width: 100%;
+  margin-bottom: 2.5%;
   display: flex;
   justify-content: space-between;
+}
+.quote-content{
+  width: 86.9%;
+  overflow: hidden;
+}
+.quote-box-content{
+  width: 300%;
+  display: flex;
+  transition: .7s;
+  transform: translateX(0);
 }
 .quote-box-left{
   width: 15.4%;
   margin-top: 7.2%;
   transition: transform 1s;
-}
-.quote-box-left:hover{
-  transform: scale(1.1);
 }
 .quote-box-right{
   width: 78.5%;
