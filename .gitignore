@@ -9,4 +9,8 @@ node_modules
 *.log
 *.log.*
 .DS_STORE
+
 .DS_Store
+._*
+*.css
+

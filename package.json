@@ -6,8 +6,9 @@
     "test": "jest",
     "lint": "./node_modules/.bin/eslint tasks/**/*.js",
     "tdd": "jest --watch",
-    "watch:sass": "node-sass -w css-practice/task_3/scss/main.scss -o css-practice/task_3/css/",
-    "compile:sass": "node-sass css-practice/task_3/scss/main.scss -o css-practice/task_3/css/"
+    "watch:sass": "node-sass -w css-practice/css-js-task2/scss/index.scss -o css-practice/css-js-task2/css",
+    "compile:sass": "node-sass css-practice/css-js-task2/scss/index.scss -o css-practice/css-js-task2/css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" -d css-practice/task_2/css/ -o  css-practice/task_2/css/main.pre.css"
   },
   "husky": {
     "hooks": {
@@ -17,6 +18,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^9.3.1",
     "babel-core": "^6.26.0",
     "babel-jest": "^21.0.2",
     "babel-preset-es2015": "^6.24.1",
