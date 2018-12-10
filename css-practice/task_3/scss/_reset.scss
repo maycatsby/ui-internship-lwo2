@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;  
 }
 
 .container {
@@ -11,7 +12,15 @@
   margin: 0 auto;
 }
 
+main {
+  overflow: hidden;
+}
+
 a, h2, p, li {
   text-decoration: none;
   list-style: none;
+}
+
+.body_popup {
+  overflow: hidden;
 }
