@@ -748,17 +748,26 @@ header {
 }
 
 .lb-gallery {
+  @include grid;
+  @include grid-template-columns(1fr 1fr 1fr);
+  grid-gap: 20px;
   padding-top: 0;
 }
 
 .lb-pic {
   width: 100%;
+  height: 218px;
 }
 
 .lb-item {
-  @include flex-basis(32%);
+  @include flex-basis(33%);
 
   position: relative;
+}
+
+.lb-header {
+  overflow: scroll;
+  height: 36px;
 }
 
 .number {
@@ -776,15 +785,23 @@ header {
   font-style: italic;
   font-weight: 300;
   position: absolute;
-  padding: 11px 16px;
+  padding: 2px 0;
+  width: 50px;
+  height: 60px;
   text-align: center;
-  top: 42%;
+  top: 45%;
+  right: 85%;
 }
 
 .lb-text-block {
   border-bottom: 1px solid $border;
   padding: 17px 0 33px 10px;
   margin-right: 17px;
+
+  .flow {
+    overflow: auto;
+    height: 36px;
+  }
 }
 
 .lb-icons{
@@ -941,18 +958,32 @@ header {
 }
 
 .blog-items {
+
+  @include grid;
+  
+  overflow: scroll;
+  height: 280px;
   margin-top: 20px;
-  @include flex;
-  @include flex-direction(column);
 }
 .blog-item {
   @include grid;
   @include grid-template-columns(0.3fr 0.7fr);
-  padding-bottom: 34px;
+
+  padding-bottom: 10px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .blog-text-header {
   font-size: 12px;
+  padding-right: 25px;
+  height: 40px;
+  white-space: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .blog-text {
