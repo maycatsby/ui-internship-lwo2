@@ -1,113 +1,119 @@
-/* global document*/
-const containers = document.querySelectorAll('.services-info-title');
-const servicesAccordionText = document.querySelectorAll('.services-info-text');
+/* global fetch, window, document*/
 
-containers.forEach((el) => {
-  el.addEventListener('click', toggleShow);
-});
+window.onload = fetchData();
 
-function toggleShow(e) {
-  const textClassList = e.currentTarget.nextElementSibling.classList;
+function fetchData() {
+  fetch('http://localhost:3000/api/blogs').then((res) => res.json()).then((res) => render(res.blogs, res.latest));
+}
 
-  containers.forEach((el) => {
-    if (el !== e.currentTarget) {
-      el.querySelector('i').classList.remove('rotate-180');
-    }
-  });
+function render(blogs, latestIds) {
+  const blogsArr = [];
+  const latestArr = [];
 
-  e.currentTarget.querySelector('i').classList.toggle('rotate-180');
+  prepareBlogItems();
+  renderLatestBlogs(latestArr);
+  renderFooterBlogs(blogsArr);
 
-  if (e.currentTarget.nextElementSibling.classList.contains('height-0')) {
-    changeAccordionImage(e.currentTarget.getAttribute('data-image'));
-    servicesAccordionText.forEach((el) => {
-      el.classList.remove('height-auto');
-      el.classList.add('height-0');
+  function prepareBlogItems() {
+    blogs.forEach((el) => {
+      if (latestIds.includes(el.id)) {
+        latestArr.push(el);
+      } else {
+        blogsArr.push(el);
+      }
     });
-  } else {
-    textClassList.remove('height-auto');
-    textClassList.add('height-0');
-    return;
-  }
-  textClassList.toggle('height-0');
-  textClassList.toggle('height-auto');
-}
-
-function changeAccordionImage(imageIndex) {
-  const servicesImagesGroup = Array.from(document.querySelectorAll('.services-group-container > img'));
-  servicesImagesGroup.forEach((el) => {
-    el.classList.add('none');
-  });
-  servicesImagesGroup[imageIndex].classList.remove('none');
-}
-
-// carousel
-
-const rightArrows = document.querySelectorAll('.fa-angle-right');
-const leftArrows = document.querySelectorAll('.fa-angle-left');
-
-leftArrows.forEach((el) => {
-  el.addEventListener('click', carouselPrev);
-});
-rightArrows.forEach((el) => {
-  el.addEventListener('click', carouselNext);
-});
-
-function carouselNext(e) {
-  let active = e.currentTarget.parentElement.querySelector('.active-carou-item');
-
-  if (!active.nextElementSibling) {
-    active.classList.remove('active-carou-item');
-    active.classList.add('next-carou-item');
-    active.previousElementSibling.classList.remove('prev-carou-item');
-    active.previousElementSibling.classList.add('next-carou-item');
-    active.previousElementSibling.previousElementSibling.classList.remove('prev-carou-item');
-    active.previousElementSibling.previousElementSibling.classList.add('active-carou-item');
-    return;
   }
 
-  active.classList.remove('active-carou-item');
-  active.classList.add('prev-carou-item');
-  active.nextElementSibling.classList.remove('next-carou-item');
-  active.nextElementSibling.classList.add('active-carou-item');
-}
+  function createFooterItem(model) {
+    const el = document.createElement('div');
+    const {
+      published,
+      title,
+      previewImg,
+    } = model;
+    const {
+      day,
+      month,
+      year,
+    } = parseDate(published);
 
-function carouselPrev(e) {
-  let active = e.currentTarget.parentElement.querySelector('.active-carou-item');
+    el.classList.add('footer-blog-item');
+    el.innerHTML = `
+    <img src=${previewImg} alt="blog-image">
+    <h3>${title}</h3>
+    <span class="cursive">
+      ${month} ${day}, ${year}
+    </span>
+    `;
 
-  if (!active.previousElementSibling) {
-    active.classList.remove('active-carou-item');
-    active.classList.add('prev-carou-item');
-    active.nextElementSibling.classList.remove('next-carou-item');
-    active.nextElementSibling.classList.add('prev-carou-item');
-    active.nextElementSibling.nextElementSibling.classList.remove('next-carou-item');
-    active.nextElementSibling.nextElementSibling.classList.add('active-carou-item');
-    return;
+    return el;
   }
 
-  active.classList.remove('active-carou-item');
-  active.classList.add('next-carou-item');
-  active.previousElementSibling.classList.remove('prev-carou-item');
-  active.previousElementSibling.classList.add('active-carou-item');
-}
+  function createLatestItem(model) {
+    const el = document.createElement('div');
+    const {
+      published,
+      title,
+      previewImg,
+      watched,
+      description,
+      comments,
+    } = model;
+    const {
+      day,
+      month,
+    } = parseDate(published);
+    
+    el.classList.add('blog-item');
+    el.innerHTML = `
+    <div class="blog-img-container">
+      <img src="${previewImg}" alt="blog-image">
+      <div class="date"><span class="day">${day}</span> <span class="month cursive">${month}</span></div>
+    </div>
+    <h3>${title}</h3>
+    <p>${description}</p>
+    <hr>
+    <div class="activities cursive">
+      <img src="./img/eye.png" alt="views">${watched}
+      <img src="./img/comment.png" alt="comments">${comments}
+    </div>
+    `;
 
-// modals
+    return el;
+  }
 
-const gallery = document.querySelector('.gallery-container');
 
-gallery.addEventListener('click', showPopup);
+  function parseDate(isoDateString) {
+    const date = new Date(isoDateString);
+    const monthArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-function showPopup(e) {
-  if (!e.target.nextElementSibling) return;
-  const modal = e.target.nextElementSibling.nextElementSibling;
-  const galleryImage = e.target.nextElementSibling;
-  const modalImg = modal.querySelector('.modal-content');
+    return {
+      day: date.getDate(),
+      month: monthArr[date.getMonth()],
+      year: date.getFullYear(),
+    };
+  }
 
-  modal.classList.remove('none');
-  modal.classList.add('display--flex');
-  modalImg.src = galleryImage.src;
-  modal.addEventListener('click', closePopup);
-}
+  function renderLatestBlogs(latestArr) {
+    const blogCont = document.querySelector('.blog-container');
 
-function closePopup(e) {
-  document.querySelector('.display--flex').classList.replace('display--flex', 'none');
+    renderBlogs(blogCont, latestArr, createLatestItem);
+  }
+
+
+  function renderFooterBlogs(blogsArr) {
+    const blogCont = document.querySelector('.footer-blog-container');
+
+    renderBlogs(blogCont, blogsArr, createFooterItem);
+  }
+
+  function renderBlogs(container, blogs, factory) {
+    const frag = document.createDocumentFragment();
+
+    blogs.forEach((blogModel) => {
+      frag.appendChild(factory(blogModel));
+    });
+
+    container.appendChild(frag);
+  }
 }

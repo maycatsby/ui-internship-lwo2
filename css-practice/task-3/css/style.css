@@ -723,22 +723,33 @@ nav a:last-child {
   margin-bottom: 32px; }
 
 .blog-container {
-  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%; }
 
 .blog-img-container {
   position: relative; }
 
 .blog-img-container img {
+  height: 240px;
   width: 100%; }
 
 .blog-item {
-  width: 32%; }
+  padding: 0 10px;
+  width: 33%;
+  margin: 0 0 10px 0; }
+
+.blog-item p {
+  height: 70px;
+  overflow-y: auto; }
 
 .blog-item p,
 .blog-item h3 {
   margin-top: 10px;
   text-align: left; }
+
+.blog-item h3 {
+  max-height: 36px;
+  overflow-y: hidden; }
 
 .date {
   padding-top: 6px;
@@ -850,6 +861,8 @@ footer i {
   width: 33%; }
 
 .footer-blog-container {
+  height: 300px;
+  overflow-y: auto;
   flex-direction: column; }
 
 .footer-blog-container img {
@@ -863,6 +876,10 @@ footer i {
 .footer-blog-item {
   margin-bottom: 32px;
   font-size: 12px; }
+
+.footer-blog-item img {
+  width: 120px;
+  height: 80px; }
 
 .footer-blog-item h3 {
   font-size: 12px;
