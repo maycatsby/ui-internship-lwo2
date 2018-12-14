@@ -738,7 +738,6 @@ ul {
   background: rgba(0, 0, 0, 0.8);
 }
 
-
 .modal-content {
   position: relative;
   margin: auto;
@@ -773,9 +772,7 @@ ul {
 .review-container {
   margin-top: 6%;
   background: url("../img/rock-bg.png") no-repeat center center;
-
   padding-bottom: 135px;
-  // opacity: 0.8;
 }
 
 .clients {
@@ -837,12 +834,13 @@ ul {
   padding-top: 3.5%;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
+
 
 .post-item {
   position: relative;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 20px 0px 10px;
   line-height: 1.7;
   width: 33%;
   img[alt="post"]{
@@ -851,10 +849,15 @@ ul {
   }
   h5 {
     padding-top: 3px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
   p {
     padding: 8px 0 0 2px;
     line-height: 24px;
+    max-height: 75px;
+    overflow: hidden;
     letter-spacing: -0.2px;
     font-family: "Roboto";
     margin-bottom: 15px;
@@ -864,8 +867,9 @@ ul {
 .post-day {
   background: #95e1d3;
   position: absolute;
-  bottom: 170px;
-  left: 5px;
+  bottom: 200px;
+  left: 0px;
+
   color: $white-color;
   padding: 0px 10px;
   line-height: 1.5;
