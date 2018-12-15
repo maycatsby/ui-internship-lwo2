@@ -11,36 +11,34 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="headline">
-                <h3>MoGo</h3>
-                <img class="hamburger" src="img/hamb.png" alt="hamburger">
-                <nav class="navigation">
-                    <a class="nav-item" href="#">about</a>
-                    <a class="nav-item" href="#">service</a>
-                    <a class="nav-item" href="#">work</a>
-                    <a class="nav-item" href="#">blog</a>
-                    <a class="nav-item" href="#">contact</a>
-                    <a href="#"><img src="img/SHOPPING_CART.png" alt="cart"></a>
-                    <a href="#"><img src="img/MAGNIFYING_GLASS.png" alt="glass"></a>
-                </nav>
-            </div>
-            <div class="welcome">
-                <h2>Creative Template</h2>
-                <h1>welcome to mogo</h1>
-                <hr>
-                <button>learn more</button>
-            </div>
-            <div class="carousell">
-                <div><span>01</span>intro</div>
-                <div><span>02</span>work</div>
-                <div><span>03</span>about</div>
-                <div><span>04</span>contacts</div>
-            </div>
-        </div>
+    <div class="headline" id="myHeadline">
+        <h3>MoGo</h3>
+        <img class="hamburger" src="img/hamb.png" alt="hamburger">
+        <nav class="navigation">
+            <a class="nav-item" href="#about">about</a>
+            <a class="nav-item" href="#service">service</a>
+            <a class="nav-item" href="#works">work</a>
+            <a class="nav-item" href="#blog">blog</a>
+            <a class="nav-item" href="#contacts">contact</a>
+            <a href="#"><img src="img/SHOPPING_CART.png" alt="cart"></a>
+            <a href="#"><img src="img/MAGNIFYING_GLASS.png" alt="glass"></a>
+        </nav>
+    </div>
+    <div class="welcome container">
+        <h2>Creative Template</h2>
+        <h1>welcome to mogo</h1>
+        <hr>
+        <button>learn more</button>
+    </div>
+    <div class="carousell container">
+        <div><span>01</span>intro</div>
+        <div><span>02</span>work</div>
+        <div><span>03</span>about</div>
+        <div><span>04</span>contacts</div>
+    </div>
     </header>
     <main>
-        <section class="about">
+        <section class="about" id="about">
             <div class="container">
                 <h4>What we do</h4>
                 <h3>story about us</h3>
@@ -81,7 +79,7 @@
                 </div>
             </div>
         </div>
-        <section class="used-services">
+        <section class="used-services" id="service">
             <div class="container">
                 <h4>We work with</h4>
                 <h3>amazing services</h3>
@@ -138,57 +136,115 @@
                 <hr>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                 <div class="display">
-                <img src="img/Layer_43.png" alt="photo">
+                <img src="img/Layer_43.png" alt="photo" class="accord-img tabSwitch" id="tab1">
+                <img src="img/event_823-500-380-20120229132217.jpg" alt="photo" class="accord-img" id="tab2">
+                <img src="img/picture-an-oak-1534331433-1534331465_n.jpg" alt="photo" class="accord-img" id="tab3">
                 <div class="accordion">
                     <div class="accordion-section first">
-                    <div class="accordion-heading">
+                    <div class="accordion-heading" data-id="tab1" id="default-open">
                         <img src="img/PICTURE1.png" alt="picture icon">
                         <h3>Photography</h3>
-                        <img src="img/DOWN.png" alt="up">
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.
-                        <br/>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p class="panel"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                            culpa qui officia deserunt mollit anim id est laborum.
+                            <br/>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                            culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
                     </div>
                     <div class="accordion-section second">
-                    <div class="accordion-heading">
+                    <div class="accordion-heading" data-id="tab2"> 
                         <img src="img/EQUALIZER.png" alt="equalizer icon">
                         <h3>creativity</h3>
-                        <img src="img/UP.png" alt="down">
                     </div>
+                        <p class="panel">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                            culpa qui officia deserunt mollit anim id est laborum.
+                            <br/>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                            culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
                     </div>
                     <div class="accordion-section third">
-                    <div class="accordion-heading">
+                    <div class="accordion-heading" data-id="tab3">
                         <img src="img/BULLSEYE.png" alt="bullseye icon">
                         <h3>web design</h3>
-                        <img src="img/UP.png" alt="down">
                     </div>
+                        <p class="panel"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                            culpa qui officia deserunt mollit anim id est laborum.
+                            <br/>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                            culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
                     </div>
                 </div>
                 </div>
                 </div>
         </section>
         <div class="feedback">
-            <div class="container">
-                <img src="img/DOWN_copy_2.png" alt="arrow" width="12" height="22">
-                <div class="chat"></div>
-                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
-                    <span>Jon Doe</span>
-                </p>
-                <hr>
-                <img src="img/DOWN_copy.png" alt="arrow" width="12" height="22">
+            <div id="quotes_slider">
+                <button class="scroll-left"></button>
+                <div class="holder">
+                    <div class="slide-holder">
+                        <div class="slide-in">
+                            <div class="slide-content-one">
+                                    <div class="chat"></div>
+                                    <p>“1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                                        <span>Jon Doe</span>
+                                    </p>
+                                    <hr> 
+                            </div>    
+                        </div>
+                        <div class="slide-in">
+                                <div class="slide-content-one">
+                                        <div class="chat"></div>
+                                        <p>“2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                                            <span>Jon Doe</span>
+                                        </p>
+                                        <hr> 
+                                </div> 
+                        </div>
+                        <div class="slide-in">
+                                <div class="slide-content-one">
+                                        <div class="chat"></div>
+                                        <p>“3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                                            <span>Jon Doe</span>
+                                        </p>
+                                        <hr> 
+                                </div> 
+                        </div>
+                    </div>
+                </div>
+                <button class="scroll-right"></button>
             </div>
         </div>
         <section class="team">
@@ -234,7 +290,7 @@
                 <img src="img/studio.png" alt="logo">
             </div>
         </div>
-        <section class="works">
+        <section class="works" id="works">
             <div class="container">
                 <h4>What we do</h4>
                 <h3>some of our work</h3>
@@ -243,23 +299,53 @@
             </div>
         </section>
         <div class="portfolio">
-            <img src="img/Layer_26.png" alt="design">
-            <img src="img/Layer_33.png" alt="design">
-            <img class="large" src="img/Layer_34.png" alt="design">
-            <img src="img/Layer_31.png" alt="design">
-            <img src="img/Layer_35.png" alt="design">
-            <img src="img/Layer_29.png" alt="design">
-            <img src="img/Layer_32.png" alt="design">
+            <img class="myImages" src="img/Layer_26.png" alt="design">
+            <img class="myImages" src="img/Layer_33.png" alt="design">
+            <img class="myImages large" src="img/Layer_34.png" alt="design">
+            <img class="myImages" src="img/Layer_31.png" alt="design">
+            <img class="myImages" src="img/Layer_35.png" alt="design">
+            <img class="myImages" src="img/Layer_29.png" alt="design">
+            <img class="myImages" src="img/Layer_32.png" alt="design">
         </div>
-        <div class="feedback nobackground">
-            <div class="container">
-                <img src="img/DOWN_copy_2.png" alt="arrow" width="12" height="22">
-                <img src="img/Layer_36.png" alt="user">
-                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
-                    <span>Joshua Earle</span>
-                </p>
-                <hr>
-                <img src="img/DOWN_copy.png" alt="arrow" width="12" height="22">
+        <div id="myModal" class="modal">
+            <img class="modal-content" id="img01">
+        </div>
+        <div class="feedback">
+                <div id="review_slider">
+                    <button class="scroll-left"></button>
+                    <div class="holder">
+                        <div class="slide-holder">
+                            <div class="slide-in">
+                                <div class="slide-content-one">
+                                        <div class="feed-photo"><img src="img/Layer_36.png" alt="phpto"></div>
+                                        <p>“1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                                            <span>Jon Doe</span>
+                                        </p>
+                                        <hr> 
+                                </div>    
+                            </div>
+                            <div class="slide-in">
+                                    <div class="slide-content-one">
+                                            <div class="feed-photo"><img src="img/Layer_36.png" alt="phpto"></div>
+                                            <p>“2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                                                <span>Jon Doe</span>
+                                            </p>
+                                            <hr> 
+                                    </div> 
+                            </div>
+                            <div class="slide-in">
+                                    <div class="slide-content-one">
+                                            <div class="feed-photo"><img src="img/Layer_36.png" alt="phpto"></div>
+                                            <p>“3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                                                <span>Jon Doe</span>
+                                            </p>
+                                            <hr> 
+                                    </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <button class="scroll-right"></button>
+                </div>
             </div>
         </div>
         <section class="clients">
@@ -299,7 +385,7 @@
                 </div>
             </div>
         </section>
-        <section class="blog">
+        <section id="blog" class="blog">
             <div class="container">
                 <h4>Our stories</h4>
                 <h3>latest blog</h3>
@@ -308,7 +394,7 @@
                 </div>
             </div>
         </section>
-        <section class="map">
+        <section class="map" id="contacts">
             <img src="img/PIN_2.png" alt="pointer">
             <h3>open map</h3>
             <hr>
@@ -363,7 +449,9 @@
         <p>&#169; 2016 MoGo free PSD template by <span>Laaqiq</span></p>
         </div>
     </footer>
-    <script src="blog.js"></script>
-    <!-- <script src="footer-blog.js"></script> -->
+    <script src="scroll.js"></script>
+    <script src="modal-img.js"></script>
+    <script src="accordion.js"></script>
+    <script src="slider.js"></script>
 </body>
 </html>
