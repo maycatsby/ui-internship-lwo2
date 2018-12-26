@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SharedModule } from '../shared/shared.module';
 import { throwIfAlreadyLoaded } from './guard/module-import-guard';
 import { ContentComponent } from './content/content.component';
+import { CoreRoutingModule } from './core-routing.module';
 
 
 @NgModule({
@@ -15,7 +16,7 @@ import { ContentComponent } from './content/content.component';
     FooterComponent,
     HeaderContactsComponent,
     HeaderNavComponent,
-    ContentComponent
+    ContentComponent,
   ], exports: [
     HeaderComponent,
     FooterComponent,
@@ -26,6 +27,7 @@ import { ContentComponent } from './content/content.component';
 
   imports: [
     CommonModule,
+    CoreRoutingModule,
     SharedModule,
     SharedModule.forRoot()
   ]
