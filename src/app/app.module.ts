@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
+import { CoreRoutingModule } from './core/core-routing.module';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { CoreModule } from './core/core.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CoreRoutingModule,
     NgbModule,
     HttpClientModule,
     CoreModule,
