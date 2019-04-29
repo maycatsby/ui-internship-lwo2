@@ -1,5 +1,10 @@
 export const isBoolean = (value) => {
-  if (typeof value === 'boolean') {
+  let valueType = typeof value;
+  if (valueType === 'boolean' ||
+  (valueType === 'object' && valueType.valueOf() === 'boolean')) {
     return true;
-  } else return false;
+  } else {
+    return false;
+  }
 };
+

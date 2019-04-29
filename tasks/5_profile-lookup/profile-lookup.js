@@ -25,9 +25,10 @@ const arr = [
 export const lookupProfile = (firstName, prop) => {
   let message = 'No such contact';
   for (let i=0; i<arr.length; i++) {
-    if (arr[i].firstName === firstName && arr[i][prop]) {
+    let namesCompare = arr[i].firstName === firstName;
+    if (namesCompare && arr[i][prop]) {
       return message = arr[i][prop];
-    } else if (arr[i].firstName === firstName) {
+    } else if (namesCompare) {
       return message = 'No such property';
     }
   }
