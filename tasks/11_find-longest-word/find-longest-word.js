@@ -1,6 +1,7 @@
 export const findLongestWord = (value) => {
-  return value.split(/\W/g).map((cur) => cur.length).reduce((prev, cur) => {
-    return prev<cur ? cur : prev;
-  }, 0
-  );
+  const strArr = value.split(/\s/);
+  return strArr.reduce((prev, cur) => {
+    return prev.length < cur.length ? cur : prev;
+  }).length;
 };
+
