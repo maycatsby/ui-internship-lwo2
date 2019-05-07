@@ -1,12 +1,23 @@
 export const firstNSmallest = (arr, num) => {
-  let loopAmount = arr.length - num;
-  let newArray = arr.reverse();
-  if (loopAmount >= 0) {
-    for (let i = 0; i < loopAmount; i++) {
-      let max = Math.max(...newArray);
-      let index = newArray.indexOf(max);
-      newArray.splice(index, 1);
-    }
-    return newArray.reverse();
+  let newArray = arr.slice(0);
+  let arrMin = arr.sort((a, b) => a - b).slice(0, num);
+  let a = newArray.filter((cur) => arrMin.indexOf(cur) !== -1);
+  let diff = a.length - arrMin.length;
+  if (diff > 0) {
+    a.splice((-diff));
   }
+  return a;
 };
+
+/*
+export const firstNSmallest = (arr, num) => {
+  let newArray = arr.slice(0);
+  let arrMin = arr.sort((a, b) => a - b).slice(0, num);
+  let a = newArray.filter((cur) => arrMin.indexOf(cur) !== -1);
+  let diff = a.length - arrMin.length;
+  if (diff > 0) {
+    a.splice((-diff));
+  }
+  return a;
+};
+*/
