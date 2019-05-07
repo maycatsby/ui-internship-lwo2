@@ -1,24 +1,15 @@
 export const rowWeights = (arr) => {
-  let team1 = [0];
-  let team2 = [0];
-  let arrOfWeight = [team1, team2];
+  let team1 = 0;
+  let team2 = 0;
 
   for (let i = 0; i < arr.length; i++) {
     if (i % 2 === 0) {
-      team1.push(arr[i]);
+      team1 += arr[i];
     } else {
-      team2.push(arr[i]);
+      team2 += arr[i];
     }
   }
 
-  return arrOfWeight.map((cur) => {
-    if (cur.length > 1) {
-      return cur.reduce((cur, prev) => {
-        return cur + prev;
-      });
-    } else {
-      return cur[0];
-    }
-  });
+  return [team1, team2];
 };
 
