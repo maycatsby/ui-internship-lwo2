@@ -1,6 +1,4 @@
 export function formatWorkingHours(arr) {
-  let start = null;
-  let end = null;
   const tillDay = () => start !== end ? ` - ${end.day.toUpperCase()}` : '';
   const dayAndHours = () => {
     let startDay = start.day.toUpperCase();
@@ -15,23 +13,20 @@ export function formatWorkingHours(arr) {
       return 1;
     }
   });
-
+  let start;
+  let end;
+  start = end = sortedArray[0];
   let scheduleArray = [];
-  for (let i = 0; i < sortedArray.length; i++) {
-    if (start === null) {
-      start = end = sortedArray[i];
-    } else if (sortedArray[i].from === start.from
+  for (let i = 1; i < sortedArray.length; i++) {
+    if (sortedArray[i].from === start.from
       && sortedArray[i].to === start.to) {
       end = sortedArray[i];
-      if (!sortedArray[i + 1]) {
-        scheduleArray.push(dayAndHours());
-      }
     } else {
       scheduleArray.push(dayAndHours());
       start = end = sortedArray[i];
-      if (!sortedArray[i + 1]) {
-        scheduleArray.push(dayAndHours());
-      }
+    }
+    if (!sortedArray[i + 1]) {
+      scheduleArray.push(dayAndHours());
     }
   }
   return scheduleArray;
