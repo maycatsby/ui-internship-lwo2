@@ -1,12 +1,14 @@
 export const rot13Encoder = (str) => {
-  let newUtfNum = str.split('').map((cur) => cur.charCodeAt() + 13);
-  let rot13Arr = newUtfNum.map((cur) => {
-    if (cur >= 78 && cur <= 90) {
-      return String.fromCharCode(cur);
-    } else if (cur > 90 && cur <= 103) {
-      return String.fromCharCode(cur - 90 + 64);
+  const calcCharCode = (el) => el.charCodeAt() + 13;
+  const strArr = str.split('');
+  let rot13Arr = strArr.map((cur) => {
+    let curCharCode = calcCharCode(cur);
+    if (curCharCode >= 78 && curCharCode <= 90) {
+      return String.fromCharCode(curCharCode);
+    } else if (curCharCode > 90 && curCharCode <= 103) {
+      return String.fromCharCode(curCharCode - 90 + 64);
     } else {
-      return String.fromCharCode(cur - 13);
+      return String.fromCharCode(curCharCode - 13);
     }
   });
   return rot13Arr.join('');

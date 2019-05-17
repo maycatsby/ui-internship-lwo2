@@ -1,6 +1,6 @@
 export const getVowelCount = (str) =>{
   let pattern = /[aeiou]/gi;
-  let vowelAmount = str.split('').filter((cur) => cur.match(pattern)).length;
-  return vowelAmount;
+  let vowelAmount = str.match(pattern);
+  return vowelAmount ? vowelAmount.length : 0;
 };
 
