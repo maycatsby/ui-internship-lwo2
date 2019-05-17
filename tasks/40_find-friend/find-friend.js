@@ -1,19 +1,24 @@
 export const findFriend = (arr) => {
-  let redAmount = 0;
+  // eslint-disable-next-line no-undef
+  let indexOfRed = new Set();
 
-  for (let i = 0; i < arr.length; i++) {
-    let prevElBlue = arr[i - 1] == 'blue';
-    let nextElBlue = arr[i + 1] == 'blue';
-
-    if (arr[i] !== 'red') {
-      continue;
-    } else if ((prevElBlue && nextElBlue) ||
-         (nextElBlue && arr[i + 2] == 'blue') ||
-         (prevElBlue && arr[i - 2] == 'blue')) {
-      redAmount++;
+  for (let i = 0; i < arr.length - 2; i++) {
+    let curRedIndex;
+    let blue = 0;
+    let red = 0;
+    arr.slice(i, i + 3).forEach((cur, j) => {
+      if (cur === 'red') {
+        red++;
+        curRedIndex = i + j;
+      } else if (cur === 'blue') {
+        blue++;
+      }
+    });
+    if (blue === 2 && red === 1) {
+      indexOfRed.add(curRedIndex);
     }
   }
-  return redAmount;
+  return indexOfRed.size;
 };
 
 
