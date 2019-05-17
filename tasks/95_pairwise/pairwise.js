@@ -4,12 +4,12 @@ export const pairwise = (arr, num) => {
   }
   let sumOfIndex = 0;
   for (let i = 0; i < arr.length; i++) {
-    let index = arr.findIndex((cur, index) => {
-      return arr[i] + cur === num && index !== i;
-    });
-    if (index !== -1) {
-      sumOfIndex += i + index;
-      arr[i] = arr[index] = 'used';
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] === num) {
+        sumOfIndex += i + j;
+        arr[i] = arr[j] = 'used';
+        break;
+      }
     }
   }
   return sumOfIndex;

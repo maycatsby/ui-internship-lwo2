@@ -9,3 +9,10 @@ export const squares = (number) => {
   }
   return counter;
 };
+
+/* second solution */
+/*
+export const squares = (num) => {
+  return Math.floor(( num + 1 ) / 2 ) + Math.floor( num / 4 );
+};
+*/
