@@ -3,9 +3,6 @@ export const humanizeFormat = (number) => {
   let lastElement = number > 0 ? parseInt(number.toString().slice(-1)) : '';
 
   switch (lastElement) {
-    case 0:
-    default:
-      humanizedNumber = `${number.toString()}th`; break;
     case 1:
       humanizedNumber = `${number.toString()}st`; break;
     case 2:
@@ -14,6 +11,8 @@ export const humanizeFormat = (number) => {
       humanizedNumber = `${number.toString()}rd`; break;
     case '':
       humanizedNumber = ''; break;
+    default:
+      humanizedNumber = `${number.toString()}th`; break;
   }
   return humanizedNumber;
 };
