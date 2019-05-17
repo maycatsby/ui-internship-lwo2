@@ -9,20 +9,21 @@ export const GOLF_SCORES = {
 };
 
 export const golfScore = (par, stroke) => {
-  switch (true) {
-    case stroke === 1:
-      return GOLF_SCORES.HOLE_IN_ONE;
-    case stroke <= par - 2:
-      return GOLF_SCORES.EAGLE;
-    case stroke === par - 1:
+  if (stroke === 1) {
+    return GOLF_SCORES.HOLE_IN_ONE;
+  } else if (par - stroke <= -3) {
+    return GOLF_SCORES.GO_HOME;
+  }
+  switch (par - stroke) {
+    case 1:
       return GOLF_SCORES.BIRDIE;
-    case stroke === par:
+    case 0:
       return GOLF_SCORES.PAR;
-    case stroke === par + 1:
+    case -1:
       return GOLF_SCORES.BOGEY;
-    case stroke === par + 2:
+    case -2:
       return GOLF_SCORES.DOUBLE_BOGEY;
-    case stroke >= par + 3:
-      return GOLF_SCORES.GO_HOME;
+    default:
+      return GOLF_SCORES.EAGLE;
   }
 };

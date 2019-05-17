@@ -24,13 +24,12 @@ const arr = [
 
 export const lookupProfile = (firstName, prop) => {
   let message = 'No such contact';
-  for (let i=0; i<arr.length; i++) {
-    let namesCompare = arr[i].firstName === firstName;
-    if (namesCompare && arr[i][prop]) {
-      return message = arr[i][prop];
-    } else if (namesCompare) {
-      return message = 'No such property';
-    }
+  let foundedEl = arr.find((cur) => cur.firstName === firstName);
+  if (foundedEl && foundedEl[prop]) {
+    return message = foundedEl[prop];
+  } else if (foundedEl) {
+    return message = 'No such property';
   }
   return message;
 };
+
