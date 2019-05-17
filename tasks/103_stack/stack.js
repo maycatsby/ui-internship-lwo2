@@ -15,7 +15,8 @@ export class Stack {
     if (this.last === null) {
       this.last = newTop;
     } else {
-      newTop.prev = this.last; this.last = newTop;
+      newTop.prev = this.last;
+      this.last = newTop;
     }
     this.size++;
   }

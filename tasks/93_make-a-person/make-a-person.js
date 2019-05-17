@@ -1,33 +1,32 @@
 export class Person {
   constructor(fullName) {
-    this.firstName;
-    this.lastName;
-    this.fullName = fullName;
+    this._firstName = fullName.split(' ')[0];
+    this._lastName = fullName.split(' ')[1];
   }
 
   getFirstName() {
-    return this.firstName = this.fullName.split(' ')[0];
+    return this._firstName;
   }
 
   getLastName() {
-    return this.lastName = this.fullName.split(' ')[1];
+    return this._lastName;
   }
 
   getFullName() {
-    return this.fullName;
+    return `${this._firstName} ${this._lastName}`;
   }
 
   setFirstName(firstName) {
-    this.fullName = `${firstName} ${this.fullName.split(' ')[1]}`;
-    return this.firstName = firstName;
+    return this._firstName = firstName;
   }
 
   setLastName(lastName) {
-    this.fullName = `${this.fullName.split(' ')[0]} ${lastName}`;
-    return this.lastName = lastName;
+    return this._lastName = lastName;
   }
 
   setFullName(fullName) {
-    return this.fullName = fullName;
+    this._firstName = fullName.split(' ')[0];
+    this._lastName = fullName.split(' ')[1];
+    return `${this._firstName} ${this._lastName}`;
   }
 }
