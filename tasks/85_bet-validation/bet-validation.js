@@ -6,7 +6,7 @@ export const validate_bet = (arrRange, ...num) => {
     return 'None';
   }
   let arrStr = str.split(/\s|,/)
-      .filter((cur) => cur !== '').sort();
+      .filter((cur) => cur !== '').sort((a, b) => a - b);
   if ([...new Set(arrStr)].length !== arrRange[0]) {
     return 'None';
   }

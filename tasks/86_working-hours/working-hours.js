@@ -1,33 +1,34 @@
 export function formatWorkingHours(arr) {
+  if (!arr.length) {
+    return [];
+  }
   const tillDay = () => start !== end ? ` - ${end.day.toUpperCase()}` : '';
   const dayAndHours = () => {
     let startDay = start.day.toUpperCase();
     return `${startDay}${tillDay()}: ${start.from} - ${start.to}`;
   };
+
   const daysOfWeek = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
-  const sortedArray = arr.sort((a, b) => {
-    const indexOfEl = (day) => daysOfWeek.indexOf(day);
-    if (indexOfEl(a.day) < indexOfEl(b.day)) {
-      return -1;
-    } else {
-      return 1;
-    }
-  });
   let start;
   let end;
-  start = end = sortedArray[0];
+  start = end = arr.find((el) => el.day === 'mon');
   let scheduleArray = [];
-  for (let i = 1; i < sortedArray.length; i++) {
-    if (sortedArray[i].from === start.from
-      && sortedArray[i].to === start.to) {
-      end = sortedArray[i];
+
+  for (let i = 1; i < daysOfWeek.length; i++) {
+    let currentDay = arr.find((el) => el.day === daysOfWeek[i]);
+
+    if (currentDay.from === start.from
+          && currentDay.to === start.to) {
+      end = currentDay;
     } else {
       scheduleArray.push(dayAndHours());
-      start = end = sortedArray[i];
+      start = end = currentDay;
     }
-    if (!sortedArray[i + 1]) {
+    if (i === daysOfWeek.length - 1) {
       scheduleArray.push(dayAndHours());
     }
   }
   return scheduleArray;
 }
+
+

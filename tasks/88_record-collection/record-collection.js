@@ -24,17 +24,22 @@ let collection = {
   },
 };
 export const updateRecords = (id, prop, value) => {
+  if (value === '') {
+    delete collection[id][prop];
+    return collection;
+  }
   let propIsTrack = prop === 'tracks';
   let trackContent = collection[id].tracks;
 
-  if (value === '') {
-    delete collection[id][prop];
-  } else if (propIsTrack && trackContent) {
-    collection[id].tracks.push(value);
-  } else if (propIsTrack && !trackContent) {
-    collection[id].tracks = [value];
+  if (propIsTrack) {
+    if (trackContent) {
+      collection[id].tracks.push(value);
+    } else {
+      collection[id].tracks = [value];
+    }
   } else {
     collection[id][prop] = value;
   }
+
   return collection;
 };
