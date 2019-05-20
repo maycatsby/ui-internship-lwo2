@@ -1,4 +1,7 @@
-export const nbMonths = (priceOld, priceNew, saveMonth, percLoss ) => {
+export const nbMonths = (price1, price2, saveMonth, lossOfPerc ) => {
+  let priceOld = price1;
+  let priceNew = price2;
+  let percLoss = lossOfPerc;
   let savings = priceOld;
   let time = 0;
 
@@ -9,6 +12,6 @@ export const nbMonths = (priceOld, priceNew, saveMonth, percLoss ) => {
     priceNew -= (percLoss / 100) * priceNew;
     savings = priceOld + saveMonth * time;
   }
-  let leftMoney = Math.round(savings - priceNew);
+  const leftMoney = Math.round(savings - priceNew);
   return [time, leftMoney];
 };
