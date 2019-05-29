@@ -1,37 +1,32 @@
 .wrapper {
     font-size: 20px;
 }
-/* .wrapper::after {
-    content: "";
-    clear: both;
-    display: table;
-} */
 input[type="checkbox"] {
     display: none;
 }
 input:checked + label {
     color: grey;
 }
-input[id="red"]:checked ~ .span--red {
+input[id="red"]:not(:checked) ~ .span-red {
     display: none;
 }
-input[id="green"]:checked ~ .span--green {
+input[id="green"]:not(:checked) ~ .span-green {
     display: none;
 }
-input[id="blue"]:checked ~ .span--blue {
+input[id="blue"]:not(:checked) ~ .span-blue {
     display: none;
 }
 label {
     margin-right: 10px;
     text-decoration: underline;
 }
-.label--red {
+.label-red {
     color: red;
 }
-.label--green {
+.label-green {
     color: green;
 }
-.label--blue {
+.label-blue {
     color: blue;
 }
 span {
@@ -40,12 +35,12 @@ span {
     color: white;
     border-radius: 3px;
 }
-.span--red {
+.span-red {
     background-color: red;
 }
-.span--green {
+.span-green {
     background-color: green;
 }
-.span--blue {
+.span-blue {
     background-color: blue;
 }
