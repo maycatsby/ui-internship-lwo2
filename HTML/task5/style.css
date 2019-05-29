@@ -4,56 +4,70 @@
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
 }
+
 h1 {
     font-size: 45px;
     margin: 30px auto;
     text-align: center;
 }
+
 h2 {
     margin: 5px 0;
     font-family: inherit;
 }
+
 input {
     display: none;
 }
+
 .label__font {
     margin: 0 20px 0 0;
     padding: 4px;
     border: 1px solid black;
     border-radius: 4px;
 }
+
 .label__font:hover {
     cursor: pointer;
 }
-input[id="arial"]:checked ~ .container {
+
+input[data-font="Arial"]:checked ~ .container {
     font-family: Arial;
 }
-input[id="arial"]:checked + label {
+
+input[data-font="Arial"]:checked + label {
     background-color: rgb(165, 160, 160);
     border: 1px solid transparent;
 }
-input[id="18px"]:checked ~ .container article {
-    font-size: 18px;
+
+input[data-fontsize="18px"]:checked ~ .container {
+    font-size: 1.1em;
 }
-input[id="18px"]:checked + label {
+
+input[data-fontsize="18px"]:checked + label {
     background-color: rgb(235, 132, 95);
     border: 1px solid transparent;
 }
-input[id="dark-mode"]:checked ~ .container,
-input[id="dark-mode"]:checked ~ .source {
+
+input[data-mode="black"]:checked ~ .container,
+input[data-mode="black"]:checked ~ .source {
     color: white;
     background-color: black;
 }
-input[id="dark-mode"]:checked ~ .container blockquote p {
+
+input[data-mode="dark-mode"]:checked ~ .container blockquote {
     color: rgb(197, 188, 188);
 }
-input[id="dark-mode"]:checked + label {
+
+input[data-mode="dark-mode"]:checked + label {
     color: white;
     background-color: black;
 }
+
 main {
     text-align: center;
 }
+
 .container {
     margin: 10px auto 0 auto;
     padding: 20px 13%;
@@ -62,33 +76,40 @@ main {
     column-gap: 25px;
     width: 100%;
 }
+
 .container__article--full {
     column-span: all;
 }
+
 article:first-child {
     margin-bottom: 20px;
 }
+
 article {
     font-family: inherit;
     margin-bottom: 10px;
 }
+
 article p {
     font-family: inherit;
     text-align: justify;
     margin-bottom: 10px;
     hyphens: auto;
 }
+
 .article__img {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     width: 100%;
 }
+
 figcaption {
     text-align: center;
     margin-bottom: 10px;
     font-size: 14px;
 }
-blockquote p {
+
+blockquote {
     font-size: 17px;
     font-style: italic;
     color: rgba(88, 77, 63, 0.616);
@@ -96,13 +117,15 @@ blockquote p {
     background-color: rgba(245, 218, 187, 0.616);
     border-radius: 3px;
 }
-blockquote p::before {
+
+blockquote::before {
     content: "\201C";
 }
 
-blockquote p::after {
+blockquote::after {
     content: "\201D";
 }
+
 .source {
     font-size: 11px;
     text-align: center;
