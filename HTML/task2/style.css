@@ -1,29 +1,12 @@
 .wrapper {
     font-size: 20px;
 }
-<<<<<<< HEAD
-/* .wrapper::after {
-    content: "";
-    clear: both;
-    display: table;
-} */
-=======
->>>>>>> task2
 input[type="checkbox"] {
     display: none;
 }
 input:checked + label {
     color: grey;
 }
-<<<<<<< HEAD
-input[id="red"]:checked ~ .span--red {
-    display: none;
-}
-input[id="green"]:checked ~ .span--green {
-    display: none;
-}
-input[id="blue"]:checked ~ .span--blue {
-=======
 input[id="red"]:not(:checked) ~ .span-red {
     display: none;
 }
@@ -31,22 +14,12 @@ input[id="green"]:not(:checked) ~ .span-green {
     display: none;
 }
 input[id="blue"]:not(:checked) ~ .span-blue {
->>>>>>> task2
     display: none;
 }
 label {
     margin-right: 10px;
     text-decoration: underline;
 }
-<<<<<<< HEAD
-.label--red {
-    color: red;
-}
-.label--green {
-    color: green;
-}
-.label--blue {
-=======
 .label-red {
     color: red;
 }
@@ -54,7 +27,6 @@ label {
     color: green;
 }
 .label-blue {
->>>>>>> task2
     color: blue;
 }
 span {
@@ -63,15 +35,6 @@ span {
     color: white;
     border-radius: 3px;
 }
-<<<<<<< HEAD
-.span--red {
-    background-color: red;
-}
-.span--green {
-    background-color: green;
-}
-.span--blue {
-=======
 .span-red {
     background-color: red;
 }
@@ -79,6 +42,5 @@ span {
     background-color: green;
 }
 .span-blue {
->>>>>>> task2
     background-color: blue;
 }
