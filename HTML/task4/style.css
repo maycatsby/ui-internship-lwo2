@@ -4,29 +4,39 @@
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
 }
+
 h2 {
     text-align: center;
     margin: 20px 0 40px 0;
 }
+
 main {
     margin: 0 auto;
     width: 30%;
 }
+
 input[type="checkbox"] {
     display: none;
 }
-input[id="drinks"]:checked ~ table tbody .sweets,
-input[id="drinks"]:checked ~ table tbody .vegetable {
+
+#drinks:checked ~ table tbody .drink {
     display: none;
 }
-input[id="sweets"]:checked ~ table tbody .drink,
-input[id="sweets"]:checked ~ table tbody .vegetable {
+
+#drinks:checked + label,
+#sweets:checked + label {
+    color: white;
+    background-color: grey;
+}
+
+#sweets:checked ~ table tbody .sweets {
     display: none;
 }
 
 table {
     overflow: hidden;
 }
+
 label {
     font-size: 17px;
     margin: 10px auto;
@@ -36,15 +46,19 @@ label {
     border-radius: 4px;
     cursor: pointer;
 }
+
 .label__drink {
     background-color: rgba(241, 214, 58, 0.822);
 }
+
 .label__sweets {
     background-color: rgb(203, 163, 230);
 }
+
 table {
     width: 100%;
 }
+
 table,
 tr,
 th,
@@ -64,6 +78,7 @@ th {
 .table-container {
     margin-top: 40px;
 }
+
 tbody tr:nth-child(odd) td:first-child::before {
     background-color: rgb(238, 234, 234);
     content: "";
@@ -74,6 +89,7 @@ tbody tr:nth-child(odd) td:first-child::before {
     height: 100%;
     z-index: -20;
 }
+
 tbody tr:hover {
     background-color: rgba(72, 20, 141, 0.636);
     z-index: -20;
