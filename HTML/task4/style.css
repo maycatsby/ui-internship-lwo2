@@ -4,33 +4,14 @@
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> task4
 h2 {
     text-align: center;
     margin: 20px 0 40px 0;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> task4
 main {
     margin: 0 auto;
     width: 30%;
 }
-<<<<<<< HEAD
-input[type="checkbox"] {
-    display: none;
-}
-input[id="drinks"]:checked ~ table tbody .sweets,
-input[id="drinks"]:checked ~ table tbody .vegetable {
-    display: none;
-}
-input[id="sweets"]:checked ~ table tbody .drink,
-input[id="sweets"]:checked ~ table tbody .vegetable {
-=======
 
 input[type="checkbox"] {
     display: none;
@@ -47,17 +28,12 @@ input[type="checkbox"] {
 }
 
 #sweets:checked ~ table tbody .sweets {
->>>>>>> task4
     display: none;
 }
 
 table {
     overflow: hidden;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> task4
 label {
     font-size: 17px;
     margin: 10px auto;
@@ -67,17 +43,6 @@ label {
     border-radius: 4px;
     cursor: pointer;
 }
-<<<<<<< HEAD
-.label__drink {
-    background-color: rgba(241, 214, 58, 0.822);
-}
-.label__sweets {
-    background-color: rgb(203, 163, 230);
-}
-table {
-    width: 100%;
-}
-=======
 
 .label__drink {
     background-color: rgba(241, 214, 58, 0.822);
@@ -91,7 +56,6 @@ table {
     width: 100%;
 }
 
->>>>>>> task4
 table,
 tr,
 th,
@@ -111,10 +75,6 @@ th {
 .table-container {
     margin-top: 40px;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> task4
 tbody tr:nth-child(odd) td:first-child::before {
     background-color: rgb(238, 234, 234);
     content: "";
@@ -125,10 +85,6 @@ tbody tr:nth-child(odd) td:first-child::before {
     height: 100%;
     z-index: -20;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> task4
 tbody tr:hover {
     background-color: rgba(72, 20, 141, 0.636);
     z-index: -20;
