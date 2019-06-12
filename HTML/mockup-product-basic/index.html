@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mockup Single Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="notification">
+        <p class="notification__paragraph">
+            start selling your products or buy them from anywhere!
+        </p>
+        <button class="notification__btn-close">x</button>
+    </div>
+
+    <header class="container header">
+        <div class="header__language">
+            <picture>
+                <source media="(min-width: 800px)" srcset="img/usa-flag@3x.png">
+                <source media="(min-width: 500px)" srcset="img/usa-flag@2x.png">
+                <img src="img/usa-flag.png" alt="flag">
+            </picture>
+            <p>USD</p>
+            <span>&#9660;</span>
+        </div>
+        <div class="header__logo">bonfire</div>
+        <div class="header__cart">cart(3)</div>
+    </header>
+    <nav class="container navbar">
+        <div class="navbar__logo-hamburger">&#9776;</div>
+        <ul class="menu">
+            <li class="menu__element"><a>home</a></li>
+            <li class="menu__element"><a>men<span>&#9660;</span></a></li>
+            <li class="menu__element"><a>women<span>&#9660;</span></a></li>
+            <li class="menu__element"><a>lookbook</a></li>
+            <li class="menu__element"><a>about</a></li>
+            <li class="menu__element"><a>blog</a></li>
+        </ul>
+        <div class="navbar__action">
+            <button type="button" class="navbar__action-btn"><img src="img/heart-regular.svg"></button>
+            <button type="button" class="navbar__action-btn"><img src="img/search-solid.svg"></button>
+        </div>
+    </nav>
+    <main>
+        <section class="container product">
+            <div class="product__images">
+                <div class="product__images-main"></div>
+                <ul class="product__images-list">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="product__description">
+                <a class="product__btn-return" href="#">‹ Back to <span class="u-sea-color">Woman</span></a>
+                <h2 class="product__header">The Atelier Tailored Coat</h2>
+                <div class="product__opinion">
+                    <div class="product__star-rating">
+                        <img src="img/star.png">
+                        <img src="img/star.png">
+                        <img src="img/star.png">
+                        <img src="img/star.png">
+                        <img src="img/star.png">
+                    </div>
+                    <p>
+                        3 Review(s)
+                    </p>
+                    <p>|</p>
+                    <a class="product_btn-add-review" href="#">add a review</a>
+                </div>
+                <div class="product__price u-sea-color">
+                    $499
+                </div>
+                <div class="product__store-details">
+                    <p>
+                        Availability : <span class="u-sea-color">In stock</span>
+                    </p>
+                    <p>
+                        Product Code : <span class="u-sea-color">#4657</span>
+                    </p>
+                    <p>
+                        Tags : <span class="u-sea-color">Fashion, Hood, Classic</span>
+                    </p>
+                </div>
+                <div class="product__material-details">
+                    <p>
+                        Sleek, polished, and boasting an impeccably modern fit, this blue, 2-but-
+                        ton Lazio suit features a notch lapel, flap pockets, and accompanying flat
+                        front trousers—all in pure wool by Vitale Barberis Canonico.
+                    </p>
+                    <ul>
+                        <li>Dark blue suit for a tone-on-tone look</li>
+                        <li>Regular fit</li>
+                        <li>100% Cotton</li>
+                        <li>Free shipping with 4 days delivery</li>
+                    </ul>
+                </div>
+                <form class="product__selection">
+                    <div class="selection__color">
+                        <label>color</label>
+                        <select>
+                            <option disabled selected>Select Color</option>
+                            <option>Red</option>
+                            <option>Blue</option>
+                            <option>Rainbow</option>
+                        </select>
+                    </div>
+                    <div class="selection__size">
+                        <label>size</label>
+                        <select>
+                            <option disabled selected>Select size</option>
+                            <option>s</option>
+                            <option>m</option>
+                            <option>l</option>
+                        </select>
+                    </div>
+                    <div class="selection__quantity">
+                        <label for="input-quantity">qty</label>
+                        <input type="number" min=0 max=10 placeholder="1" name="input-quantity">
+                    </div>
+                    <a class="selection__clear-btn" href="#">Clear Selection</a>
+                    <button type="submit" class="selection__add-btn">add to cart</button>
+                    <button type="submit" class="selection__add-btn selection__add-btn--white"><img
+                            src="img/heart-regular.svg">add to wishlist</button>
+                </form>
+                <div class="product__share">
+                    <a class="share__share-btn" href="#">
+                        share this
+                    </a>
+                    <div>
+                        <button class="share__social-btn share__social-btn--facebook">
+                            <img src="img/facebook.png">Like</button>
+                        <button class="share__social-btn share__social-btn--facebook">Share</button>
+                        <span class="share__followers-amount">235k</span>
+
+                    </div>
+                    <div>
+                        <button class="share__social-btn share__social-btn--twitter">
+                            <img src="img/twitter.png">Tweet</button>
+                        <span class="share__followers-amount">93</span>
+                    </div>
+                    <div>
+                        <button class="share__social-btn share__social-btn--pin">Pin it</button>
+                        <span class="share__followers-amount">65K+</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+    </main>
+</body>
+
+</html>
