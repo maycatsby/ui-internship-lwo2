@@ -51,8 +51,8 @@
     <main>
         <section class="container product">
             <div class="product__images">
-                <div class="product__images-main"></div>
-                <ul class="product__images-list">
+                <div class="images__image-main"></div>
+                <ul class="images__image-list">
                     <li></li>
                     <li></li>
                     <li></li>
@@ -60,10 +60,10 @@
                 </ul>
             </div>
             <div class="product__description">
-                <a class="product__btn-return" href="#">‹ Back to <span class="u-sea-color">Woman</span></a>
-                <h2 class="product__header">The Atelier Tailored Coat</h2>
-                <div class="product__opinion">
-                    <div class="product__star-rating">
+                <a class="description__btn-return" href="#">‹ Back to <span class="u-sea-color">Woman</span></a>
+                <h2 class="description__header">The Atelier Tailored Coat</h2>
+                <div class="description__opinion">
+                    <div class="opinion__star-rating">
                         <img src="img/star.png">
                         <img src="img/star.png">
                         <img src="img/star.png">
@@ -74,12 +74,12 @@
                         3 Review(s)
                     </p>
                     <p>|</p>
-                    <a class="product__btn-add-review" href="#">add a review</a>
+                    <a class="opinion__btn-add-review" href="#">add a review</a>
                 </div>
-                <div class="product__price u-sea-color">
+                <div class="opinion__price u-sea-color">
                     $499
                 </div>
-                <div class="product__store-details">
+                <div class="description__store-details">
                     <p>
                         Availability : <span class="u-sea-color">In stock</span>
                     </p>
@@ -90,7 +90,7 @@
                         Tags : <span class="u-sea-color">Fashion, Hood, Classic</span>
                     </p>
                 </div>
-                <div class="product__material-details">
+                <div class="description__material-details">
                     <p>
                         Sleek, polished, and boasting an impeccably modern fit, this blue, 2-but-
                         ton Lazio suit features a notch lapel, flap pockets, and accompanying flat
@@ -103,10 +103,10 @@
                         <li>Free shipping with 4 days delivery</li>
                     </ul>
                 </div>
-                <form class="product__selection">
+                <form class="description__selection">
                     <div class="selection__color">
-                        <label>color</label>
-                        <select>
+                        <label for="color">color</label>
+                        <select id="color" class="selection__select-tag">
                             <option disabled selected>Select Color </option>
                             <option>Red</option>
                             <option>Blue</option>
@@ -114,8 +114,8 @@
                         </select>
                     </div>
                     <div class="selection__size">
-                        <label>size </label>
-                        <select>
+                        <label for="size">size </label>
+                        <select id="size" class="selection__select-tag">
                             <option disabled selected>Select size </option>
                             <option>s</option>
                             <option>m</option>
@@ -123,17 +123,17 @@
                         </select>
                     </div>
                     <div class="selection__quantity">
-                        <label for="input-quantity">qty</label>
-                        <input type="number" min=0 max=10 placeholder="1" name="input-quantity">
+                        <label for="quantity">qty</label>
+                        <input type="number" min=0 max=10 placeholder="1" id="quantity" class="selection__input">
                     </div>
-                    <a class="selection__clear-btn" href="#">Clear Selection</a>
-                    <button type="submit" class="selection__add-btn">add to cart</button>
+                    <button class="selection__btn selection__btn--clear-btn">Clear Selection</button>
+                    <button class="selection__btn selection__btn--add-btn">add to cart</button>
                     <!-- icon below come from https://fontawesome.com
 	                https://fontawesome.com/license-->
-                    <button type="submit" class="selection__add-btn selection__add-btn--white"><img
+                    <button class="selection__btn selection__btn--add-btn u-btn-white"><img
                             src="img/heart-regular.svg">add to wishlist</button>
                 </form>
-                <div class="product__share">
+                <div class="description__share">
                     <a class="share__share-btn" href="#">
                         share this
                     </a>
@@ -158,7 +158,6 @@
         </section>
     </main>
     <footer class="container footer">
-
         <div>Star icon on website made by <a href="https://www.flaticon.com/authors/smashicons"
                 title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/"
                 title="Flaticon">www.flaticon.com</a> is licensed by <a

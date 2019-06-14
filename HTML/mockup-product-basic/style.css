@@ -38,6 +38,7 @@ html {
     padding: 1.2rem 20% 1.2rem 35%;
     display: flex;
     justify-content: space-between;
+    color: #868f93;
     background: rgba(103, 137, 154, 0.5);
 }
 
@@ -66,10 +67,8 @@ html {
 }
 
 .notification__paragraph {
-    font-family: Lato;
     font-size: 1rem;
     line-height: 1.6;
-    color: #868f93;
     text-transform: uppercase;
 }
 
@@ -198,6 +197,7 @@ html {
 .menu__element a {
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .menu__element span {
@@ -238,7 +238,7 @@ html {
     flex-wrap: wrap;
 }
 
-/***** PRODUCT IMAGES*****/
+/***** PRODUCT IMAGES *****/
 
 .product__images {
     content: "";
@@ -252,12 +252,12 @@ html {
     }
 }
 
-.product__images-main {
+.images__image-main {
     background-color: #e1e1e1;
     height: 77%;
 }
 
-.product__images-list {
+.images__image-list {
     margin-top: 3%;
     height: 20%;
     display: flex;
@@ -265,12 +265,12 @@ html {
     list-style: none;
 }
 
-.product__images-list li {
+.images__image-list li {
     width: 23%;
     background-color: #e1e1e1;
 }
 
-/***** PRODUCT DESCRIPTION*****/
+/***** PRODUCT DESCRIPTION *****/
 
 .product__description {
     padding-left: 3%;
@@ -283,7 +283,7 @@ html {
     }
 }
 
-.product__btn-return {
+.description__btn-return {
     margin-top: 2%;
     display: inline-block;
     font-size: 1.4rem;
@@ -293,12 +293,12 @@ html {
 }
 
 @media only screen and (max-width: 850px) {
-    .product__btn-return {
+    .description__btn-return {
         margin-top: 7%;
     }
 }
 
-.product__header {
+.description__header {
     margin-top: 10%;
     font-size: 2.4rem;
     font-weight: bold;
@@ -307,12 +307,14 @@ html {
 }
 
 @media only screen and (max-width: 850px) {
-    .product__header {
+    .description__header {
         margin-top: 5%;
     }
 }
 
-.product__opinion {
+/***** PRODUCT OPINION *****/
+
+.description__opinion {
     margin-top: 3%;
     width: 70%;
     display: flex;
@@ -321,46 +323,48 @@ html {
 }
 
 @media only screen and (max-width: 1600px) {
-    .product__opinion {
+    .description__opinion {
         width: 80%;
     }
 }
 
 @media only screen and (max-width: 1300px) {
-    .product__opinion {
+    .description__opinion {
         width: 90%;
     }
 }
 
 @media only screen and (max-width: 850px) {
-    .product__opinion {
+    .description__opinion {
         width: 65%;
     }
 }
 
-.product__opinion p {
+.description__opinion p {
     font-size: 1.4rem;
     font-weight: 300;
     color: #555555;
 }
 
-.product__btn-add-review {
+.opinion__btn-add-review {
     font-size: 12px;
     font-weight: bold;
     color: #111;
     text-transform: uppercase;
 }
 
-.product__star-rating img {
+.opinion__star-rating img {
     width: 1.7rem;
 }
 
-.product__price {
+.opinion__price {
     margin-top: 3%;
     font-size: 2.4rem;
 }
 
-.product__store-details {
+/***** PRODUCT DETAILS *****/
+
+.description__store-details {
     margin-top: 3%;
     font-size: 1.4rem;
     font-weight: bold;
@@ -370,7 +374,7 @@ html {
     color: #111;
 }
 
-.product__material-details {
+.description__material-details {
     margin-top: 3%;
     font-size: 1.4rem;
     font-weight: 300;
@@ -380,19 +384,21 @@ html {
     color: #555555;
 }
 
-.product__material-details ul {
+.description__material-details ul {
     margin-top: 4%;
     list-style-position: inside;
 }
 
-.product__selection {
+/***** PRODUCT SELECTION *****/
+
+.description__selection {
     margin-top: 8%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.product__selection label {
+.description__selection label {
     margin-bottom: 1rem;
     display: block;
     font-size: 1.4rem;
@@ -413,8 +419,8 @@ html {
     width: 10%;
 }
 
-.product__selection select,
-.product__selection input {
+.selection__select-tag,
+.selection__input {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     width: 100%;
@@ -430,36 +436,39 @@ html {
     color: rgba(17, 17, 17, 0.6);
 }
 
-.product__selection select {
+.selection__select-tag {
     padding-left: 0.8rem;
     padding-right: 0.8rem;
     background-image: url(img/down-arrow.png);
     background-position: 97% 48%;
     background-size: 1rem 1rem;
     background-repeat: no-repeat;
-    /* background-position-x: 100%;
-    background-position-y: 5px; */
 }
 
-.selection__clear-btn {
+.selection__btn {
     margin-top: 5%;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.selection__btn--clear-btn {
     flex-basis: 100%;
     font-size: 1.2rem;
     line-height: 3;
     text-align: left;
     color: #111111;
-    text-transform: uppercase;
-    cursor: pointer;
+    text-decoration: underline;
+    background: none;
+    border: none;
 }
 
 @media only screen and (max-width: 850px) {
-    .selection__clear-btn {
+    .selection__btn--clear-btn {
         margin-top: 3%;
     }
 }
 
-.selection__add-btn {
-    margin-top: 5%;
+.selection__btn--add-btn {
     padding-top: 4%;
     padding-bottom: 4%;
     flex-basis: 47%;
@@ -467,32 +476,26 @@ html {
     font-weight: bold;
     letter-spacing: normal;
     color: #fff;
-    text-transform: uppercase;
-    background: none;
     background-color: #000;
     border: solid 1px #000;
-    cursor: pointer;
 }
 
 @media only screen and (max-width: 850px) {
-    .selection__add-btn {
+    .selection__btn--add-btn {
         margin-top: 3%;
         padding-top: 2%;
         padding-bottom: 2%;
     }
 }
 
-.selection__add-btn img {
+.selection__btn img {
     margin-right: 2%;
     width: 1.2rem;
 }
 
-.selection__add-btn--white {
-    color: #000;
-    background-color: #fff;
-}
+/***** PRODUCT SHARE *****/
 
-.product__share {
+.description__share {
     margin-top: 5%;
     padding: 4% 0;
     display: flex;
@@ -504,7 +507,7 @@ html {
 }
 
 @media only screen and (max-width: 850px) {
-    .product__share {
+    .description__share {
         padding: 2% 0;
     }
 }
@@ -599,6 +602,8 @@ html {
     color: #333333;
 }
 
+/***** PRODUCT FOOTER *****/
+
 .footer {
     padding-bottom: 1%;
     font-size: 1rem;
@@ -610,6 +615,13 @@ html {
     color: #333333;
 }
 
+/***** UTILITIES *****/
+
 .u-sea-color {
     color: #68899a;
+}
+
+.u-btn-white {
+    color: #000;
+    background-color: #fff;
 }
