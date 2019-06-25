@@ -1,0 +1,25 @@
+.form-contact {
+    &__inputs {
+        display: grid;
+        grid-template: 1fr/ 1fr 1fr;
+        column-gap: 5%;
+
+        @include respond(tablet-port) {
+            display: block;
+        }
+    }
+
+    &__data-inputs {
+        flex-direction: column;
+        @include flex;
+    }
+
+    &__message-input {
+        flex-direction: column;
+        @include flex($justify: flex-end);
+    }
+
+    &__btn {
+        margin-top: 2%;
+    }
+}

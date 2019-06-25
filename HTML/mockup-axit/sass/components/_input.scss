@@ -1,0 +1,18 @@
+.input {
+    margin-bottom: 10%;
+    padding: 4px 8px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    font-size: 1.4rem;
+    background: none;
+
+    @include respond(tablet) {
+        margin-bottom: 7%;
+    }
+
+    &::placeholder {
+        font-family: OpenSans, sans-serif;
+        color: #cccccc;
+    }
+}

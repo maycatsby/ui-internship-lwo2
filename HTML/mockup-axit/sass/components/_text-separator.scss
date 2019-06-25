@@ -1,0 +1,17 @@
+.text-separator {
+    width: 7rem;
+    height: 2px;
+    display: block;
+    background-color: $color-main-light;
+    content: "";
+
+    &--vertical-margin {
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+
+        @include respond(tablet-port) {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+}
