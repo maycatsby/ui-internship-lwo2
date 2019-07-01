@@ -1,0 +1,46 @@
+.header {
+    padding: 10% 0;
+    background-image: url(img/header@3x-min.png);
+    background-size: cover;
+    background-position: center;
+    @include flex($justify: center, $align: center);
+    flex-direction: column;
+
+    &__heading {
+        width: 50%;
+        font-size: 6rem;
+        font-weight: 100;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.25;
+        letter-spacing: 2.4px;
+        text-align: center;
+        color: $color-main-dark;
+
+        @include respond(tablet) {
+            width: 55%;
+            font-size: 5rem;
+        }
+        @include respond(tablet-port) {
+            width: 70%;
+            font-size: 4rem;
+        }
+
+        @include respond(phone) {
+            width: 90%;
+        }
+    }
+
+    &__play-icon {
+        margin-top: 3rem;
+        width: 6rem;
+        & img {
+            width: 100%;
+        }
+    }
+
+    &__btn {
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+    }
+}
