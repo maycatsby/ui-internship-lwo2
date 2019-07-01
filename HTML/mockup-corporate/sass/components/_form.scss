@@ -1,0 +1,46 @@
+.form {
+    @include flex;
+
+    @include respond(tablet-port) {
+        justify-content: center;
+    }
+
+    &__info-trial {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        @include flex($justify: flex-end);
+
+        @include respond(tablet-port) {
+            width: 70%;
+            order: 1;
+            justify-content: center;
+        }
+
+        & img {
+            margin-top: 1.5rem;
+            margin-right: -2rem;
+            height: 3rem;
+        }
+    }
+
+    &__input {
+        width: 23%;
+        @include respond(tablet-port) {
+            width: 70%;
+            margin-bottom: 3%;
+        }
+    }
+
+    &__btn {
+        width: 23%;
+        height: 100%;
+
+        @include respond(tablet-port) {
+            width: 70%;
+        }
+
+        @include respond(tablet-port) {
+            order: 2;
+        }
+    }
+}

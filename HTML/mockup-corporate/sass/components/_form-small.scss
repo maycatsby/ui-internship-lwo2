@@ -1,0 +1,28 @@
+.form-small {
+    height: 5rem;
+    @include flex;
+    flex-wrap: nowrap;
+
+    &__input {
+        width: 87%;
+        height: 100%;
+
+        @include respond(tablet-port) {
+            width: 90%;
+        }
+    }
+
+    &__btn {
+        width: 17%;
+        height: 100%;
+        @include flex($justify: center);
+
+        @include respond(tablet-port) {
+            width: 5rem;
+        }
+
+        & img {
+            width: 50%;
+        }
+    }
+}
