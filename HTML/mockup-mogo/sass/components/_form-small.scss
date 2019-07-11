@@ -1,0 +1,33 @@
+.form-small {
+    height: 3.8rem;
+    @include flex;
+    flex-wrap: nowrap;
+
+    &__input {
+        padding: 3%;
+        width: 60%;
+        height: 100%;
+        border: none;
+        border: 1px solid #ccc;
+        background: none;
+
+        &::placeholder {
+            font-family: Roboto;
+            font-size: 15px;
+            font-weight: 300;
+            font-style: italic;
+            color: #cccccc;
+        }
+
+        &:focus,
+        &:active {
+            outline: none;
+            border: 1px solid $color-secondary-light;
+        }
+    }
+
+    &__btn {
+        width: 40%;
+        height: 100%;
+    }
+}

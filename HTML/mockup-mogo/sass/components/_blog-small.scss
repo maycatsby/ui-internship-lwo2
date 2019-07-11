@@ -1,0 +1,18 @@
+.blog-small {
+    @include flex;
+    width: 100%;
+
+    & picture {
+        width: 35%;
+        display: block;
+    }
+
+    & img {
+        width: 100%;
+        display: block;
+    }
+
+    &__content {
+        width: 60%;
+    }
+}

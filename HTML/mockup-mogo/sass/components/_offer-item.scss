@@ -1,0 +1,36 @@
+.offer-item {
+    @include flex($align: flex-start);
+    padding: 10% 5%;
+
+    &:nth-child(-n + 3) {
+        border-bottom: 1px solid #e5e5e5;
+
+        @include respond(tablet-port) {
+            border: none;
+        }
+    }
+
+    &__image {
+        width: 18%;
+        display: block;
+
+        @include respond(tablet-port) {
+            width: 15%;
+        }
+
+        & img {
+            width: 100%;
+        }
+    }
+    &__content {
+        width: 80%;
+    }
+
+    &__paragraph {
+        margin-top: 1rem;
+
+        @include respond(tablet-port) {
+            margin-top: 0.5rem;
+        }
+    }
+}
