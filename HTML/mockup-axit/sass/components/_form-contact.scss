@@ -17,6 +17,10 @@
     &__message-input {
         flex-direction: column;
         @include flex($justify: flex-end);
+
+        & textarea {
+            resize: none;
+        }
     }
 
     &__btn {

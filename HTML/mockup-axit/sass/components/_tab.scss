@@ -10,8 +10,9 @@
     text-transform: uppercase;
     border-bottom: 1px solid $color-white-mode;
     background-color: $color-main-dark;
+    cursor: pointer;
 
-    &--orange {
+    &--selected {
         background-color: $color-main-light;
     }
 }

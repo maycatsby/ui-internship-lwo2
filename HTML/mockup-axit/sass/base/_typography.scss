@@ -5,6 +5,11 @@
     color: $color-white-mode;
     text-transform: uppercase;
 
+    &:first-child {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
     & span {
         font-weight: 300;
         color: $color-main-light;

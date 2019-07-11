@@ -15,4 +15,15 @@
         font-family: OpenSans, sans-serif;
         color: #cccccc;
     }
+
+    &:focus,
+    &:active {
+        outline: none;
+        border-bottom: 1px solid $color-main-light;
+
+        &::placeholder {
+            font-family: OpenSans, sans-serif;
+            color: $color-main-light;
+        }
+    }
 }
