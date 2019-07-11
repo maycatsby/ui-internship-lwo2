@@ -63,12 +63,13 @@
     &__details {
         background-color: $color-white-mode;
         list-style: none;
-        & li {
-            padding: 3% 0;
-            text-transform: uppercase;
-            &:not(:last-child) {
-                border-bottom: 1px solid $color-grey-light;
-            }
+    }
+
+    &__single-detail {
+        padding: 3% 0;
+        text-transform: uppercase;
+        &:not(:last-child) {
+            border-bottom: 1px solid $color-grey-light;
         }
     }
 }
