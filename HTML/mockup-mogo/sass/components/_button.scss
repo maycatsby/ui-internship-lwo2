@@ -1,0 +1,57 @@
+.btn {
+    background: none;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    color: $color-main-light;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+        transition: all 0.3s;
+    }
+
+    &--ghost {
+        padding: 1.5rem 3%;
+        border: 2px solid $color-main-light;
+
+        &:hover {
+            background-color: rgba(51, 51, 51, 0.384);
+        }
+    }
+
+    &--arrow {
+        width: 2.5rem;
+        display: block;
+
+        & img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &--left {
+        transform: rotate(90deg);
+    }
+
+    &--right {
+        transform: rotate(-90deg);
+    }
+
+    &--subscribe {
+        color: $color-main-light;
+        background-color: $color-secondary-light;
+
+        &:hover {
+            background-color: rgb(129, 127, 127);
+            opacity: 0.8;
+        }
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}

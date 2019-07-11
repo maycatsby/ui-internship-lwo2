@@ -6,9 +6,9 @@
     "test": "jest",
     "lint": "./node_modules/.bin/eslint tasks/**/*.js",
     "tdd": "jest --watch",
-    "watch:sass": "node-sass HTML/mockup-corporate/sass/main.scss  HTML/mockup-corporate/style.css -w -r",
-    "compile:sass": "node-sass --source-map true HTML/mockup-corporate/sass/main.scss HTML/mockup-corporate/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' HTML/mockup-corporate/style.comp.css -o HTML/mockup-corporate/style.prefix.css"
+    "watch:sass": "node-sass HTML/mockup-mogo/sass/main.scss  HTML/mockup-mogo/style.css -w -r",
+    "compile:sass": "node-sass --source-map true HTML/mockup-mogo/sass/main.scss HTML/mockup-mogo/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' HTML/mockup-mogo/style.comp.css -o HTML/mockup-mogo/style.prefix.css"
   },
   "husky": {
     "hooks": {
@@ -18,7 +18,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^9.6.0",
+    "autoprefixer": "^9.6.1",
     "babel-core": "^6.26.0",
     "babel-jest": "^21.0.2",
     "babel-preset-es2015": "^6.24.1",
@@ -27,7 +27,8 @@
     "husky": "^1.1.2",
     "jest": "^21.1.0",
     "node-sass": "^4.12.0",
-    "postcss-cli": "^6.1.2",
+    "postcss-cli": "^6.1.3",
     "regenerator-runtime": "^0.11.0"
-  }
+  },
+  "dependencies": {}
 }
