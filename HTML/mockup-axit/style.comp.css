@@ -27,6 +27,9 @@ html {
   letter-spacing: 2px;
   color: #fff;
   text-transform: uppercase; }
+  .logo:first-child {
+    text-decoration: none;
+    cursor: pointer; }
   .logo span {
     font-weight: 300;
     color: #ff8b38; }
@@ -495,11 +498,15 @@ html {
   .menu__item {
     font-size: 1.6rem;
     font-weight: 400;
-    text-align: right;
-    color: rgba(255, 255, 255, 0.69); }
+    text-align: right; }
     @media only screen and (max-width: 800px) {
       .menu__item {
         display: none; } }
+  .menu a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.69); }
+    .menu a:hover {
+      color: #ff8b38; }
   .menu__hamburger {
     display: none; }
     @media only screen and (max-width: 800px) {
@@ -523,6 +530,12 @@ html {
   .input::placeholder {
     font-family: OpenSans, sans-serif;
     color: #cccccc; }
+  .input:focus, .input:active {
+    outline: none;
+    border-bottom: 1px solid #ff8b38; }
+    .input:focus::placeholder, .input:active::placeholder {
+      font-family: OpenSans, sans-serif;
+      color: #ff8b38; }
 
 .btn {
   padding: 1.5rem 5%;
@@ -659,11 +672,11 @@ html {
   .card__details {
     background-color: #fff;
     list-style: none; }
-    .card__details li {
-      padding: 3% 0;
-      text-transform: uppercase; }
-      .card__details li:not(:last-child) {
-        border-bottom: 1px solid #f5f5f5; }
+  .card__single-detail {
+    padding: 3% 0;
+    text-transform: uppercase; }
+    .card__single-detail:not(:last-child) {
+      border-bottom: 1px solid #f5f5f5; }
 
 .opinion {
   width: 25%; }
@@ -724,6 +737,8 @@ html {
   justify-content: flex-end;
   align-items: center;
   flex-wrap: wrap; }
+  .form-contact__message-input textarea {
+    resize: none; }
 
 .form-contact__btn {
   margin-top: 2%; }
@@ -739,8 +754,9 @@ html {
   color: #fff;
   text-transform: uppercase;
   border-bottom: 1px solid #fff;
-  background-color: #333333; }
-  .tab--orange {
+  background-color: #333333;
+  cursor: pointer; }
+  .tab--selected {
     background-color: #ff8b38; }
 
 .u-centered {
