@@ -5,6 +5,14 @@
         justify-content: center;
     }
 
+    &--submitted {
+        padding: 2rem 0;
+        display: none;
+        font-size: 2rem;
+        color: $color-main-dark;
+        background-color: rgba(255, 255, 255, 0.452);
+    }
+
     &__info-trial {
         width: 100%;
         margin-bottom: 1.5rem;

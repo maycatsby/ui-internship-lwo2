@@ -5,4 +5,5 @@ export const elements = {
   passwordInput: document.querySelector('.form__input-password'),
   btn: document.querySelector('.form__btn'),
   form: document.querySelector('.form'),
+  sentForm: document.querySelector('.form--submitted'),
 };

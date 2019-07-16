@@ -40,33 +40,17 @@ inputNameArr.forEach((el, ind) => {
 });
 
 elements.form.addEventListener('submit', (e) => {
-  const emptyInputsArr = [];
-  for (i = 0; i < inputNameArr.length; i++) {
-    if (inputNameArr[i].value === '') {
-      emptyInputsArr.push('is empty');
-      console.log(emptyInputsArr);
-    }
-  }
+  e.preventDefault();
+  // let emptyInputsAmount = 0;
+  // for (let i = 0; i < inputNameArr.length; i++) {
+  //   if (inputNameArr[i].value === '') {
+  //     emptyInputsAmount++;
+  //   }
+  // }
 
-  if (emptyInputsArr.length) {
-    e.preventDefault();
-  }
+  elements.form.classList.add('u-hidden');
+  elements.sentForm.classList.add('u-show');
+  // if (emptyInputsAmount) {
+  //   e.preventDefault();
+  // }
 });
-// el.addEventListener('submit', (event) => {
-//   const validValueArr = [];
-
-//   for (let i = loopStart; i < loopEnd; i++) {
-//     let validValue = validator(inputNameArr[i], patternArr[i]);
-
-//     if (!validValue) {
-//       validValueArr.push(validValue);
-//     }
-//   }
-
-//   if (!validValueArr.length) {
-//     el.classList.add('u-hidden');
-//     formSentArr[ind].classList.add('u-show');
-//   }
-
-//   event.preventDefault();
-// });
