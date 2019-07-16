@@ -1,0 +1,34 @@
+.menu {
+    list-style: none;
+    opacity: 0.69;
+    @include flex;
+
+    &__item {
+        font-size: 1.6rem;
+        font-weight: 400;
+        text-align: right;
+
+        @include respond(tablet-port) {
+            display: none;
+        }
+    }
+
+    & a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.69);
+
+        &:hover {
+            color: $color-main-light;
+        }
+    }
+
+    &__hamburger {
+        display: none;
+        @include respond(tablet-port) {
+            display: inline-block;
+            font-size: 2.8rem;
+            color: $color-white-mode;
+            cursor: pointer;
+        }
+    }
+}

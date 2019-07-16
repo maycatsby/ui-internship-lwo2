@@ -1,0 +1,442 @@
+.section-intro {
+    background-image: url(img/image@2x-min.png);
+    background-color: rgba(26, 23, 23, 0.952);
+    background-size: cover;
+    background-position: left top;
+    @include padding-default;
+    @include flex;
+
+    @include respond(big-desktop) {
+        background-image: url(img/image@3x-min.png);
+    }
+    @include respond(tablet) {
+        @include padding-default-middle;
+    }
+
+    @include respond(tablet-port) {
+        justify-content: center;
+    }
+
+    @include respond(phone) {
+        @include padding-default-small;
+    }
+
+    &__logo {
+        font-size: 6rem;
+
+        @include respond(tablet-port) {
+            font-size: 5rem;
+        }
+
+        @include respond(phone) {
+            font-size: 4rem;
+        }
+    }
+
+    &__content {
+        width: 55%;
+
+        @include respond(tablet-port) {
+            width: 100%;
+            @include flex;
+            flex-direction: column;
+        }
+    }
+
+    &__slogan {
+        margin-top: 1%;
+    }
+
+    &__separator {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    &__paragraph {
+        margin-bottom: 8%;
+        width: 75%;
+        @include respond(tablet) {
+            width: 100%;
+        }
+    }
+
+    &__form {
+        width: 33%;
+
+        @include respond(big-desktop) {
+            width: 25%;
+        }
+
+        @include respond(tablet) {
+            width: 42%;
+        }
+
+        @include respond(tablet-port) {
+            margin-top: 7%;
+            width: 70%;
+        }
+
+        @include respond(phone) {
+            width: 90%;
+        }
+    }
+}
+
+.section-social {
+    @include flex;
+    @include padding-small;
+
+    &__description {
+        width: 40%;
+
+        @include respond(tablet-port) {
+            width: 100%;
+        }
+    }
+
+    &__icons {
+        width: 45%;
+        @include flex;
+
+        @include respond(tablet) {
+            width: 50%;
+        }
+
+        @include respond(tablet-port) {
+            width: 95%;
+        }
+
+        & img {
+            height: 4.3rem;
+
+            @include respond(tablet) {
+                height: 3.5rem;
+            }
+
+            @include respond(tablet-port) {
+                margin-top: 1rem;
+                height: 2rem;
+            }
+        }
+    }
+}
+
+.section-tabs {
+    padding-top: 15rem;
+    padding-bottom: 11rem;
+    background-color: $color-grey-light;
+    @include flex($align: flex-start);
+
+    @include respond(tablet) {
+        @include padding-default-middle;
+    }
+
+    @include respond(phone) {
+        @include padding-default-small;
+    }
+
+    &__tabs {
+        width: 10%;
+
+        @include respond(tablet) {
+            width: 15%;
+        }
+
+        @include respond(tablet-port) {
+            width: 20%;
+        }
+    }
+
+    &__content {
+        width: 40%;
+
+        @include respond(tablet-port) {
+            width: 70%;
+        }
+    }
+
+    &__paragraph,
+    &__btn {
+        margin-top: 7%;
+    }
+
+    &__picture {
+        width: 30%;
+
+        @include respond(tablet-port) {
+            display: none;
+        }
+
+        & picture {
+            display: block;
+        }
+
+        & img {
+            width: 100%;
+        }
+    }
+}
+
+.section-sub {
+    @include padding-default;
+    @include flex;
+
+    @include respond(tablet) {
+        @include padding-default-middle;
+    }
+
+    @include respond(phone) {
+        @include padding-default-small;
+    }
+
+    &__picture {
+        margin-left: -4rem;
+        width: 50%;
+
+        @include respond(tablet-port) {
+            margin-left: -2.5rem;
+            width: 100%;
+        }
+        & img {
+            width: 100%;
+        }
+    }
+
+    &__content {
+        width: 41%;
+        align-self: flex-start;
+
+        @include respond(tablet-port) {
+            width: 100%;
+        }
+    }
+
+    &__subcontent {
+        margin-top: 5%;
+        @include flex;
+        flex-wrap: nowrap;
+    }
+}
+
+.subcontent {
+    &__circle-icon {
+        margin-right: 3%;
+        align-self: flex-start;
+    }
+}
+
+.section-standard {
+    background-color: $color-grey-light;
+    @include padding-default;
+    @include flex($align: flex-start);
+
+    @include respond(tablet) {
+        @include padding-default-middle;
+    }
+
+    @include respond(phone) {
+        @include padding-default-small;
+    }
+
+    &__content {
+        width: 40%;
+
+        @include respond(tablet-port) {
+            width: 100%;
+        }
+    }
+
+    &__picture {
+        margin-top: -1%;
+        width: 50%;
+
+        @include respond(tablet-port) {
+            margin-top: 5%;
+            width: 100%;
+        }
+
+        & img {
+            width: 100%;
+        }
+    }
+}
+
+.section-offer {
+    text-align: center;
+    @include padding-default;
+
+    @include respond(tablet) {
+        @include padding-default-middle;
+    }
+
+    @include respond(phone) {
+        @include padding-default-small;
+    }
+
+    &__offer {
+        margin-top: 5%;
+        @include flex($align: flex-start);
+
+        @include respond(tablet-port) {
+            margin-top: 7%;
+        }
+    }
+}
+
+.offer {
+    &__item {
+        width: 29%;
+
+        @include respond(tablet-port) {
+            width: 100%;
+        }
+
+        &:not(:first-child) {
+            @include respond(tablet-port) {
+                margin-top: 7%;
+            }
+        }
+    }
+
+    &__heading {
+        margin-top: 7%;
+
+        @include respond(tablet-port) {
+            margin-top: 4%;
+        }
+    }
+
+    &__paragraph {
+        margin-top: 3%;
+    }
+}
+
+.section-price {
+    text-align: center;
+    background-color: $color-grey-light;
+    @include padding-default;
+
+    @include respond(tablet) {
+        @include padding-default-middle;
+    }
+
+    @include respond(phone) {
+        @include padding-default-small;
+    }
+
+    &__content {
+        text-align: center;
+    }
+
+    &__options {
+        margin-top: 5%;
+        @include flex($align: flex-end);
+
+        @include respond(tablet-port) {
+            justify-content: center;
+        }
+    }
+}
+
+.section-opinions {
+    text-align: center;
+    @include padding-default;
+
+    @include respond(tablet) {
+        @include padding-default-middle;
+    }
+
+    @include respond(phone) {
+        @include padding-default-small;
+    }
+
+    &__opinion {
+        margin-top: 5%;
+        @include flex;
+
+        @include respond(tablet-port) {
+            justify-content: center;
+        }
+    }
+}
+
+.section-design {
+    padding-top: 7.5rem;
+    padding-bottom: 6.5rem;
+    text-align: center;
+    background-color: rgba(26, 23, 23, 0.952);
+    background-image: url(img/section-design@2x-min.png);
+
+    @include respond(big-desktop) {
+        background-image: url(img/section-design@3x-min.png);
+    }
+
+    @include respond(tablet) {
+        @include padding-default-middle;
+    }
+
+    @include respond(phone) {
+        @include padding-default-small;
+    }
+
+    &__btn {
+        margin-top: 2%;
+
+        @include respond(tablet-port) {
+            margin-top: 4%;
+        }
+    }
+}
+
+.section-contact {
+    text-align: center;
+    @include padding-default;
+
+    @include respond(tablet) {
+        @include padding-default-middle;
+    }
+
+    @include respond(phone) {
+        @include padding-default-small;
+    }
+
+    &__form {
+        margin-top: 5%;
+
+        @include respond(tablet) {
+            margin-top: 7%;
+        }
+    }
+}
+
+.footer {
+    background-color: $color-dark-mode;
+    @include padding-small;
+    @include flex($align: center);
+    flex-direction: column;
+
+    &__social-icons {
+        width: 30%;
+        @include flex;
+
+        @include respond(tablet) {
+            width: 70%;
+        }
+        & img {
+            width: 2rem;
+        }
+    }
+
+    &__rights {
+        margin-top: 1.5rem;
+    }
+
+    &__credentials {
+        margin-top: 1.5rem;
+
+        & a {
+            color: $color-grey-light;
+            text-decoration: none;
+        }
+    }
+}

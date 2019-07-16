@@ -1,0 +1,75 @@
+.card {
+    width: 27%;
+    background-color: $color-main-dark;
+
+    @include respond(tablet) {
+        width: 32%;
+    }
+
+    @include respond(tablet-port) {
+        width: 60%;
+    }
+
+    @include respond(phone) {
+        width: 85%;
+    }
+
+    &:not(:first-child) {
+        @include respond(tablet-port) {
+            margin-top: 5%;
+        }
+    }
+
+    &__heading {
+        padding: 4% 0;
+        border-bottom: 1px solid $color-white-mode;
+        color: $color-white-mode;
+    }
+
+    &__price {
+        padding: 3% 0;
+        font-family: Raleway, sans-serif;
+        font-size: 3.5rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: $color-white-mode;
+        & span {
+            font-size: 7rem;
+            @include respond(tablet-port) {
+                font-size: 5rem;
+            }
+        }
+    }
+
+    &__version {
+        padding-bottom: 5%;
+        opacity: 0.5;
+        font-size: 1.4rem;
+        font-weight: 400;
+        font-style: italic;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    &__popular {
+        padding: 3px 0;
+        color: $color-white-mode;
+        background-color: $color-main-light;
+
+        &--big {
+            padding: 3% 0;
+        }
+    }
+
+    &__details {
+        background-color: $color-white-mode;
+        list-style: none;
+    }
+
+    &__single-detail {
+        padding: 3% 0;
+        text-transform: uppercase;
+        &:not(:last-child) {
+            border-bottom: 1px solid $color-grey-light;
+        }
+    }
+}
