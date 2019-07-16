@@ -32,4 +32,9 @@
             opacity: 1;
         }
     }
+
+    &--disabled {
+        cursor: not-allowed;
+        opacity: 0.07;
+    }
 }

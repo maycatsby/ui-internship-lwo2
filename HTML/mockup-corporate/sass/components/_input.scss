@@ -9,7 +9,7 @@
 
     &:focus {
         outline: none;
-        border-color: $color-main-light;
+        // border-color: rgb(127, 212, 127);
     }
 
     &::placeholder {
@@ -23,6 +23,14 @@
         background-color: #8d8d8d41;
         &::placeholder {
             color: $color-paragraph;
+        }
+    }
+
+    &--invalid {
+        border: 2px solid red;
+
+        :focus {
+            border: 2px solid red;
         }
     }
 }
