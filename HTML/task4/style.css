@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0 40px 0;
+}
+
+main {
+    margin: 0 auto;
+    width: 30%;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+#drinks:checked ~ table tbody .drink {
+    display: none;
+}
+
+#drinks:checked + label,
+#sweets:checked + label {
+    color: white;
+    background-color: grey;
+}
+
+#sweets:checked ~ table tbody .sweets {
+    display: none;
+}
+
+table {
+    overflow: hidden;
+}
+
+label {
+    font-size: 17px;
+    margin: 10px auto;
+    padding: 4px;
+    text-align: center;
+    display: block;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.label__drink {
+    background-color: rgba(241, 214, 58, 0.822);
+}
+
+.label__sweets {
+    background-color: rgb(203, 163, 230);
+}
+
+table {
+    width: 100%;
+}
+
+table,
+tr,
+th,
+td {
+    padding: 8px 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    position: relative;
+}
+
+th {
+    background-color: rgb(211, 221, 231);
+    z-index: 100;
+}
+
+.table-container {
+    margin-top: 40px;
+}
+
+tbody tr:nth-child(odd) td:first-child::before {
+    background-color: rgb(238, 234, 234);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -5000px;
+    width: 10000px;
+    height: 100%;
+    z-index: -20;
+}
+
+tbody tr:hover {
+    background-color: rgba(72, 20, 141, 0.636);
+    z-index: -20;
+}
+
+td:hover::after {
+    background-color: rgba(72, 20, 141, 0.636);
+    content: "";
+    position: absolute;
+    top: -7000px;
+    left: 0;
+    width: 100%;
+    height: 10000px;
+    z-index: -2;
+}
