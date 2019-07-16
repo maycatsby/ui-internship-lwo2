@@ -1,4 +1,12 @@
 .form-contact {
+    &--submitted {
+        padding: 2rem 0.7rem;
+        display: none;
+        font-size: 2rem;
+        text-align: center;
+        color: $color-main-light;
+    }
+
     &__inputs {
         display: grid;
         grid-template: 1fr/ 1fr 1fr;

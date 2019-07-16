@@ -42,17 +42,18 @@
             </p>
             <button type="button" class="btn btn--ghost">Download</button>
         </div>
-        <form class="section-intro__form form-trial">
+        <form class="section-intro__form form-trial" method="post" action="#">
             <h3 class="form-trial__header">
                 Try Your <span>free</span> Trial Today
             </h3>
             <div class="form-trial__inputs">
-                <input type="text" placeholder="Name" class="input">
-                <input type="email" placeholder="Email" class="input">
-                <input type="password" placeholder="Password" class="input">
+                <input type="text" placeholder="Name" class="form-trial__name input">
+                <input type="email" placeholder="Email" class="form-trial__email input">
+                <input type="password" placeholder="Password" class="form-trial__password input">
             </div>
             <button class="form-trial__btn btn btn--orange">Get Started</button>
         </form>
+        <div class="section-intro__form form-trial form-trial--submitted">We sent you details to your email</div>
     </section>
 
     <section class=" container section-social">
@@ -349,15 +350,15 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
         </div>
-        <form class="section-contact__form form-contact">
+        <form class="section-contact__form form-contact" method="post" action="#">
             <div class="form-contact__inputs">
                 <div class="form-contact__data-inputs">
-                    <input type="text" placeholder="Name" class="input">
-                    <input type="email" placeholder="Email" class="input">
-                    <input type="text" placeholder="Subject" class="input">
+                    <input type="text" placeholder="Name" class="form-contact__name input">
+                    <input type="email" placeholder="Email" class="form-contact__email input">
+                    <input type="text" placeholder="Subject" class="form-contact__subject input">
                 </div>
                 <div class="form-contact__message-input">
-                    <textarea rows="13" placeholder="Message" class="input"></textarea>
+                    <textarea rows="13" placeholder="Message" class="form-contact__message input"></textarea>
                 </div>
             </div>
 
@@ -365,6 +366,7 @@
                 <button class=" btn btn--orange">Send message</button>
             </div>
         </form>
+        <div class="section-contact__form form-contact form-contact--submitted">We sent your message</div>
     </section>
 
     <footer class="container footer">
@@ -440,6 +442,7 @@
                     target="_blank">CC 3.0 BY</a></p>
         </div>
     </footer>
+    <script type="module" src="js/task1.js"></script>
 </body>
 
 </html>

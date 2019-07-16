@@ -26,4 +26,16 @@
             color: $color-main-light;
         }
     }
+
+    &--invalid {
+        border: 2px solid red;
+
+        &:focus {
+            border: 2px solid red;
+        }
+
+        &::placeholder {
+            color: red;
+        }
+    }
 }
