@@ -1,10 +1,5 @@
-/* eslint-disable no-undef */
 import {elements} from './elements.js';
-
-const namePattern = /^[a-zA-Z]+$/;
-const emailPattern = /^[\w.%+-]+@[\w.-]+\.[A-Za-z]{1,63}$/;
-// eslint-disable-next-line max-len
-const passwordPattern = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/;
+import {patterns} from './patterns.js';
 
 const inputNameArr = [
   elements.nameInput,
@@ -12,7 +7,7 @@ const inputNameArr = [
   elements.passwordInput,
 ];
 
-const patternArr = [namePattern, emailPattern, passwordPattern];
+const patternArr = [patterns.name, patterns.email, patterns.password];
 
 const validator = (input, pattern) => {
   let inputValue = input.value;
@@ -28,12 +23,16 @@ const validator = (input, pattern) => {
   }
 };
 
+const validArr = [false, false, false];
+
 inputNameArr.forEach((el, ind) => {
   el.addEventListener('input', () => {
     let validValue = validator(inputNameArr[ind], patternArr[ind]);
+    validArr[ind] = validValue;
+
     elements.btn.classList.remove('btn--disabled');
 
-    if (!validValue) {
+    if (validArr.includes(false)) {
       elements.btn.classList.add('btn--disabled');
     }
   });
@@ -41,16 +40,6 @@ inputNameArr.forEach((el, ind) => {
 
 elements.form.addEventListener('submit', (e) => {
   e.preventDefault();
-  // let emptyInputsAmount = 0;
-  // for (let i = 0; i < inputNameArr.length; i++) {
-  //   if (inputNameArr[i].value === '') {
-  //     emptyInputsAmount++;
-  //   }
-  // }
-
   elements.form.classList.add('u-hidden');
   elements.sentForm.classList.add('u-show');
-  // if (emptyInputsAmount) {
-  //   e.preventDefault();
-  // }
 });
