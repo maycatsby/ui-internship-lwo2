@@ -40,6 +40,9 @@ inputNameArr.forEach((el, ind) => {
 
 elements.form.addEventListener('submit', (e) => {
   e.preventDefault();
-  elements.form.classList.add('u-hidden');
-  elements.sentForm.classList.add('u-show');
+
+  if (!validArr.includes(false)) {
+    elements.form.classList.add('u-hidden');
+    elements.sentForm.classList.add('u-show');
+  }
 });
