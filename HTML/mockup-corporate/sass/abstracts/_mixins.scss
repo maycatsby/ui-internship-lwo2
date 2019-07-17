@@ -1,0 +1,39 @@
+@mixin flex($justify: space-between, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: wrap;
+}
+
+@mixin padding-default {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+
+    @include respond(phone) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 500px) {
+            @content;
+        }
+    }
+    @if $breakpoint == tablet-port {
+        @media only screen and (max-width: 800px) {
+            @content;
+        }
+    }
+    @if $breakpoint == tablet {
+        @media only screen and (max-width: 1024px) {
+            @content;
+        }
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 1500px) {
+            @content;
+        }
+    }
+}

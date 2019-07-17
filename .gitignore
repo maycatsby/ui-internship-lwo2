@@ -3,6 +3,9 @@
 .vscode/
 *.iml
 *.sublime*
+HTML/mockup-corporate/style.comp.css
+HTML/mockup-corporate/style.prefix.css
+HTML/mockup-corporate/style.comp.css.map
 
 # common ignores
 node_modules

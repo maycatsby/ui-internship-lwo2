@@ -6,9 +6,10 @@
     "test": "jest",
     "lint": "./node_modules/.bin/eslint tasks/**/*.js",
     "tdd": "jest --watch",
-    "watch:sass": "node-sass HTML/mockup-axit/sass/main.scss  HTML/mockup-axit/style.css -w -r",
-    "compile:sass": "node-sass --source-map true HTML/mockup-axit/sass/main.scss HTML/mockup-axit/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' HTML/mockup-axit/style.comp.css -o HTML/mockup-axit/style.prefix.css"
+    "watch:sass": "node-sass HTML/mockup-corporate/sass/main.scss  HTML/mockup-corporate/style.css -w -r",
+    "compile:sass": "node-sass --source-map true HTML/mockup-corporate/sass/main.scss HTML/mockup-corporate/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' HTML/mockup-corporate/style.comp.css -o HTML/mockup-corporate/style.prefix.css"
+
   },
   "husky": {
     "hooks": {
