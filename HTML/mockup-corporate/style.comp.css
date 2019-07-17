@@ -447,11 +447,11 @@ html {
   border: solid 1px #f6f5f3;
   border-radius: 4px;
   font-size: 1.4rem;
+  color: #fff;
   background: none;
   background-color: #f6f5f311; }
   .input:focus {
-    outline: none;
-    border-color: #ff6d6d; }
+    outline: none; }
   .input::placeholder {
     font-family: Exo, sans-serif;
     color: #f6f5f3;
@@ -461,6 +461,10 @@ html {
     background-color: #8d8d8d41; }
     .input--footer::placeholder {
       color: rgba(40, 40, 40, 0.66); }
+  .input--invalid {
+    border: 2px solid red; }
+    .input--invalid :focus {
+      border: 2px solid red; }
 
 .btn {
   padding: 1.5rem 4%;
@@ -487,6 +491,9 @@ html {
     padding: 0; }
     .btn--footer:hover {
       opacity: 1; }
+  .btn--disabled {
+    cursor: not-allowed;
+    opacity: 0.07; }
 
 .form {
   display: flex;
@@ -496,6 +503,12 @@ html {
   @media only screen and (max-width: 800px) {
     .form {
       justify-content: center; } }
+  .form--submitted {
+    padding: 2rem 0;
+    display: none;
+    font-size: 2rem;
+    color: #282828;
+    background-color: rgba(255, 255, 255, 0.452); }
   .form__info-trial {
     width: 100%;
     margin-bottom: 1.5rem;
@@ -556,5 +569,11 @@ html {
 
 .u-color-white {
   color: #fff; }
+
+.u-hidden {
+  display: none; }
+
+.u-show {
+  display: block; }
 
 /*# sourceMappingURL=style.comp.css.map */

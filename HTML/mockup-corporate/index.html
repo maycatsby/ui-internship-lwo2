@@ -221,7 +221,7 @@
             </h2>
         </div>
 
-        <form class="section-form__form form">
+        <form class="section-form__form form" method="post" action="#">
             <div class="form__info-trial">
                 <picture>
                     <source media="(min-width: 1500px)" srcset="img/arrow@3x.png">
@@ -230,11 +230,12 @@
                 </picture>
                 <p class="paragraph paragraph--grey">30 days free trial for all.</p>
             </div>
-            <input class="form__input input" type="text" placeholder="FULL NAME">
-            <input class="form__input input" type="email" placeholder="YOUR EMAIL">
-            <input class="form__input input" type="password" placeholder="PASSWORD">
+            <input class="form__input form__input-name input" type="text" placeholder="FULL NAME" required>
+            <input class="form__input form__input-email input" type="email" placeholder="YOUR EMAIL" required>
+            <input class="form__input form__input-password input" type="password" placeholder="PASSWORD" required>
             <button class="form__btn btn">TRY NOW</button>
         </form>
+        <div class="section-form__form form form--submitted">We sent details to your email</div>
         <p class="section-form__terms paragraph paragraph--grey">By Signing up you agree to our <a href="#">terms &
                 Services.</a>
         </p>
@@ -324,6 +325,7 @@
                     target="_blank">CC 3.0 BY</a></div>
         </div>
     </footer>
+    <script type="module" src="js/task3.js"></script>
 </body>
 
 </html>
