@@ -536,6 +536,12 @@ html {
     .input:focus::placeholder, .input:active::placeholder {
       font-family: OpenSans, sans-serif;
       color: #ff8b38; }
+  .input--invalid {
+    border: 2px solid red; }
+    .input--invalid:focus {
+      border: 2px solid red; }
+    .input--invalid::placeholder {
+      color: red; }
 
 .btn {
   padding: 1.5rem 5%;
@@ -563,11 +569,19 @@ html {
     transition: all 0.3s;
     background-color: #333333;
     opacity: 0.6; }
+  .btn:active, .btn:focus {
+    outline: none; }
 
 .form-trial {
   border-radius: 0.3rem;
   background-color: #ff8b38;
   overflow: hidden; }
+  .form-trial--submitted {
+    padding: 2rem 0.7rem;
+    display: none;
+    font-size: 2rem;
+    text-align: center;
+    opacity: 0.75; }
   .form-trial__header {
     padding-top: 5%;
     padding-bottom: 5%;
@@ -716,6 +730,13 @@ html {
       margin-right: 2rem;
       width: 20%; }
 
+.form-contact--submitted {
+  padding: 2rem 0.7rem;
+  display: none;
+  font-size: 2rem;
+  text-align: center;
+  color: #ff8b38; }
+
 .form-contact__inputs {
   display: grid;
   grid-template: 1fr/ 1fr 1fr;
@@ -768,3 +789,9 @@ html {
 
 .u-background-white {
   background-color: #fff; }
+
+.u-hidden {
+  display: none; }
+
+.u-show {
+  display: block; }
