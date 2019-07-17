@@ -9,6 +9,7 @@
     "watch:sass": "node-sass HTML/mockup-corporate/sass/main.scss  HTML/mockup-corporate/style.css -w -r",
     "compile:sass": "node-sass --source-map true HTML/mockup-corporate/sass/main.scss HTML/mockup-corporate/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' HTML/mockup-corporate/style.comp.css -o HTML/mockup-corporate/style.prefix.css"
+
   },
   "husky": {
     "hooks": {

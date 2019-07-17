@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 30px;
+    font-family: "Lato", sans-serif;
+}
+.wrap {
+    margin: 1rem auto;
+    padding: 0.5rem;
+    width: 35%;
+    background-color: rgb(216, 210, 210);
+}
+.wrap__letters {
+    padding: 0;
+    margin-bottom: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.wrap__letters--line1 {
+    font-size: 3.2rem;
+}
+.wrap__letters--line2 {
+    font-size: 2.3rem;
+}
+.wrap__letters--line3 {
+    font-size: 1.9rem;
+}
+.wrap__letters--line4 {
+    font-size: 1.6rem;
+}
+.wrap__letters--line5 {
+    font-size: 1.2rem;
+}
+.wrap__letters--line6 {
+    font-size: 0.8rem;
+}
