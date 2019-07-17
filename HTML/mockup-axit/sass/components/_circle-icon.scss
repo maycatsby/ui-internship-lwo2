@@ -1,0 +1,29 @@
+.circle-icon {
+    padding: 1%;
+    width: 4rem;
+    border: 2px solid $color-main-light;
+    border-radius: 50%;
+    @include flex($justify: center);
+
+    &__img {
+        width: 90%;
+    }
+
+    &--big {
+        padding: 3%;
+        width: 6rem;
+
+        @include respond(tablet) {
+            width: 30%;
+        }
+
+        @include respond(tablet-port) {
+            width: 15%;
+        }
+
+        @include respond(phone) {
+            padding: 1%;
+            width: 10%;
+        }
+    }
+}

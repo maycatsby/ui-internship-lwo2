@@ -1,0 +1,48 @@
+.opinion {
+    width: 25%;
+    @include respond(tablet) {
+        width: 30%;
+    }
+
+    @include respond(tablet-port) {
+        width: 80%;
+    }
+
+    &:not(:first-child) {
+        @include respond(tablet-port) {
+            margin-top: 7%;
+        }
+    }
+
+    &__quote {
+        padding: 7% 4%;
+        position: relative;
+        background-color: $color-grey-light;
+        font-style: italic;
+
+        @include respond(tablet-port) {
+            padding: 4% 2%;
+        }
+
+        &::after {
+            height: 1.5rem;
+            width: 1.5rem;
+            content: "";
+            position: absolute;
+            bottom: -1.5rem;
+            left: 5%;
+            background-color: $color-grey-light;
+            clip-path: polygon(0 0, 100% 0, 50% 100%, 0 0);
+        }
+    }
+
+    &__person {
+        margin-top: 2.5rem;
+        @include flex($justify: flex-start);
+
+        & img {
+            margin-right: 2rem;
+            width: 20%;
+        }
+    }
+}

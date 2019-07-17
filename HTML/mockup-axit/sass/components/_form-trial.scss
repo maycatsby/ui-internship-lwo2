@@ -1,0 +1,29 @@
+.form-trial {
+    border-radius: 0.3rem;
+    background-color: $color-main-light;
+    overflow: hidden;
+
+    &__header {
+        padding-top: 5%;
+        padding-bottom: 5%;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        color: #333333;
+        background-color: $color-grey-light;
+        & span {
+            text-transform: uppercase;
+            color: $color-main-light;
+        }
+    }
+
+    &__inputs {
+        padding: 7% 8% 0 8%;
+        width: 100%;
+        background-color: $color-white-mode;
+    }
+
+    &__btn {
+        width: 100%;
+    }
+}
