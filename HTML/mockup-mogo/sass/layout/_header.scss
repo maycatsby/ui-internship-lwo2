@@ -21,7 +21,7 @@
             url(img/layer-15@2x-min.png);
     }
 
-    &__top {
+    &__top-navigation {
         @include flex($align: flex-end);
     }
 

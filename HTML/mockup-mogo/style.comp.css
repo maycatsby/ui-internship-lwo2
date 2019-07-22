@@ -44,13 +44,11 @@ html {
       color: #ccc; }
 
 .heading {
+  padding-bottom: 4rem;
   font-family: Montserrat;
   font-size: 15rem;
   font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
   line-height: 0.93;
-  letter-spacing: normal;
   text-align: center;
   color: #fff;
   position: relative; }
@@ -69,12 +67,9 @@ html {
     height: 3px;
     position: absolute;
     left: 50%;
-    bottom: -15%;
+    bottom: 0;
     transform: translateX(-50%);
     background-color: #fff; }
-    @media only screen and (max-width: 500px) {
-      .heading::after {
-        bottom: -2rem; } }
   .heading--small {
     font-size: 1.8rem;
     font-weight: normal; }
@@ -89,29 +84,16 @@ html {
     color: #333;
     text-transform: uppercase; }
     .heading--section::after {
-      bottom: -4rem;
       transform: translateX(-50%);
       background-color: #f38181; }
-      @media only screen and (max-width: 500px) {
-        .heading--section::after {
-          bottom: -2.5rem; } }
   .heading--map {
     font-size: 2.4rem;
     color: #f38181; }
-    .heading--map::after {
-      bottom: -2.5rem; }
-      @media only screen and (max-width: 800px) {
-        .heading--map::after {
-          display: none; } }
 
 .subheading {
   font-family: "Kaushan Script", sans-serif;
   font-size: 7.2rem;
   font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
   text-align: center;
   color: #fff; }
   @media only screen and (max-width: 1024px) {
@@ -143,11 +125,9 @@ html {
 .label {
   font-size: 1.4rem;
   font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
   color: #333;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-decoration: none; }
   .label--light {
     text-align: center;
     color: #fff;
@@ -164,7 +144,7 @@ html {
   @media only screen and (max-width: 1024px) {
     .header {
       background-image: linear-gradient(to bottom, #f38181dc 0%, #f38181dc 40%, #fce38ae3 80%), url(img/layer-15@2x-min.png); } }
-  .header__top {
+  .header__top-navigation {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -231,7 +211,7 @@ html {
     width: 80%;
     text-align: center; }
   .section-about__paragraph {
-    margin-top: 7rem; }
+    margin-top: 5rem; }
   .section-about__picture {
     padding-top: 10rem;
     padding-bottom: 10rem;
@@ -312,12 +292,12 @@ html {
     .section-design {
       padding-top: 4rem; } }
   .section-design__image-tab {
-    margin: 10rem auto 0 auto;
+    margin: 7rem auto 0 auto;
     width: 25%;
     display: block; }
     @media only screen and (max-width: 1024px) {
       .section-design__image-tab {
-        margin-top: 7rem;
+        margin-top: 4rem;
         width: 35%; } }
     @media only screen and (max-width: 500px) {
       .section-design__image-tab {
@@ -354,7 +334,7 @@ html {
     width: 80%;
     text-align: center; }
   .section-range__paragraph {
-    margin-top: 7rem; }
+    margin-top: 5rem; }
   .section-range__container {
     display: flex;
     justify-content: space-between;
@@ -396,7 +376,7 @@ html {
       padding-top: 5rem;
       padding-bottom: 5rem; } }
   .section-team__paragraph {
-    margin-top: 7rem;
+    margin-top: 5rem;
     text-align: center; }
   .section-team__people {
     margin-top: 8%;
@@ -438,7 +418,7 @@ html {
     margin: 0 auto;
     width: 70%; }
   .section-portfolio__paragraph {
-    margin-top: 7rem;
+    margin-top: 5rem;
     text-align: center; }
   .section-portfolio__container {
     margin-top: 10rem;
@@ -468,13 +448,13 @@ html {
     .section-clients {
       background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.85) 100%), url(img/layer-53@2x-min.png); } }
   .section-clients__clients {
-    margin-top: 12rem;
+    margin-top: 9rem;
     display: grid;
     grid-template: repeat(2, 1fr)/repeat(2, 1fr);
     grid-gap: 5rem; }
     @media only screen and (max-width: 1024px) {
       .section-clients__clients {
-        margin-top: 10rem; } }
+        margin-top: 7rem; } }
     @media only screen and (max-width: 800px) {
       .section-clients__clients {
         grid-template: repeat(1, 1fr)/1fr; } }
@@ -495,7 +475,7 @@ html {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 12rem; }
+    margin-top: 9rem; }
     @media only screen and (max-width: 1024px) {
       .section-blog__blogs {
         margin-top: 15%; } }
@@ -1022,6 +1002,7 @@ html {
   .client-item__user {
     margin-top: 0.4rem;
     margin-bottom: 3rem;
+    padding-bottom: 1.3rem;
     position: relative; }
     .client-item__user::after {
       content: "";
@@ -1029,7 +1010,7 @@ html {
       height: 3px;
       position: absolute;
       left: 0;
-      bottom: -1.3rem;
+      bottom: 0;
       background-color: #f38181; }
 
 .blog {
