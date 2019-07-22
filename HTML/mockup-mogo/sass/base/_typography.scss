@@ -20,13 +20,11 @@
 }
 
 .heading {
+    padding-bottom: 4rem;
     font-family: Montserrat;
     font-size: 15rem;
     font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
     line-height: 0.93;
-    letter-spacing: normal;
     text-align: center;
     color: $color-main-light;
     position: relative;
@@ -49,13 +47,9 @@
         height: 3px;
         position: absolute;
         left: 50%;
-        bottom: -15%;
+        bottom: 0;
         transform: translateX(-50%);
         background-color: $color-main-light;
-
-        @include respond(phone) {
-            bottom: -2rem;
-        }
     }
 
     &--small {
@@ -77,27 +71,14 @@
         text-transform: uppercase;
 
         &::after {
-            bottom: -4rem;
             transform: translateX(-50%);
             background-color: $color-secondary-middle;
-
-            @include respond(phone) {
-                bottom: -2.5rem;
-            }
         }
     }
 
     &--map {
         font-size: 2.4rem;
         color: $color-secondary-middle;
-
-        &::after {
-            bottom: -2.5rem;
-
-            @include respond(tablet-port) {
-                display: none;
-            }
-        }
     }
 }
 
@@ -105,10 +86,6 @@
     font-family: "Kaushan Script", sans-serif;
     font-size: 7.2rem;
     font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
     text-align: center;
     color: $color-main-light;
 
@@ -150,13 +127,10 @@
 
 .label {
     font-size: 1.4rem;
-    // text-align: left;
     font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
     color: $color-main-dark;
     text-transform: uppercase;
+    text-decoration: none;
 
     &--light {
         text-align: center;
