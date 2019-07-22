@@ -7,7 +7,9 @@
     "rules": {
         "require-jsdoc": 0
     },
-    "globals":{
+    "globals": {
+        "document": true,
+        "console": true,
         "Set": true
     }
 }

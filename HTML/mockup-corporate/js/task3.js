@@ -11,31 +11,29 @@ const patternArr = [patterns.name, patterns.email, patterns.password];
 
 const validator = (input, pattern) => {
   let inputValue = input.value;
-  let validation = pattern.test(inputValue);
+  let isValid = pattern.test(inputValue);
 
   input.classList.remove('input--invalid');
 
-  if (!validation) {
+  if (!isValid) {
     input.classList.add('input--invalid');
-    return false;
-  } else {
-    return true;
   }
+
+  return isValid;
 };
 
 const validArr = [false, false, false];
 
-inputNameArr.forEach((el, ind) => {
-  el.addEventListener('input', () => {
-    let validValue = validator(inputNameArr[ind], patternArr[ind]);
-    validArr[ind] = validValue;
+elements.form.addEventListener('input', (e) => {
+  let index = e.target.dataset.index;
+  let validValue = validator(inputNameArr[index], patternArr[index]);
+  validArr[index] = validValue;
 
-    elements.btn.classList.remove('btn--disabled');
+  elements.btn.classList.remove('btn--disabled');
 
-    if (validArr.includes(false)) {
-      elements.btn.classList.add('btn--disabled');
-    }
-  });
+  if (validArr.includes(false)) {
+    elements.btn.classList.add('btn--disabled');
+  }
 });
 
 elements.form.addEventListener('submit', (e) => {
