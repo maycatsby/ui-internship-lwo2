@@ -1,67 +1,81 @@
-/* eslint-disable no-undef */
 import {elements} from './elements.js';
+import {pattern} from './pattern.js';
 
-const namePattern = /^[a-zA-Z]+$/;
-const emailPattern = /^[\w.%+-]+@[\w.-]+\.[A-Za-z]{1,63}$/;
-// eslint-disable-next-line max-len
-const passwordPattern = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/;
-const messagePattern = /.{1,250}/;
-
-const inputNameArr = [
-  elements.nameTrialForm,
-  elements.emailTrialForm,
-  elements.passwordTrialForm,
-  elements.nameContactForm,
-  elements.emailContactForm,
-  elements.messageContactForm,
-  elements.subjectContactForm,
+const inputNameArr1 = [
+  elements.formTrialForm.elements.name,
+  elements.formTrialForm.elements.email,
+  elements.formTrialForm.elements.password,
 ];
 
-const formSentArr = [elements.sentTrialForm, elements.sentContactForm];
+const inputNameArr2 = [
+  elements.formContactForm.elements.name,
+  elements.formContactForm.elements.email,
+  elements.formContactForm.elements.subject,
+  elements.formContactForm.elements.message,
+];
 
-const patternArr = [
-  namePattern,
-  emailPattern,
-  passwordPattern,
-  namePattern,
-  emailPattern,
-  namePattern,
-  messagePattern,
+const patternArr1 = [pattern.name, pattern.email, pattern.password];
+
+const patternArr2 = [
+  pattern.name,
+  pattern.email,
+  pattern.name,
+  pattern.message,
 ];
 
 const validator = (input, pattern) => {
   let inputValue = input.value;
-  let validation = pattern.test(inputValue);
+  let isValid = pattern.test(inputValue);
 
   input.classList.remove('input--invalid');
 
-  if (!validation) {
+  if (!isValid) {
     input.classList.add('input--invalid');
-    return false;
-  } else {
-    return true;
+  }
+
+  return isValid;
+};
+
+const submitVerification = (inputArr, patternArr, form, sent) => {
+  let validationFactor = 0;
+
+  for (let i = 0; i < inputArr.length; i++) {
+    let validValue = validator(inputArr[i], patternArr[i]);
+
+    if (validValue) {
+      validationFactor++;
+    }
+  }
+
+  if (validationFactor === inputArr.length) {
+    form.classList.add('u-hidden');
+    sent.classList.add('u-show');
   }
 };
 
-[elements.formTrialForm, elements.formContactForm].forEach((el, ind) => {
-  el.addEventListener('submit', (event) => {
-    const validValueArr = [];
-    let loopStart = ind === 0 ? 0 : 3;
-    let loopEnd = ind === 0 ? 3 : inputNameArr.length;
-
-    for (let i = loopStart; i < loopEnd; i++) {
-      let validValue = validator(inputNameArr[i], patternArr[i]);
-
-      if (!validValue) {
-        validValueArr.push(validValue);
-      }
-    }
-
-    if (!validValueArr.length) {
-      el.classList.add('u-hidden');
-      formSentArr[ind].classList.add('u-show');
-    }
-
+const formTrialListener = () => {
+  elements.formTrialForm.addEventListener('submit', (event) => {
+    submitVerification(
+        inputNameArr1,
+        patternArr1,
+        elements.formTrialForm,
+        elements.sentTrialForm
+    );
     event.preventDefault();
   });
-});
+};
+
+const formContactListener = () => {
+  elements.formContactForm.addEventListener('submit', (event) => {
+    submitVerification(
+        inputNameArr2,
+        patternArr2,
+        elements.formContactForm,
+        elements.sentContactForm
+    );
+    event.preventDefault();
+  });
+};
+
+formTrialListener();
+formContactListener();
