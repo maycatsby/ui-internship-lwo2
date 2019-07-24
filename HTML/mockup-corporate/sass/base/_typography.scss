@@ -1,0 +1,68 @@
+.section-heading {
+    margin-top: 1rem;
+    font-size: 4rem;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: 1.6px;
+    color: $color-main-dark;
+
+    @include respond(tablet) {
+        font-size: 3.5rem;
+    }
+
+    @include respond(tablet-port) {
+        font-size: 3rem;
+    }
+
+    & span {
+        color: $color-main-light;
+    }
+
+    &--label {
+        font-size: 1.6rem;
+        color: $color-main-light;
+        text-transform: uppercase;
+    }
+
+    &--sub {
+        font-size: 2.2rem;
+    }
+
+    &__triangle {
+        display: inline;
+        text-align: right;
+        padding: 4% 6% 4% 1%;
+        color: $color-mode-white;
+        background-color: $color-main-light;
+        clip-path: polygon(0 0, 100% 50%, 0 100%);
+        cursor: pointer;
+    }
+}
+
+.paragraph {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.63;
+    letter-spacing: 0.64px;
+    color: $color-paragraph;
+
+    &--small {
+        font-size: 1.4rem;
+    }
+
+    &--pink {
+        color: $color-main-light;
+    }
+
+    &--grey {
+        color: rgba(246, 245, 243, 0.45);
+    }
+
+    &--quote {
+        font-weight: normal;
+        font-style: italic;
+        color: rgba(255, 255, 255, 0.66);
+    }
+}

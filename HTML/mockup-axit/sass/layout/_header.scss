@@ -1,0 +1,27 @@
+.header {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 100%;
+    background-color: $color-dark-mode;
+    @include flex;
+
+    &__navigation {
+        width: 52%;
+
+        @include respond(tablet) {
+            width: 70%;
+        }
+
+        @include respond(tablet-port) {
+            width: 2.8rem;
+        }
+    }
+
+    &__logo {
+        font-size: 3rem;
+
+        @include respond(tablet-port) {
+            font-size: 2.5rem;
+        }
+    }
+}

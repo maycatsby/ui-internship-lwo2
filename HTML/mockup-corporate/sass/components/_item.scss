@@ -1,0 +1,32 @@
+.item {
+    width: 30%;
+    text-align: center;
+
+    @include respond(tablet-port) {
+        width: 100%;
+    }
+
+    &:not(:first-child) {
+        @include respond(tablet-port) {
+            margin-top: 3rem;
+        }
+    }
+
+    &__icon {
+        width: 20%;
+        @include respond(tablet-port) {
+            width: 13%;
+        }
+    }
+
+    &__icon-dummy {
+        width: 7rem;
+        height: 10rem;
+        display: inline-block;
+        background-color: #4e4e5e;
+    }
+
+    &__paragraph {
+        margin-top: 3%;
+    }
+}
