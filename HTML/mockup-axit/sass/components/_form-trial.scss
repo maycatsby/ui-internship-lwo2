@@ -3,6 +3,14 @@
     background-color: $color-main-light;
     overflow: hidden;
 
+    &--submitted {
+        padding: 2rem 0.7rem;
+        display: none;
+        font-size: 2rem;
+        text-align: center;
+        opacity: 0.75;
+    }
+
     &__header {
         padding-top: 5%;
         padding-bottom: 5%;

@@ -32,4 +32,9 @@
         background-color: $color-main-dark;
         opacity: 0.6;
     }
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
 }
