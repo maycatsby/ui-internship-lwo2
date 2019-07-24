@@ -1,10 +1,20 @@
 .header {
     padding: 10% 0;
-    background-image: url(img/header@3x-min.png);
-    background-size: cover;
-    background-position: center;
     @include flex($justify: center, $align: center);
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    &__video {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        z-index: -1;
+    }
 
     &__heading {
         width: 50%;
@@ -15,7 +25,7 @@
         line-height: 1.25;
         letter-spacing: 2.4px;
         text-align: center;
-        color: $color-main-dark;
+        color: $color-grey-light;
 
         @include respond(tablet) {
             width: 55%;
@@ -34,8 +44,15 @@
     &__play-icon {
         margin-top: 3rem;
         width: 6rem;
-        & img {
-            width: 100%;
+        filter: brightness(120%);
+
+        &:focus,
+        &:active {
+            outline: none;
+        }
+
+        @include respond(phone) {
+            width: 5rem;
         }
     }
 

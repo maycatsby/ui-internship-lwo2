@@ -72,14 +72,22 @@ html {
 
 .header {
   padding: 10% 0;
-  background-image: url(img/header@3x-min.png);
-  background-size: cover;
-  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  flex-direction: column; }
+  flex-direction: column;
+  position: relative;
+  overflow: hidden; }
+  .header__video {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: -1; }
   .header__heading {
     width: 50%;
     font-size: 6rem;
@@ -89,7 +97,7 @@ html {
     line-height: 1.25;
     letter-spacing: 2.4px;
     text-align: center;
-    color: #282828; }
+    color: #fdfbf5; }
     @media only screen and (max-width: 1024px) {
       .header__heading {
         width: 55%;
@@ -103,9 +111,13 @@ html {
         width: 90%; } }
   .header__play-icon {
     margin-top: 3rem;
-    width: 6rem; }
-    .header__play-icon img {
-      width: 100%; }
+    width: 6rem;
+    filter: brightness(120%); }
+    .header__play-icon:focus, .header__play-icon:active {
+      outline: none; }
+    @media only screen and (max-width: 500px) {
+      .header__play-icon {
+        width: 5rem; } }
   .header__btn {
     margin-top: 4rem;
     margin-bottom: 1rem; }
@@ -575,5 +587,8 @@ html {
 
 .u-show {
   display: block; }
+
+.u-play-active {
+  filter: brightness(70%); }
 
 /*# sourceMappingURL=style.comp.css.map */
