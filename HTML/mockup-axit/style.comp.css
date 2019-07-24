@@ -776,8 +776,11 @@ html {
   text-transform: uppercase;
   border-bottom: 1px solid #fff;
   background-color: #333333;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: background-color 0.3s; }
   .tab--selected {
+    background-color: #ff8b38; }
+  .tab:hover {
     background-color: #ff8b38; }
 
 .u-centered {

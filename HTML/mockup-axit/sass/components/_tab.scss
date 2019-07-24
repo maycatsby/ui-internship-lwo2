@@ -11,8 +11,13 @@
     border-bottom: 1px solid $color-white-mode;
     background-color: $color-main-dark;
     cursor: pointer;
+    transition: background-color 0.3s;
 
     &--selected {
+        background-color: $color-main-light;
+    }
+
+    &:hover {
         background-color: $color-main-light;
     }
 }
