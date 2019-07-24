@@ -1,0 +1,44 @@
+.option-item {
+    width: 100%;
+    border: 1px solid #e5e5e5;
+
+    &:not(:first-child) {
+        margin-top: 1.5rem;
+    }
+
+    &__top {
+        @include flex;
+        padding: 3%;
+    }
+
+    &__content {
+        @include flex($justify: flex-start);
+        width: 50%;
+
+        @include respond(tablet) {
+            width: 80%;
+        }
+    }
+
+    &__icon {
+        margin-right: 1rem;
+        width: 3.5rem;
+        display: block;
+
+        @include respond(tablet-port) {
+            width: 2.5rem;
+        }
+
+        & img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &__paragraph {
+        padding: 3%;
+        width: 100%;
+        display: none;
+        border-top: 1px solid #e5e5e5;
+    }
+}

@@ -1,0 +1,127 @@
+.picture {
+    width: 100%;
+    position: relative;
+    background-color: $color-secondary-light;
+
+    &:hover &__container,
+    &:hover &__container-port {
+        transition: transform 0.3s linear;
+
+        &::after {
+            content: "";
+            background-image: linear-gradient(
+                to bottom,
+                #f38181dc 0%,
+                #f38181dc 30%,
+                #fce38ae3 90%
+            );
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 5;
+        }
+    }
+
+    &:hover &__container {
+        transform: translate(-1rem, -1rem);
+    }
+
+    &:hover &__content {
+        display: block;
+
+        @include respond(tablet-port) {
+            display: none;
+        }
+    }
+
+    &:hover &__social {
+        @include flex;
+    }
+
+    &__image {
+        width: 100%;
+        display: block;
+
+        & img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &__content,
+    &__social {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 7;
+
+        & img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        text-align: center;
+
+        & picture {
+            margin: 0 auto;
+            width: 3rem;
+            display: block;
+
+            @include respond(tablet-port) {
+                width: 2rem;
+            }
+        }
+
+        & span {
+            margin-top: 1rem;
+            display: block;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: $color-main-light;
+            text-transform: uppercase;
+        }
+
+        & h4 {
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &__social {
+        width: 70%;
+
+        @include respond(tablet-port) {
+            width: 100%;
+        }
+
+        @include respond(phone) {
+            width: 70%;
+        }
+    }
+
+    &__social-link {
+        padding: 1rem;
+        width: 25%;
+        background-color: #fce38a;
+
+        @include respond(tablet-port) {
+            padding: 0.5rem;
+        }
+
+        &:not(:last-child) {
+            border-right: 0.2px solid $color-secondary-middle;
+        }
+
+        &:first-child {
+            background-color: $color-secondary-middle;
+        }
+    }
+}

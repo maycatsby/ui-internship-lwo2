@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Montserrat", sans-serif;
+    /* 1rem = 10px  10px/16px = 0.625 = 62.5% */
+    font-size: 62.5%;
+
+    @include respond(phone) {
+        font-size: 50%;
+    }
+}
+
+.container {
+    padding: 0 17%;
+    width: 100%;
+
+    &--flex {
+        @include flex($align: stretch);
+    }
+
+    @include respond(big-desktop) {
+        padding: 0 12%;
+    }
+
+    @include respond(tablet) {
+        padding: 0 10%;
+    }
+
+    @include respond(tablet-port) {
+        padding: 0 5%;
+    }
+}

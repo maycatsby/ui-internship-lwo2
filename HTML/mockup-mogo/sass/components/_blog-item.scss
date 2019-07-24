@@ -1,0 +1,69 @@
+.blog {
+    width: 30%;
+    position: relative;
+
+    @include respond(tablet-port) {
+        width: 100%;
+    }
+
+    &:not(:first-child) {
+        @include respond(tablet-port) {
+            margin-top: 10%;
+        }
+    }
+
+    &__picture {
+        margin-bottom: 1rem;
+        display: block;
+
+        & img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &__time {
+        padding: 2% 1%;
+        width: 20%;
+        position: absolute;
+        top: 5rem;
+        left: -1rem;
+        text-align: center;
+        background-color: $color-secondary-light;
+    }
+
+    &__paragraph {
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    &__container {
+        @include flex($justify: flex-start);
+        margin-top: 0.5rem;
+    }
+
+    &__view-comment {
+        @include flex($justify: flex-start);
+        width: 35%;
+
+        @include respond(tablet-port) {
+            width: 20%;
+        }
+    }
+
+    &__icon {
+        margin-right: 0.8rem;
+        width: 1.5rem;
+        display: block;
+
+        &:first-child {
+            width: 2rem;
+        }
+
+        & img {
+            width: 100%;
+            display: block;
+        }
+    }
+}

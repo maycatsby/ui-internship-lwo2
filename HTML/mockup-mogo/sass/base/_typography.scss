@@ -1,0 +1,144 @@
+.logo {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: left;
+    color: $color-main-light;
+
+    & a {
+        text-decoration: none;
+        color: $color-main-light;
+        cursor: pointer;
+    }
+
+    &--footer {
+        font-size: 4.6rem;
+
+        & a {
+            color: #ccc;
+        }
+    }
+}
+
+.heading {
+    padding-bottom: 4rem;
+    font-family: Montserrat;
+    font-size: 15rem;
+    font-weight: bold;
+    line-height: 0.93;
+    text-align: center;
+    color: $color-main-light;
+    position: relative;
+
+    @include respond(tablet) {
+        font-size: 11rem;
+    }
+
+    @include respond(tablet-port) {
+        font-size: 8rem;
+    }
+
+    @include respond(phone) {
+        font-size: 5rem;
+    }
+
+    &::after {
+        content: "";
+        width: 7rem;
+        height: 3px;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        background-color: $color-main-light;
+    }
+
+    &--small {
+        font-size: 1.8rem;
+        font-weight: normal;
+        &::after {
+            display: none;
+        }
+        & span {
+            font-size: 1.9rem;
+            font-weight: bold;
+        }
+    }
+
+    &--section {
+        margin-top: 2.3rem;
+        font-size: 3rem;
+        color: $color-main-dark;
+        text-transform: uppercase;
+
+        &::after {
+            transform: translateX(-50%);
+            background-color: $color-secondary-middle;
+        }
+    }
+
+    &--map {
+        font-size: 2.4rem;
+        color: $color-secondary-middle;
+    }
+}
+
+.subheading {
+    font-family: "Kaushan Script", sans-serif;
+    font-size: 7.2rem;
+    font-weight: normal;
+    text-align: center;
+    color: $color-main-light;
+
+    @include respond(tablet) {
+        font-size: 6rem;
+    }
+
+    @include respond(tablet-port) {
+        font-size: 4rem;
+    }
+
+    @include respond(phone) {
+        font-size: 3rem;
+    }
+
+    &--section {
+        font-size: 2.4rem;
+        color: $color-main-dark;
+    }
+}
+
+.paragraph {
+    font-family: Roboto, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: $color-paragraph;
+
+    &--accordion {
+        font-weight: 300;
+        font-style: italic;
+    }
+
+    &--big {
+        font-size: 3rem;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+}
+
+.label {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: $color-main-dark;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &--light {
+        text-align: center;
+        color: $color-main-light;
+        font-weight: normal;
+    }
+
+    &--white {
+        color: $color-main-light;
+    }
+}

@@ -1,0 +1,53 @@
+.nav {
+    @include flex;
+
+    &__menu {
+        @include flex;
+        width: 80%;
+        list-style: none;
+
+        @include respond(tablet-port) {
+            display: none;
+        }
+    }
+
+    &__menu-item {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+
+        & a:hover {
+            padding-bottom: 5px;
+            color: #fce38a;
+            border-bottom: 2px solid #fce38a;
+        }
+    }
+
+    &__hamburger-menu {
+        display: none;
+        font-size: 2.5rem;
+        color: $color-main-light;
+        cursor: pointer;
+
+        @include respond(tablet-port) {
+            display: inline-block;
+        }
+    }
+
+    &__action {
+        padding-left: 10%;
+        width: 20%;
+        @include flex;
+
+        @include respond(tablet-port) {
+            display: none;
+        }
+    }
+
+    &__btn {
+        width: 2rem;
+
+        & img {
+            width: 100%;
+        }
+    }
+}
