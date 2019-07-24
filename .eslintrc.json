@@ -10,6 +10,7 @@
     "globals": {
         "document": true,
         "console": true,
+        "Promise": true,
         "Set": true
     }
 }
