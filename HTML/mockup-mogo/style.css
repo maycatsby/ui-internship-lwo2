@@ -342,7 +342,7 @@ html {
     flex-wrap: wrap;
     margin-top: 5%; }
   .section-range__image {
-    display: block;
+    display: none;
     width: 45%; }
     @media only screen and (max-width: 500px) {
       .section-range__image {
@@ -876,7 +876,8 @@ html {
 
 .option-item {
   width: 100%;
-  border: 1px solid #e5e5e5; }
+  border: 1px solid #e5e5e5;
+  cursor: pointer; }
   .option-item:not(:first-child) {
     margin-top: 1.5rem; }
   .option-item__top {
@@ -1082,3 +1083,6 @@ html {
 
 .u-color-white {
   color: #fff; }
+
+.u-show {
+  display: block; }

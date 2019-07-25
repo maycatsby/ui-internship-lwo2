@@ -1,6 +1,7 @@
 .option-item {
     width: 100%;
     border: 1px solid #e5e5e5;
+    cursor: pointer;
 
     &:not(:first-child) {
         margin-top: 1.5rem;
