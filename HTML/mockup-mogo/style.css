@@ -122,6 +122,9 @@ html {
     line-height: 1;
     text-transform: uppercase; }
 
+body {
+  position: relative; }
+
 .label {
   font-size: 1.4rem;
   font-weight: bold;
@@ -407,7 +410,8 @@ html {
       display: block; }
 
 .section-portfolio {
-  padding-top: 10rem; }
+  padding-top: 10rem;
+  position: relative; }
   @media only screen and (max-width: 1024px) {
     .section-portfolio {
       padding-top: 7rem; } }
@@ -605,6 +609,24 @@ html {
       color: #333;
       font-size: 0.8rem; }
 
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0c0b0be1;
+  z-index: 100; }
+
+.popup__image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  max-height: 100%;
+  transform: translate(-50%, -50%); }
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -716,7 +738,8 @@ html {
 .picture {
   width: 100%;
   position: relative;
-  background-color: #95e1d3; }
+  background-color: #95e1d3;
+  cursor: pointer; }
   .picture:hover .picture__container,
   .picture:hover .picture__container-port {
     transition: transform 0.3s linear; }
