@@ -207,6 +207,7 @@
 
 .section-portfolio {
     @include padding-default-top;
+    position: relative;
 
     &__content {
         margin: 0 auto;
@@ -450,4 +451,24 @@
             font-size: 0.8rem;
         }
     }
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0c0b0be1;
+    z-index: 100;
+}
+
+.popup__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    max-height: 100%;
+    transform: translate(-50%, -50%);
 }
