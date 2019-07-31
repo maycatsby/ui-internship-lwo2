@@ -1,4 +1,4 @@
-export const loadedElements = new Promise((res) => {
+export const promiseElements = new Promise((res) => {
   document.addEventListener('DOMContentLoaded', () => {
     const elements = {
       optionsPart: document.querySelector('.section-range__options'),

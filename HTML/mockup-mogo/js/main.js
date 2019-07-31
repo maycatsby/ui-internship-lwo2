@@ -1,3 +1,3 @@
-import {displayAccordion} from './task6.js';
+import {initAccordion} from './task6.js';
 
-displayAccordion();
+initAccordion();
