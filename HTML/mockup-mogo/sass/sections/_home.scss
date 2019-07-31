@@ -131,7 +131,7 @@
     }
 
     &__image {
-        display: block;
+        display: none;
         width: 45%;
 
         @include respond(phone) {

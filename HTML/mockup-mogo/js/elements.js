@@ -6,6 +6,11 @@ export const promiseElements = new Promise((res) => {
       ),
       popup: document.querySelector('.popup'),
       popupImage: document.querySelector('.popup__image'),
+      optionsPart: document.querySelector('.section-range__options'),
+      optionTop: document.querySelectorAll('.option-item__top'),
+      paragraph: document.querySelectorAll('.option-item__paragraph'),
+      arrow: document.querySelectorAll('.option-item__btn'),
+      picture: document.querySelectorAll('.section-range__image'),
     };
     res(elements);
   });
