@@ -274,7 +274,7 @@
     @include padding-default-big;
 
     &__blogs {
-        @include flex;
+        @include flex($align: flex-start);
         margin-top: 9rem;
 
         @include respond(tablet) {
@@ -404,7 +404,7 @@
         margin-top: 3rem;
         display: grid;
         grid-template: repeat(3, 1fr) / 1fr;
-        row-gap: 5%;
+        row-gap: 2rem;
     }
 
     &__instagram-container {

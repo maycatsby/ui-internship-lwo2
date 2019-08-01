@@ -11,6 +11,8 @@ export const promiseElements = new Promise((res) => {
       paragraph: document.querySelectorAll('.option-item__paragraph'),
       arrow: document.querySelectorAll('.option-item__btn'),
       picture: document.querySelectorAll('.section-range__image'),
+      blogsParent: document.querySelector('.section-blog__blogs'),
+      blogsFooterParent: document.querySelector('.footer__blogs-container'),
     };
     res(elements);
   });
