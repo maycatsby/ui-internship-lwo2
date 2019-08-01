@@ -1,6 +1,12 @@
 .opinion {
-    @include flex;
+    display: none;
     width: 85%;
+    animation-duration: 1s;
+    animation-name: none;
+
+    &--active {
+        @include flex;
+    }
 
     &__icon {
         padding: 4%;

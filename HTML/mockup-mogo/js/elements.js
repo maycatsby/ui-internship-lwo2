@@ -11,6 +11,10 @@ export const promiseElements = new Promise((res) => {
       paragraph: document.querySelectorAll('.option-item__paragraph'),
       arrow: document.querySelectorAll('.option-item__btn'),
       picture: document.querySelectorAll('.section-range__image'),
+      opinionsPartFirst: document.querySelectorAll('.opinion--1'),
+      opinionsPartSecond: document.querySelectorAll('.opinion--2'),
+      buttonLeft: document.querySelectorAll('.btn--left'),
+      buttonRight: document.querySelectorAll('.btn--right'),
     };
     res(elements);
   });
