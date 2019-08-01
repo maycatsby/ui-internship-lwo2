@@ -1,5 +1,7 @@
-import {displayAccordion} from './task6.js';
+import {initAccordion} from './task6.js';
 import {showPopup} from './task8.js';
+import {initSlider} from './task7.js';
 
-displayAccordion();
+initAccordion();
 showPopup();
+initSlider();

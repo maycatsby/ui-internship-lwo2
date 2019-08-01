@@ -1,6 +1,6 @@
 import {promiseElements} from './elements.js';
 
-export function displayAccordion() {
+export function initAccordion() {
   promiseElements.then((elements) => {
     elements.optionsPart.addEventListener('click', (e) => {
       let targetClosestOption = e.target.closest('.option-item__top');
