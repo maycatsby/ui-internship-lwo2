@@ -11,6 +11,7 @@
         "document": true,
         "console": true,
         "Promise": true,
+        "window": true,
         "Set": true
     }
 }
