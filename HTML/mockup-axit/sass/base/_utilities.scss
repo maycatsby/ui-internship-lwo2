@@ -10,3 +10,16 @@
 .u-background-white {
     background-color: $color-white-mode;
 }
+
+.u-hidden {
+    display: none;
+}
+
+.u-show {
+    display: block;
+
+    &--animated {
+        animation-duration: 2s;
+        animation-name: opacityEffect;
+    }
+}

@@ -149,6 +149,7 @@
 
     &__content {
         width: 40%;
+        display: none;
 
         @include respond(tablet-port) {
             width: 70%;

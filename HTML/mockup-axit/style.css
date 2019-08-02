@@ -1,3 +1,11 @@
+@keyframes opacityEffect {
+  0% {
+    opacity: 0; }
+  70% {
+    opacity: 0.6; }
+  100% {
+    opacity: 1; } }
+
 * {
   margin: 0;
   padding: 0;
@@ -243,7 +251,8 @@ html {
       .section-tabs__tabs {
         width: 20%; } }
   .section-tabs__content {
-    width: 40%; }
+    width: 40%;
+    display: none; }
     @media only screen and (max-width: 800px) {
       .section-tabs__content {
         width: 70%; } }
@@ -798,3 +807,6 @@ html {
 
 .u-show {
   display: block; }
+  .u-show--animated {
+    animation-duration: 2s;
+    animation-name: opacityEffect; }
