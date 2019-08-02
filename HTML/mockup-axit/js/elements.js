@@ -5,9 +5,9 @@ export const elementsLoaded = new Promise((res) => {
       formContactForm: document.querySelector('.form-contact'),
       sentTrialForm: document.querySelector('.form-trial--submitted'),
       sentContactForm: document.querySelector('.form-contact--submitted'),
+      tabsContainer: document.querySelector('.section-tabs__tabs'),
+      tabsContent: document.querySelectorAll('.section-tabs__content'),
       tabs: document.querySelectorAll('.tab'),
-      tabTitle: document.querySelector('.section-tabs__heading'),
-      tabParagraph: document.querySelector('.section-tabs__paragraph'),
     };
     res(elements);
   });

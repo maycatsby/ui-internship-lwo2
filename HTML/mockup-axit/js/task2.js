@@ -1,31 +1,22 @@
 import {elementsLoaded} from './elements.js';
-import * as content from './content.js';
 
-export const addingTabsEffects = () => {
+export const addTabsEffects = () => {
   elementsLoaded.then((data) => {
-    const elements = data;
+    const {tabsContainer, tabsContent, tabs} = data;
+    let activeTabIndex = 0;
 
-    const changeContent = (title, content) => {
-      elements.tabTitle.textContent = title;
-      elements.tabParagraph.textContent = content;
-    };
+    tabsContainer.addEventListener('click', (e) => {
+      let selectedIndex = e.target.dataset.index;
 
-    const changeTabColor = (e) => {
-      elements.tabs.forEach((el) => {
-        el.classList.remove('tab--selected');
-      });
-      e.target.classList.add('tab--selected');
-    };
+      tabs[activeTabIndex].classList.remove('tab--selected');
+      tabs[selectedIndex].classList.add('tab--selected');
 
-    const addingClickListener = () => {
-      elements.tabs.forEach((el, index) => {
-        el.addEventListener('click', (e) => {
-          changeTabColor(e);
-          changeContent(content.title[index], content.paragraph[index]);
-        });
-      });
-    };
-
-    addingClickListener();
+      tabsContent[activeTabIndex].classList.remove(
+          'u-show',
+          'u-show--animated'
+      );
+      tabsContent[selectedIndex].classList.add('u-show', 'u-show--animated');
+      activeTabIndex = selectedIndex;
+    });
   });
 };
