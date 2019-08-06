@@ -17,4 +17,9 @@
 
 .u-show {
     display: block;
+
+    &--animated {
+        animation-duration: 2s;
+        animation-name: opacityEffect;
+    }
 }
